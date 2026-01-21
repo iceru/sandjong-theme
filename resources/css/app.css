@@ -1,4 +1,3 @@
-
 @import url(https://fonts.bunny.net/css?family=raleway:400);
 @import 'tailwindcss';
 @import './theme.css';
@@ -9,8 +8,17 @@
 @source '../../vendor/tailpress/framework/**/**/*.php';
 
 @utility container {
-    margin-inline: auto;
-    padding-inline: 2rem;
+  margin-inline: auto;
+  padding-inline: 1rem;
+}
+
+@theme {
+  --color-primary: #314E48;
+  --color-terracota: #A05752;
+  --color-gold: #CF9C63;
+  --color-beige: #FFF1E2;
+  --color-beige-dark: #FFE5C9;
+  --color-body: #1D1D1D;
 }
 
 /*
@@ -22,6 +30,7 @@
   color utility to any element that depends on these defaults.
 */
 @layer base {
+
   *,
   ::after,
   ::before,
@@ -29,4 +38,85 @@
   ::file-selector-button {
     border-color: var(--color-zinc-200, currentColor);
   }
+}
+
+
+.stepped-corner {
+  background-color: var(--color-primary);
+
+  --r: 30px;
+  --s: 40px;
+
+  -webkit-mask:
+    radial-gradient(var(--r) at calc(100% - var(--r) - var(--s)) calc(100% - var(--r)), #0000 98%, #000) calc(var(--r) + var(--s)) var(--r),
+    radial-gradient(var(--r) at calc(100% - var(--r)) calc(100% - var(--r) - var(--s)), #0000 98%, #000) var(--r) calc(var(--r) + var(--s));
+
+}
+
+body,
+html {
+  font-family: 'Philosopher', sans-serif;
+}
+
+h3 {
+  font-size: 50px;
+  line-height: 56px;
+}
+
+h4 {
+  font-size: 32px;
+  line-height: 36px;
+}
+
+h5 {
+  font-size: 20px;
+  font-weight: bold;
+  line-height: 26px;
+}
+
+.body {
+  font-size: 14px;
+  line-height: 24px;
+}
+
+.button {
+  padding: 4px 24px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  color: white;
+  letter-spacing: 4%;
+  font-size: 12px;
+  border-radius: 4px;
+  position: relative;
+}
+
+.button-top {
+  content: "";
+  display: inline-block;
+  width: 90%;
+  height: 6px;
+  top: -6px;
+  border-radius: 4px 4px 0 0;
+  left: 50%;
+  transform: translateX(-50%);
+  position: absolute;
+  z-index: 5;
+  transition: all;
+
+}
+
+.button-bottom {
+  content: "";
+  display: inline-block;
+  width: 90%;
+  height: 6px;
+  bottom: -6px;
+  border-radius: 0 0 4px 4px;
+  left: 50%;
+  transform: translateX(-50%);
+  position: absolute;
+  z-index: 5;
+  transition: all;
 }
