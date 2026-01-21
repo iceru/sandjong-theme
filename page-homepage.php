@@ -49,7 +49,23 @@
 
 <section class="bg-beige py-28">
     <div>
-        <h4 class="mb-8 text-center">A Window to the Soul</h4>
+        <h4 class="mb-8 text-center text-gold">A Window to the Soul</h4>
+        <div class="flex flex-col justify-center items-center">
+            <div class="mb-8 w-[500px] h-[500px] relative flex justify-center items-center">
+                <h4 class="text-beige relative z-10 text-center max-w-[360px]">
+                    The Unique Threads in Our Wellness Tapestry
+                </h4>
+                <img class="w-full h-full object-cover absolute left-0 top-0"
+                    src="<?php echo get_template_directory_uri(); ?>/images/soul-1.png" alt="">
+            </div>
+            <p class="max-w-[503px] text-center">
+                In Gading Serpong, find the tender fusion of Baduy simplicity and Peranakan color. In Jakarta, step into
+                a
+                refined haven inspired by Javanese nobility, Balinese devotion, and Peranakan beauty. Each Sandjong
+                space
+                reflects heritage, nurtures serenity, and creates a soft feeling of home where you can always belong.
+            </p>
+        </div>
     </div>
 </section>
 
