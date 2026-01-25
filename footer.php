@@ -21,7 +21,7 @@
         </div>
     </footer> -->
 
-<footer class="bg-primary text-beige">
+<footer class="bg-primary text-beige relative z-20">
     <section class="container flex py-11 space-x-16">
         <div class="w-[20%]">
             <img src="<?php echo get_template_directory_uri(); ?>/images/logo.png" alt="Sandjong Logo">

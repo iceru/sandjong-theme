@@ -112,4 +112,109 @@
     </div>
 </section>
 
+<section class="bg-primary py-16">
+    <div class="absolute w-full h-full left-0 top-0 opacity-10">
+        <img class="w-full h-full object-cover object-top"
+            src="<?php echo get_template_directory_uri(); ?>/images/bg-green.png" alt="">
+    </div>
+    <div class="container">
+        <div class="grid md:grid-cols-2 mb-28">
+            <h4 class="text-gold ">5 Senses Experiences</h4>
+            <p class="body text-beige">
+                As the company overseeing our diverse portfolio of wellness services, we remain firm in our commitment
+                to the concept of ‘5-senses branding’. We want to guarantee that each aspects of our offerings caters to
+                a unified and immersive sensory journey for our valued clients:
+            </p>
+        </div>
+        <!-- TODO: Slick Slider Grid Experiences -->
+        <div></div>
+    </div>
+</section>
+
+<section class="h-screen flex flex-col justify-center items-center relative z-20">
+    <div class="absolute w-full h-full left-0 top-0 ">
+        <img class="w-full h-full object-cover object-top"
+            src="<?php echo get_template_directory_uri(); ?>/images/bg-ambience.png" alt="">
+    </div>
+    <h4 class="text-gold relative z-10 mb-40">
+        Enchanting <span class="text-beige">Ambience</span>
+    </h4>
+    <div class="bg-primary relative z-0 w-[70vw] mx-auto p-20 text-center -mb-[460px] rounded-2xl">
+        <h4 class="text-gold mb-16">
+            A space where time slows, and stories unfold
+        </h4>
+        <p class="text-beige max-w-[612px] mb-16 mx-auto">
+            Inspired by apothecaries of the past and royal sanctuaries of Southeast Asia, Sandjong is alive with
+            texture, scent, and sound that relives that era. In Gading Serpong, Baduy serenity meets Peranakan spirit;
+            in Jakarta, Javanese grace, Balinese warmth, and Peranakan elegance intertwine. From heirlooms to herbal
+            blends, every detail invites you into a deeply sensory, culturally rooted escape.
+        </p>
+        <a href="#" class="button bg-gold !px-8">Explore</a>
+    </div>
+</section>
+
+<section class="relative py-28 z-10 bg-beige">
+    <div class="absolute w-full h-full left-0 top-0 opacity-10">
+        <img class="w-full h-full object-cover object-top"
+            src="<?php echo get_template_directory_uri(); ?>/images/bg-beige.png" alt="">
+    </div>
+    <div class="container">
+        <h4 class="text-center mt-44 text-gold">Delicately Facilitating <span class="text-primary">
+                Your Serene Moments
+            </span></h4>
+    </div>
+    <!-- TODO: Slick Slider Facility -->
+    <div></div>
+</section>
+
+<section class="relative py-20" id="timeline">
+    <div class="absolute inset-0 bg-body/20 h-[110%] -top[-10%] left-0" data-scroll data-scroll-speed="2">
+        <img src="<?php echo get_template_directory_uri(); ?>/images/bg-timeline.png"
+            class="w-full h-full object-cover mix-blend-multiply" alt="" />
+    </div>
+    <div class="container relative">
+        <h4 class="text-gold mb-14">Echoes <span class="text-beige">of Time</span></h4>
+        <p class="text-beige max-w-[435px]">Our story unfolds slowly, a rhythmic ritual of tradition. Born from a vision
+            by Amerta Jiwa Indonesia,
+            Sandjong was shaped by culture, soul, and serenity. Each chapter reflects care and devotion to
+            heritage-based wellness. Our milestones are echoes of all who have journeyed with us and all that shaped the
+            legacy with us; of hands that healed, scents that calmed, and guests who found their way back to themselves.
+        </p>
+    </div>
+</section>
+
+<section id="awards" class="bg-beige py-28">
+    <h4 class="text-center text-gold mb-11">
+        In Gentle <span class="text-primary">Honor</span>
+    </h4>
+    <p class="body text-center max-w-[695px] mb-14 mx-auto">
+        Every recognition we have received is not a trophy, but a whisper of gratitude—gently offered by those who have
+        felt the calm, the comfort, and the culture within our sanctuary. These honors are not our destination. They are
+        gentle markers along our path—reminders that grace, when given sincerely, often returns softly.
+    </p>
+    <!-- TODO: Slick Slider Awards -->
+    <div>
+
+    </div>
+</section>
+
+<section class="relative py-40">
+    <div class="absolute inset-0 h-[110%] -top[-10%] left-0" data-scroll data-scroll-speed="2">
+        <img src="<?php echo get_template_directory_uri(); ?>/images/bg-session.png" class="w-full h-full object-cover "
+            alt="" />
+    </div>
+    <div class="container relative z-10 text-center">
+        <h4 class="text-gold mb-8 max-w-[383px] mx-auto">
+            Loved in Silence, Remembered in Stillness
+        </h4>
+        <p class="body text-beige max-w-[424px] mx-auto mb-8">But beyond accolades, it is the return of a guest, the
+            softened
+            breath at the end of
+            a treatment, and the
+            shared stillness that truly honors us.</p>
+        <a href="#" class="button bg-gold !px-4">Book Your Session</a>
+    </div>
+</section>
+
+
 <?php get_footer(); ?>

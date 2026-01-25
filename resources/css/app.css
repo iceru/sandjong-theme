@@ -121,14 +121,6 @@ h5 {
   filter: brightness(110%);
 }
 
-.button:hover::before {
-  width: 95%;
-}
-
-.button:hover::after {
-  width: 95%;
-}
-
 .button:active {
   transform: scale(0.98);
 }
