@@ -93,6 +93,31 @@
                 <a href="/">
                     <img src="<?php echo get_template_directory_uri(); ?>/images/logo.png" class="h-[42px]" alt="">
                 </a>
+                <ul class="flex items-center text-beige space-x-10">
+                    <li>
+                        <a class="!no-underline text-xs" href="/">Home</a>
+                    </li>
+                    <li>
+                        <a class="!no-underline text-xs" href="/journey">Journey of Sandjong </a>
+                    </li>
+                    <li>
+                        <a class="!no-underline text-xs" href="/signature-rituals">Signature Rituals</a>
+                    </li>
+                    <li>
+                        <a class="!no-underline text-xs" href="/wellness-whisper">Wellness Whisper</a>
+                    </li>
+                    <li>
+                        <a class="!no-underline text-xs" href="/expand">Expand with Sandjong</a>
+                    </li>
+                    <li>
+                        <a class="!no-underline text-xs" href="/sanctuary">Sanctuary of Sandjong</a>
+                    </li>
+                </ul>
+                <div>
+                    <a href="" class="button bg-terracota">
+                        Book Now
+                    </a>
+                </div>
             </section>
         </header>
 

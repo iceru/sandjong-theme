@@ -40,8 +40,6 @@
             place to unwind, refresh your body, and restore your mind in a culturally rich and rejuvenating sanctuary.
         </p>
         <a href="" class="button bg-gold group">
-            <div class="button-top bg-gold"></div>
-            <div class="button-bottom bg-gold "></div>
             Learn More
         </a>
     </div>
@@ -118,13 +116,9 @@
         </p>
         <div class="flex justify-center items-center space-x-8">
             <a href="" class="button bg-terracota">
-                <div class="button-top bg-terracota"></div>
-                <div class="button-bottom bg-terracota "></div>
                 Spa Operation
             </a>
             <a href="" class="button bg-gold group">
-                <div class="button-top bg-gold"></div>
-                <div class="button-bottom bg-gold "></div>
                 For Franchise
             </a>
         </div>

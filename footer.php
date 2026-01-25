@@ -96,7 +96,69 @@
 </footer>
 </div>
 
+<script src="https://unpkg.com/lenis@1.1.18/dist/lenis.min.js"></script>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const isMobile = window.innerWidth < 1024;
+
+        const lenis = new Lenis({
+            duration: 1.2,
+            easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+            smooth: true,
+        });
+
+        function raf(time) {
+            lenis.raf(time);
+            requestAnimationFrame(raf);
+        }
+        requestAnimationFrame(raf);
+
+        // Handle ".is-inview" animation triggers (Previously Locomotive)
+        // Disabled on mobile for cleaner UX
+        if (!isMobile) {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    const targetClass = entry.target.getAttribute('data-scroll-class') || 'is-inview';
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add(targetClass);
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            document.querySelectorAll('[data-scroll]').forEach(el => observer.observe(el));
+        } else {
+            // Force show elements on mobile if they rely on "is-inview"
+            document.querySelectorAll('[data-scroll]').forEach(el => {
+                const targetClass = el.getAttribute('data-scroll-class') || 'is-inview';
+                el.classList.add(targetClass);
+            });
+        }
+
+        // Handle "data-scroll-speed" parallax
+        lenis.on('scroll', (e) => {
+            if (!isMobile) {
+                document.querySelectorAll('[data-scroll-speed]').forEach(el => {
+                    const speed = parseFloat(el.getAttribute('data-scroll-speed')) || 0;
+                    // Use parent bounds to avoid jitter when the element itself translates
+                    const parent = el.parentElement;
+                    const rect = parent.getBoundingClientRect();
+                    const viewHeight = window.innerHeight;
+
+                    if (rect.top < viewHeight && rect.bottom > 0) {
+                        const progress = (viewHeight - rect.top) / (viewHeight + rect.height);
+                        const yPos = (progress - 0.5) * speed * 100;
+                        el.style.transform = `translate3d(0, ${yPos}px, 0)`;
+                    }
+                });
+            }
+        });
+
+        window.lenis = lenis;
+    });
+</script>
 <?php wp_footer(); ?>
 </body>
+
 
 </html>

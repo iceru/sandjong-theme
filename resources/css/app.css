@@ -84,39 +84,51 @@ h5 {
   display: inline-flex;
   justify-content: center;
   align-items: center;
-  text-decoration: none;
-  color: white;
-  letter-spacing: 4%;
+  text-decoration: none !important;
+  color: white !important;
+  letter-spacing: 0.04em;
   font-size: 12px;
   border-radius: 4px;
   position: relative;
+  transition: all 0.3s ease;
+  cursor: pointer;
 }
 
-.button-top {
+.button::before,
+.button::after {
   content: "";
-  display: inline-block;
+  display: block;
   width: 90%;
   height: 6px;
+  left: 50%;
+  transform: translateX(-50%);
+  position: absolute;
+  background-color: inherit;
+  transition: all 0.3s ease;
+}
+
+.button::before {
   top: -6px;
   border-radius: 4px 4px 0 0;
-  left: 50%;
-  transform: translateX(-50%);
-  position: absolute;
-  z-index: 5;
-  transition: all;
-
 }
 
-.button-bottom {
-  content: "";
-  display: inline-block;
-  width: 90%;
-  height: 6px;
+.button::after {
   bottom: -6px;
   border-radius: 0 0 4px 4px;
-  left: 50%;
-  transform: translateX(-50%);
-  position: absolute;
-  z-index: 5;
-  transition: all;
+}
+
+.button:hover {
+  filter: brightness(110%);
+}
+
+.button:hover::before {
+  width: 95%;
+}
+
+.button:hover::after {
+  width: 95%;
+}
+
+.button:active {
+  transform: scale(0.98);
 }
