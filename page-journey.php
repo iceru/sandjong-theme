@@ -131,7 +131,7 @@
     </div>
 </section>
 
-<section class="h-screen flex flex-col justify-center items-center relative z-20">
+<section class="h-screen flex flex-col justify-center items-center relative z-20 ">
     <div class="absolute w-full h-full left-0 top-0 ">
         <img class="w-full h-full object-cover object-top"
             src="<?php echo get_template_directory_uri(); ?>/images/bg-ambience.png" alt="">
@@ -168,7 +168,7 @@
 </section>
 
 <section class="relative py-20" id="timeline">
-    <div class="absolute inset-0 bg-body/20 h-[110%] -top[-10%] left-0" data-scroll data-scroll-speed="2">
+    <div class="absolute inset-0 bg-body/20 h-[120%] -top-[20%] left-0" data-scroll data-scroll-speed="2">
         <img src="<?php echo get_template_directory_uri(); ?>/images/bg-timeline.png"
             class="w-full h-full object-cover mix-blend-multiply" alt="" />
     </div>
@@ -183,7 +183,7 @@
     </div>
 </section>
 
-<section id="awards" class="bg-beige py-28">
+<section id="awards" class="bg-beige py-28 relative z-10">
     <h4 class="text-center text-gold mb-11">
         In Gentle <span class="text-primary">Honor</span>
     </h4>
@@ -199,7 +199,7 @@
 </section>
 
 <section class="relative py-40">
-    <div class="absolute inset-0 h-[110%] -top[-10%] left-0" data-scroll data-scroll-speed="2">
+    <div class="absolute inset-0 h-[120%] -top-0 left-0" data-scroll data-scroll-speed="2">
         <img src="<?php echo get_template_directory_uri(); ?>/images/bg-session.png" class="w-full h-full object-cover "
             alt="" />
     </div>
