@@ -45,7 +45,7 @@
     </div>
 </section>
 
-<section class="bg-beige py-28">
+<section class="bg-beige py-28 relative max-w-screen overflow-x-hidden">
     <div>
         <h4 class="mb-8 text-center text-gold">A Window to the Soul</h4>
         <div class="flex flex-col justify-center items-center">
@@ -65,11 +65,49 @@
             </p>
         </div>
     </div>
+    <img class="w-[374px] h-[384px] object-cover absolute -left-16 top-[46%] rounded-lg -translate-y-1/2 z-0"
+        src="<?php echo get_template_directory_uri(); ?>/images/soul-3.png" alt="">
+    <img class="w-[374px] h-[384px] object-cover absolute -right-16 top-[46%] rounded-lg -translate-y-1/2 z-0"
+        src="<?php echo get_template_directory_uri(); ?>/images/soul-2.png" alt="">
 </section>
 
-<section class="bg-beige">
+<section class="bg-beige py-28">
     <div class="container">
-        <h5>Sandjong's Wellness Branches</h5>
+        <div class="flex items-center space-x-6 mb-16">
+            <h5 class="text-gold whitespace-nowrap">Sandjong's Wellness Branches</h5>
+            <div class="h-[1px] w-full border border-gold border-dashed mt-[4px]"></div>
+            <a href="" class="button !text-gold whitespace-nowrap !p-0">Explore more</a>
+        </div>
+        <div>
+            <div class="grid md:grid-cols-2 not-last:mb-8 not-last:pb-8 not-last:border-b border-gold border-dashed">
+                <div class="space-y-8 text-primary ">
+                    <h4>Sandjong at Episode Gading Serpong</h4>
+                    <p class="max-w-[489px]">Opened in 2022, this is where the Sandjong story began. Amid Gading
+                        Serpong’s urban rhythm, the
+                        sanctuary blends Baduy serenity with Peranakan culture. Earthy tones, woven textures, and
+                        heritage-inspired details shape a warm space into a calming luxury within the vibrant city.</p>
+                    <a href="" class="button bg-gold">Explore</a>
+                </div>
+                <div>
+                    <img src="<?php echo get_template_directory_uri(); ?>/images/episode.png"
+                        class="max-h-[355px] object-cover" alt="">
+                </div>
+            </div>
+            <div class="grid md:grid-cols-2 not-last:mb-8 not-last:pb-8 not-last:border-b border-gold border-dashed">
+                <div class="space-y-8 text-primary ">
+                    <h4>Sandjong at The Orient Jakarta</h4>
+                    <p class="max-w-[489px]">Opened in 2024, Sandjong at The Orient Jakarta is a haven of refined design
+                        and cultural grace of rare textures, heirloom tones, and apothecary elegance. Inspired by
+                        Javanese wisdom, Balinese devotion, and Peranakan artistry, each ritual unfolds like a regal,
+                        intimate, and timeless ceremonial offering.</p>
+                    <a href="" class="button bg-gold">Explore</a>
+                </div>
+                <div>
+                    <img src="<?php echo get_template_directory_uri(); ?>/images/episode.png"
+                        class="max-h-[355px] object-cover" alt="">
+                </div>
+            </div>
+        </div>
     </div>
 </section>
 
@@ -81,19 +119,30 @@
         <img class="w-full h-full object-cover object-top z-0"
             src="<?php echo get_template_directory_uri(); ?>/images/bg-footer.jpg" alt="">
     </div>
-    <div class="grid lg:grid-cols-2 bg-beige mx-auto max-w-[1100px] p-16 rounded-lg z-10 relative -mt-40">
-        <div>
+    <div class="flex justify-between bg-beige mx-auto max-w-[1100px] p-16 rounded-lg z-10 relative -mt-40">
+        <div class="w-[45%]">
             <h5 class="text-gold mb-4">Wellness Whisper</h5>
             <h4 class="mb-9">Gentle Notes From Sandjong</h4>
-            <p class="body text-body mb-20">
+            <p class="body text-body mb-20 max-w-[381px]">
                 Wellness Whisper is our way of keeping you close to Sandjong’s journey. Where we share updates and open
                 a window into our world: the traditions that inspire us, the rituals we are creating, and the milestones
                 we are reaching together.
             </p>
             <a href="" class="button bg-terracota">Read More</a>
         </div>
-        <div>
-
+        <div class="flex flex-col space-y-2 items-center justify-center">
+            <img src="<?php echo get_template_directory_uri(); ?>/images/icons/arrow-terra.png"
+                class="-rotate-90 w-3 h-3 opacity-40" alt="">
+            <div class="w-[1px] h-full border border-terracota border-dashed opacity-30"></div>
+            <img src="<?php echo get_template_directory_uri(); ?>/images/icons/arrow-terra.png"
+                class="rotate-90 w-3 h-3 opacity-40" alt="">
+        </div>
+        <div class="w-[45%] flex flex-col justify-center">
+            <div>
+                <small class="text-xs text-primary font-bold mb-2">17 Aug 2025</small>
+                <h4 class="mb-2">Promotion Headline Text</h4>
+                <a href="" class="button !text-terracota !p-0 !underline">Read More</a>
+            </div>
         </div>
     </div>
 </section>
