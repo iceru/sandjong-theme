@@ -28,18 +28,55 @@
     </div>
 </section>
 
-<section class="bg-primary py-36">
-    <div class="container grid md:grid-cols-2">
+<section class="bg-primary py-36 relative">
+    <div class="container grid md:grid-cols-2 ">
         <div>
             <h5 class="mb-9 text-gold">Our Commitment</h5>
-            <h4 class="max-w-[487px] text-beige">
+            <h4 class="max-w-[487px] text-beige mb-52">
                 Amerta’s dedication to maintain a 5-star standard and crafting unforgettable experiences for our valued
                 customers is shown and nurtured through our vision, mission, culture, motto, and values.
             </h4>
         </div>
         <!-- TODO: Slick SLider Visi Misi -->
-        <div>
+        <div class="absolute right-0 flex space-x-6 w-1/2 whitespace-nowrap overflow-x-auto pb-6">
 
+            <div class="w-[312px] shrink-0">
+                <img src="<?php echo get_template_directory_uri(); ?>/images/vision.png"
+                    class="w-full h-[270px] object-cover" alt="">
+
+                <div class="bg-beige py-10 px-9 rounded-b-lg whitespace-normal">
+                    <h5 class="text-gold mb-4">Vision</h5>
+                    <p class="body text-primary">
+                        To lead Indonesia’s wellness industry with our profound expertise, innovation, and continuous
+                        advancement through research and development.
+                    </p>
+                </div>
+            </div>
+
+            <div class="w-[312px] shrink-0">
+                <img src="<?php echo get_template_directory_uri(); ?>/images/vision.png"
+                    class="w-full h-[270px] object-cover" alt="">
+
+                <div class="bg-beige py-10 px-9 rounded-b-lg whitespace-normal">
+                    <h5 class="text-gold mb-4">Mission</h5>
+                    <p class="body text-primary min-h-[96px]">
+                        Dedicated to creating a uniquely memorable experience and genuine care to meet our customers’
+                        needs.
+                    </p>
+                </div>
+            </div>
+
+            <div class="w-[312px] shrink-0">
+                <img src="<?php echo get_template_directory_uri(); ?>/images/vision.png"
+                    class="w-full h-[270px] object-cover" alt="">
+
+                <div class="bg-beige py-10 px-9 rounded-b-lg whitespace-normal">
+                    <h5 class="text-gold mb-4">Motto</h5>
+                    <p class="body text-primary min-h-[96px]">
+                        “Delivering exceptional customer satisfaction while honoring the needs of all”
+                    </p>
+                </div>
+            </div>
         </div>
     </div>
 </section>
@@ -49,7 +86,7 @@
         <img class="w-full h-full object-cover" src="<?php echo get_template_directory_uri(); ?>/images/bg-culture.png"
             alt="">
     </div>
-    <div class="container flex flex-col h-screen text-center justify-center items-center relative z-10">
+    <div class="container flex flex-col h-screen max-h-[1000px] text-center justify-center items-center relative z-10">
         <h5 class="text-gold mb-6">Our Culture</h5>
         <h4 class="max-w-[729px] text-beige">
             In Amerta’s esteemed environment, we nurture and enhance our offered personalized services and the mutual
@@ -131,7 +168,7 @@
     </div>
 </section>
 
-<section class="h-screen flex flex-col justify-center items-center relative z-20 ">
+<section class="h-screen max-h-[702px] flex flex-col justify-center items-center relative z-20 ">
     <div class="absolute w-full h-full left-0 top-0 ">
         <img class="w-full h-full object-cover object-top"
             src="<?php echo get_template_directory_uri(); ?>/images/bg-ambience.png" alt="">
