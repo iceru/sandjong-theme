@@ -149,12 +149,12 @@
     </div>
 </section>
 
-<section class="bg-primary py-16">
-    <div class="absolute w-full h-full left-0 top-0 opacity-10">
+<section class="bg-primary py-16 relative">
+    <div class="absolute w-full h-full left-0 top-0">
         <img class="w-full h-full object-cover object-top"
-            src="<?php echo get_template_directory_uri(); ?>/images/bg-green.png" alt="">
+            src="<?php echo get_template_directory_uri(); ?>/images/bg-green.jpg" alt="">
     </div>
-    <div class="container">
+    <div class="container relative">
         <div class="grid md:grid-cols-2 mb-28">
             <h4 class="text-gold ">5 Senses Experiences</h4>
             <p class="body text-beige">
@@ -164,7 +164,49 @@
             </p>
         </div>
         <!-- TODO: Slick Slider Grid Experiences -->
-        <div></div>
+        <div class="senses-slider">
+            <div>
+                <div class="grid grid-cols-2">
+                    <div>
+                        <img src="<?php echo get_template_directory_uri(); ?>/images/senses.png" class="rounded-lg"
+                            alt="">
+                    </div>
+                    <div>
+                        <div class="mb-10 w-[71px] h-[71px] rounded-full bg-[#966938] flex justify-center items-center">
+                            <img src="<?php echo get_template_directory_uri(); ?>/images/icons/eye.png"
+                                class="w-[54px] h-[54px] object-contain" alt="">
+                        </div>
+                        <h5 class="text-gold mb-4">Sight</h5>
+                        <p class="body text-beige max-w-[336px]">
+                            Our spaces are thoughtfully designed, showcasing inviting layouts, calming colors, abundant
+                            natural light, and high-quality materials to create visually pleasing and motivating
+                            environments.
+
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div class="grid grid-cols-2">
+                    <div>
+                        <img src="<?php echo get_template_directory_uri(); ?>/images/senses.png" class="rounded-lg"
+                            alt="">
+                    </div>
+                    <div>
+                        <div class="mb-10 w-[71px] h-[71px] rounded-full bg-[#966938] flex justify-center items-center">
+                            <img src="<?php echo get_template_directory_uri(); ?>/images/icons/flower.png"
+                                class="w-[54px] h-[54px] object-contain" alt="">
+                        </div>
+                        <h5 class="text-gold mb-4">Smell</h5>
+                        <p class="body text-beige max-w-[336px]">
+                            We incorporate aromatherapy into all our spaces, using pleasant scents to invigorate and
+                            refresh clients, personalized to their activity and energy.
+
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </section>
 
@@ -192,16 +234,56 @@
 
 <section class="relative py-28 z-10 bg-beige">
     <div class="absolute w-full h-full left-0 top-0 opacity-10">
-        <img class="w-full h-full object-cover object-top"
+        <img class="w-full h-full object-cover object-bottom"
             src="<?php echo get_template_directory_uri(); ?>/images/bg-beige.png" alt="">
     </div>
     <div class="container">
-        <h4 class="text-center mt-44 text-gold">Delicately Facilitating <span class="text-primary">
+        <h4 class="text-center mt-44 text-gold mb-16">Delicately Facilitating <span class="text-primary">
                 Your Serene Moments
-            </span></h4>
+            </span>
+        </h4>
+
+        <!-- TODO: Slick Slider Facility -->
+        <div class="facility-slider">
+            <div>
+                <div class="grid md:grid-cols-2 gap-6">
+                    <div>
+                        <img src="<?php echo get_template_directory_uri(); ?>/images/lobby.png" alt="">
+                    </div>
+                    <div class="bg-[#FFE5C9] rounded-xl relative px-20 py-16">
+                        <div class="w-[97%] h-3 rounded-t-xl -top-3 left-1/2 -translate-x-1/2 bg-[#FFE5C9] absolute">
+                        </div>
+                        <div class="w-[97%] h-3 rounded-b-xl -bottom-3 left-1/2 -translate-x-1/2 bg-[#FFE5C9] absolute">
+                        </div>
+                        <h4 class="text-gold mb-11">Lobby Area</h4>
+                        <p class="body max-w-[395px]">
+                            The gate of Sandjong’s hospitality experience, where our professional receptionists welcome
+                            the
+                            guests with comprehensive information and blended oils recommendation.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div class="grid md:grid-cols-2 gap-6">
+                    <div>
+                        <img src="<?php echo get_template_directory_uri(); ?>/images/reflexology.png" alt="">
+                    </div>
+                    <div class="bg-[#FFE5C9] rounded-xl relative px-20 py-16">
+                        <div class="w-[97%] h-3 rounded-t-xl -top-3 left-1/2 -translate-x-1/2 bg-[#FFE5C9] absolute">
+                        </div>
+                        <div class="w-[97%] h-3 rounded-b-xl -bottom-3 left-1/2 -translate-x-1/2 bg-[#FFE5C9] absolute">
+                        </div>
+                        <h4 class="text-gold mb-11">Reflexology Area</h4>
+                        <p class="body max-w-[395px]">
+                            Features five comfortable chairs designed to apply sensational pressure to your nerves,
+                            leaving you feeling refreshed and invigorated.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-    <!-- TODO: Slick Slider Facility -->
-    <div></div>
 </section>
 
 <section class="relative py-20" id="timeline">
@@ -211,13 +293,104 @@
     </div>
     <div class="container relative">
         <h4 class="text-gold mb-14">Echoes <span class="text-beige">of Time</span></h4>
-        <p class="text-beige max-w-[435px]">Our story unfolds slowly, a rhythmic ritual of tradition. Born from a vision
-            by Amerta Jiwa Indonesia,
-            Sandjong was shaped by culture, soul, and serenity. Each chapter reflects care and devotion to
-            heritage-based wellness. Our milestones are echoes of all who have journeyed with us and all that shaped the
-            legacy with us; of hands that healed, scents that calmed, and guests who found their way back to themselves.
-        </p>
-    </div>
+        <div class="grid md:grid-cols-2">
+            <p class="text-beige max-w-[435px]">Our story unfolds slowly, a rhythmic ritual of tradition. Born from a
+                vision
+                by Amerta Jiwa Indonesia,
+                Sandjong was shaped by culture, soul, and serenity. Each chapter reflects care and devotion to
+                heritage-based wellness. Our milestones are echoes of all who have journeyed with us and all that shaped
+                the
+                legacy with us; of hands that healed, scents that calmed, and guests who found their way back to
+                themselves.
+            </p>
+            <div>
+                <p class="text-beige max-w-[435px] mb-9">Sandjong's identity are echoes of every hand that has healed,
+                    every
+                    scent that has calmed, every guest who found a moment to return to themselves.
+                </p>
+                <div class="flex space-x-6">
+                    <div class="flex flex-col items-center space-y-3">
+                        <img src="<?php echo get_template_directory_uri(); ?>/images/icons/arrow-gold.png" alt=""
+                            class="rotate-90">
+                        <div class="h-full w-[1px] border border-dashed border-gold"></div>
+                        <img src="<?php echo get_template_directory_uri(); ?>/images/icons/arrow-gold.png" alt=""
+                            class="-rotate-90">
+                    </div>
+                    <div class="mt-4">
+                        <div class="relative timeline-item cursor-pointer active">
+                            <img src="<?php echo get_template_directory_uri(); ?>/images/icons/dot-gold.png" alt=""
+                                class="absolute -left-[39px] top-1 timeline-dot">
+                            <h5 class="timeline-title transition-all duration-300 mb-8">
+                                2022 — The First Bloom
+                            </h5>
+                            <div class="timeline-content">
+                                <p class="text-beige max-w-[435px] mb-9">
+                                    We opened the doors to Sandjong at Episode Gading Serpong, our first sanctuary
+                                    inspired
+                                    by
+                                    the
+                                    quiet strength of Baduy tradition and the vibrant elegance of Peranakan heritage. A
+                                    hidden
+                                    gem
+                                    in the city, where healing feels like coming home.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="relative timeline-item cursor-pointer">
+                            <img src="<?php echo get_template_directory_uri(); ?>/images/icons/dot-gold.png" alt=""
+                                class="absolute -left-[39px] top-1 timeline-dot">
+                            <h5 class="timeline-title transition-all duration-300 mb-8">
+                                2023 — A Voice Recognized
+                            </h5>
+                            <div class="timeline-content hidden">
+                                <p class="text-beige max-w-[435px] mb-9">
+                                    Sandjong was honored as The Best Spa 2023, a celebration of the care, culture, and
+                                    calm
+                                    that
+                                    live in every corner of our sanctuary. An affirmation of the grace we strive to
+                                    bring
+                                    into
+                                    the world.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="relative timeline-item cursor-pointer">
+                            <img src="<?php echo get_template_directory_uri(); ?>/images/icons/dot-gold.png" alt=""
+                                class="absolute -left-[39px] top-1 timeline-dot">
+                            <h5 class="timeline-title transition-all duration-300 mb-8">
+                                2024 — The Second Sanctuary
+                            </h5>
+                            <div class="timeline-content hidden">
+                                <p class="text-beige max-w-[435px] mb-9">
+                                    Sandjong Spa at The Orient Jakarta was unveiled. A refined apothecary of royal
+                                    elegance,
+                                    drawing from Peranakan, Javanese, and Balinese heritage. A sacred space for regal
+                                    restoration, crafted with precision and poetry.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="relative timeline-item cursor-pointer">
+                            <img src="<?php echo get_template_directory_uri(); ?>/images/icons/dot-gold.png" alt=""
+                                class="absolute -left-[39px] top-1 timeline-dot">
+                            <h5 class="timeline-title transition-all duration-300 mb-8">
+                                And Beyond…
+                            </h5>
+                            <div class="timeline-content hidden">
+                                <p class="text-beige max-w-[435px] mb-9">
+                                    We continue to grow, guided not by urgency, but by meaning. Each future Sandjong
+                                    will
+                                    be
+                                    a
+                                    new echo that faithfully rooted in its land, lovingly shaped by its people, and
+                                    gracefully
+                                    unfolding with time.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
 </section>
 
 <section id="awards" class="bg-beige py-28 relative z-10">
@@ -230,7 +403,46 @@
         gentle markers along our path—reminders that grace, when given sincerely, often returns softly.
     </p>
     <!-- TODO: Slick Slider Awards -->
-    <div>
+    <div class="bg-primary mx-auto max-w-[860px]  rounded-xl relative">
+        <div class="w-[97%] h-3 rounded-t-xl -top-3 left-1/2 -translate-x-1/2 bg-primary absolute"></div>
+        <div class="w-[97%] h-3 rounded-b-xl -bottom-3 left-1/2 -translate-x-1/2 bg-primary absolute"></div>
+        <div class="py-14 px-8">
+            <div class="awards-slider">
+                <div class="flex flex-col justify-center items-center text-center">
+                    <div class="flex justify-center">
+                        <img src="<?php echo get_template_directory_uri(); ?>/images/award-1.png" alt="">
+                    </div>
+                    <h5 class="text-gold mt-4">The Best Spa 2025</h5>
+                    <p class="body text-beige max-w-[385px] mx-auto">
+                        An offering of appreciation for the experiences we’ve crafted with heart and heritage—where
+                        healing
+                        becomes a way home
+                    </p>
+                </div>
+                <div class="flex flex-col justify-center items-center text-center">
+                    <div class="flex justify-center">
+                        <img src="<?php echo get_template_directory_uri(); ?>/images/award-1.png" alt="">
+                    </div>
+                    <h5 class="text-gold mt-4">The Best Spa 2025</h5>
+                    <p class="body text-beige max-w-[385px] mx-auto">
+                        An offering of appreciation for the experiences we’ve crafted with heart and heritage—where
+                        healing
+                        becomes a way home
+                    </p>
+                </div>
+                <div class="flex flex-col justify-center items-center text-center">
+                    <div class="flex justify-center">
+                        <img src="<?php echo get_template_directory_uri(); ?>/images/award-1.png" alt="">
+                    </div>
+                    <h5 class="text-gold mt-4">The Best Spa 2025</h5>
+                    <p class="body text-beige max-w-[385px] mx-auto">
+                        An offering of appreciation for the experiences we’ve crafted with heart and heritage—where
+                        healing
+                        becomes a way home
+                    </p>
+                </div>
+            </div>
+        </div>
 
     </div>
 </section>
@@ -252,6 +464,50 @@
         <a href="#" class="button bg-gold !px-4">Book Your Session</a>
     </div>
 </section>
+
+
+<script>
+    $(document).ready(function () {
+        $('.senses-slider').slick({
+            dots: true,
+            infinite: true,
+            speed: 300,
+            slidesToShow: 1,
+            adaptiveHeight: true
+        });
+
+        $('.facility-slider').slick({
+            dots: true,
+            infinite: true,
+            speed: 300,
+            slidesToShow: 1,
+            adaptiveHeight: true
+        });
+
+        $('.awards-slider').slick({
+            dots: true,
+            infinite: true,
+            speed: 300,
+            slidesToShow: 1,
+            adaptiveHeight: true
+        });
+
+        $('.timeline-item').on('click', function () {
+            // If the clicked item is already active, do nothing
+            if ($(this).hasClass('active')) return;
+
+            // 1. Remove active class from all items
+            $('.timeline-item').removeClass('active');
+
+            // 2. Add active class to the clicked item
+            $(this).addClass('active');
+
+            // 3. Slide up all other contents and slide down the current one
+            $('.timeline-content').not($(this).find('.timeline-content')).slideUp(400);
+            $(this).find('.timeline-content').slideDown(400);
+        });
+    });
+</script>
 
 
 <?php get_footer(); ?>
