@@ -37,8 +37,8 @@
                 customers is shown and nurtured through our vision, mission, culture, motto, and values.
             </h4>
         </div>
-        <!-- TODO: Slick SLider Visi Misi -->
-        <div class="absolute right-0 flex space-x-6 w-1/2 whitespace-nowrap overflow-x-auto pb-6">
+        <div
+            class="draggable-container absolute right-0 flex space-x-6 w-1/2 whitespace-nowrap overflow-x-auto pb-6 cursor-grab select-none no-scrollbar">
 
             <div class="w-[312px] shrink-0">
                 <img src="<?php echo get_template_directory_uri(); ?>/images/vision.png"
@@ -54,7 +54,7 @@
             </div>
 
             <div class="w-[312px] shrink-0">
-                <img src="<?php echo get_template_directory_uri(); ?>/images/vision.png"
+                <img src="<?php echo get_template_directory_uri(); ?>/images/mission.png"
                     class="w-full h-[270px] object-cover" alt="">
 
                 <div class="bg-beige py-10 px-9 rounded-b-lg whitespace-normal">
@@ -67,7 +67,7 @@
             </div>
 
             <div class="w-[312px] shrink-0">
-                <img src="<?php echo get_template_directory_uri(); ?>/images/vision.png"
+                <img src="<?php echo get_template_directory_uri(); ?>/images/motto.png"
                     class="w-full h-[270px] object-cover" alt="">
 
                 <div class="bg-beige py-10 px-9 rounded-b-lg whitespace-normal">
@@ -206,7 +206,10 @@
                     </div>
                 </div>
             </div>
+
         </div>
+        <div class="senses-nav flex items-center absolute left-[50%] ml-12 -translate-x-1/2 bottom-20 mt-4"></div>
+
     </div>
 </section>
 
@@ -244,44 +247,52 @@
         </h4>
 
         <!-- TODO: Slick Slider Facility -->
-        <div class="facility-slider">
-            <div>
-                <div class="grid md:grid-cols-2 gap-6">
-                    <div>
-                        <img src="<?php echo get_template_directory_uri(); ?>/images/lobby.png" alt="">
+        <div class="relative">
+            <div class="facility-slider">
+                <div>
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div>
+                            <img src="<?php echo get_template_directory_uri(); ?>/images/lobby.png" alt="">
+                        </div>
+                        <div class="bg-[#FFE5C9] rounded-xl relative px-20 py-16">
+                            <div
+                                class="w-[97%] h-3 rounded-t-xl -top-3 left-1/2 -translate-x-1/2 bg-[#FFE5C9] absolute">
+                            </div>
+                            <div
+                                class="w-[97%] h-3 rounded-b-xl -bottom-3 left-1/2 -translate-x-1/2 bg-[#FFE5C9] absolute">
+                            </div>
+                            <h4 class="text-gold mb-11">Lobby Area</h4>
+                            <p class="body max-w-[395px]">
+                                The gate of Sandjong’s hospitality experience, where our professional receptionists
+                                welcome
+                                the
+                                guests with comprehensive information and blended oils recommendation.
+                            </p>
+                        </div>
                     </div>
-                    <div class="bg-[#FFE5C9] rounded-xl relative px-20 py-16">
-                        <div class="w-[97%] h-3 rounded-t-xl -top-3 left-1/2 -translate-x-1/2 bg-[#FFE5C9] absolute">
+                </div>
+                <div>
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div>
+                            <img src="<?php echo get_template_directory_uri(); ?>/images/reflexology.png" alt="">
                         </div>
-                        <div class="w-[97%] h-3 rounded-b-xl -bottom-3 left-1/2 -translate-x-1/2 bg-[#FFE5C9] absolute">
+                        <div class="bg-[#FFE5C9] rounded-xl relative px-20 py-16">
+                            <div
+                                class="w-[97%] h-3 rounded-t-xl -top-3 left-1/2 -translate-x-1/2 bg-[#FFE5C9] absolute">
+                            </div>
+                            <div
+                                class="w-[97%] h-3 rounded-b-xl -bottom-3 left-1/2 -translate-x-1/2 bg-[#FFE5C9] absolute">
+                            </div>
+                            <h4 class="text-gold mb-11">Reflexology Area</h4>
+                            <p class="body max-w-[395px]">
+                                Features five comfortable chairs designed to apply sensational pressure to your nerves,
+                                leaving you feeling refreshed and invigorated.
+                            </p>
                         </div>
-                        <h4 class="text-gold mb-11">Lobby Area</h4>
-                        <p class="body max-w-[395px]">
-                            The gate of Sandjong’s hospitality experience, where our professional receptionists welcome
-                            the
-                            guests with comprehensive information and blended oils recommendation.
-                        </p>
                     </div>
                 </div>
             </div>
-            <div>
-                <div class="grid md:grid-cols-2 gap-6">
-                    <div>
-                        <img src="<?php echo get_template_directory_uri(); ?>/images/reflexology.png" alt="">
-                    </div>
-                    <div class="bg-[#FFE5C9] rounded-xl relative px-20 py-16">
-                        <div class="w-[97%] h-3 rounded-t-xl -top-3 left-1/2 -translate-x-1/2 bg-[#FFE5C9] absolute">
-                        </div>
-                        <div class="w-[97%] h-3 rounded-b-xl -bottom-3 left-1/2 -translate-x-1/2 bg-[#FFE5C9] absolute">
-                        </div>
-                        <h4 class="text-gold mb-11">Reflexology Area</h4>
-                        <p class="body max-w-[395px]">
-                            Features five comfortable chairs designed to apply sensational pressure to your nerves,
-                            leaving you feeling refreshed and invigorated.
-                        </p>
-                    </div>
-                </div>
-            </div>
+            <div class="facility-nav flex items-center absolute left-[61%] -translate-x-1/2 bottom-20 mt-4"></div>
         </div>
     </div>
 </section>
@@ -469,11 +480,15 @@
 <script>
     $(document).ready(function () {
         $('.senses-slider').slick({
-            dots: true,
-            infinite: true,
-            speed: 300,
             slidesToShow: 1,
-            adaptiveHeight: true
+            slidesToScroll: 1,
+            arrows: true,
+            dots: true,
+            fade: true, // Smooth transition
+            appendArrows: $('.senses-nav'),
+            appendDots: $('.senses-nav'),
+            prevArrow: '<button type="button" class="slick-prev-custom mr-4"><img src="<?php echo get_template_directory_uri(); ?>/images/icons/arrow-terra.png" class="w-2.5 h-2.5 rotate-180"></button>',
+            nextArrow: '<button type="button" class="slick-next-custom ml-4"><img src="<?php echo get_template_directory_uri(); ?>/images/icons/arrow-terra.png" class="w-2.5 h-2.5"></button>',
         });
 
         $('.facility-slider').slick({
@@ -481,7 +496,12 @@
             infinite: true,
             speed: 300,
             slidesToShow: 1,
-            adaptiveHeight: true
+            fade: true,
+            adaptiveHeight: true,
+            appendArrows: $('.facility-nav'),
+            appendDots: $('.facility-nav'),
+            prevArrow: '<button type="button" class="slick-prev-custom mr-4"><img src="<?php echo get_template_directory_uri(); ?>/images/icons/arrow-terra.png" class="w-2.5 h-2.5 rotate-180"></button>',
+            nextArrow: '<button type="button" class="slick-next-custom ml-4"><img src="<?php echo get_template_directory_uri(); ?>/images/icons/arrow-terra.png" class="w-2.5 h-2.5"></button>',
         });
 
         $('.awards-slider').slick({
@@ -489,7 +509,9 @@
             infinite: true,
             speed: 300,
             slidesToShow: 1,
-            adaptiveHeight: true
+            adaptiveHeight: true,
+            prevArrow: '<button type="button" class="slick-prev before:hidden !-left-2"><img src="<?php echo get_template_directory_uri(); ?>/images/icons/arrow-terra-2.png" class="w-6 h-6 rotate-180"></button>',
+            nextArrow: '<button type="button" class="slick-next before:hidden !-right-2"><img src="<?php echo get_template_directory_uri(); ?>/images/icons/arrow-terra-2.png" class="w-6 h-6"></button>',
         });
 
         $('.timeline-item').on('click', function () {
@@ -505,6 +527,39 @@
             // 3. Slide up all other contents and slide down the current one
             $('.timeline-content').not($(this).find('.timeline-content')).slideUp(400);
             $(this).find('.timeline-content').slideDown(400);
+        });
+
+        const $container = $('.draggable-container');
+        let isDown = false;
+        let startX;
+        let scrollLeft;
+
+        // IMPORTANT: Prevent browser from trying to drag images/links
+        $container.on('dragstart', function (e) {
+            e.preventDefault();
+        });
+
+        $container.on('mousedown', function (e) {
+            isDown = true;
+            $container.addClass('dragging');
+            // pageX is the mouse position relative to the whole document
+            startX = e.pageX - $container.offset().left;
+            scrollLeft = $container.scrollLeft();
+        });
+
+        $(window).on('mouseup', function () { // Attach to window to catch release outside container
+            isDown = false;
+            $container.removeClass('dragging');
+        });
+
+        $container.on('mousemove', function (e) {
+            if (!isDown) return;
+            e.preventDefault(); // Stop text selection or other default behaviors
+
+            const x = e.pageX - $container.offset().left;
+            const walk = (x - startX) * 1; // Adjust scroll speed multiplier here
+
+            $container.scrollLeft(scrollLeft - walk);
         });
     });
 </script>

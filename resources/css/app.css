@@ -79,6 +79,24 @@ h5 {
   line-height: 24px;
 }
 
+
+@media screen and (max-width: 768px) {
+  h3 {
+    font-size: 32px;
+    line-height: 36px;
+  }
+
+  h4 {
+    font-size: 24px;
+    line-height: 28px;
+  }
+
+  h5 {
+    font-size: 16px;
+    line-height: 20px;
+  }
+}
+
 .button {
   padding: 4px 24px;
   display: inline-flex;
@@ -169,6 +187,15 @@ h5 {
   border-color: #A05752;
 }
 
+.awards-slider .slick-dots li button {
+  @apply border-beige
+}
+
+.awards-slider .slick-dots li.slick-active button {
+  @apply bg-beige border-beige
+}
+
+
 .timeline-item .timeline-dot {
   transform: scale(0.6);
   /* Smaller dot */
@@ -199,4 +226,53 @@ h5 {
 /* Active Tab */
 .tab-trigger.active h5 {
   @apply opacity-100 border-terracota
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.no-scrollbar {
+  -ms-overflow-style: none;
+  /* IE and Edge */
+  scrollbar-width: none;
+  /* Firefox */
+}
+
+.draggable-container {
+  scroll-behavior: smooth;
+  /* For touch devices */
+}
+
+.draggable-container.dragging {
+  scroll-behavior: auto;
+  /* Disable smooth scroll during drag for instant response */
+  cursor: grabbing;
+}
+
+.draggable-container img {
+  pointer-events: none;
+  user-select: none;
+  -webkit-user-drag: none;
+}
+
+.slick-prev-custom {
+  order: 1;
+}
+
+.senses-nav .slick-dots,
+.facility-nav .slick-dots {
+  order: 2;
+  display: flex !important;
+  position: relative;
+  bottom: 0;
+  width: auto;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.slick-next-custom {
+  order: 3;
 }

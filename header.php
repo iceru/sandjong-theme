@@ -105,7 +105,7 @@
                 <a href="/">
                     <img src="<?php echo get_template_directory_uri(); ?>/images/logo.png" class="h-[42px]" alt="">
                 </a>
-                <ul class="flex items-center text-beige space-x-10">
+                <ul class="items-center text-beige space-x-10 hidden md:flex">
                     <li>
                         <a class="!no-underline text-xs" href="/">Home</a>
                     </li>
@@ -125,8 +125,8 @@
                         <a class="!no-underline text-xs" href="/sanctuary">Sanctuary of Sandjong</a>
                     </li>
                 </ul>
-                <div>
-                    <a href="" class="button bg-terracota">
+                <div class="hidden md:block">
+                    <a href="" class="button bg-terracota ">
                         Book Now
                     </a>
                 </div>

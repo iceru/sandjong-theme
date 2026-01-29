@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 
-<section id="header" class="h-auto flex flex-col justify-end items-center relative aspect-video w-full">
+<section id="header" class="h-screen md:h-auto flex flex-col justify-end items-center relative md:aspect-video w-full">
     <div class="absolute left-0 top-0 w-full h-full">
         <img class="w-full h-full object-cover" src="<?php echo get_template_directory_uri(); ?>/images/homepage.gif"
             alt="">
@@ -49,7 +49,7 @@
     <div>
         <h4 class="mb-8 text-center text-gold">A Window to the Soul</h4>
         <div class="flex flex-col justify-center items-center">
-            <div class="mb-8 w-[500px] h-[500px] relative flex justify-center items-center">
+            <div class="mb-8 md:w-[500px] h-[350px] md:h-[500px] relative flex justify-center items-center">
                 <h4 class="text-beige relative z-10 text-center max-w-[360px]">
                     The Unique Threads in Our Wellness Tapestry
                 </h4>
@@ -65,9 +65,9 @@
             </p>
         </div>
     </div>
-    <img class="w-[374px] h-[384px] object-cover absolute -left-16 top-[46%] rounded-lg -translate-y-1/2 z-0"
+    <img class="hidden md:block w-[374px] h-[384px] object-cover absolute -left-16 top-[46%] rounded-lg -translate-y-1/2 z-0"
         src="<?php echo get_template_directory_uri(); ?>/images/soul-3.png" alt="">
-    <img class="w-[374px] h-[384px] object-cover absolute -right-16 top-[46%] rounded-lg -translate-y-1/2 z-0"
+    <img class="hidden md:block w-[374px] h-[384px] object-cover absolute -right-16 top-[46%] rounded-lg -translate-y-1/2 z-0"
         src="<?php echo get_template_directory_uri(); ?>/images/soul-2.png" alt="">
 </section>
 
@@ -86,7 +86,7 @@
                         Serpong’s urban rhythm, the
                         sanctuary blends Baduy serenity with Peranakan culture. Earthy tones, woven textures, and
                         heritage-inspired details shape a warm space into a calming luxury within the vibrant city.</p>
-                    <a href="" class="button bg-gold">Explore</a>
+                    <a href="" class="button bg-gold block mb-8 md:mb-0">Explore</a>
                 </div>
                 <div>
                     <img src="<?php echo get_template_directory_uri(); ?>/images/episode.png"
@@ -100,7 +100,7 @@
                         and cultural grace of rare textures, heirloom tones, and apothecary elegance. Inspired by
                         Javanese wisdom, Balinese devotion, and Peranakan artistry, each ritual unfolds like a regal,
                         intimate, and timeless ceremonial offering.</p>
-                    <a href="" class="button bg-gold">Explore</a>
+                    <a href="" class="button bg-gold block mb-8 md:mb-0">Explore</a>
                 </div>
                 <div>
                     <img src="<?php echo get_template_directory_uri(); ?>/images/episode.png"
@@ -119,25 +119,26 @@
         <img class="w-full h-full object-cover object-top z-0"
             src="<?php echo get_template_directory_uri(); ?>/images/bg-footer.jpg" alt="">
     </div>
-    <div class="flex justify-between bg-beige mx-auto max-w-[1100px] p-16 rounded-lg z-10 relative -mt-40">
-        <div class="w-[45%]">
+    <div
+        class="flex flex-wrap md:flex-nowrap justify-between bg-beige mx-auto max-w-[1100px] p-6 md:p-16 rounded-lg z-10 relative -mt-40">
+        <div class="w-full md:w-[45%] mb-16 md:mb-0">
             <h5 class="text-gold mb-4">Wellness Whisper</h5>
             <h4 class="mb-9">Gentle Notes From Sandjong</h4>
-            <p class="body text-body mb-20 max-w-[381px]">
+            <p class="body text-body mb-9 md:mb-20 max-w-[381px]">
                 Wellness Whisper is our way of keeping you close to Sandjong’s journey. Where we share updates and open
                 a window into our world: the traditions that inspire us, the rituals we are creating, and the milestones
                 we are reaching together.
             </p>
             <a href="" class="button bg-terracota">Read More</a>
         </div>
-        <div class="flex flex-col space-y-2 items-center justify-center">
+        <div class="flex flex-col space-y-2 items-center justify-center hidden md:block">
             <img src="<?php echo get_template_directory_uri(); ?>/images/icons/arrow-terra.png"
                 class="-rotate-90 w-3 h-3 opacity-40" alt="">
             <div class="w-[1px] h-full border border-terracota border-dashed opacity-30"></div>
             <img src="<?php echo get_template_directory_uri(); ?>/images/icons/arrow-terra.png"
                 class="rotate-90 w-3 h-3 opacity-40" alt="">
         </div>
-        <div class="w-[45%] flex flex-col justify-center">
+        <div class="w-full md:w-[45%] flex flex-col justify-center">
             <div>
                 <small class="text-xs text-primary font-bold mb-2">17 Aug 2025</small>
                 <h4 class="mb-2">Promotion Headline Text</h4>
@@ -155,7 +156,7 @@
     <div class="absolute left-0 top-0 w-full h-full bg-black/50 z-10">
     </div>
 
-    <div class="text-beige relative z-20 text-center">
+    <div class="text-beige relative z-20 text-center px-4">
         <h3 class="mx-auto max-w-[539px] mb-6">Growing Wellness, Building Together</h3>
         <p class="body mx-auto max-w-[461px] mb-9">We invite you to join our journey of culture and care through
             partnerships
