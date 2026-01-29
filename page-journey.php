@@ -1,30 +1,26 @@
 <?php get_header(); ?>
 
 
-<section class="relative h-[501px] flex justify-center items-center">
+<section class="relative h-[400px] md:h-[501px] flex justify-center items-center">
     <div class="absolute w-full h-[110%] left-0 -top-[10%]" data-scroll data-scroll-speed="2">
         <img class="w-full h-full object-cover" src="<?php echo get_template_directory_uri(); ?>/images/bg-journey.png"
             alt="">
     </div>
-    <h4 class="text-beige relative z-10">Rooted in Amerta Jiwa</h4>
+    <h4 class="text-beige relative z-10 mt-14 md:mt-0">Rooted in Amerta Jiwa</h4>
 </section>
 
 <section class="bg-beige py-36 relative">
     <div class="container grid md:grid-cols-2 text-primary">
-        <div>
-            <h4 class="max-w-[312px]">
-                Nature Inheritance Rooted in Culture
-            </h4>
-        </div>
-        <div>
-            <p class="body">Born from Amerta Jiwa Indonesia, Sandjong elevates wellness into a living ritual. The name
-                Sandjong is
-                inspired by the Indonesian word “sanjung”, meaning “praise” or “to bring joy” which reflects our
-                devotion to heritage and balance. Rooted in Indonesia’s rich traditions, we reinterpret ancient wellness
-                philosophies into refined, multisensory experiences, and create spaces to return home to: to calm, to
-                culture, to self.
-            </p>
-        </div>
+        <h4 class="max-w-[312px] mb-10 md:mb-0">
+            Nature Inheritance Rooted in Culture
+        </h4>
+        <p class="body">Born from Amerta Jiwa Indonesia, Sandjong elevates wellness into a living ritual. The name
+            Sandjong is
+            inspired by the Indonesian word “sanjung”, meaning “praise” or “to bring joy” which reflects our
+            devotion to heritage and balance. Rooted in Indonesia’s rich traditions, we reinterpret ancient wellness
+            philosophies into refined, multisensory experiences, and create spaces to return home to: to calm, to
+            culture, to self.
+        </p>
     </div>
 </section>
 
@@ -32,13 +28,13 @@
     <div class="container grid md:grid-cols-2 ">
         <div>
             <h5 class="mb-9 text-gold">Our Commitment</h5>
-            <h4 class="max-w-[487px] text-beige mb-52">
+            <h4 class="max-w-[487px] text-beige mb-14 md:mb-52">
                 Amerta’s dedication to maintain a 5-star standard and crafting unforgettable experiences for our valued
                 customers is shown and nurtured through our vision, mission, culture, motto, and values.
             </h4>
         </div>
         <div
-            class="draggable-container absolute right-0 flex space-x-6 w-1/2 whitespace-nowrap overflow-x-auto pb-6 cursor-grab select-none no-scrollbar">
+            class="draggable-container md:absolute right-0 flex space-x-6 w-full md:w-1/2 whitespace-nowrap overflow-x-auto pb-6 cursor-grab select-none no-scrollbar">
 
             <div class="w-[312px] shrink-0">
                 <img src="<?php echo get_template_directory_uri(); ?>/images/vision.png"
@@ -166,7 +162,7 @@
         <!-- TODO: Slick Slider Grid Experiences -->
         <div class="senses-slider">
             <div>
-                <div class="grid grid-cols-2">
+                <div class="grid md:grid-cols-2 gap-6">
                     <div>
                         <img src="<?php echo get_template_directory_uri(); ?>/images/senses.png" class="rounded-lg"
                             alt="">
@@ -187,7 +183,7 @@
                 </div>
             </div>
             <div>
-                <div class="grid grid-cols-2">
+                <div class="grid md:grid-cols-2 gap-6">
                     <div>
                         <img src="<?php echo get_template_directory_uri(); ?>/images/senses.png" class="rounded-lg"
                             alt="">
@@ -213,16 +209,17 @@
     </div>
 </section>
 
-<section class="h-screen max-h-[702px] flex flex-col justify-center items-center relative z-20 ">
+<section class="h-[60vh] md:h-screen max-h-[702px] flex flex-col justify-center items-center relative z-20 ">
     <div class="absolute w-full h-full left-0 top-0 ">
         <img class="w-full h-full object-cover object-top"
             src="<?php echo get_template_directory_uri(); ?>/images/bg-ambience.png" alt="">
     </div>
-    <h4 class="text-gold relative z-10 mb-40">
+    <h4 class="text-gold relative z-10 mb-20 md:mb-40">
         Enchanting <span class="text-beige">Ambience</span>
     </h4>
-    <div class="bg-primary relative z-0 w-[70vw] mx-auto p-20 text-center -mb-[460px] rounded-2xl">
-        <h4 class="text-gold mb-16">
+    <div
+        class="bg-primary relative z-0 w-[90vw] md:w-[70vw] mx-auto py-10 px-4 md:!p-20 text-center -mb-[460px] rounded-2xl">
+        <h4 class="text-gold mb-8 md:mb-16">
             A space where time slows, and stories unfold
         </h4>
         <p class="text-beige max-w-[612px] mb-16 mx-auto">
@@ -241,7 +238,7 @@
             src="<?php echo get_template_directory_uri(); ?>/images/bg-beige.png" alt="">
     </div>
     <div class="container">
-        <h4 class="text-center mt-44 text-gold mb-16">Delicately Facilitating <span class="text-primary">
+        <h4 class="text-center mt-72 md:mt-44 text-gold mb-16">Delicately Facilitating <span class="text-primary">
                 Your Serene Moments
             </span>
         </h4>
@@ -254,7 +251,7 @@
                         <div>
                             <img src="<?php echo get_template_directory_uri(); ?>/images/lobby.png" alt="">
                         </div>
-                        <div class="bg-[#FFE5C9] rounded-xl relative px-20 py-16">
+                        <div class="bg-[#FFE5C9] rounded-xl relative p-8 md:px-20 md:py-16">
                             <div
                                 class="w-[97%] h-3 rounded-t-xl -top-3 left-1/2 -translate-x-1/2 bg-[#FFE5C9] absolute">
                             </div>
@@ -262,7 +259,7 @@
                                 class="w-[97%] h-3 rounded-b-xl -bottom-3 left-1/2 -translate-x-1/2 bg-[#FFE5C9] absolute">
                             </div>
                             <h4 class="text-gold mb-11">Lobby Area</h4>
-                            <p class="body max-w-[395px]">
+                            <p class="body max-w-[395px] mb-14 md:mb-0">
                                 The gate of Sandjong’s hospitality experience, where our professional receptionists
                                 welcome
                                 the
@@ -276,7 +273,7 @@
                         <div>
                             <img src="<?php echo get_template_directory_uri(); ?>/images/reflexology.png" alt="">
                         </div>
-                        <div class="bg-[#FFE5C9] rounded-xl relative px-20 py-16">
+                        <div class="bg-[#FFE5C9] rounded-xl relative p-8 md:px-20 md:py-16">
                             <div
                                 class="w-[97%] h-3 rounded-t-xl -top-3 left-1/2 -translate-x-1/2 bg-[#FFE5C9] absolute">
                             </div>
@@ -284,7 +281,7 @@
                                 class="w-[97%] h-3 rounded-b-xl -bottom-3 left-1/2 -translate-x-1/2 bg-[#FFE5C9] absolute">
                             </div>
                             <h4 class="text-gold mb-11">Reflexology Area</h4>
-                            <p class="body max-w-[395px]">
+                            <p class="body max-w-[395px] mb-14 md:mb-0">
                                 Features five comfortable chairs designed to apply sensational pressure to your nerves,
                                 leaving you feeling refreshed and invigorated.
                             </p>
@@ -292,7 +289,9 @@
                     </div>
                 </div>
             </div>
-            <div class="facility-nav flex items-center absolute left-[61%] -translate-x-1/2 bottom-20 mt-4"></div>
+            <div
+                class="facility-nav flex items-center absolute left-20 md:left-[61%] -translate-x-1/2 bottom-6 md:bottom-20 mt-4">
+            </div>
         </div>
     </div>
 </section>
@@ -405,56 +404,60 @@
 </section>
 
 <section id="awards" class="bg-beige py-28 relative z-10">
-    <h4 class="text-center text-gold mb-11">
-        In Gentle <span class="text-primary">Honor</span>
-    </h4>
-    <p class="body text-center max-w-[695px] mb-14 mx-auto">
-        Every recognition we have received is not a trophy, but a whisper of gratitude—gently offered by those who have
-        felt the calm, the comfort, and the culture within our sanctuary. These honors are not our destination. They are
-        gentle markers along our path—reminders that grace, when given sincerely, often returns softly.
-    </p>
-    <!-- TODO: Slick Slider Awards -->
-    <div class="bg-primary mx-auto max-w-[860px]  rounded-xl relative">
-        <div class="w-[97%] h-3 rounded-t-xl -top-3 left-1/2 -translate-x-1/2 bg-primary absolute"></div>
-        <div class="w-[97%] h-3 rounded-b-xl -bottom-3 left-1/2 -translate-x-1/2 bg-primary absolute"></div>
-        <div class="py-14 px-8">
-            <div class="awards-slider">
-                <div class="flex flex-col justify-center items-center text-center">
-                    <div class="flex justify-center">
-                        <img src="<?php echo get_template_directory_uri(); ?>/images/award-1.png" alt="">
+    <div class="container">
+        <h4 class="text-center text-gold mb-11">
+            In Gentle <span class="text-primary">Honor</span>
+        </h4>
+        <p class="body text-center max-w-[695px] mb-14 mx-auto">
+            Every recognition we have received is not a trophy, but a whisper of gratitude—gently offered by those who
+            have
+            felt the calm, the comfort, and the culture within our sanctuary. These honors are not our destination. They
+            are
+            gentle markers along our path—reminders that grace, when given sincerely, often returns softly.
+        </p>
+        <!-- TODO: Slick Slider Awards -->
+        <div class="bg-primary mx-auto max-w-[860px]  rounded-xl relative">
+            <div class="w-[97%] h-3 rounded-t-xl -top-3 left-1/2 -translate-x-1/2 bg-primary absolute"></div>
+            <div class="w-[97%] h-3 rounded-b-xl -bottom-3 left-1/2 -translate-x-1/2 bg-primary absolute"></div>
+            <div class="py-14 px-8">
+                <div class="awards-slider">
+                    <div class="flex flex-col justify-center items-center text-center">
+                        <div class="flex justify-center">
+                            <img src="<?php echo get_template_directory_uri(); ?>/images/award-1.png" alt="">
+                        </div>
+                        <h5 class="text-gold mt-4">The Best Spa 2025</h5>
+                        <p class="body text-beige max-w-[385px] mx-auto">
+                            An offering of appreciation for the experiences we’ve crafted with heart and heritage—where
+                            healing
+                            becomes a way home
+                        </p>
                     </div>
-                    <h5 class="text-gold mt-4">The Best Spa 2025</h5>
-                    <p class="body text-beige max-w-[385px] mx-auto">
-                        An offering of appreciation for the experiences we’ve crafted with heart and heritage—where
-                        healing
-                        becomes a way home
-                    </p>
-                </div>
-                <div class="flex flex-col justify-center items-center text-center">
-                    <div class="flex justify-center">
-                        <img src="<?php echo get_template_directory_uri(); ?>/images/award-1.png" alt="">
+                    <div class="flex flex-col justify-center items-center text-center">
+                        <div class="flex justify-center">
+                            <img src="<?php echo get_template_directory_uri(); ?>/images/award-1.png" alt="">
+                        </div>
+                        <h5 class="text-gold mt-4">The Best Spa 2025</h5>
+                        <p class="body text-beige max-w-[385px] mx-auto">
+                            An offering of appreciation for the experiences we’ve crafted with heart and heritage—where
+                            healing
+                            becomes a way home
+                        </p>
                     </div>
-                    <h5 class="text-gold mt-4">The Best Spa 2025</h5>
-                    <p class="body text-beige max-w-[385px] mx-auto">
-                        An offering of appreciation for the experiences we’ve crafted with heart and heritage—where
-                        healing
-                        becomes a way home
-                    </p>
-                </div>
-                <div class="flex flex-col justify-center items-center text-center">
-                    <div class="flex justify-center">
-                        <img src="<?php echo get_template_directory_uri(); ?>/images/award-1.png" alt="">
+                    <div class="flex flex-col justify-center items-center text-center">
+                        <div class="flex justify-center">
+                            <img src="<?php echo get_template_directory_uri(); ?>/images/award-1.png" alt="">
+                        </div>
+                        <h5 class="text-gold mt-4">The Best Spa 2025</h5>
+                        <p class="body text-beige max-w-[385px] mx-auto">
+                            An offering of appreciation for the experiences we’ve crafted with heart and heritage—where
+                            healing
+                            becomes a way home
+                        </p>
                     </div>
-                    <h5 class="text-gold mt-4">The Best Spa 2025</h5>
-                    <p class="body text-beige max-w-[385px] mx-auto">
-                        An offering of appreciation for the experiences we’ve crafted with heart and heritage—where
-                        healing
-                        becomes a way home
-                    </p>
                 </div>
             </div>
-        </div>
 
+        </div>
     </div>
 </section>
 
