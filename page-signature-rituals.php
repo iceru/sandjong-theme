@@ -134,7 +134,7 @@
             </div>
         </div>
         <div id="package" class="tab-content hidden">
-            <div class="rounded-lg relative flex flex-col justify-end p-14 min-h-[552px] mb-11">
+            <div class="rounded-lg relative flex flex-col justify-end p-14 min-h-[552px] mb-[71px]">
                 <div class="absolute w-full h-full left-0 top-0">
                     <img class="rounded-lg w-full h-full object-cover"
                         src="<?php echo get_template_directory_uri(); ?>/images/package.png" alt="">
@@ -151,13 +151,78 @@
                         <br />
                         Perfect
                         for: those looking for extended, full-journey indulgence or shared wellness experiences.
-
                     </p>
+                </div>
+            </div>
+            <div>
+                <div class="flex items-center space-x-2 mb-10">
+                    <img src="<?php echo get_template_directory_uri(); ?>/images/icons/arrow-gold.png"
+                        class="rotate-180" alt="">
+                    <div class="w-full border border-dashed h-[1px] border-gold"></div>
+                    <img src="<?php echo get_template_directory_uri(); ?>/images/icons/arrow-gold.png" alt="">
+                </div>
+                <div class="grid md:grid-cols-2">
+                    <div>
+                        <h5 class="text-terracota">Sandjong Scrub</h5>
+                    </div>
+                    <div>
+                        <div class="flex items-start space-x-14 pb-12 mb-12 border-b border-gold/50">
+                            <div>
+                                <h4 class="text-primary mb-10">Sirih Scrub</h4>
+                                <p>
+                                    This magic leaf helps reduce back pain, muscle tension, brighten the skin, and
+                                    minimize
+                                    black spots, especially for pregnant women.
+                                </p>
+                            </div>
+                            <div
+                                class="flex items-center bg-gold/20 text-gold space-x-2 rounded-lg py-1 px-2 shrink-0 mt-1">
+                                <img src="<?php echo get_template_directory_uri(); ?>/images/icons/timer.png" alt="">
+                                <span>45'</span>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-14 pb-12 mb-12 border-b border-gold/50">
+                            <div>
+                                <h4 class="text-primary mb-10">Lemon Scrub</h4>
+                                <p>
+                                    Lemon is a natural exfoliating agent. Combined with Himalayan salt, they become a
+                                    unique concoction that will lift all dead skin cells, maintain your body fluid
+                                    balance, and leave your skin years younger.
+                                </p>
+                            </div>
+                            <div
+                                class="flex items-center bg-gold/20 text-gold space-x-2 rounded-lg py-1 px-2 shrink-0 mt-1">
+                                <img src="<?php echo get_template_directory_uri(); ?>/images/icons/timer.png" alt="">
+                                <span>45'</span>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-14 pb-12 mb-12">
+                            <div>
+                                <h4 class="text-primary mb-10">Almond Scrub</h4>
+                                <p>
+                                    LAlmonds and oatmeal body scrub works wonder in maintaining moisture, brightening,
+                                    and reducing stretch marks. This mixture will also help treat skin conditions for
+                                    women after childbirth.
+                                </p>
+                            </div>
+                            <div
+                                class="flex items-center bg-gold/20 text-gold space-x-2 rounded-lg py-1 px-2 shrink-0 mt-1">
+                                <img src="<?php echo get_template_directory_uri(); ?>/images/icons/timer.png" alt="">
+                                <span>45'</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex items-center space-x-2 mb-10">
+                    <img src="<?php echo get_template_directory_uri(); ?>/images/icons/arrow-gold.png"
+                        class="rotate-180" alt="">
+                    <div class="w-full border border-dashed h-[1px] border-gold"></div>
+                    <img src="<?php echo get_template_directory_uri(); ?>/images/icons/arrow-gold.png" alt="">
                 </div>
             </div>
         </div>
         <div id="simple" class="tab-content hidden">
-            <div class="rounded-lg relative flex flex-col justify-end p-14 min-h-[552px] mb-11">
+            <div class="rounded-lg relative flex flex-col justify-end p-14 min-h-[552px] mb-16">
                 <div class="absolute w-full h-full left-0 top-0">
                     <img class="rounded-lg w-full h-full object-cover"
                         src="<?php echo get_template_directory_uri(); ?>/images/simple.png" alt="">
@@ -177,12 +242,99 @@
                     </p>
                 </div>
             </div>
+            <div>
+                <div class="grid md:grid-cols-2 gap-6 mb-6">
+                    <div>
+                        <img src="<?php echo get_template_directory_uri(); ?>/images/acu.png"
+                            class="rounded-lg w-full h-[384px] object-cover mb-5" alt="">
+                        <div class="flex justify-between mb-5">
+                            <h5 class="text-primary">Face Acupressure</h5>
+                            <div
+                                class="flex items-center bg-gold/20 text-gold space-x-2 rounded-lg py-0.5 px-2 shrink-0 mt-1">
+                                <img src="<?php echo get_template_directory_uri(); ?>/images/icons/timer.png" alt="">
+                                <span>45'</span>
+                            </div>
+                        </div>
+                        <p>
+                            Facial massage technique involves applying pressure to specific points on the face. This
+                            treatment can help improve blood circulation and alleviate tension, providing both health
+                            and beauty benefits
+                        </p>
+                    </div>
+                    <div>
+                        <img src="<?php echo get_template_directory_uri(); ?>/images/herbal.png"
+                            class="rounded-lg w-full h-[384px] object-cover mb-5" alt="">
+                        <div class="flex justify-between mb-5">
+                            <h5 class="text-primary">Herbal Infused Bath</h5>
+                            <div
+                                class="flex items-center bg-gold/20 text-gold space-x-2 rounded-lg py-0.5 px-2 shrink-0 mt-1">
+                                <img src="<?php echo get_template_directory_uri(); ?>/images/icons/timer.png" alt="">
+                                <span>45'</span>
+                            </div>
+                        </div>
+                        <p>
+                            Propel your body and soul to a relaxing heaven through the herbs and spices water treatment.
+                        </p>
+                    </div>
+                </div>
+                <div class="grid md:grid-cols-3 gap-6">
+                    <div>
+                        <img src="<?php echo get_template_directory_uri(); ?>/images/acu.png"
+                            class="rounded-lg w-full h-[384px] object-cover mb-5" alt="">
+                        <div class="flex justify-between mb-5">
+                            <h5 class="text-primary">Intimacy Care (Ratus)</h5>
+                            <div
+                                class="flex items-center bg-gold/20 text-gold space-x-2 rounded-lg py-0.5 px-2 shrink-0 mt-1">
+                                <img src="<?php echo get_template_directory_uri(); ?>/images/icons/timer.png" alt="">
+                                <span>45'</span>
+                            </div>
+                        </div>
+                        <p>
+                            Ratus is a specific treatment for women’s intimate parts, recommended for women after the
+                            delivery period or if you have particular concerns with your private area.
+                        </p>
+                    </div>
+                    <div>
+                        <img src="<?php echo get_template_directory_uri(); ?>/images/upper-body.png"
+                            class="rounded-lg w-full h-[384px] object-cover mb-5" alt="">
+                        <div class="flex justify-between mb-5">
+                            <h5 class="text-primary">Upper Body Reliever</h5>
+                            <div
+                                class="flex items-center bg-gold/20 text-gold space-x-2 rounded-lg py-0.5 px-2 shrink-0 mt-1">
+                                <img src="<?php echo get_template_directory_uri(); ?>/images/icons/timer.png" alt="">
+                                <span>45'</span>
+                            </div>
+                        </div>
+                        <p>
+                            Tension often occurs on pressure points along the upper body, namely the back, shoulder, and
+                            head. This treatment works along the meridian in harmonious synergy and relieves muscle
+                            tension in the upper body resulting in a fresher feeling throughout the day.
+                        </p>
+                    </div>
+                    <div>
+                        <img src="<?php echo get_template_directory_uri(); ?>/images/milk.png"
+                            class="rounded-lg w-full h-[384px] object-cover mb-5" alt="">
+                        <div class="flex justify-between mb-5">
+                            <h5 class="text-primary">Milk Honey Bath</h5>
+                            <div
+                                class="flex items-center bg-gold/20 text-gold space-x-2 rounded-lg py-0.5 px-2 shrink-0 mt-1">
+                                <img src="<?php echo get_template_directory_uri(); ?>/images/icons/timer.png" alt="">
+                                <span>45'</span>
+                            </div>
+                        </div>
+                        <p>
+                            Enjoy the soothing treatment experience in honey and milk that helps brighten the skin.
+                        </p>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </section>
 
 <script>
     $(document).ready(function () {
+        // 1. Initialize the slider
         $('.signature-sliders').slick({
             infinite: false,
             slidesToShow: 1.25,
@@ -191,14 +343,24 @@
         });
 
         $('.tab-trigger').on('click', function () {
+            // If already active, don't do anything
+            if ($(this).hasClass('active')) return;
+
             $('.tab-trigger').removeClass('active');
             $(this).addClass('active');
 
             const target = $(this).data('target');
 
-            $('.tab-content').addClass('hidden'); // Hide all
-            $(target).removeClass('hidden').hide().fadeIn(500); // Show target with a smooth fade
+            // 2. Hide all and Show target
+            $('.tab-content').addClass('hidden');
+
+            // Use a callback function inside fadeIn to ensure the 
+            // slider reinitializes AFTER the element is visible
+            $(target).removeClass('hidden').hide().fadeIn(500, function () {
+                // 3. Re-initialize/Refresh sliders inside the active tab
+                $(this).find('.signature-sliders').slick('setPosition');
+            });
         });
-    })
+    });
 </script>
 <?php get_footer(); ?>
