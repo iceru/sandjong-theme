@@ -79,6 +79,24 @@ h5 {
   line-height: 24px;
 }
 
+
+@media screen and (max-width: 768px) {
+  h3 {
+    font-size: 32px;
+    line-height: 36px;
+  }
+
+  h4 {
+    font-size: 24px;
+    line-height: 28px;
+  }
+
+  h5 {
+    font-size: 16px;
+    line-height: 20px;
+  }
+}
+
 .button {
   padding: 4px 24px;
   display: inline-flex;
@@ -123,4 +141,138 @@ h5 {
 
 .button:active {
   transform: scale(0.98);
+}
+
+/* Slick Slider Dots Styling */
+.slick-dots {
+  bottom: -45px;
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+}
+
+.slick-dots li {
+  width: 10px;
+  height: 10px;
+  margin: 0 6px;
+  padding: 0;
+  cursor: pointer;
+}
+
+.slick-dots li button {
+  width: 10px;
+  height: 10px;
+  padding: 0;
+  cursor: pointer;
+  color: transparent;
+  border: 1px solid #A05752;
+  border-radius: 50%;
+  outline: none;
+  background: transparent;
+  display: block;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.slick-dots li button:before {
+  display: none !important;
+}
+
+.slick-dots li.slick-active button {
+  background: #A05752;
+  border-color: #A05752;
+}
+
+.awards-slider .slick-dots li button {
+  @apply border-beige
+}
+
+.awards-slider .slick-dots li.slick-active button {
+  @apply bg-beige border-beige
+}
+
+
+.timeline-item .timeline-dot {
+  transform: scale(0.6);
+  /* Smaller dot */
+  transition: all 0.3s ease;
+}
+
+.timeline-title {
+  @apply text-beige opacity-50;
+  /* Beige and 50% opacity */
+  transition: all 0.3s ease;
+}
+
+/* Active State (Only 1 at a time) */
+.timeline-item.active .timeline-dot {
+  transform: scale(1);
+  /* Full size gold dot */
+}
+
+.timeline-item.active .timeline-title {
+  @apply text-gold opacity-100;
+  /* Gold text, full opacity */
+}
+
+.tab-trigger h5 {
+  @apply opacity-40 border-b-2 border-transparent cursor-pointer;
+}
+
+/* Active Tab */
+.tab-trigger.active h5 {
+  @apply opacity-100 border-terracota
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.no-scrollbar {
+  -ms-overflow-style: none;
+  /* IE and Edge */
+  scrollbar-width: none;
+  /* Firefox */
+}
+
+.draggable-container {
+  scroll-behavior: smooth;
+  /* For touch devices */
+}
+
+.draggable-container.dragging {
+  scroll-behavior: auto;
+  /* Disable smooth scroll during drag for instant response */
+  cursor: grabbing;
+}
+
+.draggable-container img {
+  pointer-events: none;
+  user-select: none;
+  -webkit-user-drag: none;
+}
+
+.slick-prev-custom {
+  order: 1;
+}
+
+.senses-nav .slick-dots,
+.facility-nav .slick-dots {
+  order: 2;
+  display: flex !important;
+  position: relative;
+  bottom: 0;
+  width: auto;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.slick-next-custom {
+  order: 3;
 }

@@ -22,11 +22,11 @@
     </footer> -->
 
 <footer class="bg-primary text-beige relative z-20">
-    <section class="container flex py-11 space-x-16">
-        <div class="w-[20%]">
+    <section class="container flex flex-wrap md:flex-nowrap py-11 space-y-12 md:space-y-0 md:space-x-16">
+        <div class="w-full md:w-[20%]">
             <img src="<?php echo get_template_directory_uri(); ?>/images/logo.png" alt="Sandjong Logo">
         </div>
-        <div class="w-[20%]">
+        <div class="w-full md:w-[20%]">
             <h6 class="mb-5 uppercase text-gold text-xs tracking-widest">Address</h6>
             <div class="mb-14">
                 <h5 class="mb-6">
@@ -50,13 +50,13 @@
         </div>
 
         <div>
-            <div class="flex space-x-14">
+            <div class="flex flex-wrap md:flex-nowrap space-y-12 md:space-y-0 md:space-x-14">
                 <div>
                     <div>
                         <h6 class="mb-5 uppercase text-gold text-xs tracking-widest">Navigation</h6>
                     </div>
                     <div>
-                        <ul class="space-y-5">
+                        <ul class="space-y-2 md:space-y-5">
                             <li><a href="" class="!no-underline">Journey of Sandjong</a></li>
                             <li><a href="" class="!no-underline">Signature Rituals</a></li>
                             <li><a href="" class="!no-underline">Wellness Whisper</a></li>

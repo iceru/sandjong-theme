@@ -19,6 +19,18 @@
     <link href="https://fonts.googleapis.com/css2?family=Philosopher:ital,wght@0,400;0,700;1,400;1,700&display=swap"
         rel="stylesheet">
 
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"
+        integrity="sha512-HGOnQO9+SP1V92SrtZfjqxxtLmVzqZpjFFekvzZVWoiASSQgSr4cw9Kqd2+l8Llp4Gm0G8GIFJ4ddwZilcdb8A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css"
+        integrity="sha512-17EgCFERpgZKcm0j0fEq1YCJuyAWdz9KUtv1EjVuaOz8pDnh/0nZxmU6BBXwaaxqoi9PQXnRWqlcDB027hgv9A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css"
+        integrity="sha512-yHknP1/AwR+yx26cB1y0cjvQUMvEa2PFzt1c9LlS4pRQ5NOTZFWbhBig+X9G9eYW/8m0/4OXNx8pxJ6z57x0dw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
     <?php wp_head(); ?>
 </head>
 
@@ -93,7 +105,7 @@
                 <a href="/">
                     <img src="<?php echo get_template_directory_uri(); ?>/images/logo.png" class="h-[42px]" alt="">
                 </a>
-                <ul class="flex items-center text-beige space-x-10">
+                <ul class="items-center text-beige space-x-10 hidden md:flex">
                     <li>
                         <a class="!no-underline text-xs" href="/">Home</a>
                     </li>
@@ -113,8 +125,8 @@
                         <a class="!no-underline text-xs" href="/sanctuary">Sanctuary of Sandjong</a>
                     </li>
                 </ul>
-                <div>
-                    <a href="" class="button bg-terracota">
+                <div class="hidden md:block">
+                    <a href="" class="button bg-terracota ">
                         Book Now
                     </a>
                 </div>
