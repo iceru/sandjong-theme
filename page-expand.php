@@ -113,16 +113,69 @@
     </div>
 </section>
 
-<section class="bg-beige py-32 container flex">
-    <div>
-        <p class="text-primary max-w-[326px]">
-            Each Sandjong franchise is thoughtfully curated: maintaining our standards of care, heritage, and sensory
-            experience, while allowing your space to reflect the spirit of its surroundings.
-        </p>
+<section class="bg-beige py-32 relative z-10">
+    <div class="container flex space-x-28">
+        <div class="shrink-0">
+            <p class="text-primary max-w-[326px]">
+                Each Sandjong franchise is thoughtfully curated: maintaining our standards of care, heritage, and
+                sensory
+                experience, while allowing your space to reflect the spirit of its surroundings.
+            </p>
+        </div>
+        <div class="">
+            <p class="text-primary mb-[61px]">You will receive:</p>
+            <div class="grid md:grid-cols-3">
+                <div>
+                    <div class="w-16 h-16 mb-9 rounded-full bg-gold/20 flex justify-center items-center">
+                        <img src="<?php echo get_template_directory_uri(); ?>/images/icons/certificate.png"
+                            class="w-[42px] h-[42px] object-contain" alt="">
+                    </div>
+                    <h5 class="text-primary max-w-[210px]">Full franchise license and rights to the Sandjong brand</h5>
+                </div>
+
+            </div>
+        </div>
     </div>
-    <div class="">
-        <p class="text-primary">You will receive:</p>
-        <div class="grid md:grid-cols-3">
+</section>
+
+<section class="bg-beige py-24 relative">
+    <div class="absolute w-full h-full left-0 top-0 opacity-10">
+        <img src="<?php echo get_template_directory_uri(); ?>/images/bg-beige.png" class="w-full h-full object-cover"
+            alt="">
+    </div>
+    <div class="container grid md:grid-cols-2 relative z-10">
+        <div class="text-primary">
+            <h4 class="text-terracota mb-6">Let Us Build Serenity, Together</h4>
+            <p class="body mb-16 max-w-[413px]">
+                If you feel aligned with our purpose, we welcome you into this shared journey to create sanctuaries that
+                heal, restore, and carry the richness of Indonesian culture forward.
+            </p>
+            <h5 class=" mb-2">
+                Inquire with us
+            </h5>
+            <p class="body  mb-16">
+                Sandjong Wellness by Amerta Jiwa Indonesia
+            </p>
+            <p class="body font-bold">
+                Episode Hotel Gading Serpong
+            </p>
+            <p class="body max-w-[214px] mb-9 ">
+                2nd Floor, Jl. Gading Serpong Boulevard Barat S No. 6-7 Pakulonan Barat Tangerang — 15810
+            </p>
+            <div class="flex space-x-5 mb-4">
+                <p class="body text-terracota font-bold">M</p>
+                <p class="body">+62 818 77 4915</p>
+            </div>
+            <div class="flex space-x-5 mb-4">
+                <p class="body text-terracota font-bold">M</p>
+                <p class="body">+62 21 3037 6088</p>
+            </div>
+            <div class="flex space-x-5 mb-4">
+                <p class="body text-terracota font-bold">E</p>
+                <p class="body">info.sandjongspa@amertajiwa.com</p>
+            </div>
+        </div>
+        <div>
 
         </div>
     </div>
