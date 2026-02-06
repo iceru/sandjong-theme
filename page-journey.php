@@ -29,8 +29,7 @@
         <div>
             <h5 class="mb-9 text-gold">Our Commitment</h5>
             <h4 class="max-w-[487px] text-beige mb-14 md:mb-52">
-                Amerta’s dedication to maintain a 5-star standard and crafting unforgettable experiences for our valued
-                customers is shown and nurtured through our vision, mission, culture, motto, and values.
+             As part of Amerta, Sandjong is dedicated to maintaining a 5-star standard and crafting unforgettable experiences for our valued customers. This commitment is reflected and nurtured through our vision, mission, culture, motto, and values.
             </h4>
         </div>
         <div
