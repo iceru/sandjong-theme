@@ -29,7 +29,8 @@
         <div>
             <h5 class="mb-9 text-gold">Our Commitment</h5>
             <h4 class="max-w-[487px] text-beige mb-14 md:mb-52">
-             As part of Amerta, Sandjong is dedicated to maintaining a 5-star standard and crafting unforgettable experiences for our valued customers. This commitment is reflected and nurtured through our vision, mission, culture, motto, and values.
+                Amerta’s dedication to maintain a 5-star standard and crafting unforgettable experiences for our valued
+                customers is shown and nurtured through our vision, mission, culture, motto, and values.
             </h4>
         </div>
         <div
@@ -160,50 +161,52 @@
         </div>
         <!-- TODO: Slick Slider Grid Experiences -->
         <div class="senses-slider">
-            <div>
-                <div class="grid md:grid-cols-2 gap-6">
+            <?php
+            $senses_query = new WP_Query(array(
+                'post_type' => 'sense',
+                'posts_per_page' => -1,
+                'orderby' => 'menu_order',
+                'order' => 'ASC',
+            ));
+
+            if ($senses_query->have_posts()):
+                while ($senses_query->have_posts()):
+                    $senses_query->the_post();
+                    $icon = get_field('icon'); // Assuming ACF field 'icon'
+                    ?>
                     <div>
-                        <img src="<?php echo get_template_directory_uri(); ?>/images/senses.png" class="rounded-lg"
-                            alt="">
-                    </div>
-                    <div>
-                        <div class="mb-10 w-[71px] h-[71px] rounded-full bg-[#966938] flex justify-center items-center">
-                            <img src="<?php echo get_template_directory_uri(); ?>/images/icons/eye.png"
-                                class="w-[54px] h-[54px] object-contain" alt="">
+                        <div class="grid md:grid-cols-2">
+                            <div>
+                                <?php if (has_post_thumbnail()): ?>
+                                    <?php the_post_thumbnail('large', array('class' => 'rounded-lg w-full h-full object-cover max-w-[500px]')); ?>
+                                <?php else: ?>
+                                    <img src="<?php echo get_template_directory_uri(); ?>/images/senses.png" class="rounded-lg"
+                                        alt="">
+                                <?php endif; ?>
+                            </div>
+                            <div>
+                                <div class="mb-10 w-[71px] h-[71px] rounded-full bg-[#966938] flex justify-center items-center">
+                                    <?php if ($icon): ?>
+                                        <img src="<?php echo esc_url($icon); ?>" class="w-[54px] h-[54px] object-contain">
+                                    <?php else: ?>
+                                        <img src=" <?php echo get_template_directory_uri(); ?>/images/icons/eye.png"
+                                            class="w-[54px] h-[54px] object-contain" alt="">
+                                    <?php endif; ?>
+                                </div>
+                                <h5 class="text-gold mb-4"><?php the_title(); ?></h5>
+                                <div class="body text-beige max-w-[336px]">
+                                    <?php the_content(); ?>
+                                </div>
+                            </div>
                         </div>
-                        <h5 class="text-gold mb-4">Sight</h5>
-                        <p class="body text-beige max-w-[336px]">
-                            Our spaces are thoughtfully designed, showcasing inviting layouts, calming colors, abundant
-                            natural light, and high-quality materials to create visually pleasing and motivating
-                            environments.
-
-                        </p>
                     </div>
-                </div>
-            </div>
-            <div>
-                <div class="grid md:grid-cols-2 gap-6">
-                    <div>
-                        <img src="<?php echo get_template_directory_uri(); ?>/images/senses.png" class="rounded-lg"
-                            alt="">
-                    </div>
-                    <div>
-                        <div class="mb-10 w-[71px] h-[71px] rounded-full bg-[#966938] flex justify-center items-center">
-                            <img src="<?php echo get_template_directory_uri(); ?>/images/icons/flower.png"
-                                class="w-[54px] h-[54px] object-contain" alt="">
-                        </div>
-                        <h5 class="text-gold mb-4">Smell</h5>
-                        <p class="body text-beige max-w-[336px]">
-                            We incorporate aromatherapy into all our spaces, using pleasant scents to invigorate and
-                            refresh clients, personalized to their activity and energy.
-
-                        </p>
-                    </div>
-                </div>
-            </div>
-
+                    <?php
+                endwhile;
+                wp_reset_postdata();
+            endif;
+            ?>
         </div>
-        <div class="senses-nav flex items-center absolute left-[50%] ml-12 -translate-x-1/2 bottom-20 mt-4"></div>
+        <div class="senses-nav flex items-center absolute left-[52%] ml-12 -translate-x-1/2 bottom-20 mt-4"></div>
 
     </div>
 </section>
@@ -245,51 +248,49 @@
         <!-- TODO: Slick Slider Facility -->
         <div class="relative">
             <div class="facility-slider">
-                <div>
-                    <div class="grid md:grid-cols-2 gap-6">
+                <?php
+                $facility_query = new WP_Query(array(
+                    'post_type' => 'facility',
+                    'posts_per_page' => -1,
+                    'orderby' => 'menu_order',
+                    'order' => 'ASC',
+                ));
+
+                if ($facility_query->have_posts()):
+                    while ($facility_query->have_posts()):
+                        $facility_query->the_post();
+                        ?>
                         <div>
-                            <img src="<?php echo get_template_directory_uri(); ?>/images/lobby.png" alt="">
-                        </div>
-                        <div class="bg-[#FFE5C9] rounded-xl relative p-8 md:px-20 md:py-16">
-                            <div
-                                class="w-[97%] h-3 rounded-t-xl -top-3 left-1/2 -translate-x-1/2 bg-[#FFE5C9] absolute">
+                            <div class="grid md:grid-cols-2 gap-6">
+                                <div>
+                                    <?php if (has_post_thumbnail()): ?>
+                                        <?php the_post_thumbnail('large', array('class' => 'w-full h-full object-cover rounded-lg')); ?>
+                                    <?php else: ?>
+                                        <img src="<?php echo get_template_directory_uri(); ?>/images/lobby.png" alt="">
+                                    <?php endif; ?>
+                                </div>
+                                <div class="bg-[#FFE5C9] rounded-xl relative p-8 md:px-20 md:py-16">
+                                    <div
+                                        class="w-[97%] h-3 rounded-t-xl -top-3 left-1/2 -translate-x-1/2 bg-[#FFE5C9] absolute">
+                                    </div>
+                                    <div
+                                        class="w-[97%] h-3 rounded-b-xl -bottom-3 left-1/2 -translate-x-1/2 bg-[#FFE5C9] absolute">
+                                    </div>
+                                    <h4 class="text-gold mb-11"><?php the_title(); ?></h4>
+                                    <div class="body max-w-[395px] mb-14 md:mb-0">
+                                        <?php the_content(); ?>
+                                    </div>
+                                </div>
                             </div>
-                            <div
-                                class="w-[97%] h-3 rounded-b-xl -bottom-3 left-1/2 -translate-x-1/2 bg-[#FFE5C9] absolute">
-                            </div>
-                            <h4 class="text-gold mb-11">Lobby Area</h4>
-                            <p class="body max-w-[395px] mb-14 md:mb-0">
-                                The gate of Sandjong’s hospitality experience, where our professional receptionists
-                                welcome
-                                the
-                                guests with comprehensive information and blended oils recommendation.
-                            </p>
                         </div>
-                    </div>
-                </div>
-                <div>
-                    <div class="grid md:grid-cols-2 gap-6">
-                        <div>
-                            <img src="<?php echo get_template_directory_uri(); ?>/images/reflexology.png" alt="">
-                        </div>
-                        <div class="bg-[#FFE5C9] rounded-xl relative p-8 md:px-20 md:py-16">
-                            <div
-                                class="w-[97%] h-3 rounded-t-xl -top-3 left-1/2 -translate-x-1/2 bg-[#FFE5C9] absolute">
-                            </div>
-                            <div
-                                class="w-[97%] h-3 rounded-b-xl -bottom-3 left-1/2 -translate-x-1/2 bg-[#FFE5C9] absolute">
-                            </div>
-                            <h4 class="text-gold mb-11">Reflexology Area</h4>
-                            <p class="body max-w-[395px] mb-14 md:mb-0">
-                                Features five comfortable chairs designed to apply sensational pressure to your nerves,
-                                leaving you feeling refreshed and invigorated.
-                            </p>
-                        </div>
-                    </div>
-                </div>
+                        <?php
+                    endwhile;
+                    wp_reset_postdata();
+                endif;
+                ?>
             </div>
             <div
-                class="facility-nav flex items-center absolute left-20 md:left-[61%] -translate-x-1/2 bottom-6 md:bottom-20 mt-4">
+                class="facility-nav flex items-center absolute left-20 md:left-[63%] -translate-x-1/2 bottom-6 md:bottom-20 mt-4">
             </div>
         </div>
     </div>
@@ -420,39 +421,36 @@
             <div class="w-[97%] h-3 rounded-b-xl -bottom-3 left-1/2 -translate-x-1/2 bg-primary absolute"></div>
             <div class="py-14 px-8">
                 <div class="awards-slider">
-                    <div class="flex flex-col justify-center items-center text-center">
-                        <div class="flex justify-center">
-                            <img src="<?php echo get_template_directory_uri(); ?>/images/award-1.png" alt="">
-                        </div>
-                        <h5 class="text-gold mt-4">The Best Spa 2025</h5>
-                        <p class="body text-beige max-w-[385px] mx-auto">
-                            An offering of appreciation for the experiences we’ve crafted with heart and heritage—where
-                            healing
-                            becomes a way home
-                        </p>
-                    </div>
-                    <div class="flex flex-col justify-center items-center text-center">
-                        <div class="flex justify-center">
-                            <img src="<?php echo get_template_directory_uri(); ?>/images/award-1.png" alt="">
-                        </div>
-                        <h5 class="text-gold mt-4">The Best Spa 2025</h5>
-                        <p class="body text-beige max-w-[385px] mx-auto">
-                            An offering of appreciation for the experiences we’ve crafted with heart and heritage—where
-                            healing
-                            becomes a way home
-                        </p>
-                    </div>
-                    <div class="flex flex-col justify-center items-center text-center">
-                        <div class="flex justify-center">
-                            <img src="<?php echo get_template_directory_uri(); ?>/images/award-1.png" alt="">
-                        </div>
-                        <h5 class="text-gold mt-4">The Best Spa 2025</h5>
-                        <p class="body text-beige max-w-[385px] mx-auto">
-                            An offering of appreciation for the experiences we’ve crafted with heart and heritage—where
-                            healing
-                            becomes a way home
-                        </p>
-                    </div>
+                    <?php
+                    $awards_query = new WP_Query(array(
+                        'post_type' => 'award',
+                        'posts_per_page' => -1,
+                        'orderby' => 'date',
+                        'order' => 'DESC',
+                    ));
+
+                    if ($awards_query->have_posts()):
+                        while ($awards_query->have_posts()):
+                            $awards_query->the_post();
+                            ?>
+                            <div class="flex flex-col justify-center items-center text-center">
+                                <div class="flex justify-center">
+                                    <?php if (has_post_thumbnail()): ?>
+                                        <?php the_post_thumbnail('medium', array('class' => 'object-contain')); ?>
+                                    <?php else: ?>
+                                        <img src="<?php echo get_template_directory_uri(); ?>/images/award-1.png" alt="">
+                                    <?php endif; ?>
+                                </div>
+                                <h5 class="text-gold mt-4"><?php the_title(); ?></h5>
+                                <div class="body text-beige max-w-[385px] mx-auto">
+                                    <?php the_content(); ?>
+                                </div>
+                            </div>
+                            <?php
+                        endwhile;
+                        wp_reset_postdata();
+                    endif;
+                    ?>
                 </div>
             </div>
 

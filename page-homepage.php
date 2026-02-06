@@ -71,7 +71,7 @@
         src="<?php echo get_template_directory_uri(); ?>/images/soul-2.png" alt="">
 </section>
 
-<section class="bg-beige py-28">
+<section class="bg-beige py-28" id="branches">
     <div class="container">
         <div class="flex items-center space-x-6 mb-16">
             <h5 class="text-gold whitespace-nowrap">Sandjong's Wellness Branches</h5>
@@ -79,34 +79,40 @@
             <a href="" class="button !text-gold whitespace-nowrap !p-0">Explore more</a>
         </div>
         <div>
-            <div class="grid md:grid-cols-2 not-last:mb-8 not-last:pb-8 not-last:border-b border-gold border-dashed">
-                <div class="space-y-8 text-primary ">
-                    <h4>Sandjong at Episode Gading Serpong</h4>
-                    <p class="max-w-[489px]">Opened in 2022, this is where the Sandjong story began. Amid Gading
-                        Serpong’s urban rhythm, the
-                        sanctuary blends Baduy serenity with Peranakan culture. Earthy tones, woven textures, and
-                        heritage-inspired details shape a warm space into a calming luxury within the vibrant city.</p>
-                    <a href="" class="button bg-gold block mb-8 md:mb-0">Explore</a>
-                </div>
-                <div>
-                    <img src="<?php echo get_template_directory_uri(); ?>/images/episode.png"
-                        class="max-h-[355px] object-cover" alt="">
-                </div>
-            </div>
-            <div class="grid md:grid-cols-2 not-last:mb-8 not-last:pb-8 not-last:border-b border-gold border-dashed">
-                <div class="space-y-8 text-primary ">
-                    <h4>Sandjong at The Orient Jakarta</h4>
-                    <p class="max-w-[489px]">Opened in 2024, Sandjong at The Orient Jakarta is a haven of refined design
-                        and cultural grace of rare textures, heirloom tones, and apothecary elegance. Inspired by
-                        Javanese wisdom, Balinese devotion, and Peranakan artistry, each ritual unfolds like a regal,
-                        intimate, and timeless ceremonial offering.</p>
-                    <a href="" class="button bg-gold block mb-8 md:mb-0">Explore</a>
-                </div>
-                <div>
-                    <img src="<?php echo get_template_directory_uri(); ?>/images/episode.png"
-                        class="max-h-[355px] object-cover" alt="">
-                </div>
-            </div>
+            <?php
+            $branch_query = new WP_Query(array(
+                'post_type' => 'branch',
+                'posts_per_page' => -1,
+                'orderby' => 'menu_order',
+                'order' => 'ASC',
+            ));
+
+            if ($branch_query->have_posts()):
+                while ($branch_query->have_posts()):
+                    $branch_query->the_post();
+                    ?>
+                    <div class="grid md:grid-cols-2 not-last:mb-8 not-last:pb-8 not-last:border-b border-gold border-dashed">
+                        <div class="space-y-8 text-primary ">
+                            <h4><?php the_title(); ?></h4>
+                            <div class="max-w-[489px]">
+                                <?php the_content(); ?>
+                            </div>
+                            <a href="<?php the_permalink(); ?>" class="button bg-gold inline-block mb-8 md:mb-0">Explore</a>
+                        </div>
+                        <div>
+                            <?php if (has_post_thumbnail()): ?>
+                                <?php the_post_thumbnail('large', array('class' => 'masked-image max-h-[355px] w-full object-cover')); ?>
+                            <?php else: ?>
+                                <img src="<?php echo get_template_directory_uri(); ?>/images/episode.png"
+                                    class=" max-h-[355px] object-cover" alt="">
+                            <?php endif; ?>
+                        </div>
+                    </div>
+                    <?php
+                endwhile;
+                wp_reset_postdata();
+            endif;
+            ?>
         </div>
     </div>
 </section>
