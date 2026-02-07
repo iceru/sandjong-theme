@@ -57,10 +57,10 @@
                     </div>
                     <div>
                         <ul class="space-y-2 md:space-y-5">
-                            <li><a href="" class="!no-underline">Journey of Sandjong</a></li>
-                            <li><a href="" class="!no-underline">Signature Rituals</a></li>
-                            <li><a href="" class="!no-underline">Wellness Whisper</a></li>
-                            <li><a href="" class="!no-underline">Expand with Sandjong</a></li>
+                            <li><a href="/journey" class="!no-underline">Journey of Sandjong</a></li>
+                            <li><a href="/signature-rituals" class="!no-underline">Signature Rituals</a></li>
+                            <li><a href="/wellness-whisper" class="!no-underline">Wellness Whisper</a></li>
+                            <li><a href="/expand" class="!no-underline">Expand with Sandjong</a></li>
                         </ul>
                     </div>
                 </div>
@@ -70,9 +70,11 @@
                     </div>
                     <div>
                         <ul class="space-y-5">
-                            <li><a href="" class="!no-underline">021-3952-1229</a></li>
-                            <li><a href="" class="!no-underline">0821-3037-6088</a></li>
-                            <li><a href="" class="!no-underline">info.sandjong@amertajiwa.com</a></li>
+                            <li><a href="tel:+622139521229" class="!no-underline">021-3952-1229</a></li>
+                            <li><a href="tel:+6282130376088" class="!no-underline">0821-3037-6088</a></li>
+                            <li><a href="mailto:info.sandjong@amertajiwa.com"
+                                    class="!no-underline">info.sandjong@amertajiwa.com</a>
+                            </li>
                         </ul>
                     </div>
                 </div>
@@ -82,8 +84,11 @@
                     </div>
                     <div>
                         <ul class="space-y-5">
-                            <li><a href="" class="!no-underline">Instagram</a></li>
-                            <li><a href="" class="!no-underline">Facebook</a></li>
+                            <li><a href="https://www.instagram.com/sandjongwellness/?hl=en" target="_blank"
+                                    class="!no-underline">Instagram</a></li>
+                            <li><a href="https://www.facebook.com/sandjongwellness" target="_blank"
+                                    class="!no-underline">Facebook</a>
+                            </li>
                         </ul>
                     </div>
                 </div>

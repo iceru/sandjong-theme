@@ -16,78 +16,98 @@
     </div>
 </section>
 
-<section class="bg-beige relative z-10 py-28">
+<section class="bg-beige relative z-10 py-28" id="branches">
     <div class="container space-y-32">
-        <div class="grid md:grid-cols-2 gap-20">
-            <div>
-                <h4 class="text-gold mb-4">Sandjong at Episode Gading Serpong</h4>
-                <p class="body text-primary mb-12">
-                    Experience Peranakan Banten
-                </p>
-                <p class="body mb-16">
-                    Opened in 2022, this is where the Sandjong journey began. Nestled in the urban rhythm of Gading
-                    Serpong, this sanctuary draws inspiration from the grounded serenity of Baduy traditions and the
-                    vibrant soul of Peranakan culture. Earthy tones, handwoven textures, and heritage colors create a
-                    warm, nostalgic space that feels both rooted and rejuvenating. A place where simplicity becomes
-                    luxury, and everyday stress gives way to meaningful stillness.
-                </p>
-                <div class="grid md:grid-cols-3 text-primary gap-8 gap-y-16">
+        <?php
+        $branch_query = new WP_Query(array(
+            'post_type' => 'branch',
+            'posts_per_page' => -1,
+            'orderby' => 'menu_order',
+            'order' => 'ASC',
+        ));
+
+        if ($branch_query->have_posts()):
+            while ($branch_query->have_posts()):
+                $branch_query->the_post();
+                ?>
+                <div class="grid md:grid-cols-2 gap-20">
                     <div>
-                        <p class="font-bold body mb-1">
-                            Location
-                        </p>
-                        <p class="body">
-                            2nd floor of Episode Hotel Gading Serpong, Tangerang
-                        </p>
-                    </div>
-                    <div>
-                        <p class="font-bold body mb-1">
-                            Perfect for
-                        </p>
-                        <p class="body max-w-[143px]">
-                            Urban dwellers seeking balance, quiet, and reconnection
-                        </p>
-                    </div>
-                    <div>
-                        <p class="font-bold body mb-1">
-                            Socials
-                        </p>
-                        <div class="flex">
-                            <a href="#"><img
-                                    src="<?php echo get_template_directory_uri(); ?>/images/icons/instagram.png"
-                                    class="mr-2 -ml-1" alt="">
-                            </a>
-                            <a href="#"><img src="<?php echo get_template_directory_uri(); ?>/images/icons/facebook.png"
-                                    alt="">
-                            </a>
+                        <h4 class="text-gold mb-4">
+                            <?php the_title(); ?>
+                        </h4>
+                        <?php if (get_field('subtitle')): ?>
+                            <p class="body text-primary mb-12">
+                                <?php echo get_field('subtitle'); ?>
+                            </p>
+                        <?php endif; ?>
+                        <div class="body mb-16">
+                            <?php the_content(); ?>
+                        </div>
+                        <div class="grid md:grid-cols-3 text-primary gap-8 gap-y-16">
+                            <div>
+                                <p class="font-bold body mb-1">
+                                    Location
+                                </p>
+                                <p class="body">
+                                    <?php echo get_field('location'); ?>
+                                </p>
+                            </div>
+                            <div>
+                                <p class="font-bold body mb-1">
+                                    Perfect for
+                                </p>
+                                <p class="body max-w-[143px]">
+                                    <?php echo get_field('perfect_for'); ?>
+                                </p>
+                            </div>
+                            <div>
+                                <p class="font-bold body mb-1">
+                                    Socials
+                                </p>
+                                <div class="flex">
+                                    <a href="<?php echo get_field('instagram'); ?>" target="_blank"><img
+                                            src="<?php echo get_template_directory_uri(); ?>/images/icons/instagram.png"
+                                            class="mr-2 -ml-1" alt="Instagram">
+                                    </a>
+                                    <a href="<?php echo get_field('facebook'); ?>" target="_blank"><img
+                                            src="<?php echo get_template_directory_uri(); ?>/images/icons/facebook.png"
+                                            alt="Facebook">
+                                    </a>
+                                </div>
+                            </div>
+                            <div>
+                                <p class="font-bold body mb-1">
+                                    Experience
+                                </p>
+                                <p class="body max-w-[143px]">
+                                    <?php echo get_field('experience'); ?>
+                                </p>
+                            </div>
+                            <div>
+                                <p class="font-bold body mb-1">
+                                    Concept Essence
+                                </p>
+                                <p class="body max-w-[143px]">
+                                    <?php echo get_field('concept_essence'); ?>
+                                </p>
+                            </div>
                         </div>
                     </div>
                     <div>
-                        <p class="font-bold body mb-1">
-                            Experience
-                        </p>
-                        <p class="body max-w-[143px]">
-                            Chinese Apothecary
-                        </p>
-                    </div>
-                    <div>
-                        <p class="font-bold body mb-1">
-                            Concept Essence
-                        </p>
-                        <p class="body max-w-[143px]">
-                            Peranakan-Baduy
-                        </p>
+                        <div class="sliders">
+                            <div>
+                                <img src="<?php echo get_the_post_thumbnail_url(get_the_ID(), 'large'); ?>"
+                                    class="w-full h-full object-cover rounded-lg" alt="<?php the_title(); ?>">
+                            </div>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div>
-                <div class="sliders">
-                    <div>
-                        <img src="" alt="">
-                    </div>
-                </div>
-            </div>
-        </div>
+                <?php
+            endwhile;
+            wp_reset_postdata();
+        endif;
+        ?>
+    </div>
 </section>
 
 <section class="h-[456px] relative">

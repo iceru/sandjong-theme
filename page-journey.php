@@ -145,7 +145,7 @@
     </div>
 </section>
 
-<section class="bg-primary py-16 relative">
+<section class="bg-primary py-16 relative z-10">
     <div class="absolute w-full h-full left-0 top-0">
         <img class="w-full h-full object-cover object-top"
             src="<?php echo get_template_directory_uri(); ?>/images/bg-green.jpg" alt="">
@@ -211,16 +211,19 @@
     </div>
 </section>
 
-<section class="h-[60vh] md:h-screen max-h-[702px] flex flex-col justify-center items-center relative z-20 ">
-    <div class="absolute w-full h-full left-0 top-0 ">
-        <img class="w-full h-full object-cover object-top"
+<section class="h-[60vh] md:h-[90vh] max-h-[702px] flex flex-col justify-center items-center relative z-0 ">
+    <div class="absolute w-full h-[120%] left-0 -top-[20%] " data-scroll data-scroll-speed="2">
+        <img class="w-full h-full top-0 object-cover object-top"
             src="<?php echo get_template_directory_uri(); ?>/images/bg-ambience.png" alt="">
     </div>
     <h4 class="text-gold relative z-10 mb-20 md:mb-40">
         Enchanting <span class="text-beige">Ambience</span>
     </h4>
+</section>
+
+<section class="relative py-28 z-10 bg-beige">
     <div
-        class="bg-primary relative z-0 w-[90vw] md:w-[70vw] mx-auto py-10 px-4 md:!p-20 text-center -mb-[460px] rounded-2xl">
+        class="bg-primary relative z-20 w-[90vw] md:w-[70vw] mx-auto py-10 px-4 md:!p-20 text-center -mt-[360px] rounded-2xl">
         <h4 class="text-gold mb-8 md:mb-16">
             A space where time slows, and stories unfold
         </h4>
@@ -232,15 +235,12 @@
         </p>
         <a href="#" class="button bg-gold !px-8">Explore</a>
     </div>
-</section>
-
-<section class="relative py-28 z-10 bg-beige">
     <div class="absolute w-full h-full left-0 top-0 opacity-10">
         <img class="w-full h-full object-cover object-bottom"
             src="<?php echo get_template_directory_uri(); ?>/images/bg-beige.png" alt="">
     </div>
     <div class="container">
-        <h4 class="text-center mt-72 md:mt-44 text-gold mb-16">Delicately Facilitating <span class="text-primary">
+        <h4 class="text-center mt-72 md:mt-24 text-gold mb-16">Delicately Facilitating <span class="text-primary">
                 Your Serene Moments
             </span>
         </h4>

@@ -45,56 +45,91 @@
     </div>
 </section>
 
-<section class="bg-primary py-20 relative z-10">
+<section class="bg-primary py-20 relative z-10" id="services">
     <div class="absolute w-full h-full left-0 top-0">
         <img src="<?php echo get_template_directory_uri(); ?>/images/bg-green.jpg" class="w-full h-full object-cover"
             alt="">
     </div>
     <div class="container relative z-10">
         <h3 class="text-gold mb-11">Our Services</h3>
-        <div class="grid md:grid-cols-2 gap-32">
-            <div>
-                <img src="<?php echo get_template_directory_uri(); ?>/images/expand/our-services.png" class="" alt="">
-            </div>
-            <div>
-                <div class="flex pb-5 border-b border-beige space-x-16 text-beige mb-16">
-                    <div>
-                        <h5>
-                            Consulting
-                        </h5>
-                    </div>
-                    <div>
-                        <h5>
-                            Training
-                        </h5>
-                    </div>
-                    <div>
-                        <h5>
-                            Management
-                        </h5>
-                    </div>
+        <?php
+        $services = new WP_Query(array(
+            'post_type' => 'services',
+            'posts_per_page' => -1,
+            'order' => 'ASC'
+        ));
+
+        if ($services->have_posts()):
+            ?>
+            <div class="grid md:grid-cols-2 gap-32">
+                <div class="relative">
+                    <?php while ($services->have_posts()):
+                        $services->the_post();
+                        $activeClass = ($services->current_post === 0) ? '' : 'hidden'; // First visible, others hidden
+                        ?>
+                        <img src="<?php echo get_the_post_thumbnail_url() ? get_the_post_thumbnail_url() : get_template_directory_uri() . '/images/expand/our-services.png'; ?>"
+                            class="service-image w-full h-auto object-cover <?php echo $activeClass; ?>"
+                            data-id="service-<?php echo get_the_ID(); ?>" alt="<?php the_title(); ?>">
+                    <?php endwhile; ?>
                 </div>
                 <div>
-                    <h4 class="text-gold mb-4">
-                        Wellness Consulting
-                    </h4>
-                    <p class="body text-beige mb-16">
-                        Shaping wellness with insight and care.
-                    </p>
-                    <p class="body text-beige max-w-[430px]">
-                        We guide and work closely with property owners, hoteliers, and wellness entrepreneurs to shape
-                        spas with depth and intention. Our support covers concepting, spatial design, product curation,
-                        and the full guest experience.
-                        <br /><br />
-                        And because wellness is more than a facility, we help integrate it
-                        into your property's culture, creating programs that feel thoughtful, true, and naturally
-                        connected to their setting.
-                    </p>
+                    <div class="flex border-b border-beige space-x-16 text-beige mb-14 overflow-x-auto" id="tabs">
+                        <?php $services->rewind_posts(); ?>
+                        <?php while ($services->have_posts()):
+                            $services->the_post();
+                            $opacityClass = ($services->current_post === 0) ? 'opacity-100 border-b-white' : 'opacity-40 border-b-transparent';
+                            ?>
+                            <div class="cursor-pointer pb-5 border-b-2 border-transparent service-tab transition-opacity duration-300 <?php echo $opacityClass; ?>"
+                                data-target="service-<?php echo get_the_ID(); ?>">
+                                <h5>
+                                    <?php echo get_field('tab_name'); ?>
+                                </h5>
+                            </div>
+                        <?php endwhile; ?>
+                    </div>
+                    <div>
+                        <?php $services->rewind_posts(); ?>
+                        <?php while ($services->have_posts()):
+                            $services->the_post();
+                            $activeClass = ($services->current_post === 0) ? '' : 'hidden';
+                            ?>
+                            <div class="service-content <?php echo $activeClass; ?>" id="service-<?php echo get_the_ID(); ?>">
+                                <h4 class="text-gold mb-2">
+                                    <?php the_title(); ?>
+                                </h4>
+                                <p class="text-beige body mb-16">
+                                    <?php echo get_field('subtitle'); ?>
+                                </p>
+                                <div class="body text-beige mb-16 max-w-[430px]">
+                                    <?php the_content(); ?>
+                                </div>
+                            </div>
+                        <?php endwhile; ?>
+                    </div>
                 </div>
             </div>
-        </div>
+            <?php wp_reset_postdata(); endif; ?>
     </div>
 </section>
+<script>
+    jQuery(document).ready(function ($) {
+        $('.service-tab').click(function () {
+            var targetId = $(this).data('target');
+
+            // Handle Tabs
+            $('.service-tab').removeClass('opacity-100 border-b-white').addClass('opacity-40 border-b-transparent');
+            $(this).removeClass('opacity-40 border-b-transparent').addClass('opacity-100 border-b-white');
+
+            // Handle Content
+            $('.service-content').addClass('hidden');
+            $('#' + targetId).removeClass('hidden');
+
+            // Handle Images
+            $('.service-image').addClass('hidden');
+            $('.service-image[data-id="' + targetId + '"]').removeClass('hidden');
+        });
+    });
+</script>
 
 <section class="relative">
     <div class="absolute w-full h-[130%] left-0 -top-[20%]" data-scroll data-scroll-speed="2">
@@ -124,7 +159,7 @@
         </div>
         <div class="">
             <p class="text-primary mb-[61px]">You will receive:</p>
-            <div class="grid md:grid-cols-3">
+            <div class="grid md:grid-cols-3 gap-28">
                 <div>
                     <div class="w-16 h-16 mb-9 rounded-full bg-gold/20 flex justify-center items-center">
                         <img src="<?php echo get_template_directory_uri(); ?>/images/icons/certificate.png"
@@ -132,7 +167,42 @@
                     </div>
                     <h5 class="text-primary max-w-[210px]">Full franchise license and rights to the Sandjong brand</h5>
                 </div>
-
+                <div>
+                    <div class="w-16 h-16 mb-9 rounded-full bg-gold/20 flex justify-center items-center">
+                        <img src="<?php echo get_template_directory_uri(); ?>/images/icons/design.png"
+                            class="w-[42px] h-[42px] object-contain" alt="">
+                    </div>
+                    <h5 class="text-primary max-w-[210px]">Design guidance & spatial concept development</h5>
+                </div>
+                <div>
+                    <div class="w-16 h-16 mb-9 rounded-full bg-gold/20 flex justify-center items-center">
+                        <img src="<?php echo get_template_directory_uri(); ?>/images/icons/training.png"
+                            class="w-[42px] h-[42px] object-contain" alt="">
+                    </div>
+                    <h5 class="text-primary max-w-[210px]">Training and refreshment programs for therapists</h5>
+                </div>
+                <div>
+                    <div class="w-16 h-16 mb-9 rounded-full bg-gold/20 flex justify-center items-center">
+                        <img src="<?php echo get_template_directory_uri(); ?>/images/icons/user-manual.png"
+                            class="w-[42px] h-[42px] object-contain" alt="">
+                    </div>
+                    <h5 class="text-primary max-w-[210px]">Service manuals, rituals, SOPs, and guest experience
+                        protocols</h5>
+                </div>
+                <div>
+                    <div class="w-16 h-16 mb-9 rounded-full bg-gold/20 flex justify-center items-center">
+                        <img src="<?php echo get_template_directory_uri(); ?>/images/icons/presentation.png"
+                            class="w-[42px] h-[42px] object-contain" alt="">
+                    </div>
+                    <h5 class="text-primary max-w-[210px]">Marketing materials, launch support, and brand campaigns</h5>
+                </div>
+                <div>
+                    <div class="w-16 h-16 mb-9 rounded-full bg-gold/20 flex justify-center items-center">
+                        <img src="<?php echo get_template_directory_uri(); ?>/images/icons/guarantee.png"
+                            class="w-[42px] h-[42px] object-contain" alt="">
+                    </div>
+                    <h5 class="text-primary max-w-[210px]">Continuous operational consulting and quality control</h5>
+                </div>
             </div>
         </div>
     </div>
@@ -162,18 +232,18 @@
             <p class="body max-w-[214px] mb-9 ">
                 2nd Floor, Jl. Gading Serpong Boulevard Barat S No. 6-7 Pakulonan Barat Tangerang — 15810
             </p>
-            <div class="flex space-x-5 mb-4">
+            <a href="tel:+62818774915" class="flex space-x-5 mb-4 !no-underline">
                 <p class="body text-terracota font-bold">M</p>
                 <p class="body">+62 818 77 4915</p>
-            </div>
-            <div class="flex space-x-5 mb-4">
+            </a>
+            <a href="tel:+622130376088" class="flex space-x-5 mb-4 !no-underline">
                 <p class="body text-terracota font-bold">M</p>
                 <p class="body">+62 21 3037 6088</p>
-            </div>
-            <div class="flex space-x-5 mb-4">
+            </a>
+            <a href="mailto:info.sandjongspa@amertajiwa.com" class="flex space-x-5 mb-4 !no-underline">
                 <p class="body text-terracota font-bold">E</p>
                 <p class="body">info.sandjongspa@amertajiwa.com</p>
-            </div>
+            </a>
         </div>
         <div>
 

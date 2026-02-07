@@ -91,5 +91,17 @@ function sandjong_register_cpts()
         'menu_icon' => 'dashicons-location',
         'supports' => array('title', 'editor', 'thumbnail', 'excerpt'),
     ));
+
+    // Service CPT
+    register_post_type('services', array(
+        'labels' => array(
+            'name' => 'Services',
+            'singular_name' => 'Service',
+        ),
+        'public' => true,
+        'has_archive' => false,
+        'menu_icon' => 'dashicons-clipboard',
+        'supports' => array('title', 'editor', 'thumbnail', 'excerpt'),
+    ));
 }
 add_action('init', 'sandjong_register_cpts');

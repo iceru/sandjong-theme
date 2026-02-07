@@ -71,7 +71,7 @@
         src="<?php echo get_template_directory_uri(); ?>/images/soul-2.png" alt="">
 </section>
 
-<section class="bg-beige py-28" id="branches">
+<section class="bg-beige py-28 relative z-20" id="branches">
     <div class="container">
         <div class="flex items-center space-x-6 mb-16">
             <h5 class="text-gold whitespace-nowrap">Sandjong's Wellness Branches</h5>
@@ -118,24 +118,31 @@
 </section>
 
 <section id="posts" class="bg-primary pb-40 relative z-10">
-
-    <img class="w-full h-[526px] object-cover relative z-10"
-        src="<?php echo get_template_directory_uri(); ?>/images/bg-posts-2.png" alt="">
-    <div class="absolute w-full h-[80%] left-0 bottom-0">
+    <div class="w-full h-[526px] relative">
+        <img class="w-full h-[120%] absolute left-0 -top-[10%] object-cover" data-scroll data-scroll-speed="2"
+            src="<?php echo get_template_directory_uri(); ?>/images/bg-posts-2.png" alt="">
+    </div>
+    <div class="absolute w-full h-[50%] left-0 bottom-0">
         <img class="w-full h-full object-cover object-top z-0"
             src="<?php echo get_template_directory_uri(); ?>/images/bg-footer.jpg" alt="">
     </div>
     <div
         class="flex flex-wrap md:flex-nowrap justify-between bg-beige mx-auto max-w-[1100px] p-6 md:p-16 rounded-lg z-10 relative -mt-40">
-        <div class="w-full md:w-[45%] mb-16 md:mb-0">
-            <h5 class="text-gold mb-4">Wellness Whisper</h5>
-            <h4 class="mb-9">Gentle Notes From Sandjong</h4>
-            <p class="body text-body mb-9 md:mb-20 max-w-[381px]">
-                Wellness Whisper is our way of keeping you close to Sandjong’s journey. Where we share updates and open
-                a window into our world: the traditions that inspire us, the rituals we are creating, and the milestones
-                we are reaching together.
-            </p>
-            <a href="" class="button bg-terracota">Read More</a>
+        <div class="w-full md:w-[45%] mb-16 md:mb-0 flex flex-col justify-between">
+            <div>
+                <h5 class="text-gold mb-4">Wellness Whisper</h5>
+                <h4 class="mb-9">Gentle Notes From Sandjong</h4>
+                <p class="body text-body mb-9 md:mb-20 max-w-[381px]">
+                    Wellness Whisper is our way of keeping you close to Sandjong’s journey. Where we share updates and
+                    open
+                    a window into our world: the traditions that inspire us, the rituals we are creating, and the
+                    milestones
+                    we are reaching together.
+                </p>
+            </div>
+            <div>
+                <a href="/wellness-whisper" class="button bg-terracota">Read More</a>
+            </div>
         </div>
         <div class="flex flex-col space-y-2 items-center justify-center hidden md:block">
             <img src="<?php echo get_template_directory_uri(); ?>/images/icons/arrow-terra.png"
@@ -144,18 +151,43 @@
             <img src="<?php echo get_template_directory_uri(); ?>/images/icons/arrow-terra.png"
                 class="rotate-90 w-3 h-3 opacity-40" alt="">
         </div>
-        <div class="w-full md:w-[45%] flex flex-col justify-center">
-            <div>
-                <small class="text-xs text-primary font-bold mb-2">17 Aug 2025</small>
-                <h4 class="mb-2">Promotion Headline Text</h4>
-                <a href="" class="button !text-terracota !p-0 !underline">Read More</a>
-            </div>
+        <div class="w-full md:w-[45%] flex flex-col justify-center" id="news">
+            <?php
+            // Query the latest 3 posts
+            $args = array(
+                'post_type' => 'post',
+                'posts_per_page' => 3,
+            );
+            $news_query = new WP_Query($args);
+
+            if ($news_query->have_posts()):
+                while ($news_query->have_posts()):
+                    $news_query->the_post();
+                    ?>
+                    <div class="mb-8 pb-8 border-b border-gold/30 last:border-b-0 last:mb-0 last:pb-0">
+                        <small class="text-xs text-primary font-bold mb-2">
+                            <?php echo get_the_date('d M Y'); ?>
+                        </small>
+                        <h4 class="mb-2 line-clamp-1 text-primary">
+                            <?php the_title(); ?>
+                        </h4>
+                        <a href="<?php the_permalink(); ?>" class="button !text-terracota !p-0 !underline">
+                            Read More
+                        </a>
+                    </div>
+                    <?php
+                endwhile;
+                wp_reset_postdata(); // Restore original Post Data
+            else:
+                ?>
+                <p>No whispers shared just yet.</p>
+            <?php endif; ?>
         </div>
     </div>
 </section>
 
 <section id="franchise" class="h-screen flex flex-col justify-center items-center relative">
-    <div class="absolute left-0 top-0 w-full h-full z-0">
+    <div class="absolute left-0 w-full h-[120%] -top-[10%] z-0" data-scroll data-scroll-speed="2">
         <img class="w-full h-full object-cover"
             src="<?php echo get_template_directory_uri(); ?>/images/bg-franchise.jpg" alt="">
     </div>

@@ -8,7 +8,7 @@ get_header();
 
 <section class="relative h-[400px] md:h-[587px] flex justify-center items-center">
 	<div class="absolute w-full h-[110%] left-0 -top-[10%]" data-scroll data-scroll-speed="2">
-		<img class="w-full h-full object-cover" src="<?php echo get_template_directory_uri(); ?>/images/bg-wellness.jpg"
+		<img class="w-full h-full object-cover" src="<?php echo get_template_directory_uri(); ?>/images/bg-wellness.png"
 			alt="News hero background">
 	</div>
 
