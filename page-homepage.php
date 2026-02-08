@@ -171,7 +171,7 @@
                         <h4 class="mb-2 line-clamp-1 text-primary">
                             <?php the_title(); ?>
                         </h4>
-                        <a href="<?php the_permalink(); ?>" class="button !text-terracota !p-0 !underline">
+                        <a href="/sanctuary#<?php echo get_the_ID(); ?>" class="button !text-terracota !p-0 !underline">
                             Read More
                         </a>
                     </div>

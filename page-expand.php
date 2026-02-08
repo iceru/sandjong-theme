@@ -245,8 +245,8 @@
                 <p class="body">info.sandjongspa@amertajiwa.com</p>
             </a>
         </div>
-        <div>
-
+        <div id="forms">
+            <?php echo do_shortcode('[contact-form-7 id="7318e68" title="Contact form 1"]'); ?>
         </div>
     </div>
 </section>

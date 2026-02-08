@@ -103,5 +103,17 @@ function sandjong_register_cpts()
         'menu_icon' => 'dashicons-clipboard',
         'supports' => array('title', 'editor', 'thumbnail', 'excerpt'),
     ));
+
+    // Branch Image CPT
+    register_post_type('branch_image', array(
+        'labels' => array(
+            'name' => 'Branch Images',
+            'singular_name' => 'Branch Image',
+        ),
+        'public' => true,
+        'has_archive' => false,
+        'menu_icon' => 'dashicons-format-image',
+        'supports' => array('title', 'thumbnail'),
+    ));
 }
 add_action('init', 'sandjong_register_cpts');
