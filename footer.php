@@ -24,7 +24,8 @@
 <footer class="bg-primary text-beige relative z-20">
     <section class="container flex flex-wrap md:flex-nowrap py-11 space-y-12 md:space-y-0 md:space-x-16">
         <div class="w-full md:w-[20%]">
-            <img src="<?php echo get_template_directory_uri(); ?>/images/logo.png" alt="Sandjong Logo">
+            <img class="w-[136px] md:w-[200px]" src="<?php echo get_template_directory_uri(); ?>/images/logo-2.png"
+                alt="Sandjong Logo">
         </div>
         <div class="w-full md:w-[20%]">
             <h6 class="mb-5 uppercase text-gold text-xs tracking-widest">Address</h6>
@@ -33,7 +34,7 @@
                     Episode Hotel <br />
                     Gading Serpong
                 </h5>
-                <p>
+                <p class="text-sm md:text-base max-w-[232px]">
                     2nd Floor, Jl. Gading Serpong Boulevard Barat S No. 6-7 Pakulonan Barat Tangerang — 15810
                 </p>
             </div>
@@ -42,7 +43,7 @@
                     The Orient Jakarta <br />
                     A Royal Hideaway Hotel
                 </h5>
-                <p>
+                <p class="text-sm md:text-base max-w-[232px]">
                     5th Floor, Jl. Jend. Sudirman No. 36, Bend. Hilir Kec. Tn. Abang Kota Jakarta Pusat DKI Jakarta —
                     10210
                 </p>
@@ -50,7 +51,7 @@
         </div>
 
         <div>
-            <div class="flex flex-wrap md:flex-nowrap space-y-12 md:space-y-0 md:space-x-14">
+            <div class="hidden md:flex flex-wrap md:flex-nowrap space-y-12 md:space-y-0 md:space-x-14">
                 <div>
                     <div>
                         <h6 class="mb-5 uppercase text-gold text-xs tracking-widest">Navigation</h6>

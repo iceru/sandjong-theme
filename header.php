@@ -39,71 +39,17 @@
 
     <div id="page" class="min-h-screen flex flex-col">
         <?php do_action('tailpress_header'); ?>
-
-        <!-- <header class="container mx-auto py-6">
-            <div class="md:flex md:justify-between md:items-center">
-                <div class="flex justify-between items-center">
-                    <div>
-                        <?php if (has_custom_logo()): ?>
-                            <?php the_custom_logo(); ?>
-                        <?php else: ?>
-                            <div class="flex items-center gap-2">
-                                <a href="<?php echo esc_url(home_url('/')); ?>"
-                                    class="!no-underline lowercase font-medium text-lg">
-                                    <?php bloginfo('name'); ?>
-                                </a>
-                                <?php if ($description = get_bloginfo('description')): ?>
-                                    <span class="text-sm font-light text-dark/80">|</span>
-                                    <span class="text-sm font-light text-dark/80"><?php echo esc_html($description); ?></span>
-                                <?php endif; ?>
-                            </div>
-                        <?php endif; ?>
-                    </div>
-
-                    <?php if (has_nav_menu('primary')): ?>
-                        <div class="md:hidden">
-                            <button type="button" aria-label="Toggle navigation" id="primary-menu-toggle">
-                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                                    stroke="currentColor" class="size-6">
-                                    <path stroke-linecap="round" stroke-linejoin="round"
-                                        d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
-                                </svg>
-                            </button>
-                        </div>
-                    <?php endif; ?>
-                </div>
-
-                <div id="primary-navigation"
-                    class="hidden md:flex md:bg-transparent gap-6 items-center border border-light md:border-none rounded-xl p-4 md:p-0">
-                    <nav>
-                        <?php if (current_user_can('administrator') && !has_nav_menu('primary')): ?>
-                            <a href="<?php echo esc_url(admin_url('nav-menus.php')); ?>"
-                                class="text-sm text-zinc-600"><?php esc_html_e('Edit Menus', 'tailpress'); ?></a>
-                        <?php else: ?>
-                            <?php
-                            wp_nav_menu([
-                                'container_id' => 'primary-menu',
-                                'container_class' => '',
-                                'menu_class' => 'md:flex md:-mx-4 [&_a]:!no-underline',
-                                'theme_location' => 'primary',
-                                'li_class' => 'md:mx-4',
-                                'fallback_cb' => false,
-                            ]);
-                            ?>
-                        <?php endif; ?>
-                    </nav>
-
-                    <div class="inline-block mt-4 md:mt-0"><?php get_search_form(); ?></div>
-                </div>
-            </div>
-        </header> -->
-
         <header class="fixed top-0 left-0 z-40 w-full">
             <section
                 class="drop-shadow-2xl container relative flex justify-between items-center rounded-b-xl bg-primary py-5 pb-3 px-[22px] min-h-[40px]">
                 <div class="absolute -bottom-3 left-1/2 -translate-x-1/2 w-[98.5%] rounded-b-xl  h-4 bg-primary"></div>
+                <button id="mobile-menu-btn" class="md:hidden">
+                    <div class="h-px w-7 bg-gold mb-2"></div>
+                    <div class="h-px w-4 bg-gold"></div>
+                </button>
                 <a href="/">
-                    <img src="<?php echo get_template_directory_uri(); ?>/images/logo.png" class="h-[42px]" alt="">
+                    <img src="<?php echo get_template_directory_uri(); ?>/images/logo.png" class="h-[30px] md:h-[42px]"
+                        alt="">
                 </a>
                 <ul class="items-center text-beige space-x-10 hidden md:flex">
                     <li>
@@ -131,6 +77,54 @@
                     </a>
                 </div>
             </section>
+            <div id="mobile-overlay"
+                class="fixed inset-0 z-40 bg-black/60 opacity-0 pointer-events-none transition-opacity duration-300">
+            </div>
+            <div id="mobile-sidebar"
+                class="fixed inset-y-0 rounded-r-xl left-0 z-50 w-[80vw] bg-primary flex flex-col py-11 px-9 justify-between -translate-x-[110%] transition-transform duration-300 ease-in-out shadow-2xl">
+                <div class="absolute -right-3 w-4 h-[97%] top-1/2 -translate-y-1/2 bg-primary rounded-r-xl"></div>
+                <div>
+                    <a href="/">
+                        <img src="<?php echo get_template_directory_uri(); ?>/images/logo.png" class="h-[38px] mb-24"
+                            alt="">
+                    </a>
+                    <ul class="flex flex-col space-y-9 text-beige text-xl">
+                        <li><a class="!no-underline" href="/">Home</a></li>
+                        <li><a class="!no-underline" href="/journey">Journey of Sandjong </a></li>
+                        <li><a class="!no-underline" href="/signature-rituals">Signature Rituals</a></li>
+                        <li><a class="!no-underline" href="/wellness-whisper">Wellness Whisper</a></li>
+                        <li><a class="!no-underline" href="/expand">Expand with Sandjong</a></li>
+                        <li><a class="!no-underline" href="/sanctuary">Sanctuary of Sandjong</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <a href="" class="button bg-terracota !text-xl px-8 py-3">Book Now</a>
+                </div>
+            </div>
+
+            <script>
+                jQuery(document).ready(function ($) {
+                    function openSidebar() {
+                        $('#mobile-sidebar').removeClass('-translate-x-[110%]').addClass('translate-x-0');
+                        $('#mobile-overlay').removeClass('opacity-0 pointer-events-none').addClass('opacity-100');
+                        $('body').addClass('overflow-hidden');
+                    }
+
+                    function closeSidebar() {
+                        $('#mobile-sidebar').removeClass('translate-x-0').addClass('-translate-x-[110%]');
+                        $('#mobile-overlay').removeClass('opacity-100').addClass('opacity-0 pointer-events-none');
+                        $('body').removeClass('overflow-hidden');
+                    }
+
+                    $('#mobile-menu-btn').click(function () {
+                        openSidebar();
+                    });
+
+                    $('#close-sidebar, #mobile-overlay').click(function () {
+                        closeSidebar();
+                    });
+                });
+            </script>
         </header>
 
         <div id="content" class="site-content grow">

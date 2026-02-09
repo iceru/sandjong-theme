@@ -21,8 +21,9 @@
     </div>
 </section>
 
-<section id="about" class="bg-beige text-center py-36 flex flex-col justify-center items-center relative text-primary ">
-    <div class="absolute w-full h-full left-0 top-0 opacity-10">
+<section id="about"
+    class="bg-beige text-center py-20 md:py-36 flex flex-col justify-center items-center relative text-primary ">
+    <div class="absolute w-full h-[130%] md:h-full left-0 top-0 opacity-10">
         <img class="w-full h-full object-cover object-top"
             src="<?php echo get_template_directory_uri(); ?>/images/bg-beige.png" alt="">
     </div>
@@ -45,18 +46,18 @@
     </div>
 </section>
 
-<section class="bg-beige py-28 relative max-w-screen overflow-x-hidden">
+<section class="bg-beige py-16 md:py-28 relative max-w-screen overflow-x-hidden">
     <div>
         <h4 class="mb-8 text-center text-gold">A Window to the Soul</h4>
         <div class="flex flex-col justify-center items-center">
-            <div class="mb-8 md:w-[500px] h-[350px] md:h-[500px] relative flex justify-center items-center">
-                <h4 class="text-beige relative z-10 text-center max-w-[360px]">
+            <div class="mb-8 md:w-[500px] w-[287px] h-[290px] md:h-[500px] relative flex justify-center items-center">
+                <h4 class="text-beige relative z-10 text-center !text-xl md:!text-2xl max-w-[221px] md:max-w-[360px]">
                     The Unique Threads in Our Wellness Tapestry
                 </h4>
                 <img class="w-full h-full object-cover absolute left-0 top-0"
                     src="<?php echo get_template_directory_uri(); ?>/images/soul-1.png" alt="">
             </div>
-            <p class="max-w-[503px] text-center">
+            <p class="text-sm md:text-base max-w-[291px] md:max-w-[503px] text-center">
                 In Gading Serpong, find the tender fusion of Baduy simplicity and Peranakan color. In Jakarta, step into
                 a
                 refined haven inspired by Javanese nobility, Balinese devotion, and Peranakan beauty. Each Sandjong
@@ -65,17 +66,17 @@
             </p>
         </div>
     </div>
-    <img class="hidden md:block w-[374px] h-[384px] object-cover absolute -left-16 top-[46%] rounded-lg -translate-y-1/2 z-0"
+    <img class="md:w-[374px] w-[220px] md:h-[384px] h-[220px] object-cover absolute -left-[48%] md:-left-16 top-[43%] md:top-[46%] rounded-lg -translate-y-1/2 z-0"
         src="<?php echo get_template_directory_uri(); ?>/images/soul-3.png" alt="">
-    <img class="hidden md:block w-[374px] h-[384px] object-cover absolute -right-16 top-[46%] rounded-lg -translate-y-1/2 z-0"
+    <img class="md:w-[374px] w-[220px] md:h-[384px] h-[220px] object-cover absolute -right-[48%] md:-right-16 top-[43%] md:top-[46%] rounded-lg -translate-y-1/2 z-0"
         src="<?php echo get_template_directory_uri(); ?>/images/soul-2.png" alt="">
 </section>
 
 <section class="bg-beige py-28 relative z-20" id="branches">
     <div class="container">
-        <div class="flex items-center space-x-6 mb-16">
-            <h5 class="text-gold whitespace-nowrap">Sandjong's Wellness Branches</h5>
-            <div class="h-[1px] w-full border border-gold border-dashed mt-[4px]"></div>
+        <div class="flex items-end md:items-center justify-between space-x-6 mb-16">
+            <h5 class="text-gold md:whitespace-nowrap max-w-[168px]">Sandjong's Wellness Branches</h5>
+            <div class="h-[1px] w-full border border-gold border-dashed mt-[4px] hidden md:block"></div>
             <a href="" class="button !text-gold whitespace-nowrap !p-0">Explore more</a>
         </div>
         <div>
@@ -92,14 +93,16 @@
                     $branch_query->the_post();
                     ?>
                     <div class="grid md:grid-cols-2 not-last:mb-8 not-last:pb-8 not-last:border-b border-gold border-dashed">
-                        <div class="space-y-8 text-primary ">
-                            <h4><?php the_title(); ?></h4>
+                        <div class="space-y-8 text-primary order-2 md:order-1">
+                            <h4 class="!text-[32px] max-w-[288px] md:max-w-full !leading-tight md:leading-normal">
+                                <?php the_title(); ?>
+                            </h4>
                             <div class="max-w-[489px]">
                                 <?php the_content(); ?>
                             </div>
                             <a href="<?php the_permalink(); ?>" class="button bg-gold inline-block mb-8 md:mb-0">Explore</a>
                         </div>
-                        <div>
+                        <div class="order-1 md:order-2 mb-7 md:mb-0">
                             <?php if (has_post_thumbnail()): ?>
                                 <?php the_post_thumbnail('large', array('class' => 'masked-image max-h-[355px] w-full object-cover')); ?>
                             <?php else: ?>
@@ -118,16 +121,22 @@
 </section>
 
 <section id="posts" class="bg-primary pb-40 relative z-10">
-    <div class="w-full h-[526px] relative">
+    <div class="w-full h-[526px] hidden md:block relative">
         <img class="w-full h-[120%] absolute left-0 -top-[10%] object-cover" data-scroll data-scroll-speed="2"
             src="<?php echo get_template_directory_uri(); ?>/images/bg-posts-2.png" alt="">
+    </div>
+    <div class="w-full h-[526px] md:hidden  relative">
+        <img class="w-full h-full absolute left-0 top-0 object-cover object-top" data-scroll data-scroll-speed="2"
+            src="<?php echo get_template_directory_uri(); ?>/images/bg-posts-2-mobile.png" alt="">
     </div>
     <div class="absolute w-full h-[50%] left-0 bottom-0">
         <img class="w-full h-full object-cover object-top z-0"
             src="<?php echo get_template_directory_uri(); ?>/images/bg-footer.jpg" alt="">
     </div>
     <div
-        class="flex flex-wrap md:flex-nowrap justify-between bg-beige mx-auto max-w-[1100px] p-6 md:p-16 rounded-lg z-10 relative -mt-40">
+        class="flex flex-wrap md:flex-nowrap max-w-[90%] justify-between bg-beige mx-auto md:max-w-[1100px] p-6 md:p-16 rounded-lg z-10 relative -mt-60 md:-mt-40">
+        <div class="w-[95%] h-4 rounded-t-xl -top-4 left-1/2 -translate-x-1/2 bg-beige absolute"></div>
+        <div class="w-[95%] h-4 rounded-b-xl -bottom-4 left-1/2 -translate-x-1/2 bg-beige absolute"></div>
         <div class="w-full md:w-[45%] mb-16 md:mb-0 flex flex-col justify-between">
             <div>
                 <h5 class="text-gold mb-4">Wellness Whisper</h5>
