@@ -1,15 +1,18 @@
 <?php get_header(); ?>
 
 
-<section class="relative h-[400px] md:h-[501px] flex justify-center items-center">
+<section class="relative h-[501px] flex justify-center items-center">
     <div class="absolute w-full h-[110%] left-0 -top-[10%]" data-scroll data-scroll-speed="2">
         <img class="w-full h-full object-cover" src="<?php echo get_template_directory_uri(); ?>/images/bg-journey.png"
             alt="">
     </div>
-    <h4 class="text-beige relative z-10 mt-14 md:mt-0">Rooted in Amerta Jiwa</h4>
+    <h4 class="text-beige relative z-10 mt-14 md:mt-0 max-w-[192px] md:max-w-full text-center">
+        Rooted in
+        Amerta Jiwa
+    </h4>
 </section>
 
-<section class="bg-beige py-36 relative">
+<section class="bg-beige py-[71px] md:py-36 relative">
     <div class="container grid md:grid-cols-2 text-primary">
         <h4 class="max-w-[312px] mb-10 md:mb-0">
             Nature Inheritance Rooted in Culture
@@ -24,7 +27,7 @@
     </div>
 </section>
 
-<section class="bg-primary py-36 relative">
+<section class="bg-primary py-20 md:py-36 relative">
     <div class="container grid md:grid-cols-2 ">
         <div>
             <h5 class="mb-9 text-gold">Our Commitment</h5>
@@ -36,11 +39,12 @@
         <div
             class="draggable-container md:absolute right-0 flex space-x-6 w-full md:w-1/2 whitespace-nowrap overflow-x-auto pb-6 cursor-grab select-none no-scrollbar">
 
-            <div class="w-[312px] shrink-0">
+            <div class="w-[312px] shrink-0 ">
                 <img src="<?php echo get_template_directory_uri(); ?>/images/vision.png"
                     class="w-full h-[270px] object-cover" alt="">
 
-                <div class="bg-beige py-10 px-9 rounded-b-lg whitespace-normal">
+                <div class="bg-beige py-10 px-9 rounded-b-lg whitespace-normal relative">
+                    <div class="w-[95%] h-3 rounded-b-xl -bottom-3 left-1/2 -translate-x-1/2 bg-beige absolute"></div>
                     <h5 class="text-gold mb-4">Vision</h5>
                     <p class="body text-primary">
                         To lead Indonesia’s wellness industry with our profound expertise, innovation, and continuous
@@ -53,7 +57,8 @@
                 <img src="<?php echo get_template_directory_uri(); ?>/images/mission.png"
                     class="w-full h-[270px] object-cover" alt="">
 
-                <div class="bg-beige py-10 px-9 rounded-b-lg whitespace-normal">
+                <div class="bg-beige py-10 px-9 rounded-b-lg whitespace-normal relative">
+                    <div class="w-[95%] h-3 rounded-b-xl -bottom-3 left-1/2 -translate-x-1/2 bg-beige absolute"></div>
                     <h5 class="text-gold mb-4">Mission</h5>
                     <p class="body text-primary min-h-[96px]">
                         Dedicated to creating a uniquely memorable experience and genuine care to meet our customers’
@@ -66,7 +71,8 @@
                 <img src="<?php echo get_template_directory_uri(); ?>/images/motto.png"
                     class="w-full h-[270px] object-cover" alt="">
 
-                <div class="bg-beige py-10 px-9 rounded-b-lg whitespace-normal">
+                <div class="bg-beige py-10 px-9 rounded-b-lg whitespace-normal relative">
+                    <div class="w-[95%] h-3 rounded-b-xl -bottom-3 left-1/2 -translate-x-1/2 bg-beige absolute"></div>
                     <h5 class="text-gold mb-4">Motto</h5>
                     <p class="body text-primary min-h-[96px]">
                         “Delivering exceptional customer satisfaction while honoring the needs of all”
@@ -84,7 +90,7 @@
     </div>
     <div class="container flex flex-col h-screen max-h-[1000px] text-center justify-center items-center relative z-10">
         <h5 class="text-gold mb-6">Our Culture</h5>
-        <h4 class="max-w-[729px] text-beige">
+        <h4 class="max-w-[329px] md:max-w-[729px] text-beige">
             In Amerta’s esteemed environment, we nurture and enhance our offered personalized services and the mutual
             respect by embracing the reliable principles of amiability and positive attitude.
         </h4>
@@ -98,7 +104,7 @@
     </div>
     <div class="container relative z-10">
         <h4 class="text-terracota mb-16">Values</h4>
-        <div class="grid md:grid-cols-3 gap-20">
+        <div class="grid grid-cols-2 md:grid-cols-3 gap-8 gap-y-20 md:gap-20">
             <div>
                 <div class="mb-9 w-[74px] h-[74px] rounded-full bg-gold/20 flex justify-center items-center">
                     <img src="<?php echo get_template_directory_uri(); ?>/images/icons/heart.png" alt="">
@@ -151,8 +157,8 @@
             src="<?php echo get_template_directory_uri(); ?>/images/bg-green.jpg" alt="">
     </div>
     <div class="container relative">
-        <div class="grid md:grid-cols-2 mb-28">
-            <h4 class="text-gold ">5 Senses Experiences</h4>
+        <div class="grid md:grid-cols-2 mb-[72px] md:mb-28">
+            <h4 class="text-gold mb-10 md:mb-0">5 Senses Experiences</h4>
             <p class="body text-beige">
                 As the company overseeing our diverse portfolio of wellness services, we remain firm in our commitment
                 to the concept of ‘5-senses branding’. We want to guarantee that each aspects of our offerings caters to
@@ -176,7 +182,7 @@
                     ?>
                     <div>
                         <div class="grid md:grid-cols-2">
-                            <div>
+                            <div class="mb-16 md:mb-0 ">
                                 <?php if (has_post_thumbnail()): ?>
                                     <?php the_post_thumbnail('large', array('class' => 'rounded-lg w-full h-full object-cover max-w-[500px]')); ?>
                                 <?php else: ?>
@@ -206,12 +212,14 @@
             endif;
             ?>
         </div>
-        <div class="senses-nav flex items-center absolute left-[52%] ml-12 -translate-x-1/2 bottom-20 mt-4"></div>
+        <div
+            class="senses-nav flex items-center md:absolute md:left-[52%] md:ml-12 md:-translate-x-1/2 md:bottom-20 mt-4">
+        </div>
 
     </div>
 </section>
 
-<section class="h-[60vh] md:h-[90vh] max-h-[702px] flex flex-col justify-center items-center relative z-0 ">
+<section class="h-[90vh] md:h-[90vh] max-h-[702px] flex flex-col justify-center items-center relative z-0 ">
     <div class="absolute w-full h-[120%] left-0 -top-[20%] " data-scroll data-scroll-speed="2">
         <img class="w-full h-full top-0 object-cover object-top"
             src="<?php echo get_template_directory_uri(); ?>/images/bg-ambience.png" alt="">
@@ -223,8 +231,12 @@
 
 <section class="relative py-28 z-10 bg-beige">
     <div
-        class="bg-primary relative z-20 w-[90vw] md:w-[70vw] mx-auto py-10 px-4 md:!p-20 text-center -mt-[360px] rounded-2xl">
-        <h4 class="text-gold mb-8 md:mb-16">
+        class="bg-primary relative z-20 w-[90vw] md:w-[70vw] mx-auto py-14 px-4 md:!p-20 text-center -mt-[310px] md:-mt-[360px] rounded-xl">
+        <div class="w-[94%] h-3 rounded-t-xl -top-3 left-1/2 -translate-x-1/2 bg-primary absolute">
+        </div>
+        <div class="w-[94%] h-3 rounded-b-xl -bottom-3 left-1/2 -translate-x-1/2 bg-primary absolute">
+        </div>
+        <h4 class="text-gold mb-8 md:mb-16 !text-xl md:!text-[32px] font-bold">
             A space where time slows, and stories unfold
         </h4>
         <p class="text-beige max-w-[612px] mb-16 mx-auto">
@@ -240,7 +252,7 @@
             src="<?php echo get_template_directory_uri(); ?>/images/bg-beige.png" alt="">
     </div>
     <div class="container">
-        <h4 class="text-center mt-72 md:mt-24 text-gold mb-16">Delicately Facilitating <span class="text-primary">
+        <h4 class="text-center mt-24 text-gold mb-16">Delicately Facilitating <span class="text-primary">
                 Your Serene Moments
             </span>
         </h4>
@@ -290,7 +302,7 @@
                 ?>
             </div>
             <div
-                class="facility-nav flex items-center absolute left-20 md:left-[63%] -translate-x-1/2 bottom-6 md:bottom-20 mt-4">
+                class="facility-nav flex items-center md:absolute md:left-[63%] md:-translate-x-1/2 md:bottom-20 md:mt-4">
             </div>
         </div>
     </div>
@@ -403,7 +415,7 @@
         </div>
 </section>
 
-<section id="awards" class="bg-beige py-28 relative z-10">
+<section id="awards" class="bg-beige py-20 md:py-28 relative z-10">
     <div class="container">
         <h4 class="text-center text-gold mb-11">
             In Gentle <span class="text-primary">Honor</span>
