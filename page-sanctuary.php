@@ -4,7 +4,7 @@
         <img src="<?php echo get_template_directory_uri(); ?>/images/bg-sanctuary.png"
             class="w-full h-full object-cover" alt="">
     </div>
-    <div class="container relative z-10 flex flex-col h-full text-beige items-center justify-center">
+    <div class="container relative z-10 flex flex-col h-full text-beige items-center justify-center text-center">
         <h4 class=" mb-6">
             Sandjong Wellness by Amerta
         </h4>
@@ -17,7 +17,7 @@
 </section>
 
 <section class="bg-beige relative z-10 py-28" id="branches">
-    <div class="container space-y-32">
+    <div class="container space-y-20 md:space-y-32">
         <?php
         $branch_query = new WP_Query(array(
             'post_type' => 'branch',
@@ -30,8 +30,8 @@
             while ($branch_query->have_posts()):
                 $branch_query->the_post();
                 ?>
-                <div class="grid md:grid-cols-2 gap-20" id="<?php echo get_the_ID(); ?>">
-                    <div>
+                <div class="grid md:grid-cols-2 gap-10 md:gap-20" id="<?php echo get_the_ID(); ?>">
+                    <div class="order-2 md:order-1">
                         <h4 class="text-gold mb-4">
                             <?php the_title(); ?>
                         </h4>
@@ -40,10 +40,10 @@
                                 <?php echo get_field('subtitle'); ?>
                             </p>
                         <?php endif; ?>
-                        <div class="body mb-16">
+                        <div class="body mb-10 md:mb-16">
                             <?php the_content(); ?>
                         </div>
-                        <div class="grid md:grid-cols-3 text-primary gap-8 gap-y-16">
+                        <div class="grid md:grid-cols-3 text-primary gap-8 gap-y-9 md:gap-y-16">
                             <div>
                                 <p class="font-bold body mb-1">
                                     Location
@@ -93,7 +93,7 @@
                             </div>
                         </div>
                     </div>
-                    <div>
+                    <div class="order-1 md:order-2">
                         <div class="sliders">
                             <?php
                             $branch_images = get_field('branch_images');

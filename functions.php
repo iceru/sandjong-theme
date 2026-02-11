@@ -115,5 +115,52 @@ function sandjong_register_cpts()
         'menu_icon' => 'dashicons-format-image',
         'supports' => array('title', 'thumbnail'),
     ));
+
+    // Signature Treatment CPT
+    register_post_type('signature-treatment', array(
+        'labels' => array(
+            'name' => 'Signature Treatments',
+            'singular_name' => 'Signature Treatment',
+        ),
+        'public' => true,
+        'has_archive' => false,
+        'menu_icon' => 'dashicons-admin-users',
+        'supports' => array('title', 'editor', 'thumbnail', 'excerpt'),
+    ));
+
+    // Package Treatment CPT
+    register_post_type('package-treatment', array(
+        'labels' => array(
+            'name' => 'Package Treatments',
+            'singular_name' => 'Package Treatment',
+        ),
+        'public' => true,
+        'has_archive' => false,
+        'menu_icon' => 'dashicons-archive',
+        'supports' => array('title', 'editor', 'thumbnail', 'excerpt'),
+    ));
+
+    // Simple Touch CPT
+    register_post_type('simple-touch', array(
+        'labels' => array(
+            'name' => 'Simple Touch',
+            'singular_name' => 'Simple Touch',
+        ),
+        'public' => true,
+        'has_archive' => false,
+        'menu_icon' => 'dashicons-heart',
+        'supports' => array('title', 'editor', 'thumbnail', 'excerpt'),
+    ));
+
+    // Taxonomy for Treatment Categories (used by Package Treatment)
+    register_taxonomy('treatment-category', 'package-treatment', array(
+        'labels' => array(
+            'name' => 'Treatment Categories',
+            'singular_name' => 'Treatment Category',
+        ),
+        'hierarchical' => true,
+        'show_admin_column' => true,
+        'public' => true,
+    ));
 }
 add_action('init', 'sandjong_register_cpts');

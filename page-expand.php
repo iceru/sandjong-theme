@@ -5,10 +5,10 @@
         <img src="<?php echo get_template_directory_uri(); ?>/images/expand/hero.png" class="w-full object-cover h-full"
             alt="">
     </div>
-    <div class="container flex flex-col justify-end h-full pb-28 relative z-10 w-full">
-        <div class="grid grid-cols-2 w-full">
-            <h4 class="text-white w-[366px]">A partnership rooted in care, guided by heritage</h4>
-            <p class="text-white w-[591px]">
+    <div class="container flex flex-col justify-end h-full pb-10 md:pb-28 relative z-10 w-full">
+        <div class="grid md:grid-cols-2 w-full">
+            <h4 class="text-white md:w-[366px] mb-8 md:mb-0">A partnership rooted in care, guided by heritage</h4>
+            <p class="text-white md:w-[591px]">
                 In the world of wellness, what is genuine always moves gently from within. Through our
                 Spa Operation and Franchise Partnerships, Sandjong welcomes you to build spaces that honor tradition
                 while embracing the needs of today. With the guidance of Amerta Jiwa Indonesia, we offer cultural depth,
@@ -20,12 +20,12 @@
 </section>
 
 <section class="bg-beige py-16 relative z-10">
-    <div class="container grid grid-cols-2">
-        <div>
+    <div class="container grid md:grid-cols-2">
+        <div class="mb-20 md:mb-0">
             <h4 class="text-terracota mb-6">
                 Spa Operation
             </h4>
-            <p class="body mb-16">
+            <p class="body mb-10 md:mb-16">
                 Let us carry the rhythm of Sandjong into your space.
             </p>
             <p class="body max-w-[440px]">
@@ -61,7 +61,7 @@
 
         if ($services->have_posts()):
             ?>
-            <div class="grid md:grid-cols-2 gap-32">
+            <div class="grid md:grid-cols-2 gap-14 md:gap-32">
                 <div class="relative">
                     <?php while ($services->have_posts()):
                         $services->the_post();
@@ -72,8 +72,9 @@
                             data-id="service-<?php echo get_the_ID(); ?>" alt="<?php the_title(); ?>">
                     <?php endwhile; ?>
                 </div>
-                <div>
-                    <div class="flex border-b border-beige space-x-16 text-beige mb-14 overflow-x-auto" id="tabs">
+                <div class="overflow-auto">
+                    <div class="flex border-b border-beige space-x-16 text-beige mb-14 overflow-auto whitespace-nowrap  no-scrollbar"
+                        id="tabs">
                         <?php $services->rewind_posts(); ?>
                         <?php while ($services->have_posts()):
                             $services->the_post();
@@ -81,7 +82,7 @@
                             ?>
                             <div class="cursor-pointer pb-5 border-b-2 border-transparent service-tab transition-opacity duration-300 <?php echo $opacityClass; ?>"
                                 data-target="service-<?php echo get_the_ID(); ?>">
-                                <h5>
+                                <h5 class="whitespace-nowrap">
                                     <?php echo get_field('tab_name'); ?>
                                 </h5>
                             </div>
@@ -100,7 +101,7 @@
                                 <p class="text-beige body mb-16">
                                     <?php echo get_field('subtitle'); ?>
                                 </p>
-                                <div class="body text-beige mb-16 max-w-[430px]">
+                                <div class="body text-beige w-full md:max-w-[430px] mb-16">
                                     <?php the_content(); ?>
                                 </div>
                             </div>
@@ -148,9 +149,9 @@
     </div>
 </section>
 
-<section class="bg-beige py-32 relative z-10">
-    <div class="container flex space-x-28">
-        <div class="shrink-0">
+<section class="bg-beige py-16 md:py-32 relative z-10">
+    <div class="container md:flex md:space-x-28">
+        <div class="shrink-0 mb-16 md:mb-0">
             <p class="text-primary max-w-[326px]">
                 Each Sandjong franchise is thoughtfully curated: maintaining our standards of care, heritage, and
                 sensory
@@ -158,35 +159,39 @@
             </p>
         </div>
         <div class="">
-            <p class="text-primary mb-[61px]">You will receive:</p>
-            <div class="grid md:grid-cols-3 gap-28">
+            <p class="text-primary mb-11 md:mb-[61px]">You will receive:</p>
+            <div class="grid grid-cols-2 md:grid-cols-3 gap-4 gap-y-16 md:gap-28">
                 <div>
                     <div class="w-16 h-16 mb-9 rounded-full bg-gold/20 flex justify-center items-center">
                         <img src="<?php echo get_template_directory_uri(); ?>/images/icons/certificate.png"
                             class="w-[42px] h-[42px] object-contain" alt="">
                     </div>
-                    <h5 class="text-primary max-w-[210px]">Full franchise license and rights to the Sandjong brand</h5>
+                    <h5 class="text-primary max-w-[150px] md:max-w-[210px]">Full franchise license and rights to the
+                        Sandjong brand</h5>
                 </div>
                 <div>
                     <div class="w-16 h-16 mb-9 rounded-full bg-gold/20 flex justify-center items-center">
                         <img src="<?php echo get_template_directory_uri(); ?>/images/icons/design.png"
                             class="w-[42px] h-[42px] object-contain" alt="">
                     </div>
-                    <h5 class="text-primary max-w-[210px]">Design guidance & spatial concept development</h5>
+                    <h5 class="text-primary max-w-[150px] md:max-w-[210px]">Design guidance & spatial concept
+                        development</h5>
                 </div>
                 <div>
                     <div class="w-16 h-16 mb-9 rounded-full bg-gold/20 flex justify-center items-center">
                         <img src="<?php echo get_template_directory_uri(); ?>/images/icons/training.png"
                             class="w-[42px] h-[42px] object-contain" alt="">
                     </div>
-                    <h5 class="text-primary max-w-[210px]">Training and refreshment programs for therapists</h5>
+                    <h5 class="text-primary max-w-[150px] md:max-w-[210px]">Training and refreshment programs for
+                        therapists</h5>
                 </div>
                 <div>
                     <div class="w-16 h-16 mb-9 rounded-full bg-gold/20 flex justify-center items-center">
                         <img src="<?php echo get_template_directory_uri(); ?>/images/icons/user-manual.png"
                             class="w-[42px] h-[42px] object-contain" alt="">
                     </div>
-                    <h5 class="text-primary max-w-[210px]">Service manuals, rituals, SOPs, and guest experience
+                    <h5 class="text-primary max-w-[150px] md:max-w-[210px]">Service manuals, rituals, SOPs, and guest
+                        experience
                         protocols</h5>
                 </div>
                 <div>
@@ -194,14 +199,16 @@
                         <img src="<?php echo get_template_directory_uri(); ?>/images/icons/presentation.png"
                             class="w-[42px] h-[42px] object-contain" alt="">
                     </div>
-                    <h5 class="text-primary max-w-[210px]">Marketing materials, launch support, and brand campaigns</h5>
+                    <h5 class="text-primary max-w-[150px] md:max-w-[210px]">Marketing materials, launch support, and
+                        brand campaigns</h5>
                 </div>
                 <div>
                     <div class="w-16 h-16 mb-9 rounded-full bg-gold/20 flex justify-center items-center">
                         <img src="<?php echo get_template_directory_uri(); ?>/images/icons/guarantee.png"
                             class="w-[42px] h-[42px] object-contain" alt="">
                     </div>
-                    <h5 class="text-primary max-w-[210px]">Continuous operational consulting and quality control</h5>
+                    <h5 class="text-primary max-w-[150px] md:max-w-[210px]">Continuous operational consulting and
+                        quality control</h5>
                 </div>
             </div>
         </div>

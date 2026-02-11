@@ -6,7 +6,7 @@
 get_header();
 ?>
 
-<section class="relative h-[400px] md:h-[587px] flex justify-center items-center">
+<section class="relative h-[587px] flex justify-center items-center">
 	<div class="absolute w-full h-[110%] left-0 -top-[10%]" data-scroll data-scroll-speed="2">
 		<img class="w-full h-full object-cover" src="<?php echo get_template_directory_uri(); ?>/images/bg-wellness.png"
 			alt="News hero background">
@@ -25,8 +25,8 @@ get_header();
 <section class="bg-beige py-16 relative">
 	<div class="container text-primary">
 		<div class="mb-16">
-			<h4 class="text-terracota mb-3">Whispers from Sandjong</h4>
-			<p class="body">
+			<h4 class="text-terracota mb-5 md:mb-3 max-w-[240px] md:max-w-full">Whispers from Sandjong</h4>
+			<p class="body max-w-[291px] md:max-w-full">
 				The thoughtful updates from our sanctuaries, including new rituals, cultural moments, and
 				what’s quietly unfolding at Sandjong.
 			</p>
@@ -48,7 +48,7 @@ get_header();
 			while ($news_query->have_posts()):
 				$news_query->the_post();
 				?>
-				<article class="border-b border-gold border-dashed py-12 last:border-b-0">
+				<article class="border-b border-gold border-dashed mb-12 pb-12 last:mb-0">
 					<div class="grid md:grid-cols-[minmax(0,320px)_minmax(0,1fr)] gap-8 md:gap-24 items-start">
 						<div class="w-full">
 							<?php if (has_post_thumbnail()): ?>
