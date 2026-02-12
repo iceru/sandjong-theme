@@ -194,8 +194,8 @@
                                             <?php if (get_field('duration')): ?>
                                                 <div
                                                     class="flex items-center bg-gold/20 text-gold space-x-2 rounded-lg py-1 px-2 shrink-0 mt-1">
-                                                    <img src="<?php echo get_template_directory_uri(); ?>/images/icons/timer.png"
-                                                        alt="">
+                                                    <img src="<?php echo get_template_directory_uri(); ?>/images/icons/timer.png" alt=""
+                                                        class="w-4 h-4 object-contain">
                                                     <span><?php the_field('duration'); ?></span>
                                                 </div>
                                             <?php endif; ?>
@@ -264,7 +264,8 @@
                                     <?php if (get_field('duration')): ?>
                                         <div
                                             class="flex items-center bg-gold/20 text-gold space-x-2 rounded-lg py-0.5 px-2 shrink-0 mt-1">
-                                            <img src="<?php echo get_template_directory_uri(); ?>/images/icons/timer.png" alt="">
+                                            <img src="<?php echo get_template_directory_uri(); ?>/images/icons/timer.png"
+                                                class="w-4 h-4 object-contain" alt="">
                                             <span><?php the_field('duration'); ?>'</span>
                                         </div>
                                     <?php endif; ?>
