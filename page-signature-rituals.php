@@ -78,11 +78,13 @@
                     while ($query->have_posts()):
                         $query->the_post();
                         ?>
-                        <div class="pr-6">
+                        <div class="pr-6 py-5">
                             <div class="bg-[#F8E6D2] px-4 md:px-6 py-2 grid md:grid-cols-2 relative rounded-xl gap-6 md:gap-12">
-                                <div class="w-[98%] h-4 rounded-t-xl -top-4 left-1/2 -translate-x-1/2 bg-[#F8E6D2] absolute">
+                                <div
+                                    class="w-[98%] h-4 rounded-t-xl -top-4 left-1/2 -translate-x-1/2 bg-[#F8E6D2] absolute -z-10">
                                 </div>
-                                <div class="w-[98%] h-4 rounded-b-xl -bottom-4 left-1/2 -translate-x-1/2 bg-[#F8E6D2] absolute">
+                                <div
+                                    class="w-[98%] h-4 rounded-b-xl -bottom-4 left-1/2 -translate-x-1/2 bg-[#F8E6D2] absolute -z-10">
                                 </div>
                                 <div>
                                     <img src="<?php echo get_the_post_thumbnail_url() ? get_the_post_thumbnail_url() : get_template_directory_uri() . '/images/signature-1.png'; ?>"

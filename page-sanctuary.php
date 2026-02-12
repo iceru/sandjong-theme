@@ -97,13 +97,18 @@
                         <?php
                         $branch_images = get_field('branch_images');
                         if ($branch_images): ?>
-                            <div class="sliders">
+                            <div class="sliders mb-12">
                                 <?php foreach ($branch_images as $image_post):
                                     $img_id = is_object($image_post) ? $image_post->ID : $image_post;
+                                    // Try to get thumbnail if it's a post, otherwise try as attachment
                                     $img_url = get_the_post_thumbnail_url($img_id, 'large');
+                                    if (!$img_url) {
+                                        $img_url = wp_get_attachment_image_url($img_id, 'large');
+                                    }
+
                                     if ($img_url):
                                         ?>
-                                        <div>
+                                        <div class="h-[242px] md:h-[478px]">
                                             <img src="<?php echo esc_url($img_url); ?>" class="w-full h-full object-cover rounded-lg"
                                                 alt="<?php echo esc_attr(get_the_title($img_id)); ?>">
                                         </div>
@@ -112,7 +117,7 @@
                                 endforeach; ?>
                             </div>
                         <?php elseif (has_post_thumbnail()): ?>
-                            <div>
+                            <div class="h-[242px] md:h-[478px] mb-12">
                                 <img src="<?php echo get_the_post_thumbnail_url(get_the_ID(), 'large'); ?>"
                                     class="w-full h-full object-cover rounded-lg" alt="<?php the_title(); ?>">
                             </div>
@@ -141,4 +146,21 @@
         </p>
     </div>
 </section>
+
+<script>
+    jQuery(document).ready(function ($) {
+        $('.sliders').slick({
+            infinite: true,
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            arrows: true,
+            prevArrow: '<button type="button" class="slick-prev"><img src="<?php echo get_template_directory_uri(); ?>/images/package-left.png" alt="Previous"></button>',
+            nextArrow: '<button type="button" class="slick-next"><img src="<?php echo get_template_directory_uri(); ?>/images/package-right.png" alt="Next"></button>',
+            dots: true,
+            autoplay: true,
+            autoplaySpeed: 3000,
+            adaptiveHeight: false
+        });
+    });
+</script>
 <?php get_footer(); ?>

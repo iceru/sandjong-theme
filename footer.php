@@ -96,6 +96,19 @@
             </div>
             <div class="mt-10">
                 <h5 class="text-gold mb-6">Subscribe to our Newsletter</h5>
+                <div class="relative">
+                    <div
+                        class="absolute -left-2 top-1/2 -translate-y-1/2 w-4 z-0 h-[52px] bg-primary border-2 border-beige rounded-lg">
+                    </div>
+                    <div class="absolute -left-[1px] z-10 top-1/2 -translate-y-1/2 w-4 h-[48px] bg-primary ">
+                    </div>
+                    <?php echo do_shortcode('[fluentform id="2"]'); ?>
+                    <div
+                        class="absolute -right-2 top-1/2 -translate-y-1/2 w-4 z-0 h-[52px] bg-primary border-2 border-beige rounded-lg">
+                    </div>
+                    <div class="absolute -right-[1px] z-10 top-1/2 -translate-y-1/2 w-2.5 h-[48px] bg-primary ">
+                    </div>
+                </div>
             </div>
         </div>
     </section>

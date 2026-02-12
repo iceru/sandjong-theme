@@ -351,7 +351,8 @@ h5 {
   position: relative;
 }
 
-.signature-sliders .slick-arrow {
+.signature-sliders .slick-arrow,
+.sliders .slick-arrow {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
@@ -367,30 +368,37 @@ h5 {
   justify-content: center;
 }
 
-.signature-sliders .slick-prev {
+.signature-sliders .slick-prev,
+.sliders .slick-prev {
   left: -20px;
 }
 
-.signature-sliders .slick-next {
+.signature-sliders .slick-next,
+.sliders .slick-next {
   right: -20px;
 }
 
+.sliders .slick-next::before,
 .signature-sliders .slick-next::before {
   content: "";
   display: none;
 }
 
+.sliders .slick-prev::before,
 .signature-sliders .slick-prev::before {
   content: "";
   display: none;
 }
 
 @media (max-width: 1280px) {
-  .signature-sliders .slick-prev {
+
+  .signature-sliders .slick-prev,
+  .sliders .slick-prev {
     left: -30px;
   }
 
-  .signature-sliders .slick-next {
+  .signature-sliders .slick-next,
+  .sliders .slick-next {
     right: -30px;
   }
 }
@@ -398,19 +406,83 @@ h5 {
 @media (max-width: 1024px) {
 
   .signature-sliders .slick-prev,
-  .signature-sliders .slick-next {
+  .sliders .slick-prev,
+  .signature-sliders .slick-next,
+  .sliders .slick-next {
     top: auto;
     bottom: -60px;
     transform: none;
   }
 
-  .signature-sliders .slick-prev {
+  .signature-sliders .slick-prev,
+  .sliders .slick-prev {
     left: 50%;
     margin-left: -50px;
   }
 
-  .signature-sliders .slick-next {
+  .signature-sliders .slick-next,
+  .sliders .slick-next {
     right: 50%;
     margin-right: -50px;
   }
+}
+
+form.fluent_form_2 .ff-t-container {
+  background-color: #314E48;
+  /* The dark green from your image */
+  padding: 0.5rem;
+  border: 2px solid #e8e2d6;
+  /* The light cream border */
+  border-radius: .75rem;
+  /* Large rounded corners */
+  position: relative;
+  display: flex;
+  align-items: center;
+  /* Creating the "bracket" effect on the corners */
+}
+
+/* Style the Input Field */
+form.fluent_form_2 .ff-el-form-control {
+  background: transparent !important;
+  border: none !important;
+  color: #a5b0ab !important;
+  /* Muted text color */
+  font-family: serif;
+  /* Matches the "classic" look in your image */
+  font-size: 1.2rem;
+  box-shadow: none !important;
+}
+
+/* Placeholder text color */
+form.fluent_form_2 .ff-el-form-control::placeholder {
+  color: #a5b0ab;
+  opacity: 0.8;
+}
+
+/* Submit Button Customization */
+form.fluent_form_2 .ff-btn-submit {
+  background-color: #a05752 !important;
+  /* The reddish-brown color */
+  border-radius: 12px !important;
+  padding: 10px 30px !important;
+  font-family: serif;
+  font-size: 1.1rem;
+  text-transform: capitalize;
+  border: none !important;
+  transition: all 0.3s ease;
+}
+
+/* Hover effect for the button */
+form.fluent_form_2 .ff-btn-submit:hover {
+  background-color: #bc6b65 !important;
+  transform: scale(1.02);
+}
+
+.frm-fluent-form .ff-t-cell .ff_submit_btn_wrapper_custom button,
+.fluentform .ff-el-group {
+  margin-bottom: 0 !important;
+}
+
+form.fluent_form_2 .wpf_has_custom_css.ff-btn-submit:hover {
+  color: white !important;
 }
