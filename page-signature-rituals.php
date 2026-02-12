@@ -152,6 +152,8 @@
                     $categories = get_terms(array(
                         'taxonomy' => 'treatment-category',
                         'hide_empty' => true,
+                        'orderby' => 'slug',
+                        'order' => 'ASC',
                     ));
 
                     foreach ($categories as $category):
