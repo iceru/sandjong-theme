@@ -102,7 +102,7 @@
                     </div>
                     <div class="absolute -left-[1px] z-10 top-1/2 -translate-y-1/2 w-4 h-[48px] bg-primary ">
                     </div>
-                    <?php echo do_shortcode('[fluentform id="2"]'); ?>
+                    <?php echo do_shortcode('[fluentform id="3"]'); ?>
                     <div
                         class="absolute -right-2 top-1/2 -translate-y-1/2 w-4 z-0 h-[52px] bg-primary border-2 border-beige rounded-lg">
                     </div>
