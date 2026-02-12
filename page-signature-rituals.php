@@ -237,7 +237,7 @@
                 </div>
             </div>
             <div id="simple-touch">
-                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="grid lg:grid-cols-6 gap-x-6 gap-y-10">
                     <?php
                     $s_args = array(
                         'post_type' => 'simple-touch',
@@ -247,10 +247,14 @@
                     );
                     $s_query = new WP_Query($s_args);
                     if ($s_query->have_posts()):
+                        $s_count = 0;
                         while ($s_query->have_posts()):
                             $s_query->the_post();
+                            $s_count++;
+                            // first two items span 3/6 columns (50% each), others span 2/6 (33.3% each)
+                            $col_span = ($s_count <= 2) ? 'lg:col-span-3' : 'lg:col-span-2';
                             ?>
-                            <div class="flex flex-col">
+                            <div class="flex flex-col <?php echo esc_attr($col_span); ?>">
                                 <img src="<?php echo get_the_post_thumbnail_url() ? get_the_post_thumbnail_url() : get_template_directory_uri() . '/images/acu.png'; ?>"
                                     class="rounded-lg w-full h-[384px] object-cover mb-5" alt="<?php the_title(); ?>">
                                 <div class="flex justify-between mb-5">
@@ -286,6 +290,8 @@
             slidesToShow: 1.25,
             slidesToScroll: 1,
             arrows: true,
+            prevArrow: '<button type="button" class="slick-prev"><img src="<?php echo get_template_directory_uri(); ?>/images/package-left.png" alt="Previous"></button>',
+            nextArrow: '<button type="button" class="slick-next"><img src="<?php echo get_template_directory_uri(); ?>/images/package-right.png" alt="Next"></button>',
             responsive: [
                 {
                     breakpoint: 768,

@@ -162,5 +162,17 @@ function sandjong_register_cpts()
         'show_admin_column' => true,
         'public' => true,
     ));
+
+    // Promotions CPT
+    register_post_type('promotions', array(
+        'labels' => array(
+            'name' => 'Promotions',
+            'singular_name' => 'Promotion',
+        ),
+        'public' => true,
+        'has_archive' => false,
+        'menu_icon' => 'dashicons-tag',
+        'supports' => array('title', 'editor', 'thumbnail', 'excerpt'),
+    ));
 }
 add_action('init', 'sandjong_register_cpts');

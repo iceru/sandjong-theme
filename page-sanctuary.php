@@ -94,12 +94,11 @@
                         </div>
                     </div>
                     <div class="order-1 md:order-2">
-                        <div class="sliders">
-                            <?php
-                            $branch_images = get_field('branch_images');
-                            if ($branch_images):
-                                foreach ($branch_images as $image_post):
-                                    // setup_postdata($image_post); // Optional: if we want to use template tags
+                        <?php
+                        $branch_images = get_field('branch_images');
+                        if ($branch_images): ?>
+                            <div class="sliders">
+                                <?php foreach ($branch_images as $image_post):
                                     $img_id = is_object($image_post) ? $image_post->ID : $image_post;
                                     $img_url = get_the_post_thumbnail_url($img_id, 'large');
                                     if ($img_url):
@@ -110,16 +109,14 @@
                                         </div>
                                         <?php
                                     endif;
-                                endforeach;
-                                // wp_reset_postdata(); // If setup_postdata was used
-                            elseif (has_post_thumbnail()):
-                                ?>
-                                <div>
-                                    <img src="<?php echo get_the_post_thumbnail_url(get_the_ID(), 'large'); ?>"
-                                        class="w-full h-full object-cover rounded-lg" alt="<?php the_title(); ?>">
-                                </div>
-                            <?php endif; ?>
-                        </div>
+                                endforeach; ?>
+                            </div>
+                        <?php elseif (has_post_thumbnail()): ?>
+                            <div>
+                                <img src="<?php echo get_the_post_thumbnail_url(get_the_ID(), 'large'); ?>"
+                                    class="w-full h-full object-cover rounded-lg" alt="<?php the_title(); ?>">
+                            </div>
+                        <?php endif; ?>
                     </div>
                 </div>
                 <?php

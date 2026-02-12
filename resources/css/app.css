@@ -345,3 +345,72 @@ h5 {
     grid-template-columns: 1fr;
   }
 }
+
+
+.signature-sliders-container {
+  position: relative;
+}
+
+.signature-sliders .slick-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 20;
+  cursor: pointer;
+  background: transparent;
+  border: none;
+  padding: 0;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.signature-sliders .slick-prev {
+  left: -20px;
+}
+
+.signature-sliders .slick-next {
+  right: -20px;
+}
+
+.signature-sliders .slick-next::before {
+  content: "";
+  display: none;
+}
+
+.signature-sliders .slick-prev::before {
+  content: "";
+  display: none;
+}
+
+@media (max-width: 1280px) {
+  .signature-sliders .slick-prev {
+    left: -30px;
+  }
+
+  .signature-sliders .slick-next {
+    right: -30px;
+  }
+}
+
+@media (max-width: 1024px) {
+
+  .signature-sliders .slick-prev,
+  .signature-sliders .slick-next {
+    top: auto;
+    bottom: -60px;
+    transform: none;
+  }
+
+  .signature-sliders .slick-prev {
+    left: 50%;
+    margin-left: -50px;
+  }
+
+  .signature-sliders .slick-next {
+    right: 50%;
+    margin-right: -50px;
+  }
+}

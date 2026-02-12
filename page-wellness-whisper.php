@@ -130,7 +130,6 @@ get_header();
 </section>
 
 <?php
-// Promotions section (CPT "promotions") with its own pagination
 ?>
 <section class="bg-[#F8E6D2] relative pb-24 md:pb-32">
 	<div class="absolute w-full h-full left-0 top-0 opacity-10 pointer-events-none">
@@ -161,31 +160,25 @@ get_header();
 		);
 
 		if ($promo_query->have_posts()): ?>
-			<div class="grid md:grid-cols-3 gap-10 mb-12">
+			<div class="grid md:grid-cols-3 gap-10 md:gap-16 mb-12">
 				<?php while ($promo_query->have_posts()):
 					$promo_query->the_post(); ?>
-					<article class="bg-beige/60 rounded-xl overflow-hidden shadow-sm">
+					<article>
 						<?php if (has_post_thumbnail()): ?>
-							<a href="<?php the_permalink(); ?>" class="block">
+							<a href=" <?php the_permalink(); ?>" class="block">
 								<?php the_post_thumbnail('large', array(
-									'class' => 'w-full h-[260px] object-cover',
+									'class' => 'w-full h-[436px] object-cover rounded-xl mb-4',
 								)); ?>
 							</a>
 						<?php endif; ?>
 
-						<div class="p-6">
-							<h5 class="mb-2">
-								<a href="<?php the_permalink(); ?>" class="hover:text-terracota transition-colors">
-									<?php the_title(); ?>
-								</a>
-							</h5>
-							<div class="body text-primary/80 mb-4 min-h-[72px]">
-								<?php echo wp_trim_words(get_the_excerpt(), 20); ?>
-							</div>
-							<a href="<?php the_permalink(); ?>"
-								class="inline-flex items-center body text-terracota hover:text-primary transition-colors">
-								Read more
+						<h5 class="mb-2">
+							<a href="<?php the_permalink(); ?>" class="hover:text-terracota transition-colors !no-underline">
+								<?php the_title(); ?>
 							</a>
+						</h5>
+						<div class="body text-primary/80 mb-4">
+							<?php echo wp_trim_words(get_the_excerpt(), 20); ?>
 						</div>
 					</article>
 				<?php endwhile; ?>
