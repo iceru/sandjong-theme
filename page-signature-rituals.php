@@ -158,7 +158,7 @@
 
                     foreach ($categories as $category):
                         ?>
-                        <div class="grid md:grid-cols-2 mb-10">
+                        <div class="grid md:grid-cols-2">
                             <div class="mb-10 md:mb-0">
                                 <h5 class="text-terracota"><?php echo $category->name; ?></h5>
                             </div>
@@ -185,22 +185,34 @@
                                         $p_query->the_post();
                                         $count++;
                                         ?>
-                                        <div
-                                            class="flex items-start space-x-14 pb-12 mb-12 <?php echo ($count < $total) ? 'border-b border-gold/50' : ''; ?>">
-                                            <div>
-                                                <h4 class="text-primary mb-10"><?php the_title(); ?></h4>
-                                                <div class="prose prose-sm max-w-none">
-                                                    <?php the_content(); ?>
-                                                </div>
-                                            </div>
-                                            <?php if (get_field('duration')): ?>
-                                                <div
-                                                    class="flex items-center bg-gold/20 text-gold space-x-2 rounded-lg py-1 px-2 shrink-0 mt-1">
-                                                    <img src="<?php echo get_template_directory_uri(); ?>/images/icons/timer.png" alt=""
-                                                        class="w-4 h-4 object-contain">
-                                                    <span><?php the_field('duration'); ?></span>
-                                                </div>
+                                        <div>
+                                            <?php if (get_field('subtitle')): ?>
+                                                <h5 class="text-gold mb-11">
+                                                    <?php the_field('subtitle'); ?>
+                                                </h5>
                                             <?php endif; ?>
+
+                                            <div
+                                                class="flex items-start space-x-14 pb-12 mb-12 <?php echo ($count < $total) ? 'border-b border-gold/50' : ''; ?>">
+                                                <div>
+                                                    <h4 class="text-primary mb-10">
+                                                        <?php the_title(); ?>
+                                                    </h4>
+                                                    <div class="prose prose-sm max-w-none">
+                                                        <?php the_content(); ?>
+                                                    </div>
+                                                </div>
+                                                <?php if (get_field('duration')): ?>
+                                                    <div
+                                                        class="flex items-center bg-gold/20 text-gold space-x-2 rounded-lg py-1 px-2 shrink-0 mt-1">
+                                                        <img src="<?php echo get_template_directory_uri(); ?>/images/icons/timer.png"
+                                                            alt="" class="w-4 h-4 object-contain">
+                                                        <span>
+                                                            <?php the_field('duration'); ?>
+                                                        </span>
+                                                    </div>
+                                                <?php endif; ?>
+                                            </div>
                                         </div>
                                         <?php
                                     endwhile;
