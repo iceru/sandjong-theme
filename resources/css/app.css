@@ -427,7 +427,7 @@ h5 {
   }
 }
 
-form.fluent_form_2 .ff-t-container {
+form.fluent_form_3 .ff-t-container {
   background-color: #314E48;
   /* The dark green from your image */
   padding: 0.5rem;
@@ -442,7 +442,7 @@ form.fluent_form_2 .ff-t-container {
 }
 
 /* Style the Input Field */
-form.fluent_form_2 .ff-el-form-control {
+form.fluent_form_3 .ff-el-form-control {
   background: transparent !important;
   border: none !important;
   color: #a5b0ab !important;
@@ -454,13 +454,13 @@ form.fluent_form_2 .ff-el-form-control {
 }
 
 /* Placeholder text color */
-form.fluent_form_2 .ff-el-form-control::placeholder {
+form.fluent_form_3 .ff-el-form-control::placeholder {
   color: #a5b0ab;
   opacity: 0.8;
 }
 
 /* Submit Button Customization */
-form.fluent_form_2 .ff-btn-submit {
+form.fluent_form_3 .ff-btn-submit {
   background-color: #a05752 !important;
   /* The reddish-brown color */
   border-radius: 12px !important;
@@ -473,7 +473,7 @@ form.fluent_form_2 .ff-btn-submit {
 }
 
 /* Hover effect for the button */
-form.fluent_form_2 .ff-btn-submit:hover {
+form.fluent_form_3 .ff-btn-submit:hover {
   background-color: #bc6b65 !important;
   transform: scale(1.02);
 }
@@ -483,6 +483,6 @@ form.fluent_form_2 .ff-btn-submit:hover {
   margin-bottom: 0 !important;
 }
 
-form.fluent_form_2 .wpf_has_custom_css.ff-btn-submit:hover {
+form.fluent_form_3 .wpf_has_custom_css.ff-btn-submit:hover {
   color: white !important;
 }
