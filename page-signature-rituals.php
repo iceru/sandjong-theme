@@ -104,8 +104,8 @@
                                             <div
                                                 class="mb-7 inline-flex items-center space-x-2 rounded-lg py-1 px-1.5 bg-gold/20 text-gold">
                                                 <img src="<?php echo get_template_directory_uri(); ?>/images/icons/timer.png"
-                                                    alt="">
-                                                <span><?php the_field('duration'); ?></span>
+                                                    class="object-contain w-4 h-4" alt="">
+                                                <span><?php the_field('duration'); ?> Minutes</span>
                                             </div>
                                         <?php endif; ?>
                                     </div>
