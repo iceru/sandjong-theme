@@ -45,7 +45,7 @@
             </div>
         </div>
         <div id="signature" class="tab-content">
-            <div class="rounded-lg relative flex flex-col justify-end p-6 md:p-14 min-h-[552px] mb-11">
+            <div class="rounded-lg relative flex flex-col justify-end p-6 md:p-14 min-h-[658px] md:min-h-[552px] mb-11">
                 <div class="absolute w-full h-full left-0 top-0">
                     <img class="rounded-lg w-full h-full object-cover"
                         src="<?php echo get_template_directory_uri(); ?>/images/bg-signature-2.png" alt="">
@@ -120,7 +120,8 @@
             </div>
         </div>
         <div id="package" class="tab-content hidden">
-            <div class="rounded-lg relative flex flex-col justify-end p-6 md:p-14 min-h-[552px] mb-[71px]">
+            <div
+                class="rounded-lg relative flex flex-col justify-end p-6 md:p-14 min-h-[658px] md:min-h-[552px] mb-[71px]">
                 <div class="absolute w-full h-full left-0 top-0">
                     <img class="rounded-lg w-full h-full object-cover"
                         src="<?php echo get_template_directory_uri(); ?>/images/package.png" alt="">
@@ -237,7 +238,7 @@
             </div>
         </div>
         <div id="simple" class="tab-content hidden">
-            <div class="rounded-lg relative flex flex-col justify-end p-6 md:p-14 min-h-[552px] mb-16">
+            <div class="rounded-lg relative flex flex-col justify-end p-6 md:p-14 min-h-[658px] md:min-h-[552px] mb-16">
                 <div class="absolute w-full h-full left-0 top-0">
                     <img class="rounded-lg w-full h-full object-cover"
                         src="<?php echo get_template_directory_uri(); ?>/images/simple.png" alt="">
