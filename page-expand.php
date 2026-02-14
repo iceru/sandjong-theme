@@ -1,4 +1,17 @@
 <?php get_header(); ?>
+<style>
+    .masked-facility {
+        -webkit-mask-image: url('<?php echo get_template_directory_uri(); ?>/images/mask/mask-facility.png');
+        -webkit-mask-size: 100% 100%;
+        -webkit-mask-repeat: no-repeat;
+        -webkit-mask-position: center;
+        mask-image: url('<?php echo get_template_directory_uri(); ?>/images/mask/mask-facility.png');
+        mask-mode: alpha;
+        mask-size: 100% 100%;
+        mask-repeat: no-repeat;
+        mask-position: center;
+    }
+</style>
 
 <section class="relative h-[587px]">
     <div class="w-full h-[110%] left-0 -top-[10%] absolute" data-scroll data-scroll-speed="2">
@@ -68,7 +81,7 @@
                         $activeClass = ($services->current_post === 0) ? '' : 'hidden'; // First visible, others hidden
                         ?>
                         <img src="<?php echo get_the_post_thumbnail_url() ? get_the_post_thumbnail_url() : get_template_directory_uri() . '/images/expand/our-services.png'; ?>"
-                            class="service-image w-full h-auto object-cover <?php echo $activeClass; ?>"
+                            class="service-image masked-facility w-full h-auto object-cover <?php echo $activeClass; ?>"
                             data-id="service-<?php echo get_the_ID(); ?>" alt="<?php the_title(); ?>">
                     <?php endwhile; ?>
                 </div>

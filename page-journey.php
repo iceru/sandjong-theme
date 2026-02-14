@@ -1,4 +1,28 @@
 <?php get_header(); ?>
+<style>
+    .masked-sense {
+        -webkit-mask-image: url('<?php echo get_template_directory_uri(); ?>/images/mask/mask-sense.png');
+        -webkit-mask-size: 100% 100%;
+        -webkit-mask-repeat: no-repeat;
+        -webkit-mask-position: center;
+        mask-image: url('<?php echo get_template_directory_uri(); ?>/images/mask/mask-sense.png');
+        mask-mode: alpha;
+        mask-size: 100% 100%;
+        mask-repeat: no-repeat;
+        mask-position: center;
+    }
+    .masked-facility {
+        -webkit-mask-image: url('<?php echo get_template_directory_uri(); ?>/images/mask/mask-facility.png');
+        -webkit-mask-size: 100% 100%;
+        -webkit-mask-repeat: no-repeat;
+        -webkit-mask-position: center;
+        mask-image: url('<?php echo get_template_directory_uri(); ?>/images/mask/mask-facility.png');
+        mask-mode: alpha;
+        mask-size: 100% 100%;
+        mask-repeat: no-repeat;
+        mask-position: center;
+    }
+</style>
 
 
 <section class="relative h-[501px] flex justify-center items-center">
@@ -37,7 +61,7 @@
             </h4>
         </div>
         <div
-            class="draggable-container md:absolute right-0 flex space-x-6 w-full md:w-1/2 whitespace-nowrap overflow-x-auto pb-6 cursor-grab select-none no-scrollbar">
+            class="draggable-container pr-4 md:absolute right-0 flex space-x-6 w-full md:w-1/2 whitespace-nowrap overflow-x-auto pb-6 cursor-grab select-none no-scrollbar">
 
             <div class="w-[312px] shrink-0 ">
                 <img src="<?php echo get_template_directory_uri(); ?>/images/vision.png"
@@ -184,9 +208,9 @@
                         <div class="grid md:grid-cols-2">
                             <div class="mb-16 md:mb-0 ">
                                 <?php if (has_post_thumbnail()): ?>
-                                    <?php the_post_thumbnail('large', array('class' => 'rounded-lg w-full h-full object-cover max-w-[500px]')); ?>
+                                    <?php the_post_thumbnail('large', array('class' => 'masked-sense w-full h-full object-cover max-w-[500px]')); ?>
                                 <?php else: ?>
-                                    <img src="<?php echo get_template_directory_uri(); ?>/images/senses.png" class="rounded-lg"
+                                    <img src="<?php echo get_template_directory_uri(); ?>/images/senses.png" class="masked-sense w-full h-full object-cover max-w-[500px]"
                                         alt="">
                                 <?php endif; ?>
                             </div>
@@ -276,9 +300,9 @@
                             <div class="grid md:grid-cols-2 gap-6">
                                 <div>
                                     <?php if (has_post_thumbnail()): ?>
-                                        <?php the_post_thumbnail('large', array('class' => 'w-full h-full object-cover rounded-lg')); ?>
+                                        <?php the_post_thumbnail('large', array('class' => 'masked-facility w-full h-full object-cover')); ?>
                                     <?php else: ?>
-                                        <img src="<?php echo get_template_directory_uri(); ?>/images/lobby.png" alt="">
+                                        <img src="<?php echo get_template_directory_uri(); ?>/images/lobby.png" class="masked-facility w-full h-full object-cover" alt="">
                                     <?php endif; ?>
                                 </div>
                                 <div class="bg-[#FFE5C9] rounded-xl relative p-8 md:px-20 md:py-16">
@@ -484,7 +508,7 @@
             breath at the end of
             a treatment, and the
             shared stillness that truly honors us.</p>
-        <a href="#" class="button bg-gold !px-4">Book Your Session</a>
+        <a href="https://wa.me/6282130376088" target="_blank" class="button bg-gold !px-4">Book Your Session</a>
     </div>
 </section>
 
@@ -496,6 +520,8 @@
             slidesToScroll: 1,
             arrows: true,
             dots: true,
+            autoplay: false, // Managed by Intersection Observer
+            autoplaySpeed: 3000,
             fade: true, // Smooth transition
             appendArrows: $('.senses-nav'),
             appendDots: $('.senses-nav'),
@@ -506,6 +532,8 @@
         $('.facility-slider').slick({
             dots: true,
             infinite: true,
+            autoplay: false, // Managed by Intersection Observer
+            autoplaySpeed: 3000,
             speed: 300,
             slidesToShow: 1,
             fade: true,
@@ -519,6 +547,8 @@
         $('.awards-slider').slick({
             dots: true,
             infinite: true,
+            autoplay: false, // Managed by Intersection Observer
+            autoplaySpeed: 3000,
             speed: 300,
             slidesToShow: 1,
             adaptiveHeight: true,
@@ -526,20 +556,64 @@
             nextArrow: '<button type="button" class="slick-next before:hidden !-right-2"><img src="<?php echo get_template_directory_uri(); ?>/images/icons/arrow-terra-2.png" class="w-6 h-6"></button>',
         });
 
-        $('.timeline-item').on('click', function () {
-            // If the clicked item is already active, do nothing
-            if ($(this).hasClass('active')) return;
+        // Autoplay only when visible in viewport
+        const sliderObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    $(entry.target).slick('slickPlay');
+                } else {
+                    $(entry.target).slick('slickPause');
+                }
+            });
+        }, { threshold: 0.2 });
 
-            // 1. Remove active class from all items
-            $('.timeline-item').removeClass('active');
-
-            // 2. Add active class to the clicked item
-            $(this).addClass('active');
-
-            // 3. Slide up all other contents and slide down the current one
-            $('.timeline-content').not($(this).find('.timeline-content')).slideUp(400);
-            $(this).find('.timeline-content').slideDown(400);
+        $('.senses-slider, .facility-slider, .awards-slider').each(function () {
+            sliderObserver.observe(this);
         });
+
+        let timelineInterval;
+        const timelineItems = $('.timeline-item');
+
+        function nextTimelineItem() {
+            const current = $('.timeline-item.active');
+            let next = current.next('.timeline-item');
+            if (next.length === 0) {
+                next = timelineItems.first();
+            }
+            triggerTimelineItem(next);
+        }
+
+        function triggerTimelineItem($item) {
+            if ($item.hasClass('active')) return;
+
+            $('.timeline-item').removeClass('active');
+            $item.addClass('active');
+            $('.timeline-content').not($item.find('.timeline-content')).slideUp(400);
+            $item.find('.timeline-content').slideDown(400);
+        }
+
+        $('.timeline-item').on('click', function () {
+            triggerTimelineItem($(this));
+            // Reset interval on manual click
+            clearInterval(timelineInterval);
+            timelineInterval = setInterval(nextTimelineItem, 3000);
+        });
+
+        const timelineObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    clearInterval(timelineInterval);
+                    timelineInterval = setInterval(nextTimelineItem, 3000);
+                } else {
+                    clearInterval(timelineInterval);
+                }
+            });
+        }, { threshold: 0.2 });
+
+        const timelineSection = document.querySelector('#timeline');
+        if (timelineSection) {
+            timelineObserver.observe(timelineSection);
+        }
 
         const $container = $('.draggable-container');
         let isDown = false;

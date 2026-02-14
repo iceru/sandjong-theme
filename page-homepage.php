@@ -1,4 +1,17 @@
 <?php get_header(); ?>
+<style>
+    .masked-image {
+        -webkit-mask-image: url('<?php echo get_template_directory_uri(); ?>/images/mask/mask.png');
+        -webkit-mask-size: 100% 100%;
+        -webkit-mask-repeat: no-repeat;
+        -webkit-mask-position: center;
+        mask-image: url('<?php echo get_template_directory_uri(); ?>/images/mask/mask.png');
+        mask-mode: alpha;
+        mask-size: 100% 100%;
+        mask-repeat: no-repeat;
+        mask-position: center;
+    }
+</style>
 
 <section id="header" class="h-screen md:h-auto flex flex-col justify-end items-center relative md:aspect-video w-full">
     <div class="absolute left-0 top-0 w-full h-full">
@@ -50,7 +63,7 @@
     <div>
         <h4 class="mb-8 text-center text-gold">A Window to the Soul</h4>
         <div class="flex flex-col justify-center items-center">
-            <div class="mb-8 md:w-[500px] w-[287px] h-[290px] md:h-[500px] relative flex justify-center items-center">
+            <div class="mb-8 md:w-[522px] w-[287px] h-[296px] md:h-[536px] relative flex justify-center items-center">
                 <h4 class="text-beige relative z-10 text-center !text-xl md:!text-2xl max-w-[221px] md:max-w-[360px]">
                     The Unique Threads in Our Wellness Tapestry
                 </h4>
@@ -107,7 +120,7 @@
                                 <?php the_post_thumbnail('large', array('class' => 'masked-image max-h-[355px] w-full object-cover')); ?>
                             <?php else: ?>
                                 <img src="<?php echo get_template_directory_uri(); ?>/images/episode.png"
-                                    class=" max-h-[355px] object-cover" alt="">
+                                    class="masked-image max-h-[355px] w-full object-cover" alt="">
                             <?php endif; ?>
                         </div>
                     </div>
@@ -153,7 +166,7 @@
                 <a href="/wellness-whisper" class="button bg-terracota">Read More</a>
             </div>
         </div>
-        <div class="flex flex-col space-y-2 items-center justify-center hidden md:block">
+        <div class="flex-col space-y-2 items-center justify-center hidden md:flex">
             <img src="<?php echo get_template_directory_uri(); ?>/images/icons/arrow-terra.png"
                 class="-rotate-90 w-3 h-3 opacity-40" alt="">
             <div class="w-[1px] h-full border border-terracota border-dashed opacity-30"></div>
@@ -212,10 +225,10 @@
             souls.
         </p>
         <div class="flex justify-center items-center space-x-8">
-            <a href="" class="button bg-terracota">
+            <a href="/sanctuary" class="button bg-terracota">
                 Spa Operation
             </a>
-            <a href="" class="button bg-gold group">
+            <a href="/expand" class="button bg-gold group">
                 For Franchise
             </a>
         </div>

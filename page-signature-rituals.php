@@ -161,6 +161,11 @@
                         <div class="grid md:grid-cols-2">
                             <div class="mb-10 md:mb-0">
                                 <h5 class="text-terracota"><?php echo $category->name; ?></h5>
+                                <?php if ($category->description): ?>
+                                    <p class="body text-primary mt-9">
+                                        <?php echo $category->description; ?>
+                                    </p>
+                                <?php endif; ?>
                             </div>
                             <div>
                                 <?php

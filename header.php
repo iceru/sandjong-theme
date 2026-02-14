@@ -40,6 +40,7 @@
     <div id="page" class="min-h-screen flex flex-col">
         <?php do_action('tailpress_header'); ?>
         <header class="fixed top-0 left-0 z-40 w-full">
+            <?php $current_uri = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH); ?>
             <section
                 class="drop-shadow-2xl container relative flex justify-between items-center rounded-b-xl bg-primary py-5 pb-3 px-[22px] min-h-[40px]">
                 <div class="absolute -bottom-3 left-1/2 -translate-x-1/2 w-[98.5%] rounded-b-xl  h-4 bg-primary"></div>
@@ -53,26 +54,32 @@
                 </a>
                 <ul class="items-center text-beige space-x-10 hidden md:flex">
                     <li>
-                        <a class="!no-underline text-xs" href="/">Home</a>
+                        <a class="!no-underline text-xs hover:text-gold transition-colors <?php echo ($current_uri == '/' || $current_uri == '/index.php') ? 'text-gold' : ''; ?>"
+                            href="/">Home</a>
                     </li>
                     <li>
-                        <a class="!no-underline text-xs" href="/journey">Journey of Sandjong </a>
+                        <a class="!no-underline text-xs hover:text-gold transition-colors <?php echo (strpos($current_uri, '/journey') !== false) ? 'text-gold' : ''; ?>"
+                            href="/journey">Journey of Sandjong </a>
                     </li>
                     <li>
-                        <a class="!no-underline text-xs" href="/signature-rituals">Signature Rituals</a>
+                        <a class="!no-underline text-xs hover:text-gold transition-colors <?php echo (strpos($current_uri, '/signature-rituals') !== false) ? 'text-gold' : ''; ?>"
+                            href="/signature-rituals">Signature Rituals</a>
                     </li>
                     <li>
-                        <a class="!no-underline text-xs" href="/wellness-whisper">Wellness Whisper</a>
+                        <a class="!no-underline text-xs hover:text-gold transition-colors <?php echo (strpos($current_uri, '/wellness-whisper') !== false) ? 'text-gold' : ''; ?>"
+                            href="/wellness-whisper">Wellness Whisper</a>
                     </li>
                     <li>
-                        <a class="!no-underline text-xs" href="/expand">Expand with Sandjong</a>
+                        <a class="!no-underline text-xs hover:text-gold transition-colors <?php echo (strpos($current_uri, '/expand') !== false) ? 'text-gold' : ''; ?>"
+                            href="/expand">Expand with Sandjong</a>
                     </li>
                     <li>
-                        <a class="!no-underline text-xs" href="/sanctuary">Sanctuary of Sandjong</a>
+                        <a class="!no-underline text-xs hover:text-gold transition-colors <?php echo (strpos($current_uri, '/sanctuary') !== false) ? 'text-gold' : ''; ?>"
+                            href="/sanctuary">Sanctuary of Sandjong</a>
                     </li>
                 </ul>
                 <div class="hidden md:block">
-                    <a href="" class="button bg-terracota ">
+                    <a href="https://wa.me/6282130376088" target="_blank" class="button bg-terracota ">
                         Book Now
                     </a>
                 </div>
@@ -89,16 +96,23 @@
                             alt="">
                     </a>
                     <ul class="flex flex-col space-y-9 text-beige text-xl">
-                        <li><a class="!no-underline" href="/">Home</a></li>
-                        <li><a class="!no-underline" href="/journey">Journey of Sandjong </a></li>
-                        <li><a class="!no-underline" href="/signature-rituals">Signature Rituals</a></li>
-                        <li><a class="!no-underline" href="/wellness-whisper">Wellness Whisper</a></li>
-                        <li><a class="!no-underline" href="/expand">Expand with Sandjong</a></li>
-                        <li><a class="!no-underline" href="/sanctuary">Sanctuary of Sandjong</a></li>
+                        <li><a class="!no-underline hover:text-gold transition-colors <?php echo ($current_uri == '/' || $current_uri == '/index.php') ? 'text-gold' : ''; ?>"
+                                href="/">Home</a></li>
+                        <li><a class="!no-underline hover:text-gold transition-colors <?php echo (strpos($current_uri, '/journey') !== false) ? 'text-gold' : ''; ?>"
+                                href="/journey">Journey of Sandjong </a></li>
+                        <li><a class="!no-underline hover:text-gold transition-colors <?php echo (strpos($current_uri, '/signature-rituals') !== false) ? 'text-gold' : ''; ?>"
+                                href="/signature-rituals">Signature Rituals</a></li>
+                        <li><a class="!no-underline hover:text-gold transition-colors <?php echo (strpos($current_uri, '/wellness-whisper') !== false) ? 'text-gold' : ''; ?>"
+                                href="/wellness-whisper">Wellness Whisper</a></li>
+                        <li><a class="!no-underline hover:text-gold transition-colors <?php echo (strpos($current_uri, '/expand') !== false) ? 'text-gold' : ''; ?>"
+                                href="/expand">Expand with Sandjong</a></li>
+                        <li><a class="!no-underline hover:text-gold transition-colors <?php echo (strpos($current_uri, '/sanctuary') !== false) ? 'text-gold' : ''; ?>"
+                                href="/sanctuary">Sanctuary of Sandjong</a></li>
                     </ul>
                 </div>
                 <div>
-                    <a href="" class="button bg-terracota !text-xl px-8 py-3">Book Now</a>
+                    <a href="https://wa.me/6282130376088" target="_blank"
+                        class="button bg-terracota !text-xl px-8 py-3">Book Now</a>
                 </div>
             </div>
 

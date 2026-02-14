@@ -8,7 +8,7 @@
 get_header();
 ?>
 
-<section class="bg-beige min-h-screen py-20">
+<section class="bg-beige min-h-screen py-20 md:py-44">
 	<div class="container text-primary">
 		<?php if (have_posts()): ?>
 			<?php while (have_posts()):
@@ -115,14 +115,14 @@ get_header();
 								<article>
 									<div class="mb-6">
 										<?php if (has_post_thumbnail()): ?>
-											<a href="<?php the_permalink(); ?>" class="block overflow-hidden rounded-lg">
+											<a href="<?php the_permalink(); ?>" class="block overflow-hidden rounded-lg !no-underline">
 												<?php the_post_thumbnail('large', array(
 													'class' => 'w-full h-[220px] object-cover',
 												)); ?>
 											</a>
 										<?php else: ?>
 											<a href="<?php the_permalink(); ?>"
-												class="block overflow-hidden rounded-lg bg-primary/5 h-[220px] flex items-center justify-center">
+												class="block overflow-hidden rounded-lg !no-underline bg-primary/5 h-[220px] flex items-center justify-center">
 												<span class="body text-primary/60">No image available</span>
 											</a>
 										<?php endif; ?>
@@ -131,11 +131,11 @@ get_header();
 									<p class="body text-terracota mb-2"><?php echo get_the_date('d M Y'); ?></p>
 									<h5 class="mb-3">
 										<a href="<?php the_permalink(); ?>"
-											class="hover:text-terracota transition-colors"><?php the_title(); ?></a>
+											class="hover:text-terracota transition-colors !no-underline"><?php the_title(); ?></a>
 									</h5>
 									<div class="body text-primary/80 mb-4"><?php echo wp_trim_words(get_the_excerpt(), 22); ?></div>
 									<a href="<?php the_permalink(); ?>"
-										class="inline-flex items-center body text-terracota hover:text-primary transition-colors">Read
+										class="inline-flex items-center body !no-underline text-terracota hover:text-primary transition-colors">Read
 										more</a>
 								</article>
 							<?php endwhile; ?>
