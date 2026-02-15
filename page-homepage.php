@@ -53,7 +53,7 @@
             your
             place to unwind, refresh your body, and restore your mind in a culturally rich and rejuvenating sanctuary.
         </p>
-        <a href="" class="button bg-gold group">
+        <a href="/journey" class="button bg-gold group">
             Learn More
         </a>
     </div>
@@ -113,7 +113,8 @@
                             <div class="max-w-[489px]">
                                 <?php the_content(); ?>
                             </div>
-                            <a href="<?php the_permalink(); ?>" class="button bg-gold inline-block mb-8 md:mb-0">Explore</a>
+                            <a href="/sanctuary#<?php echo get_post_field('post_name'); ?>"
+                                class="button bg-gold inline-block mb-8 md:mb-0">Explore</a>
                         </div>
                         <div class="order-1 md:order-2 mb-7 md:mb-0">
                             <?php if (has_post_thumbnail()): ?>

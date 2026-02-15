@@ -1,4 +1,9 @@
 <?php get_header(); ?>
+<style>
+    #branches [id] {
+        scroll-margin-top: 120px;
+    }
+</style>
 <section class="h-screen w-full max-h-[811px]">
     <div class="absolute w-full h-[120%] left-0 -top-[10%]" data-scroll data-scroll-speed="2">
         <img src="<?php echo get_template_directory_uri(); ?>/images/bg-sanctuary.png"
@@ -30,7 +35,7 @@
             while ($branch_query->have_posts()):
                 $branch_query->the_post();
                 ?>
-                <div class="grid md:grid-cols-2 gap-10 md:gap-20" id="<?php echo get_the_ID(); ?>">
+                <div class="grid md:grid-cols-2 gap-10 md:gap-20" id="<?php echo get_post_field('post_name'); ?>">
                     <div class="order-2 md:order-1">
                         <h4 class="text-gold mb-4">
                             <?php the_title(); ?>
