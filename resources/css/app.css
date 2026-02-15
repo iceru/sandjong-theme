@@ -285,8 +285,6 @@ h5 {
   font-size: 14px;
   font-weight: 600;
   color: #8D5B4C;
-  /* Terracota color from your text */
-  margin-bottom: 8px;
   text-transform: uppercase;
   letter-spacing: 1px;
 }
@@ -321,6 +319,12 @@ h5 {
 .custom-contact-form .form-submit {
   text-align: right;
   margin-top: 20px;
+  position: relative;
+}
+
+.custom-contact-form .wpcf7-spinner {
+  position: absolute;
+  left: 0;
 }
 
 .custom-contact-form .btn-submit {
