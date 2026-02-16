@@ -149,8 +149,8 @@
     </div>
     <div
         class="flex flex-wrap md:flex-nowrap max-w-[90%] justify-between bg-beige mx-auto md:max-w-[1100px] p-6 md:p-16 rounded-lg z-10 relative -mt-60 md:-mt-40">
-        <div class="w-[98%] h-4 rounded-t-xl -top-4 left-1/2 -translate-x-1/2 bg-beige absolute"></div>
-        <div class="w-[98%] h-4 rounded-b-xl -bottom-4 left-1/2 -translate-x-1/2 bg-beige absolute"></div>
+        <div class="w-[95%] md:w-[98%] h-4 rounded-t-xl -top-4 left-1/2 -translate-x-1/2 bg-beige absolute"></div>
+        <div class="w-[95%] md:w-[98%] h-4 rounded-b-xl -bottom-4 left-1/2 -translate-x-1/2 bg-beige absolute"></div>
         <div class="w-full md:w-[45%] mb-16 md:mb-0 flex flex-col justify-between">
             <div>
                 <h5 class="text-gold mb-4">Wellness Whisper</h5>

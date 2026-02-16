@@ -68,7 +68,7 @@
                     class="w-full h-[270px] object-cover" alt="">
 
                 <div class="bg-beige py-10 px-9 rounded-b-lg whitespace-normal relative">
-                    <div class="w-[98%] h-3 rounded-b-xl -bottom-3 left-1/2 -translate-x-1/2 bg-beige absolute"></div>
+                    <div class="w-[95%] md:w-[98%] h-3 rounded-b-xl -bottom-3 left-1/2 -translate-x-1/2 bg-beige absolute"></div>
                     <h5 class="text-gold mb-4">Vision</h5>
                     <p class="body text-primary">
                         To lead Indonesia’s wellness industry with our profound expertise, innovation, and continuous
@@ -82,7 +82,7 @@
                     class="w-full h-[270px] object-cover" alt="">
 
                 <div class="bg-beige py-10 px-9 rounded-b-lg whitespace-normal relative">
-                    <div class="w-[98%] h-3 rounded-b-xl -bottom-3 left-1/2 -translate-x-1/2 bg-beige absolute"></div>
+                    <div class="w-[95%] md:w-[98%] h-3 rounded-b-xl -bottom-3 left-1/2 -translate-x-1/2 bg-beige absolute"></div>
                     <h5 class="text-gold mb-4">Mission</h5>
                     <p class="body text-primary min-h-[96px]">
                         Dedicated to creating a uniquely memorable experience and genuine care to meet our customers’
@@ -96,7 +96,7 @@
                     class="w-full h-[270px] object-cover" alt="">
 
                 <div class="bg-beige py-10 px-9 rounded-b-lg whitespace-normal relative">
-                    <div class="w-[98%] h-3 rounded-b-xl -bottom-3 left-1/2 -translate-x-1/2 bg-beige absolute"></div>
+                    <div class="w-[95%] md:w-[98%] h-3 rounded-b-xl -bottom-3 left-1/2 -translate-x-1/2 bg-beige absolute"></div>
                     <h5 class="text-gold mb-4">Motto</h5>
                     <p class="body text-primary min-h-[96px]">
                         “Delivering exceptional customer satisfaction while honoring the needs of all”
