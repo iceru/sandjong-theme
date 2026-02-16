@@ -68,7 +68,7 @@
                     class="w-full h-[270px] object-cover" alt="">
 
                 <div class="bg-beige py-10 px-9 rounded-b-lg whitespace-normal relative">
-                    <div class="w-[95%] h-3 rounded-b-xl -bottom-3 left-1/2 -translate-x-1/2 bg-beige absolute"></div>
+                    <div class="w-[98%] h-3 rounded-b-xl -bottom-3 left-1/2 -translate-x-1/2 bg-beige absolute"></div>
                     <h5 class="text-gold mb-4">Vision</h5>
                     <p class="body text-primary">
                         To lead Indonesia’s wellness industry with our profound expertise, innovation, and continuous
@@ -82,7 +82,7 @@
                     class="w-full h-[270px] object-cover" alt="">
 
                 <div class="bg-beige py-10 px-9 rounded-b-lg whitespace-normal relative">
-                    <div class="w-[95%] h-3 rounded-b-xl -bottom-3 left-1/2 -translate-x-1/2 bg-beige absolute"></div>
+                    <div class="w-[98%] h-3 rounded-b-xl -bottom-3 left-1/2 -translate-x-1/2 bg-beige absolute"></div>
                     <h5 class="text-gold mb-4">Mission</h5>
                     <p class="body text-primary min-h-[96px]">
                         Dedicated to creating a uniquely memorable experience and genuine care to meet our customers’
@@ -96,7 +96,7 @@
                     class="w-full h-[270px] object-cover" alt="">
 
                 <div class="bg-beige py-10 px-9 rounded-b-lg whitespace-normal relative">
-                    <div class="w-[95%] h-3 rounded-b-xl -bottom-3 left-1/2 -translate-x-1/2 bg-beige absolute"></div>
+                    <div class="w-[98%] h-3 rounded-b-xl -bottom-3 left-1/2 -translate-x-1/2 bg-beige absolute"></div>
                     <h5 class="text-gold mb-4">Motto</h5>
                     <p class="body text-primary min-h-[96px]">
                         “Delivering exceptional customer satisfaction while honoring the needs of all”
@@ -313,7 +313,7 @@
                                         class="w-[97%] h-3 rounded-b-xl -bottom-3 left-1/2 -translate-x-1/2 bg-[#FFE5C9] absolute">
                                     </div>
                                     <h4 class="text-gold mb-11"><?php the_title(); ?></h4>
-                                    <div class="body max-w-[395px] mb-14 md:mb-0">
+                                    <div class="body max-w-[398px] mb-14 md:mb-0">
                                         <?php the_content(); ?>
                                     </div>
                                 </div>
@@ -444,7 +444,7 @@
         <h4 class="text-center text-gold mb-11">
             In Gentle <span class="text-primary">Honor</span>
         </h4>
-        <p class="body text-center max-w-[695px] mb-14 mx-auto">
+        <p class="body text-center max-w-[698px] mb-14 mx-auto">
             Every recognition we have received is not a trophy, but a whisper of gratitude—gently offered by those who
             have
             felt the calm, the comfort, and the culture within our sanctuary. These honors are not our destination. They

@@ -12,17 +12,14 @@
 
 <?php do_action('tailpress_content_after'); ?>
 
-<!-- <footer id="colophon" class="bg-light/50 mt-12" role="contentinfo">
-        <div class="container mx-auto py-12">
-            <?php do_action('tailpress_footer'); ?>
-            <div class="text-sm text-zinc-700">
-                &copy; <?php echo esc_html(date_i18n('Y')); ?> - <?php bloginfo('name'); ?>
-            </div>
-        </div>
-    </footer> -->
+<footer class="bg-primary-2 text-beige relative z-20">
+<div class="absolute bottom-9 bg-gradient-to-b from-primary-2 h-[90px] to-transparent"></div>
 
-<footer class="bg-primary text-beige relative z-20">
-    <section class="container flex flex-wrap md:flex-nowrap py-11 space-y-12 md:space-y-0 md:space-x-16">
+<div class="absolute bottom-0 left-0 w-full h-[127px]">
+       <img src="<?php echo get_template_directory_uri(); ?>/images/bg-green.jpg" class="w-full h-full object-bottom"
+            alt="">
+</div>    
+<section class="container flex flex-wrap md:flex-nowrap py-11 space-y-12 md:space-y-0 md:space-x-16">
         <div class="w-full md:w-[20%]">
             <img class="w-[136px] md:w-[200px]" src="<?php echo get_template_directory_uri(); ?>/images/logo-2.png"
                 alt="Sandjong Logo">
@@ -113,7 +110,11 @@
         </div>
     </section>
 </footer>
-</div>
+<section class="bg-primary-2 border-t border-beige">
+    <div class="container py-4">
+        <p class="body text-gold">PT Amerta Jiwa Indonesia</p>
+    </div>
+</section>
 
 <script src="https://unpkg.com/lenis@1.1.18/dist/lenis.min.js"></script>
 
