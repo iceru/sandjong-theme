@@ -13,10 +13,10 @@
 <?php do_action('tailpress_content_after'); ?>
 
 <footer class="bg-primary-2 text-beige relative z-20">
-<div class="absolute bottom-9 bg-gradient-to-b from-primary-2 h-[90px] to-transparent"></div>
+<div class="absolute bottom-9 z-10 bg-gradient-to-b from-primary-2 h-[90px] to-transparent"></div>
 
-<div class="absolute bottom-0 left-0 w-full h-[127px]">
-       <img src="<?php echo get_template_directory_uri(); ?>/images/bg-green.jpg" class="w-full h-full object-bottom"
+<div class="absolute bottom-0 z-0 left-0 w-full h-[127px]">
+       <img src="<?php echo get_template_directory_uri(); ?>/images/bg-bottom-footer.jpg" class="w-full h-full object-bottom object-cover"
             alt="">
 </div>    
 <section class="container flex flex-wrap md:flex-nowrap py-11 space-y-12 md:space-y-0 md:space-x-16">
