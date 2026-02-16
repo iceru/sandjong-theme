@@ -110,7 +110,7 @@
         </div>
     </section>
 </footer>
-<section class="bg-primary-2 border-t border-beige">
+<section class="bg-primary-2 border-t border-beige/20">
     <div class="container py-4">
         <p class="body text-gold">PT Amerta Jiwa Indonesia</p>
     </div>
