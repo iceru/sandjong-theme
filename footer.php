@@ -16,14 +16,14 @@
     <div class="absolute bottom-9 w-full z-10 bg-gradient-to-b from-primary-2 h-[90px] to-transparent"></div>
 
     <div class="absolute bottom-0 z-0 left-0 w-full h-[127px]">
-        <img src="<?php echo get_template_directory_uri(); ?>/images/bg-bottom-footer.jpg"
+        <img src="<?php echo get_template_directory_uri(); ?>/images/webp/bg-bottom-footer.webp"
             class="w-full h-full object-bottom object-cover" alt="">
     </div>
     <section
         class="container relative z-20 pb-52 flex flex-wrap md:flex-nowrap py-11 space-y-12 md:space-y-0 md:space-x-16">
         <div class="w-full md:w-[20%]">
-            <img class="w-[136px] md:w-[200px]" src="<?php echo get_template_directory_uri(); ?>/images/logo-2.png"
-                alt="Sandjong Logo">
+            <img class="w-[136px] md:w-[200px]"
+                src="<?php echo get_template_directory_uri(); ?>/images/webp/logo-2.webp" alt="Sandjong Logo">
         </div>
         <div class="w-full md:w-[20%]">
             <h6 class="mb-5 uppercase text-gold text-xs tracking-widest">Address</h6>

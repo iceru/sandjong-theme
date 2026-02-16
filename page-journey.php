@@ -11,6 +11,7 @@
         mask-repeat: no-repeat;
         mask-position: center;
     }
+
     .masked-facility {
         -webkit-mask-image: url('<?php echo get_template_directory_uri(); ?>/images/mask/mask-facility.png');
         -webkit-mask-size: 100% 100%;
@@ -27,8 +28,8 @@
 
 <section class="relative h-[501px] flex justify-center items-center">
     <div class="absolute w-full h-[110%] left-0 -top-[10%]" data-scroll data-scroll-speed="2">
-        <img class="w-full h-full object-cover" src="<?php echo get_template_directory_uri(); ?>/images/bg-journey.png"
-            alt="">
+        <img class="w-full h-full object-cover"
+            src="<?php echo get_template_directory_uri(); ?>/images/webp/bg-journey.webp" alt="">
     </div>
     <h4 class="text-beige relative z-10 mt-14 md:mt-0 max-w-[192px] md:max-w-full text-center">
         Rooted in
@@ -64,11 +65,13 @@
             class="draggable-container pr-4 md:absolute right-0 flex space-x-6 w-full md:w-1/2 whitespace-nowrap overflow-x-auto pb-6 cursor-grab select-none no-scrollbar">
 
             <div class="w-[312px] shrink-0 ">
-                <img src="<?php echo get_template_directory_uri(); ?>/images/vision.png"
+                <img src="<?php echo get_template_directory_uri(); ?>/images/webp/vision.webp"
                     class="w-full h-[270px] object-cover" alt="">
 
                 <div class="bg-beige py-10 px-9 rounded-b-lg whitespace-normal relative">
-                    <div class="w-[95%] md:w-[98%] h-3 rounded-b-xl -bottom-3 left-1/2 -translate-x-1/2 bg-beige absolute"></div>
+                    <div
+                        class="w-[95%] md:w-[98%] h-3 rounded-b-xl -bottom-3 left-1/2 -translate-x-1/2 bg-beige absolute">
+                    </div>
                     <h5 class="text-gold mb-4">Vision</h5>
                     <p class="body text-primary">
                         To lead Indonesia’s wellness industry with our profound expertise, innovation, and continuous
@@ -78,11 +81,13 @@
             </div>
 
             <div class="w-[312px] shrink-0">
-                <img src="<?php echo get_template_directory_uri(); ?>/images/mission.png"
+                <img src="<?php echo get_template_directory_uri(); ?>/images/webp/mission.webp"
                     class="w-full h-[270px] object-cover" alt="">
 
                 <div class="bg-beige py-10 px-9 rounded-b-lg whitespace-normal relative">
-                    <div class="w-[95%] md:w-[98%] h-3 rounded-b-xl -bottom-3 left-1/2 -translate-x-1/2 bg-beige absolute"></div>
+                    <div
+                        class="w-[95%] md:w-[98%] h-3 rounded-b-xl -bottom-3 left-1/2 -translate-x-1/2 bg-beige absolute">
+                    </div>
                     <h5 class="text-gold mb-4">Mission</h5>
                     <p class="body text-primary min-h-[96px]">
                         Dedicated to creating a uniquely memorable experience and genuine care to meet our customers’
@@ -92,11 +97,13 @@
             </div>
 
             <div class="w-[312px] shrink-0">
-                <img src="<?php echo get_template_directory_uri(); ?>/images/motto.png"
+                <img src="<?php echo get_template_directory_uri(); ?>/images/webp/motto.webp"
                     class="w-full h-[270px] object-cover" alt="">
 
                 <div class="bg-beige py-10 px-9 rounded-b-lg whitespace-normal relative">
-                    <div class="w-[95%] md:w-[98%] h-3 rounded-b-xl -bottom-3 left-1/2 -translate-x-1/2 bg-beige absolute"></div>
+                    <div
+                        class="w-[95%] md:w-[98%] h-3 rounded-b-xl -bottom-3 left-1/2 -translate-x-1/2 bg-beige absolute">
+                    </div>
                     <h5 class="text-gold mb-4">Motto</h5>
                     <p class="body text-primary min-h-[96px]">
                         “Delivering exceptional customer satisfaction while honoring the needs of all”
@@ -109,8 +116,8 @@
 
 <section class="relative overflow-hidden" id="culture">
     <div class="absolute w-full h-[110%] left-0 -top-[10%]" data-scroll data-scroll-speed="2">
-        <img class="w-full h-full object-cover" src="<?php echo get_template_directory_uri(); ?>/images/bg-culture.png"
-            alt="">
+        <img class="w-full h-full object-cover"
+            src="<?php echo get_template_directory_uri(); ?>/images/webp/bg-culture.webp" alt="">
     </div>
     <div class="container flex flex-col h-screen max-h-[1000px] text-center justify-center items-center relative z-10">
         <h5 class="text-gold mb-6">Our Culture</h5>
@@ -124,7 +131,7 @@
 <section class="relative bg-beige py-28">
     <div class="absolute w-full h-full left-0 top-0 opacity-10">
         <img class="w-full h-full object-cover object-top"
-            src="<?php echo get_template_directory_uri(); ?>/images/bg-beige.png" alt="">
+            src="<?php echo get_template_directory_uri(); ?>/images/webp/bg-beige.webp" alt="">
     </div>
     <div class="container relative z-10">
         <h4 class="text-terracota mb-16">Values</h4>
@@ -178,7 +185,7 @@
 <section class="bg-primary py-16 relative z-10">
     <div class="absolute w-full h-full left-0 top-0">
         <img class="w-full h-full object-cover object-top"
-            src="<?php echo get_template_directory_uri(); ?>/images/bg-green.jpg" alt="">
+            src="<?php echo get_template_directory_uri(); ?>/images/webp/bg-green.webp" alt="">
     </div>
     <div class="container relative">
         <div class="grid md:grid-cols-2 mb-[72px] md:mb-28">
@@ -210,8 +217,8 @@
                                 <?php if (has_post_thumbnail()): ?>
                                     <?php the_post_thumbnail('large', array('class' => 'masked-sense w-full h-full object-cover max-w-[500px]')); ?>
                                 <?php else: ?>
-                                    <img src="<?php echo get_template_directory_uri(); ?>/images/senses.png" class="masked-sense w-full h-full object-cover max-w-[500px]"
-                                        alt="">
+                                    <img src="<?php echo get_template_directory_uri(); ?>/images/webp/senses.webp"
+                                        class="masked-sense w-full h-full object-cover max-w-[500px]" alt="">
                                 <?php endif; ?>
                             </div>
                             <div>
@@ -246,7 +253,7 @@
 <section class="h-[90vh] md:h-[90vh] max-h-[702px] flex flex-col justify-center items-center relative z-0 ">
     <div class="absolute w-full h-[120%] left-0 -top-[20%] " data-scroll data-scroll-speed="2">
         <img class="w-full h-full top-0 object-cover object-top"
-            src="<?php echo get_template_directory_uri(); ?>/images/bg-ambience.png" alt="">
+            src="<?php echo get_template_directory_uri(); ?>/images/webp/bg-ambience.webp" alt="">
     </div>
     <h4 class="text-gold relative z-10 mb-20 md:mb-40">
         Enchanting <span class="text-beige">Ambience</span>
@@ -273,7 +280,7 @@
     </div>
     <div class="absolute w-full h-full left-0 top-0 opacity-10">
         <img class="w-full h-full object-cover object-bottom"
-            src="<?php echo get_template_directory_uri(); ?>/images/bg-beige.png" alt="">
+            src="<?php echo get_template_directory_uri(); ?>/images/webp/bg-beige.webp" alt="">
     </div>
     <div class="container">
         <h4 class="text-center mt-24 text-gold mb-16">Delicately Facilitating <span class="text-primary">
@@ -302,7 +309,8 @@
                                     <?php if (has_post_thumbnail()): ?>
                                         <?php the_post_thumbnail('large', array('class' => 'masked-facility w-full h-full object-cover')); ?>
                                     <?php else: ?>
-                                        <img src="<?php echo get_template_directory_uri(); ?>/images/lobby.png" class="masked-facility w-full h-full object-cover" alt="">
+                                        <img src="<?php echo get_template_directory_uri(); ?>/images/webp/lobby.webp"
+                                            class="masked-facility w-full h-full object-cover" alt="">
                                     <?php endif; ?>
                                 </div>
                                 <div class="bg-[#FFE5C9] rounded-xl relative p-8 md:px-20 md:py-16">
@@ -334,7 +342,7 @@
 
 <section class="relative py-20" id="timeline">
     <div class="absolute inset-0 bg-body/20 h-[120%] -top-[20%] left-0" data-scroll data-scroll-speed="2">
-        <img src="<?php echo get_template_directory_uri(); ?>/images/bg-timeline.png"
+        <img src="<?php echo get_template_directory_uri(); ?>/images/webp/bg-timeline.webp"
             class="w-full h-full object-cover mix-blend-multiply" alt="" />
     </div>
     <div class="container relative">
@@ -474,7 +482,7 @@
                                     <?php if (has_post_thumbnail()): ?>
                                         <?php the_post_thumbnail('medium', array('class' => 'object-contain')); ?>
                                     <?php else: ?>
-                                        <img src="<?php echo get_template_directory_uri(); ?>/images/award-1.png" alt="">
+                                        <img src="<?php echo get_template_directory_uri(); ?>/images/webp/award-1.webp" alt="">
                                     <?php endif; ?>
                                 </div>
                                 <h5 class="text-gold mt-4"><?php the_title(); ?></h5>
@@ -496,8 +504,8 @@
 
 <section class="relative py-40">
     <div class="absolute inset-0 h-[120%] -top-0 left-0" data-scroll data-scroll-speed="2">
-        <img src="<?php echo get_template_directory_uri(); ?>/images/bg-session.png" class="w-full h-full object-cover "
-            alt="" />
+        <img src="<?php echo get_template_directory_uri(); ?>/images/webp/bg-session.webp"
+            class="w-full h-full object-cover " alt="" />
     </div>
     <div class="container relative z-10 text-center">
         <h4 class="text-gold mb-8 max-w-[383px] mx-auto">

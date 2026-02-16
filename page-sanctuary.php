@@ -6,7 +6,7 @@
 </style>
 <section class="h-screen w-full max-h-[811px]">
     <div class="absolute w-full h-[120%] left-0 -top-[10%]" data-scroll data-scroll-speed="2">
-        <img src="<?php echo get_template_directory_uri(); ?>/images/bg-sanctuary.png"
+        <img src="<?php echo get_template_directory_uri(); ?>/images/webp/bg-sanctuary.webp"
             class="w-full h-full object-cover" alt="">
     </div>
     <div class="container relative z-10 flex flex-col h-full text-beige items-center justify-center text-center">
@@ -139,8 +139,8 @@
 
 <section class="h-[456px] relative">
     <div class="absolute w-full h-[120%] left-0 -top-[10%]" data-scroll data-scroll-speed="2">
-        <img src="<?php echo get_template_directory_uri(); ?>/images/bg-journey.png" class="w-full h-full object-cover"
-            alt="">
+        <img src="<?php echo get_template_directory_uri(); ?>/images/webp/bg-journey.webp"
+            class="w-full h-full object-cover" alt="">
     </div>
     <div class="container flex flex-col justify-center items-center h-full relative z-10 text-center">
         <h4 class="text-gold mb-4">Living Stories of Our Sanctuaries</h4>

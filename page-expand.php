@@ -15,8 +15,8 @@
 
 <section class="relative h-[587px]">
     <div class="w-full h-[110%] left-0 -top-[10%] absolute" data-scroll data-scroll-speed="2">
-        <img src="<?php echo get_template_directory_uri(); ?>/images/expand/hero.png" class="w-full object-cover h-full"
-            alt="">
+        <img src="<?php echo get_template_directory_uri(); ?>/images/expand/hero.webp"
+            class="w-full object-cover h-full" alt="">
     </div>
     <div class="container flex flex-col justify-end h-full pb-10 md:pb-28 relative z-10 w-full">
         <div class="grid md:grid-cols-2 w-full">
@@ -53,15 +53,15 @@
             </p>
         </div>
         <div>
-            <img src="<?php echo get_template_directory_uri(); ?>/images/expand/spa-operation.png" alt="">
+            <img src="<?php echo get_template_directory_uri(); ?>/images/expand/spa-operation.webp" alt="">
         </div>
     </div>
 </section>
 
 <section class="bg-primary py-20 relative z-10" id="services">
     <div class="absolute w-full h-full left-0 top-0">
-        <img src="<?php echo get_template_directory_uri(); ?>/images/bg-green.jpg" class="w-full h-full object-cover"
-            alt="">
+        <img src="<?php echo get_template_directory_uri(); ?>/images/webp/bg-green.webp"
+            class="w-full h-full object-cover" alt="">
     </div>
     <div class="container relative z-10">
         <h3 class="text-gold mb-11">Our Services</h3>
@@ -80,7 +80,7 @@
                         $services->the_post();
                         $activeClass = ($services->current_post === 0) ? '' : 'hidden'; // First visible, others hidden
                         ?>
-                        <img src="<?php echo get_the_post_thumbnail_url() ? get_the_post_thumbnail_url() : get_template_directory_uri() . '/images/expand/our-services.png'; ?>"
+                        <img src="<?php echo get_the_post_thumbnail_url() ? get_the_post_thumbnail_url() : get_template_directory_uri() . '/images/expand/our-services.webp'; ?>"
                             class="service-image masked-facility w-full h-auto object-cover <?php echo $activeClass; ?>"
                             data-id="service-<?php echo get_the_ID(); ?>" alt="<?php the_title(); ?>">
                     <?php endwhile; ?>
@@ -147,8 +147,8 @@
 
 <section class="relative">
     <div class="absolute w-full h-[130%] left-0 -top-[20%]" data-scroll data-scroll-speed="2">
-        <img src="<?php echo get_template_directory_uri(); ?>/images/bg-timeline.png" class="w-full h-full object-cover"
-            alt="">
+        <img src="<?php echo get_template_directory_uri(); ?>/images/webp/bg-timeline.webp"
+            class="w-full h-full object-cover" alt="">
     </div>1
     <div class="container flex flex-col justify-center items-center text-center py-36 relative z-10">
         <h3 class="text-gold mb-4">For Franchise</h3>
@@ -230,8 +230,8 @@
 
 <section class="bg-beige py-24 relative">
     <div class="absolute w-full h-full left-0 top-0 opacity-10">
-        <img src="<?php echo get_template_directory_uri(); ?>/images/bg-beige.png" class="w-full h-full object-cover"
-            alt="">
+        <img src="<?php echo get_template_directory_uri(); ?>/images/webp/bg-beige.webp"
+            class="w-full h-full object-cover" alt="">
     </div>
     <div class="container grid md:grid-cols-2 relative z-10">
         <div class="text-primary">

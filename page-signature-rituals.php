@@ -3,7 +3,7 @@
 <section class="relative h-[501px] flex flex-col justify-center items-center">
     <div class="absolute w-full h-[110%] left-0 -top-[10%]" data-scroll data-scroll-speed="2">
         <img class="w-full h-full object-cover"
-            src="<?php echo get_template_directory_uri(); ?>/images/bg-signature.png" alt="">
+            src="<?php echo get_template_directory_uri(); ?>/images/webp/bg-signature.webp" alt="">
     </div>
     <h4 class="text-beige text-center relative z-10 max-w-[312px] mx-auto mt-11 mb-7">Crafted with Care, Offered with
         Meaning.</h4>
@@ -48,7 +48,7 @@
             <div class="rounded-lg relative flex flex-col justify-end p-6 md:p-14 min-h-[658px] md:min-h-[552px] mb-11">
                 <div class="absolute w-full h-full left-0 top-0">
                     <img class="rounded-lg w-full h-full object-cover"
-                        src="<?php echo get_template_directory_uri(); ?>/images/bg-signature-2.png" alt="">
+                        src="<?php echo get_template_directory_uri(); ?>/images/webp/bg-signature-2.webp" alt="">
                 </div>
                 <div class="text-beige relative z-10">
                     <h4 class="max-w-[356px] mb-8">
@@ -124,7 +124,7 @@
                 class="rounded-lg relative flex flex-col justify-end p-6 md:p-14 min-h-[658px] md:min-h-[552px] mb-[71px]">
                 <div class="absolute w-full h-full left-0 top-0">
                     <img class="rounded-lg w-full h-full object-cover"
-                        src="<?php echo get_template_directory_uri(); ?>/images/package.png" alt="">
+                        src="<?php echo get_template_directory_uri(); ?>/images/webp/package.webp" alt="">
                 </div>
                 <div class="text-beige relative z-10">
                     <h4 class="max-w-[356px] mb-8">
@@ -241,7 +241,7 @@
             <div class="rounded-lg relative flex flex-col justify-end p-6 md:p-14 min-h-[658px] md:min-h-[552px] mb-16">
                 <div class="absolute w-full h-full left-0 top-0">
                     <img class="rounded-lg w-full h-full object-cover"
-                        src="<?php echo get_template_directory_uri(); ?>/images/simple.png" alt="">
+                        src="<?php echo get_template_directory_uri(); ?>/images/webp/simple.webp" alt="">
                 </div>
                 <div class="text-beige relative z-10">
                     <h4 class="max-w-[356px] mb-8">

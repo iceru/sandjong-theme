@@ -8,8 +8,8 @@ get_header();
 
 <section class="relative h-[587px] flex justify-center items-center">
 	<div class="absolute w-full h-[110%] left-0 -top-[10%]" data-scroll data-scroll-speed="2">
-		<img class="w-full h-full object-cover" src="<?php echo get_template_directory_uri(); ?>/images/bg-wellness.png"
-			alt="News hero background">
+		<img class="w-full h-full object-cover"
+			src="<?php echo get_template_directory_uri(); ?>/images/webp/bg-wellness.webp" alt="News hero background">
 	</div>
 
 	<div class="container relative z-10 mt-14 text-center text-beige">
@@ -134,7 +134,8 @@ get_header();
 <section class="bg-[#F8E6D2] relative pb-24 md:pb-32">
 	<div class="absolute w-full h-full left-0 top-0 opacity-10 pointer-events-none">
 		<img class="w-full h-full object-cover object-top"
-			src="<?php echo get_template_directory_uri(); ?>/images/bg-beige.png" alt="Gentle offerings background">
+			src="<?php echo get_template_directory_uri(); ?>/images/webp/bg-beige.webp"
+			alt="Gentle offerings background">
 	</div>
 
 	<div class="container relative z-10 text-primary pt-16">

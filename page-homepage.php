@@ -15,8 +15,10 @@
 
 <section id="header" class="h-screen md:h-auto flex flex-col justify-end items-center relative md:aspect-video w-full">
     <div class="absolute left-0 top-0 w-full h-full">
-        <img class="w-full h-full object-cover" src="<?php echo get_template_directory_uri(); ?>/images/homepage.gif"
-            alt="">
+        <video class="w-full h-full object-cover" autoplay loop muted playsinline
+            poster="<?php echo get_template_directory_uri(); ?>/images/sandjong-placeholder.webp">
+            <source src="<?php echo get_template_directory_uri(); ?>/images/sandjong.mp4" type="video/mp4">
+        </video>
     </div>
     <div class="text-white text-center container relative z-10 mb-14">
         <h3 class="mb-6">Nature Inheritance, Rooted in Culture</h3>
@@ -38,7 +40,7 @@
     class="bg-beige text-center py-20 md:py-36 flex flex-col justify-center items-center relative text-primary ">
     <div class="absolute w-full h-[130%] md:h-full left-0 top-0 opacity-10">
         <img class="w-full h-full object-cover object-top"
-            src="<?php echo get_template_directory_uri(); ?>/images/bg-beige.png" alt="">
+            src="<?php echo get_template_directory_uri(); ?>/images/webp/bg-beige.webp" alt="">
     </div>
     <div class="container">
         <h3 class="mb-7 max-w-[522px] mx-auto">
@@ -68,7 +70,7 @@
                     The Unique Threads in Our Wellness Tapestry
                 </h4>
                 <img class="w-full h-full object-cover absolute left-0 top-0"
-                    src="<?php echo get_template_directory_uri(); ?>/images/soul-1.png" alt="">
+                    src="<?php echo get_template_directory_uri(); ?>/images/webp/soul-1.webp" alt="">
             </div>
             <p class="text-sm md:text-base max-w-[291px] md:max-w-[503px] text-center">
                 In Gading Serpong, find the tender fusion of Baduy simplicity and Peranakan color. In Jakarta, step into
@@ -80,9 +82,9 @@
         </div>
     </div>
     <img class="md:w-[374px] w-[220px] md:h-[384px] h-[220px] object-cover absolute -left-[48%] md:-left-16 top-[43%] md:top-[46%] rounded-lg -translate-y-1/2 z-0"
-        src="<?php echo get_template_directory_uri(); ?>/images/soul-3.png" alt="">
+        src="<?php echo get_template_directory_uri(); ?>/images/webp/soul-3.webp" alt="">
     <img class="md:w-[374px] w-[220px] md:h-[384px] h-[220px] object-cover absolute -right-[48%] md:-right-16 top-[43%] md:top-[46%] rounded-lg -translate-y-1/2 z-0"
-        src="<?php echo get_template_directory_uri(); ?>/images/soul-2.png" alt="">
+        src="<?php echo get_template_directory_uri(); ?>/images/webp/soul-2.webp" alt="">
 </section>
 
 <section class="bg-beige py-28 relative z-20" id="branches">
@@ -120,7 +122,7 @@
                             <?php if (has_post_thumbnail()): ?>
                                 <?php the_post_thumbnail('large', array('class' => 'masked-image max-h-[355px] w-full object-cover')); ?>
                             <?php else: ?>
-                                <img src="<?php echo get_template_directory_uri(); ?>/images/episode.png"
+                                <img src="<?php echo get_template_directory_uri(); ?>/images/webp/episode.webp"
                                     class="masked-image max-h-[355px] w-full object-cover" alt="">
                             <?php endif; ?>
                         </div>
@@ -137,15 +139,15 @@
 <section id="posts" class="bg-primary pb-40 relative z-10">
     <div class="w-full h-[526px] hidden md:block relative">
         <img class="w-full h-[120%] absolute left-0 -top-[10%] object-cover" data-scroll data-scroll-speed="2"
-            src="<?php echo get_template_directory_uri(); ?>/images/bg-posts-2.png" alt="">
+            src="<?php echo get_template_directory_uri(); ?>/images/webp/bg-posts-2.webp" alt="">
     </div>
     <div class="w-full h-[526px] md:hidden  relative">
         <img class="w-full h-full absolute left-0 top-0 object-cover object-top" data-scroll data-scroll-speed="2"
-            src="<?php echo get_template_directory_uri(); ?>/images/bg-posts-2-mobile.png" alt="">
+            src="<?php echo get_template_directory_uri(); ?>/images/webp/bg-posts-2-mobile.webp" alt="">
     </div>
     <div class="absolute w-full h-[50%] left-0 bottom-0">
         <img class="w-full h-full object-cover object-top z-0"
-            src="<?php echo get_template_directory_uri(); ?>/images/bg-footer.jpg" alt="">
+            src="<?php echo get_template_directory_uri(); ?>/images/webp/bg-footer.webp" alt="">
     </div>
     <div
         class="flex flex-wrap md:flex-nowrap max-w-[90%] justify-between bg-beige mx-auto md:max-w-[1100px] p-6 md:p-16 rounded-lg z-10 relative -mt-60 md:-mt-40">
@@ -212,7 +214,7 @@
 <section id="franchise" class="h-screen flex flex-col justify-center items-center relative">
     <div class="absolute left-0 w-full h-[120%] -top-[10%] z-0" data-scroll data-scroll-speed="2">
         <img class="w-full h-full object-cover"
-            src="<?php echo get_template_directory_uri(); ?>/images/bg-franchise.jpg" alt="">
+            src="<?php echo get_template_directory_uri(); ?>/images/webp/bg-franchise.webp" alt="">
     </div>
     <div class="absolute left-0 top-0 w-full h-full bg-black/50 z-10">
     </div>
