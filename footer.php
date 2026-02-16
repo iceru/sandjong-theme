@@ -13,13 +13,14 @@
 <?php do_action('tailpress_content_after'); ?>
 
 <footer class="bg-primary-2 text-beige relative z-20">
-<div class="absolute bottom-9 w-full z-10 bg-gradient-to-b from-primary-2 h-[90px] to-transparent"></div>
+    <div class="absolute bottom-9 w-full z-10 bg-gradient-to-b from-primary-2 h-[90px] to-transparent"></div>
 
-<div class="absolute bottom-0 z-0 left-0 w-full h-[127px]">
-       <img src="<?php echo get_template_directory_uri(); ?>/images/bg-bottom-footer.jpg" class="w-full h-full object-bottom object-cover"
-            alt="">
-</div>    
-<section class="container relative z-20 pb-52 flex flex-wrap md:flex-nowrap py-11 space-y-12 md:space-y-0 md:space-x-16">
+    <div class="absolute bottom-0 z-0 left-0 w-full h-[127px]">
+        <img src="<?php echo get_template_directory_uri(); ?>/images/bg-bottom-footer.jpg"
+            class="w-full h-full object-bottom object-cover" alt="">
+    </div>
+    <section
+        class="container relative z-20 pb-52 flex flex-wrap md:flex-nowrap py-11 space-y-12 md:space-y-0 md:space-x-16">
         <div class="w-full md:w-[20%]">
             <img class="w-[136px] md:w-[200px]" src="<?php echo get_template_directory_uri(); ?>/images/logo-2.png"
                 alt="Sandjong Logo">
@@ -93,17 +94,17 @@
             </div>
             <div class="mt-10">
                 <h5 class="text-gold mb-6">Subscribe to our Newsletter</h5>
-                <div class="relative">
+                <div class="relative ml-2">
                     <div
-                        class="absolute -left-2 top-1/2 -translate-y-1/2 w-4 z-0 h-[52px] bg-primary-2 border-2 border-beige rounded-lg">
+                        class="absolute -left-2 top-1/2 -translate-y-1/2 w-4 z-0 h-[48px] bg-primary-2 border-2 border-beige rounded-lg">
                     </div>
-                    <div class="absolute -left-[1px] z-10 top-1/2 -translate-y-1/2 w-4 h-[48px] bg-primary-2 ">
+                    <div class="absolute -left-[1px] z-10 top-1/2 -translate-y-1/2 w-4 h-[45px] bg-primary-2 ">
                     </div>
-                    <?php echo do_shortcode('[fluentform id="3"]'); ?>
+                    <?php echo do_shortcode('[fluentform id="2"]'); ?>
                     <div
-                        class="absolute -right-2 top-1/2 -translate-y-1/2 w-4 z-0 h-[52px] bg-primary-2 border-2 border-beige rounded-lg">
+                        class="absolute -right-2 top-1/2 -translate-y-1/2 w-4 z-0 h-[48px] bg-primary-2 border-2 border-beige rounded-lg">
                     </div>
-                    <div class="absolute -right-[1px] z-10 top-1/2 -translate-y-1/2 w-2.5 h-[48px] bg-primary-2 ">
+                    <div class="absolute -right-[1px] z-10 top-1/2 -translate-y-1/2 w-2.5 h-[45px] bg-primary-2 ">
                     </div>
                 </div>
             </div>

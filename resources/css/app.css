@@ -7,18 +7,18 @@
 @source '../../vendor/tailpress/framework/**/**/*.php';
 
 @utility container {
-    margin-inline: auto;
-    padding-inline: 1rem;
+  margin-inline: auto;
+  padding-inline: 1rem;
 }
 
 @theme {
-    --color-primary: #314E48;
-    --color-terracota: #A05752;
-    --color-gold: #CF9C63;
-    --color-beige: #FFF1E2;
-    --color-beige-dark: #FFE5C9;
-    --color-body: #1D1D1D;
-    --color-primary-2: #27403B;
+  --color-primary: #314E48;
+  --color-terracota: #A05752;
+  --color-gold: #CF9C63;
+  --color-beige: #FFF1E2;
+  --color-beige-dark: #FFE5C9;
+  --color-body: #1D1D1D;
+  --color-primary-2: #27403B;
 }
 
 /*
@@ -31,463 +31,481 @@
 */
 @layer base {
 
-    *,
-    ::after,
-    ::before,
-    ::backdrop,
-    ::file-selector-button {
-        border-color: var(--color-zinc-200, currentColor);
-    }
+  *,
+  ::after,
+  ::before,
+  ::backdrop,
+  ::file-selector-button {
+    border-color: var(--color-zinc-200, currentColor);
+  }
 }
 
 
 .stepped-corner {
-    background-color: var(--color-primary);
+  background-color: var(--color-primary);
 
-    --r: 30px;
-    --s: 40px;
+  --r: 30px;
+  --s: 40px;
 
-    -webkit-mask:
-        radial-gradient(var(--r) at calc(100% - var(--r) - var(--s)) calc(100% - var(--r)), #0000 98%, #000) calc(var(--r) + var(--s)) var(--r),
-        radial-gradient(var(--r) at calc(100% - var(--r)) calc(100% - var(--r) - var(--s)), #0000 98%, #000) var(--r) calc(var(--r) + var(--s));
+  -webkit-mask:
+    radial-gradient(var(--r) at calc(100% - var(--r) - var(--s)) calc(100% - var(--r)), #0000 98%, #000) calc(var(--r) + var(--s)) var(--r),
+    radial-gradient(var(--r) at calc(100% - var(--r)) calc(100% - var(--r) - var(--s)), #0000 98%, #000) var(--r) calc(var(--r) + var(--s));
 
 }
 
 body,
 html {
-    font-family: 'Philosopher', sans-serif;
+  font-family: 'Philosopher', sans-serif;
 }
 
 h3 {
-    font-size: 50px;
-    line-height: 56px;
+  font-size: 50px;
+  line-height: 56px;
 }
 
 h4 {
-    font-size: 32px;
-    line-height: 36px;
+  font-size: 32px;
+  line-height: 36px;
 }
 
 h5 {
-    font-size: 20px;
-    font-weight: bold;
-    line-height: 26px;
+  font-size: 20px;
+  font-weight: bold;
+  line-height: 26px;
 }
 
 .body {
-    font-size: 14px;
-    line-height: 24px;
+  font-size: 14px;
+  line-height: 24px;
 }
 
 
 @media screen and (max-width: 768px) {
-    h3 {
-        font-size: 32px;
-        line-height: 36px;
-    }
+  h3 {
+    font-size: 32px;
+    line-height: 36px;
+  }
 
-    h5 {
-        font-size: 20px;
-        line-height: 26px;
-    }
+  h5 {
+    font-size: 20px;
+    line-height: 26px;
+  }
 }
 
 .button {
-    padding: 4px 24px;
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    text-decoration: none !important;
-    color: white !important;
-    letter-spacing: 0.04em;
-    font-size: 12px;
-    border-radius: 4px;
-    position: relative;
-    transition: all 0.3s ease;
-    cursor: pointer;
+  padding: 4px 24px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none !important;
+  color: white !important;
+  letter-spacing: 0.04em;
+  font-size: 12px;
+  border-radius: 4px;
+  position: relative;
+  transition: all 0.3s ease;
+  cursor: pointer;
 }
 
 .button::before,
 .button::after {
-    content: "";
-    display: block;
-    width: 90%;
-    height: 6px;
-    left: 50%;
-    transform: translateX(-50%);
-    position: absolute;
-    background-color: inherit;
-    transition: all 0.3s ease;
+  content: "";
+  display: block;
+  width: 90%;
+  height: 6px;
+  left: 50%;
+  transform: translateX(-50%);
+  position: absolute;
+  background-color: inherit;
+  transition: all 0.3s ease;
 }
 
 .button::before {
-    top: -6px;
-    border-radius: 4px 4px 0 0;
+  top: -6px;
+  border-radius: 4px 4px 0 0;
 }
 
 .button::after {
-    bottom: -6px;
-    border-radius: 0 0 4px 4px;
+  bottom: -6px;
+  border-radius: 0 0 4px 4px;
 }
 
 .button:hover {
-    filter: brightness(110%);
+  filter: brightness(110%);
 }
 
 .button:active {
-    transform: scale(0.98);
+  transform: scale(0.98);
 }
 
 /* Slick Slider Dots Styling */
 .slick-dots {
-    bottom: -45px;
-    display: flex !important;
-    justify-content: center;
-    align-items: center;
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    width: 100%;
+  bottom: -45px;
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: 100%;
 }
 
 .slick-dots li {
-    width: 10px;
-    height: 10px;
-    margin: 0 6px;
-    padding: 0;
-    cursor: pointer;
+  width: 10px;
+  height: 10px;
+  margin: 0 6px;
+  padding: 0;
+  cursor: pointer;
 }
 
 .slick-dots li button {
-    width: 10px;
-    height: 10px;
-    padding: 0;
-    cursor: pointer;
-    color: transparent;
-    border: 1px solid #A05752;
-    border-radius: 50%;
-    outline: none;
-    background: transparent;
-    display: block;
-    position: relative;
-    transition: all 0.3s ease;
+  width: 10px;
+  height: 10px;
+  padding: 0;
+  cursor: pointer;
+  color: transparent;
+  border: 1px solid #A05752;
+  border-radius: 50%;
+  outline: none;
+  background: transparent;
+  display: block;
+  position: relative;
+  transition: all 0.3s ease;
 }
 
 .slick-dots li button:before {
-    display: none !important;
+  display: none !important;
 }
 
 .slick-dots li.slick-active button {
-    background: #A05752;
-    border-color: #A05752;
+  background: #A05752;
+  border-color: #A05752;
 }
 
 .awards-slider .slick-dots li button {
-    @apply border-beige
+  @apply border-beige
 }
 
 .awards-slider .slick-dots li.slick-active button {
-    @apply bg-beige border-beige
+  @apply bg-beige border-beige
 }
 
 
 .timeline-item .timeline-dot {
-    transform: scale(0.6);
-    /* Smaller dot */
-    transition: all 0.3s ease;
+  transform: scale(0.6);
+  /* Smaller dot */
+  transition: all 0.3s ease;
 }
 
 .timeline-title {
-    @apply text-beige opacity-50;
-    /* Beige and 50% opacity */
-    transition: all 0.3s ease;
+  @apply text-beige opacity-50;
+  /* Beige and 50% opacity */
+  transition: all 0.3s ease;
 }
 
 /* Active State (Only 1 at a time) */
 .timeline-item.active .timeline-dot {
-    transform: scale(1);
-    /* Full size gold dot */
+  transform: scale(1);
+  /* Full size gold dot */
 }
 
 .timeline-item.active .timeline-title {
-    @apply text-gold opacity-100;
-    /* Gold text, full opacity */
+  @apply text-gold opacity-100;
+  /* Gold text, full opacity */
 }
 
 .tab-trigger h5 {
-    @apply opacity-40 border-b-2 border-transparent cursor-pointer;
+  @apply opacity-40 border-b-2 border-transparent cursor-pointer;
 }
 
 /* Active Tab */
 .tab-trigger.active h5 {
-    @apply opacity-100 border-terracota
+  @apply opacity-100 border-terracota
 }
 
 .no-scrollbar::-webkit-scrollbar {
-    display: none;
+  display: none;
 }
 
 /* Hide scrollbar for IE, Edge and Firefox */
 .no-scrollbar {
-    -ms-overflow-style: none;
-    /* IE and Edge */
-    scrollbar-width: none;
-    /* Firefox */
+  -ms-overflow-style: none;
+  /* IE and Edge */
+  scrollbar-width: none;
+  /* Firefox */
 }
 
 .draggable-container {
-    scroll-behavior: smooth;
-    /* For touch devices */
+  scroll-behavior: smooth;
+  /* For touch devices */
 }
 
 .draggable-container.dragging {
-    scroll-behavior: auto;
-    /* Disable smooth scroll during drag for instant response */
-    cursor: grabbing;
+  scroll-behavior: auto;
+  /* Disable smooth scroll during drag for instant response */
+  cursor: grabbing;
 }
 
 .draggable-container img {
-    pointer-events: none;
-    user-select: none;
-    -webkit-user-drag: none;
+  pointer-events: none;
+  user-select: none;
+  -webkit-user-drag: none;
 }
 
 .slick-prev-custom {
-    order: 1;
+  order: 1;
 }
 
 .senses-nav .slick-dots,
 .facility-nav .slick-dots {
-    order: 2;
-    display: flex !important;
-    position: relative;
-    bottom: 0;
-    width: auto;
-    margin: 0;
-    padding: 0;
-    list-style: none;
+  order: 2;
+  display: flex !important;
+  position: relative;
+  bottom: 0;
+  width: auto;
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
 .slick-next-custom {
-    order: 3;
+  order: 3;
 }
 
 /* Container Spacing */
 .custom-contact-form .form-row {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 20px;
-    margin-bottom: 24px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  margin-bottom: 24px;
 }
 
 /* Labels */
 .custom-contact-form label {
-    display: block;
-    font-size: 14px;
-    font-weight: 600;
-    color: #8D5B4C;
-    text-transform: uppercase;
-    letter-spacing: 1px;
+  display: block;
+  font-size: 14px;
+  font-weight: 600;
+  color: #8D5B4C;
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
 
 /* Input & Textarea Styling */
 .custom-contact-form input[type="text"],
 .custom-contact-form input[type="email"],
 .custom-contact-form textarea {
-    width: 100%;
-    padding: 15px 20px;
-    background-color: transparent;
-    border: 1px solid #C4B9A7;
-    /* Subtle border color */
-    border-radius: 12px;
-    /* Rounded corners per image */
-    font-size: 16px;
-    color: #5C5446;
+  width: 100%;
+  padding: 15px 20px;
+  background-color: transparent;
+  border: 1px solid #C4B9A7;
+  /* Subtle border color */
+  border-radius: 12px;
+  /* Rounded corners per image */
+  font-size: 16px;
+  color: #5C5446;
 }
 
 .custom-contact-form textarea {
-    height: 350px;
-    /* Large height per image */
+  height: 350px;
+  /* Large height per image */
 }
 
 /* Placeholder Color */
 .custom-contact-form ::placeholder {
-    color: #A39B8F;
-    opacity: 1;
+  color: #A39B8F;
+  opacity: 1;
 }
 
 /* Submit Button Alignment & Style */
 .custom-contact-form .form-submit {
-    text-align: right;
-    margin-top: 20px;
-    position: relative;
+  text-align: right;
+  margin-top: 20px;
+  position: relative;
 }
 
 .custom-contact-form .wpcf7-spinner {
-    position: absolute;
-    left: 0;
+  position: absolute;
+  left: 0;
 }
 
 .custom-contact-form .btn-submit {
-    background-color: #C2A36F;
-    /* Gold/Tan color from image */
-    color: #FFF;
-    padding: 12px 60px;
-    border: none;
-    border-radius: 8px;
-    font-size: 18px;
-    cursor: pointer;
-    transition: background 0.3s ease;
+  background-color: #C2A36F;
+  /* Gold/Tan color from image */
+  color: #FFF;
+  padding: 12px 60px;
+  border: none;
+  border-radius: 8px;
+  font-size: 18px;
+  cursor: pointer;
+  transition: background 0.3s ease;
 }
 
 .custom-contact-form .btn-submit:hover {
-    background-color: #A88B5A;
+  background-color: #A88B5A;
 }
 
 /* Mobile Responsive */
 @media (max-width: 768px) {
-    .custom-contact-form .form-row {
-        grid-template-columns: 1fr;
-    }
+  .custom-contact-form .form-row {
+    grid-template-columns: 1fr;
+  }
 }
 
 
 .signature-sliders-container {
-    position: relative;
+  position: relative;
 }
 
 .signature-sliders .slick-arrow,
 .sliders .slick-arrow {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    z-index: 20;
-    cursor: pointer;
-    background: transparent;
-    border: none;
-    padding: 0;
-    width: 40px;
-    height: 40px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 20;
+  cursor: pointer;
+  background: transparent;
+  border: none;
+  padding: 0;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .signature-sliders .slick-prev,
 .sliders .slick-prev {
-    left: -20px;
+  left: -20px;
 }
 
 .signature-sliders .slick-next,
 .sliders .slick-next {
-    right: -20px;
+  right: -20px;
 }
 
 .sliders .slick-next::before,
 .signature-sliders .slick-next::before {
-    content: "";
-    display: none;
+  content: "";
+  display: none;
 }
 
 .sliders .slick-prev::before,
 .signature-sliders .slick-prev::before {
-    content: "";
-    display: none;
+  content: "";
+  display: none;
 }
 
 @media (max-width: 1280px) {
 
-    .signature-sliders .slick-prev,
-    .sliders .slick-prev {
-        left: -30px;
-    }
+  .signature-sliders .slick-prev,
+  .sliders .slick-prev {
+    left: -30px;
+  }
 
-    .signature-sliders .slick-next,
-    .sliders .slick-next {
-        right: -30px;
-    }
+  .signature-sliders .slick-next,
+  .sliders .slick-next {
+    right: -30px;
+  }
 }
 
 @media (max-width: 1024px) {
 
-    .signature-sliders .slick-prev,
-    .sliders .slick-prev,
-    .signature-sliders .slick-next,
-    .sliders .slick-next {
-        top: auto;
-        bottom: -60px;
-        transform: none;
-    }
+  .signature-sliders .slick-prev,
+  .sliders .slick-prev,
+  .signature-sliders .slick-next,
+  .sliders .slick-next {
+    top: auto;
+    bottom: -60px;
+    transform: none;
+  }
 
-    .signature-sliders .slick-prev,
-    .sliders .slick-prev {
-        left: 50%;
-        margin-left: -50px;
-    }
+  .signature-sliders .slick-prev,
+  .sliders .slick-prev {
+    left: 50%;
+    margin-left: -50px;
+  }
 
-    .signature-sliders .slick-next,
-    .sliders .slick-next {
-        right: 50%;
-        margin-right: -50px;
-    }
+  .signature-sliders .slick-next,
+  .sliders .slick-next {
+    right: 50%;
+    margin-right: -50px;
+  }
 }
 
-form.fluent_form_3 .ff-t-container {
-    background-color: #27403B;
-    /* The dark green from your image */
-    padding: 0.5rem;
-    border: 2px solid #e8e2d6;
-    /* The light cream border */
-    border-radius: .75rem;
-    /* Large rounded corners */
-    position: relative;
-    display: flex;
-    align-items: center;
-    /* Creating the "bracket" effect on the corners */
+form.fluent_form_2 .ff-t-container {
+  background-color: #27403B;
+  padding: 8px 8px;
+  border: 2px solid #e8e2d6;
+  border-radius: .75rem;
+  position: relative;
+  display: flex;
+  align-items: center;
 }
 
 /* Style the Input Field */
-form.fluent_form_3 .ff-el-form-control {
-    background: transparent !important;
-    border: none !important;
-    color: #a5b0ab !important;
-    /* Muted text color */
-    font-family: serif;
-    /* Matches the "classic" look in your image */
-    font-size: 1.2rem;
-    box-shadow: none !important;
+form.fluent_form_2 .ff-el-form-control {
+  background: transparent !important;
+  border: none !important;
+  color: #a5b0ab !important;
+  font-family: serif;
+  font-size: 14px;
+  box-shadow: none !important;
+  padding: 12px 10px;
 }
 
 /* Placeholder text color */
-form.fluent_form_3 .ff-el-form-control::placeholder {
-    color: #a5b0ab;
-    opacity: 0.8;
+form.fluent_form_2 .ff-el-form-control::placeholder {
+  color: #a5b0ab;
+  opacity: 0.8;
 }
 
 /* Submit Button Customization */
-form.fluent_form_3 .ff-btn-submit {
-    background-color: #a05752 !important;
-    /* The reddish-brown color */
-    border-radius: 12px !important;
-    padding: 10px 30px !important;
-    font-family: serif;
-    font-size: 1.1rem;
-    text-transform: capitalize;
-    border: none !important;
-    transition: all 0.3s ease;
+form.fluent_form_2 .ff-btn-submit {
+  background-color: #a05752 !important;
+  border-radius: 4px !important;
+  padding: 8px 16px !important;
+  font-family: serif;
+  font-size: 12px;
+  text-transform: capitalize;
+  border: none !important;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+form.fluent_form_2 .ff-btn-submit::before,
+form.fluent_form_2 .ff-btn-submit::after {
+  content: "";
+  display: block;
+  width: 88%;
+  height: 6px;
+  left: 50%;
+  transform: translateX(-50%);
+  position: absolute;
+  background-color: inherit;
+  transition: all 0.3s ease;
+}
+
+form.fluent_form_2 .ff-btn-submit::before {
+  top: -4px;
+  border-radius: 4px 4px 0 0;
+}
+
+form.fluent_form_2 .ff-btn-submit::after {
+  bottom: -4px;
+  border-radius: 0 0 4px 4px;
 }
 
 /* Hover effect for the button */
-form.fluent_form_3 .ff-btn-submit:hover {
-    background-color: #bc6b65 !important;
-    transform: scale(1.02);
+form.fluent_form_2 .ff-btn-submit:hover {
+  background-color: #bc6b65 !important;
+  transform: scale(1.02);
 }
 
 .frm-fluent-form .ff-t-cell .ff_submit_btn_wrapper_custom button,
 .fluentform .ff-el-group {
-    margin-bottom: 0 !important;
+  margin-bottom: 0 !important;
 }
 
-form.fluent_form_3 .wpf_has_custom_css.ff-btn-submit:hover {
-    color: white !important;
+form.fluent_form_2 .wpf_has_custom_css.ff-btn-submit:hover {
+  color: white !important;
 }
