@@ -49,8 +49,8 @@
                     <div class="h-px w-4 bg-gold"></div>
                 </button>
                 <a href="/">
-                    <img src="<?php echo get_template_directory_uri(); ?>/images/webp/logo.webp"
-                        class="h-[30px] md:h-[42px]" alt="">
+                    <img src="<?php echo get_template_directory_uri(); ?>/images/logo.png" class="h-[30px] md:h-[42px]"
+                        alt="">
                 </a>
                 <ul class="items-center text-beige space-x-10 hidden md:flex">
                     <li>
@@ -92,10 +92,10 @@
                 <div class="absolute -right-3 w-4 h-[97%] top-1/2 -translate-y-1/2 bg-primary rounded-r-xl"></div>
                 <div>
                     <a href="/">
-                        <img src="<?php echo get_template_directory_uri(); ?>/images/webp/logo.webp"
-                            class="h-[38px] mb-24" alt="">
+                        <img src="<?php echo get_template_directory_uri(); ?>/images/logo.png" class="h-[38px]"
+                            alt="">
                     </a>
-                    <ul class="flex flex-col space-y-9 text-beige text-xl">
+                    <ul class="flex flex-col space-y-6 text-beige">
                         <li><a class="!no-underline hover:text-gold transition-colors <?php echo ($current_uri == '/' || $current_uri == '/index.php') ? 'text-gold' : ''; ?>"
                                 href="/">Home</a></li>
                         <li><a class="!no-underline hover:text-gold transition-colors <?php echo (strpos($current_uri, '/journey') !== false) ? 'text-gold' : ''; ?>"
