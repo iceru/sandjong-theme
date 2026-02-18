@@ -92,7 +92,7 @@
                 <div class="absolute -right-3 w-4 h-[97%] top-1/2 -translate-y-1/2 bg-primary rounded-r-xl"></div>
                 <div>
                     <a href="/">
-                        <img src="<?php echo get_template_directory_uri(); ?>/images/logo.png" class="h-[38px]"
+                        <img src="<?php echo get_template_directory_uri(); ?>/images/logo.png" class="h-[38px] mb-14"
                             alt="">
                     </a>
                     <ul class="flex flex-col space-y-6 text-beige">
