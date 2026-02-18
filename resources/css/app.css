@@ -414,25 +414,23 @@ h5 {
   .sliders .slick-prev,
   .signature-sliders .slick-next,
   .sliders .slick-next {
-    top: auto;
-    bottom: -60px;
-    transform: none;
+    top: 24%;
   }
 
   .signature-sliders .slick-prev,
   .sliders .slick-prev {
-    left: 50%;
+    left: 12%;
     margin-left: -50px;
   }
 
   .signature-sliders .slick-next,
   .sliders .slick-next {
-    right: 50%;
+    right: 12%;
     margin-right: -50px;
   }
 }
 
-form.fluent_form_3 .ff-t-container {
+form.fluent_form_2 .ff-t-container {
   background-color: #27403B;
   padding: 8px 8px;
   border: 2px solid #e8e2d6;
@@ -443,7 +441,7 @@ form.fluent_form_3 .ff-t-container {
 }
 
 /* Style the Input Field */
-form.fluent_form_3 .ff-el-form-control {
+form.fluent_form_2 .ff-el-form-control {
   background: transparent !important;
   border: none !important;
   color: #a5b0ab !important;
@@ -454,13 +452,13 @@ form.fluent_form_3 .ff-el-form-control {
 }
 
 /* Placeholder text color */
-form.fluent_form_3 .ff-el-form-control::placeholder {
+form.fluent_form_2 .ff-el-form-control::placeholder {
   color: #a5b0ab;
   opacity: 0.8;
 }
 
 /* Submit Button Customization */
-form.fluent_form_3 .ff-btn-submit {
+form.fluent_form_2 .ff-btn-submit {
   background-color: #a05752 !important;
   border-radius: 4px !important;
   padding: 8px 16px !important;
@@ -472,8 +470,8 @@ form.fluent_form_3 .ff-btn-submit {
   position: relative;
 }
 
-form.fluent_form_3 .ff-btn-submit::before,
-form.fluent_form_3 .ff-btn-submit::after {
+form.fluent_form_2 .ff-btn-submit::before,
+form.fluent_form_2 .ff-btn-submit::after {
   content: "";
   display: block;
   width: 88%;
@@ -485,18 +483,18 @@ form.fluent_form_3 .ff-btn-submit::after {
   transition: all 0.3s ease;
 }
 
-form.fluent_form_3 .ff-btn-submit::before {
+form.fluent_form_2 .ff-btn-submit::before {
   top: -4px;
   border-radius: 4px 4px 0 0;
 }
 
-form.fluent_form_3 .ff-btn-submit::after {
+form.fluent_form_2 .ff-btn-submit::after {
   bottom: -4px;
   border-radius: 0 0 4px 4px;
 }
 
 /* Hover effect for the button */
-form.fluent_form_3 .ff-btn-submit:hover {
+form.fluent_form_2 .ff-btn-submit:hover {
   background-color: #bc6b65 !important;
   transform: scale(1.02);
 }
@@ -506,6 +504,24 @@ form.fluent_form_3 .ff-btn-submit:hover {
   margin-bottom: 0 !important;
 }
 
-form.fluent_form_3 .wpf_has_custom_css.ff-btn-submit:hover {
+form.fluent_form_2 .wpf_has_custom_css.ff-btn-submit:hover {
   color: white !important;
+}
+
+/* Target the wrapper specifically */
+.fluentform_wrapper_2 {
+  width: 100% !important;
+  display: block;
+}
+
+/* Ensure the form inside also expands */
+.fluentform_wrapper_2 form {
+  width: 100%;
+}
+
+.ff-t-container {
+  display: flex;
+  width: 100%;
+  flex-wrap: nowrap;
+  /* Or wrap if you want it responsive */
 }

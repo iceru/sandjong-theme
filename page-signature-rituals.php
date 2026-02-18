@@ -7,7 +7,7 @@
     </div>
     <h4 class="text-beige text-center relative z-10 max-w-[312px] mx-auto mt-11 mb-7">Crafted with Care, Offered with
         Meaning.</h4>
-    <p class="body text-center max-w-[432px] mx-auto relative z-10 text-beige">
+    <p class="body text-center max-w-[432px] px-4 mx-auto relative z-10 text-beige">
         Every ritual at Sandjong is an invitation to return, not to escape.
         To return to your senses. To be present in your own skin. As you are.
     </p>
@@ -78,20 +78,20 @@
                     while ($query->have_posts()):
                         $query->the_post();
                         ?>
-                        <div class="pr-6 py-5">
+                        <div class="md:pr-6 py-5">
                             <div class="bg-[#F8E6D2] px-4 md:px-6 py-2 grid md:grid-cols-2 relative rounded-xl gap-6 md:gap-12">
                                 <div
-                                    class="w-[95%] md:w-[98%] h-4 rounded-t-xl -top-4 left-1/2 -translate-x-1/2 bg-[#F8E6D2] absolute -z-10">
+                                    class="w-[94%] md:w-[98%] h-3 md:h-4 rounded-t-xl -top-3 md:-top-4 left-1/2 -translate-x-1/2 bg-[#F8E6D2] absolute -z-10">
                                 </div>
                                 <div
-                                    class="w-[95%] md:w-[98%] h-4 rounded-b-xl -bottom-4 left-1/2 -translate-x-1/2 bg-[#F8E6D2] absolute -z-10">
+                                    class="w-[94%] md:w-[98%] h-3 md:h-4 rounded-b-xl -bottom-3 md:-bottom-4 left-1/2 -translate-x-1/2 bg-[#F8E6D2] absolute -z-10">
                                 </div>
                                 <div>
                                     <img src="<?php echo get_the_post_thumbnail_url() ? get_the_post_thumbnail_url() : get_template_directory_uri() . '/images/signature-1.png'; ?>"
-                                        alt="<?php the_title(); ?>">
+                                        alt="<?php the_title(); ?>" class="">
                                 </div>
-                                <div class="flex flex-col justify-between">
-                                    <div>
+                                <div class="flex flex-col justify-between px-3 md:px-0">
+                                    <div class="mb-14 md:mb-0">
                                         <h5 class="text-primary mb-4 md:mb-11 md:mt-9">
                                             <?php the_title(); ?>
                                         </h5>
@@ -102,7 +102,7 @@
                                     <div>
                                         <?php if (get_field('duration')): ?>
                                             <div
-                                                class="mb-7 inline-flex items-center space-x-2 rounded-lg py-1 px-1.5 bg-gold/20 text-gold">
+                                                class="mb-2 md:mb-7 inline-flex items-center space-x-2 rounded-lg py-1 px-1.5 bg-gold/20 text-gold">
                                                 <img src="<?php echo get_template_directory_uri(); ?>/images/icons/timer.png"
                                                     class="object-contain w-4 h-4" alt="">
                                                 <span><?php the_field('duration'); ?> Minutes</span>
@@ -278,7 +278,8 @@
                             ?>
                             <div class="flex flex-col <?php echo esc_attr($col_span); ?>">
                                 <img src="<?php echo get_the_post_thumbnail_url() ? get_the_post_thumbnail_url() : get_template_directory_uri() . '/images/acu.png'; ?>"
-                                    class="rounded-lg w-full h-[384px] object-cover mb-5" alt="<?php the_title(); ?>">
+                                    class="rounded-lg w-full h-[234px] md:h-[384px] object-cover mb-5"
+                                    alt="<?php the_title(); ?>">
                                 <div class="flex justify-between mb-5">
                                     <h5 class="text-primary"><?php the_title(); ?></h5>
                                     <?php if (get_field('duration')): ?>

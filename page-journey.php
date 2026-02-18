@@ -53,8 +53,8 @@
 </section>
 
 <section class="bg-primary py-20 md:py-36 relative">
-    <div class="container grid md:grid-cols-2 ">
-        <div>
+    <div class="md:container grid md:grid-cols-2 ">
+        <div class="px-4 md:px-0">
             <h5 class="mb-9 text-gold">Our Commitment</h5>
             <h4 class="max-w-[487px] text-beige mb-14 md:mb-52">
                 Amerta’s dedication to maintain a 5-star standard and crafting unforgettable experiences for our valued
@@ -62,7 +62,7 @@
             </h4>
         </div>
         <div
-            class="draggable-container pr-4 md:absolute right-0 flex space-x-6 w-full md:w-1/2 whitespace-nowrap overflow-x-auto pb-6 cursor-grab select-none no-scrollbar">
+            class="draggable-container px-4 md:px-0 pr-4 md:absolute right-0 flex space-x-6 w-full md:w-1/2 whitespace-nowrap overflow-x-auto pb-6 cursor-grab select-none no-scrollbar">
 
             <div class="w-[312px] shrink-0 ">
                 <img src="<?php echo get_template_directory_uri(); ?>/images/webp/vision.webp"
@@ -315,10 +315,10 @@
                                 </div>
                                 <div class="bg-[#FFE5C9] rounded-xl relative p-8 md:px-20 md:py-16">
                                     <div
-                                        class="w-[97%] h-3 rounded-t-xl -top-3 left-1/2 -translate-x-1/2 bg-[#FFE5C9] absolute">
+                                        class="w-[95%] md:w-[98%] h-3 rounded-t-xl -top-3 left-1/2 -translate-x-1/2 bg-[#FFE5C9] absolute">
                                     </div>
                                     <div
-                                        class="w-[97%] h-3 rounded-b-xl -bottom-3 left-1/2 -translate-x-1/2 bg-[#FFE5C9] absolute">
+                                        class="w-[95%] md:w-[98%] h-3 rounded-b-xl -bottom-3 left-1/2 -translate-x-1/2 bg-[#FFE5C9] absolute">
                                     </div>
                                     <h4 class="text-gold mb-11"><?php the_title(); ?></h4>
                                     <div class="body max-w-[398px] mb-14 md:mb-0">
@@ -373,7 +373,7 @@
                     <div class="mt-4">
                         <div class="relative timeline-item cursor-pointer active">
                             <img src="<?php echo get_template_directory_uri(); ?>/images/icons/dot-gold.png" alt=""
-                                class="absolute -left-[39px] top-1 timeline-dot">
+                                class="absolute -left-[37px] md:-left-[39px] top-1 timeline-dot">
                             <h5 class="timeline-title transition-all duration-300 mb-8">
                                 2022 — The First Bloom
                             </h5>
@@ -392,7 +392,7 @@
                         </div>
                         <div class="relative timeline-item cursor-pointer">
                             <img src="<?php echo get_template_directory_uri(); ?>/images/icons/dot-gold.png" alt=""
-                                class="absolute -left-[39px] top-1 timeline-dot">
+                                class="absolute -left-[37px] md:-left-[39px] top-1 timeline-dot">
                             <h5 class="timeline-title transition-all duration-300 mb-8">
                                 2023 — A Voice Recognized
                             </h5>
@@ -410,7 +410,7 @@
                         </div>
                         <div class="relative timeline-item cursor-pointer">
                             <img src="<?php echo get_template_directory_uri(); ?>/images/icons/dot-gold.png" alt=""
-                                class="absolute -left-[39px] top-1 timeline-dot">
+                                class="absolute -left-[37px] md:-left-[39px] top-1 timeline-dot">
                             <h5 class="timeline-title transition-all duration-300 mb-8">
                                 2024 — The Second Sanctuary
                             </h5>
@@ -425,7 +425,7 @@
                         </div>
                         <div class="relative timeline-item cursor-pointer">
                             <img src="<?php echo get_template_directory_uri(); ?>/images/icons/dot-gold.png" alt=""
-                                class="absolute -left-[39px] top-1 timeline-dot">
+                                class="absolute -left-[37px] md:-left-[39px] top-1 timeline-dot">
                             <h5 class="timeline-title transition-all duration-300 mb-8">
                                 And Beyond…
                             </h5>
@@ -461,8 +461,9 @@
         </p>
         <!-- TODO: Slick Slider Awards -->
         <div class="bg-primary mx-auto max-w-[860px]  rounded-xl relative">
-            <div class="w-[97%] h-3 rounded-t-xl -top-3 left-1/2 -translate-x-1/2 bg-primary absolute"></div>
-            <div class="w-[97%] h-3 rounded-b-xl -bottom-3 left-1/2 -translate-x-1/2 bg-primary absolute"></div>
+            <div class="w-[95%] md:w-[98%] h-3 rounded-t-xl -top-3 left-1/2 -translate-x-1/2 bg-primary absolute"></div>
+            <div class="w-[95%] md:w-[98%] h-3 rounded-b-xl -bottom-3 left-1/2 -translate-x-1/2 bg-primary absolute">
+            </div>
             <div class="py-14 px-8">
                 <div class="awards-slider">
                     <?php

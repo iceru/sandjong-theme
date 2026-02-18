@@ -36,7 +36,8 @@ get_header();
 						</div>
 					</div>
 
-					<aside class="hidden md:block pt-4 md:pt-2 border-t md:border-t-0 md:border-l border-[#CBAF8A]/60 md:pl-8">
+					<aside
+						class="hidden md:block pt-4 md:pt-2 border-t-0 md:border-t-0 md:border-l border-[#CBAF8A]/60 md:pl-8">
 						<h5 class="text-terracota mb-4 border-b pb-2 border-terracota">Share</h5>
 						<div class="flex space-x-4">
 							<div class="flex flex-col gap-3 text-sm body">
@@ -104,7 +105,7 @@ get_header();
 				$more_query = new WP_Query($more_args);
 
 				if ($more_query->have_posts()): ?>
-					<section class="pt-12 border-t border-dotted border-[#CBAF8A]/60">
+					<section class="pt-12 md:border-t border-dotted border-[#CBAF8A]/60">
 						<div class="flex justify-between items-center mb-10">
 							<h4 class="text-terracota">More Whispers</h4>
 						</div>
