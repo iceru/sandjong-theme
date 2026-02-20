@@ -13,7 +13,7 @@
     }
 </style>
 
-<section class="relative h-[587px]">
+<section class="relative h-[501px]">
     <div class="w-full h-[110%] left-0 -top-[10%] absolute" data-scroll data-scroll-speed="2">
         <img src="<?php echo get_template_directory_uri(); ?>/images/expand/hero.webp"
             class="w-full object-cover h-full" alt="">
