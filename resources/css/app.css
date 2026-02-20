@@ -414,20 +414,18 @@ h5 {
   .sliders .slick-prev,
   .signature-sliders .slick-next,
   .sliders .slick-next {
-    top: auto;
-    bottom: -60px;
-    transform: none;
+    top: 24%;
   }
 
   .signature-sliders .slick-prev,
   .sliders .slick-prev {
-    left: 50%;
+    left: 12%;
     margin-left: -50px;
   }
 
   .signature-sliders .slick-next,
   .sliders .slick-next {
-    right: 50%;
+    right: 12%;
     margin-right: -50px;
   }
 }
@@ -508,4 +506,22 @@ form.fluent_form_3 .ff-btn-submit:hover {
 
 form.fluent_form_3 .wpf_has_custom_css.ff-btn-submit:hover {
   color: white !important;
+}
+
+/* Target the wrapper specifically */
+.fluentform_wrapper_3 {
+  width: 100% !important;
+  display: block;
+}
+
+/* Ensure the form inside also expands */
+.fluentform_wrapper_3 form {
+  width: 100%;
+}
+
+.ff-t-container {
+  display: flex;
+  width: 100%;
+  flex-wrap: nowrap;
+  /* Or wrap if you want it responsive */
 }

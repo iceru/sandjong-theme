@@ -48,7 +48,7 @@
             </div>
         </div>
 
-        <div>
+        <div class="w-full">
             <div class="hidden md:flex flex-wrap md:flex-nowrap space-y-12 md:space-y-0 md:space-x-14">
                 <div>
                     <div>
