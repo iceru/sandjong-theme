@@ -2,39 +2,40 @@
   width: 100%;
   margin-right: auto;
   margin-left: auto;
-  padding-right: 1rem;
-  padding-left: 1rem;
+  padding-right: 1.5rem; /* Slightly more breathing room for larger screens */
+  padding-left: 1.5rem;
 
-  /* Default/Mobile size */
   max-width: var(--wp--style--global--wide-size);
 
-  /* Scale up on medium screens */
   @media (min-width: theme("screens.md")) {
     max-width: 700px;
   }
-
-  /* Scale up on large screens */
   @media (min-width: theme("screens.lg")) {
     max-width: 900px;
   }
-
-  /* Scale up on extra large screens */
   @media (min-width: theme("screens.xl")) {
     max-width: 1200px;
   }
-
   @media (min-width: theme("screens.2xl")) {
     max-width: 1360px;
   }
 
-  @media (min-width: 1900px) {
-    max-width: 1800px;
+  /* Specific MacBook 14"/16" & High-DPI Laptop range */
+  @media (min-width: 1536px) {
+    max-width: 1440px;
   }
 
+  /* Large Desktop / iMac range */
+  @media (min-width: 1728px) {
+    max-width: 1600px;
+  }
+
+  /* Ultra-wide / 4K monitors */
   @media (min-width: 2000px) {
     max-width: 1920px;
   }
 }
+
 @utility alignfull {
   width: 100vw;
   margin: 0 calc(50% - 50vw) !important;
