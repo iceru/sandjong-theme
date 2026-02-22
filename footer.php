@@ -22,11 +22,11 @@
     </div>
     <section
         class="container relative z-20 pb-52 flex flex-wrap md:flex-nowrap py-11 space-y-12 md:space-y-0 md:space-x-16">
-        <div class="w-full md:w-[20%]">
+        <div class="w-full md:w-[30%] shrink-0">
             <img class="w-[136px] md:w-[200px]"
                 src="<?php echo get_template_directory_uri(); ?>/images/webp/logo-2.webp" alt="Sandjong Logo">
         </div>
-        <div class="w-full md:w-[25%]">
+        <div class="w-full shrink-0">
             <h6 class="mb-5 uppercase text-gold text-xs tracking-widest">Address</h6>
             <div class="mb-14">
                 <h5 class="mb-6">
