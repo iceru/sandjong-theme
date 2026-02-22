@@ -218,7 +218,7 @@
                 </div>
                 <div>
                     <div class="w-16 h-16 mb-9 rounded-full bg-gold/20 flex justify-center items-center">
-                        <img src="<?php echo get_template_directory_uri(); ?>/images/icons/guarantee-2s.png"
+                        <img src="<?php echo get_template_directory_uri(); ?>/images/icons/guarantee-2.png"
                             class="w-[42px] h-[42px] object-contain" alt="">
                     </div>
                     <h5 class="text-primary max-w-[150px] md:max-w-[210px]">Continuous operational consulting and
