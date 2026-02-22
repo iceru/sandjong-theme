@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Theme footer template.
  *
@@ -25,7 +26,7 @@
             <img class="w-[136px] md:w-[200px]"
                 src="<?php echo get_template_directory_uri(); ?>/images/webp/logo-2.webp" alt="Sandjong Logo">
         </div>
-        <div class="w-full md:w-[20%]">
+        <div class="w-full md:w-[25%]">
             <h6 class="mb-5 uppercase text-gold text-xs tracking-widest">Address</h6>
             <div class="mb-14">
                 <h5 class="mb-6">
@@ -145,7 +146,9 @@
                         entry.target.classList.add(targetClass);
                     }
                 });
-            }, { threshold: 0.1 });
+            }, {
+                threshold: 0.1
+            });
 
             document.querySelectorAll('[data-scroll]').forEach(el => observer.observe(el));
         } else {
