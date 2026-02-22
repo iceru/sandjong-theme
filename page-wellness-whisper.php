@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Template Name: News
  */
@@ -22,8 +23,7 @@ get_header();
 	</div>
 </section>
 
-<section class="bg-beige relative pb-24 md:pb-32">
-
+<section class="bg-beige relative py-16">
 	<div class="container relative z-10 text-primary pt-16">
 		<div class="mb-10 md:mb-12 text-left">
 			<h4 class="text-terracota mb-3">Gentle Offerings</h4>
@@ -131,7 +131,7 @@ get_header();
 		if ($news_query->have_posts()):
 			while ($news_query->have_posts()):
 				$news_query->the_post();
-				?>
+		?>
 				<article class="border-b border-gold border-dashed mb-12 pb-12 last:mb-0">
 					<div class="grid md:grid-cols-[minmax(0,320px)_minmax(0,1fr)] gap-8 md:gap-24 items-start">
 						<div class="w-full">
