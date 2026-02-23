@@ -138,7 +138,7 @@
         <div class="grid grid-cols-2 md:grid-cols-3 gap-8 gap-y-20 md:gap-20">
             <div>
                 <div class="mb-9 w-[74px] h-[74px] rounded-full bg-gold/20 flex justify-center items-center">
-                    <img src="<?php echo get_template_directory_uri(); ?>/images/icons/heart.png" alt="">
+                    <img class="w-12 h-12 object-contain" src="<?php echo get_template_directory_uri(); ?>/images/icons/heart.png" alt="">
                 </div>
                 <h5 class="text-gold mb-1">Commitment</h5>
                 <p class="body max-w-[266px]">An unwavering dedication to enhance our brand’s and our clients’ image by
@@ -148,7 +148,7 @@
             </div>
             <div>
                 <div class="mb-9 w-[74px] h-[74px] rounded-full bg-gold/20 flex justify-center items-center">
-                    <img src="<?php echo get_template_directory_uri(); ?>/images/icons/idea.png" alt="">
+                    <img class="w-12 h-12 object-contain" src="<?php echo get_template_directory_uri(); ?>/images/icons/idea.png" alt="">
                 </div>
                 <h5 class="text-gold mb-1">Innovation</h5>
                 <p class="body max-w-[266px]">An unyielding aim for innovation to elevate our core principle of customer
@@ -156,7 +156,7 @@
             </div>
             <div>
                 <div class="mb-9 w-[74px] h-[74px] rounded-full bg-gold/20 flex justify-center items-center">
-                    <img src="<?php echo get_template_directory_uri(); ?>/images/icons/star.png" alt="">
+                    <img class="w-12 h-12 object-contain" src="<?php echo get_template_directory_uri(); ?>/images/icons/star.png" alt="">
                 </div>
                 <h5 class="text-gold mb-1">Uniqueness</h5>
                 <p class="body max-w-[266px]">An adamant intention to be a unique trendsetter to the hospitality
@@ -164,7 +164,7 @@
             </div>
             <div>
                 <div class="mb-9 w-[74px] h-[74px] rounded-full bg-gold/20 flex justify-center items-center">
-                    <img src="<?php echo get_template_directory_uri(); ?>/images/icons/review.png" alt="">
+                    <img class="w-12 h-12 object-contain" src="<?php echo get_template_directory_uri(); ?>/images/icons/review.png" alt="">
                 </div>
                 <h5 class="text-gold mb-1">Memorable Experience</h5>
                 <p class="body max-w-[266px]">A supporting empowerment for our staff to consistently deliver first-rate,
@@ -172,7 +172,7 @@
             </div>
             <div>
                 <div class="mb-9 w-[74px] h-[74px] rounded-full bg-gold/20 flex justify-center items-center">
-                    <img src="<?php echo get_template_directory_uri(); ?>/images/icons/guarantee.png" alt="">
+                    <img class="w-12 h-12 object-contain" src="<?php echo get_template_directory_uri(); ?>/images/icons/guarantee.png" alt="">
                 </div>
                 <h5 class="text-gold mb-1">Consistent</h5>
                 <p class="body max-w-[281px]">A committed pledge to prioritize the implementation of our top-tier
