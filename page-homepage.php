@@ -90,7 +90,7 @@
 <section class="bg-beige py-28 relative z-20" id="branches">
     <div class="container">
         <div class="flex items-end md:items-center justify-between space-x-6 mb-16">
-            <h5 class="text-gold md:whitespace-nowrap max-w-[168px]">Sandjong's Wellness Branches</h5>
+            <h5 class="text-gold md:whitespace-nowrap max-w-[168px] md:max-w-full">Sandjong's Wellness Branches</h5>
             <div class="h-[1px] w-full border border-gold border-dashed mt-[4px] hidden md:block"></div>
             <a href="" class="button !text-gold whitespace-nowrap !p-0">Explore more</a>
         </div>
