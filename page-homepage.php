@@ -1,8 +1,8 @@
 <?php get_header(); ?>
+<script>document.documentElement.classList.add('has-scroll-snap');</script>
 <style>
-    html {
+    html.has-scroll-snap {
         scroll-snap-type: y proximity;
-        scroll-behavior: smooth;
     }
 
     .masked-image {

@@ -124,10 +124,13 @@
     document.addEventListener('DOMContentLoaded', () => {
         const isMobile = window.innerWidth < 1024;
 
+        const hasScrollSnap = document.documentElement.classList.contains('has-scroll-snap');
+
         const lenis = new Lenis({
             duration: 1.2,
             easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
-            smooth: true,
+            smooth: !hasScrollSnap,
+            smoothWheel: !hasScrollSnap,
         });
 
         function raf(time) {
