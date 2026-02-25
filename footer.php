@@ -124,13 +124,11 @@
     document.addEventListener('DOMContentLoaded', () => {
         const isMobile = window.innerWidth < 1024;
 
-        const hasScrollSnap = document.documentElement.classList.contains('has-scroll-snap');
 
         const lenis = new Lenis({
             duration: 1.2,
             easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
-            smooth: !hasScrollSnap,
-            smoothWheel: !hasScrollSnap,
+            smooth: true,
         });
 
         function raf(time) {
@@ -138,6 +136,48 @@
             requestAnimationFrame(raf);
         }
         requestAnimationFrame(raf);
+
+        // JS-based snap scrolling for pages with [data-snap-section]
+        const snapSections = document.querySelectorAll('[data-snap-section]');
+        if (snapSections.length > 0 && !isMobile) {
+            let snapTimeout = null;
+            let isSnapping = false;
+
+            lenis.on('scroll', () => {
+                if (isSnapping) return;
+
+                clearTimeout(snapTimeout);
+                snapTimeout = setTimeout(() => {
+                    // Find the nearest section to snap to
+                    const scrollY = window.scrollY;
+                    const viewHeight = window.innerHeight;
+                    let closestSection = null;
+                    let closestDistance = Infinity;
+
+                    snapSections.forEach(section => {
+                        const rect = section.getBoundingClientRect();
+                        const sectionTop = scrollY + rect.top;
+                        const distance = Math.abs(sectionTop - scrollY);
+
+                        // Only snap if the section top is reasonably close (within 40% of viewport)
+                        if (distance < viewHeight * 0.4 && distance < closestDistance && distance > 5) {
+                            closestDistance = distance;
+                            closestSection = section;
+                        }
+                    });
+
+                    if (closestSection) {
+                        isSnapping = true;
+                        lenis.scrollTo(closestSection, {
+                            duration: 0.8,
+                            onComplete: () => {
+                                isSnapping = false;
+                            }
+                        });
+                    }
+                }, 150);
+            });
+        }
 
         // Handle ".is-inview" animation triggers (Previously Locomotive)
         // Disabled on mobile for cleaner UX

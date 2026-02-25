@@ -1,9 +1,5 @@
 <?php get_header(); ?>
-<script>document.documentElement.classList.add('has-scroll-snap');</script>
 <style>
-    html.has-scroll-snap {
-        scroll-snap-type: y proximity;
-    }
 
     .masked-image {
         -webkit-mask-image: url('<?php echo get_template_directory_uri(); ?>/images/mask/mask.png');
@@ -18,8 +14,8 @@
     }
 </style>
 
-<section id="header"
-    class="h-screen md:h-auto md:aspect-video md:max-h-screen flex flex-col justify-end items-center relative w-full snap-start snap-always scroll-mt-20">
+<section id="header" data-snap-section
+    class="h-screen md:h-auto md:aspect-video md:max-h-screen flex flex-col justify-end items-center relative w-full">
     <div class="absolute left-0 top-0 w-full h-full">
         <video class="w-full h-full object-cover" autoplay loop muted playsinline
             poster="<?php echo get_template_directory_uri(); ?>/images/sandjong-placeholder.webp">
@@ -42,8 +38,8 @@
     </div>
 </section>
 
-<section id="about"
-    class="bg-beige text-center py-20 md:py-36 flex flex-col justify-center items-center relative text-primary snap-start snap-always scroll-mt-20">
+<section id="about" data-snap-section
+    class="bg-beige text-center py-20 md:py-36 flex flex-col justify-center items-center relative text-primary">
     <div class="absolute w-full h-[130%] md:h-full left-0 top-0 opacity-10">
         <img class="w-full h-full object-cover object-top"
             src="<?php echo get_template_directory_uri(); ?>/images/webp/bg-beige.webp" alt="">
@@ -67,7 +63,7 @@
     </div>
 </section>
 
-<section class="bg-beige py-16 md:py-28 relative max-w-screen overflow-x-hidden snap-start snap-always scroll-mt-20">
+<section data-snap-section class="bg-beige py-16 md:py-28 relative max-w-screen overflow-x-hidden">
     <div>
         <h4 class="mb-8 text-center text-gold">A Window to the Soul</h4>
         <div class="flex flex-col justify-center items-center">
@@ -93,7 +89,7 @@
         src="<?php echo get_template_directory_uri(); ?>/images/webp/soul-2.webp" alt="">
 </section>
 
-<section class="bg-beige py-28 relative z-20 snap-start snap-always scroll-mt-20" id="branches">
+<section data-snap-section class="bg-beige py-28 relative z-20" id="branches">
     <div class="container">
         <div class="flex items-end md:items-center justify-between space-x-6 mb-16">
             <h5 class="text-gold md:whitespace-nowrap max-w-[168px] md:max-w-full">Sandjong's Wellness Branches</h5>
@@ -142,7 +138,7 @@
     </div>
 </section>
 
-<section id="posts" class="bg-primary pb-40 relative z-10 snap-start snap-always scroll-mt-20">
+<section id="posts" data-snap-section class="bg-primary pb-40 relative z-10">
     <div class="w-full h-[526px] hidden md:block relative">
         <img class="w-full h-[120%] absolute left-0 -top-[10%] object-cover" data-scroll data-scroll-speed="2"
             src="<?php echo get_template_directory_uri(); ?>/images/webp/bg-posts-2.webp" alt="">
@@ -217,7 +213,7 @@
     </div>
 </section>
 
-<section id="franchise" class="h-screen flex flex-col justify-center items-center relative snap-start snap-always">
+<section id="franchise" data-snap-section class="h-screen flex flex-col justify-center items-center relative">
     <div class="absolute left-0 w-full h-[120%] -top-[10%] z-0" data-scroll data-scroll-speed="2">
         <img class="w-full h-full object-cover"
             src="<?php echo get_template_directory_uri(); ?>/images/webp/bg-franchise.webp" alt="">
