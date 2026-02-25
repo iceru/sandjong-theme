@@ -169,7 +169,7 @@
                     if (closestSection) {
                         isSnapping = true;
                         lenis.scrollTo(closestSection, {
-                            immediate: true,
+                            duration: 0.2,
                             onComplete: () => {
                                 isSnapping = false;
                             }
