@@ -169,13 +169,13 @@
                     if (closestSection) {
                         isSnapping = true;
                         lenis.scrollTo(closestSection, {
-                            duration: 0.8,
+                            duration: 0.3,
                             onComplete: () => {
                                 isSnapping = false;
                             }
                         });
                     }
-                }, 150);
+                }, 50);
             });
         }
 
