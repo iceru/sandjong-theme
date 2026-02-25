@@ -13,7 +13,7 @@
 
 <?php do_action('tailpress_content_after'); ?>
 
-<footer class="bg-primary-2 text-beige relative z-20 snap-start">
+<footer class="bg-primary-2 text-beige relative z-20 snap-start" data-snap-section>
     <div class="absolute bottom-9 w-full z-10 bg-gradient-to-b from-primary-2 h-[90px] to-transparent"></div>
 
     <div class="absolute bottom-0 z-0 left-0 w-full h-[127px]">
@@ -143,6 +143,11 @@
             let snapTimeout = null;
             let isSnapping = false;
 
+            // Prevent snapping from getting locked if user interrupts it
+            const releaseSnap = () => { isSnapping = false; };
+            window.addEventListener('wheel', releaseSnap, { passive: true });
+            window.addEventListener('touchstart', releaseSnap, { passive: true });
+
             lenis.on('scroll', () => {
                 if (isSnapping) return;
 
@@ -174,6 +179,11 @@
                                 isSnapping = false;
                             }
                         });
+                        
+                        // Fallback reset
+                        setTimeout(() => {
+                            isSnapping = false;
+                        }, 500);
                     }
                 }, 50);
             });
