@@ -126,7 +126,7 @@
 
 
         const lenis = new Lenis({
-            duration: 1.2,
+            duration: 0.8,
             easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
             smooth: true,
         });
@@ -160,7 +160,7 @@
                         const distance = Math.abs(sectionTop - scrollY);
 
                         // Only snap if the section top is reasonably close (within 40% of viewport)
-                        if (distance < viewHeight * 0.4 && distance < closestDistance && distance > 5) {
+                        if (distance < viewHeight * 0.5 && distance < closestDistance && distance > 5) {
                             closestDistance = distance;
                             closestSection = section;
                         }
