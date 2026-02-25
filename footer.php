@@ -160,7 +160,7 @@
                         const distance = Math.abs(sectionTop - scrollY);
 
                         // Only snap if the section top is reasonably close (within 40% of viewport)
-                        if (distance < viewHeight * 0.5 && distance < closestDistance && distance > 5) {
+                        if (distance < viewHeight * 0.6 && distance < closestDistance && distance > 5) {
                             closestDistance = distance;
                             closestSection = section;
                         }
@@ -169,7 +169,7 @@
                     if (closestSection) {
                         isSnapping = true;
                         lenis.scrollTo(closestSection, {
-                            duration: 0.3,
+                            duration: 0.2,
                             onComplete: () => {
                                 isSnapping = false;
                             }
