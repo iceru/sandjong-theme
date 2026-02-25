@@ -126,7 +126,7 @@
 
 
         const lenis = new Lenis({
-            duration: 0.8,
+            duration: 0.5,
             easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
             smooth: true,
         });
@@ -169,7 +169,7 @@
                     if (closestSection) {
                         isSnapping = true;
                         lenis.scrollTo(closestSection, {
-                            duration: 0.2,
+                            immediate: true,
                             onComplete: () => {
                                 isSnapping = false;
                             }
