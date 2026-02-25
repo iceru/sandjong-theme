@@ -116,6 +116,16 @@
                 </div>
             </div>
 
+            <style>
+                header {
+                    transition: transform 0.4s ease-in-out;
+                }
+
+                header.header-hidden {
+                    transform: translateY(-120%);
+                }
+            </style>
+
             <script>
                 jQuery(document).ready(function ($) {
                     function openSidebar() {
@@ -136,6 +146,36 @@
 
                     $('#close-sidebar, #mobile-overlay').click(function () {
                         closeSidebar();
+                    });
+
+                    // Scroll to hide header logic
+                    let lastScrollTop = 0;
+                    const header = $('header');
+                    const threshold = 80; // Distance from top before hiding starts
+
+                    $(window).scroll(function () {
+                        // Only apply on desktop (md breakpoint in Tailwind is 768px)
+                        if ($(window).width() < 768) {
+                            header.removeClass('header-hidden');
+                            return;
+                        }
+
+                        let st = $(this).scrollTop();
+
+                        if (st > threshold) {
+                            if (st > lastScrollTop) {
+                                // Scroll Down
+                                header.addClass('header-hidden');
+                            } else {
+                                // Scroll Up
+                                header.removeClass('header-hidden');
+                            }
+                        } else {
+                            // Near top
+                            header.removeClass('header-hidden');
+                        }
+
+                        lastScrollTop = st;
                     });
                 });
             </script>
