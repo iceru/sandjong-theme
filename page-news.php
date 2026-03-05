@@ -7,15 +7,15 @@
 get_header();
 ?>
 
-<section class="relative h-[501px] flex justify-center items-center">
+<section class="relative h-screen flex justify-center items-center">
 	<div class="absolute w-full h-[110%] left-0 -top-[10%]" data-scroll data-scroll-speed="2">
-		<img class="w-full h-full object-cover" src="<?php echo get_template_directory_uri(); ?>/images/bg-news.jpg"
-			alt="News hero background">
+		<img class="w-full h-full object-cover"
+			src="<?php echo get_template_directory_uri(); ?>/images/webp/bg-wellness.webp" alt="News hero background">
 	</div>
 
-	<div class="container relative z-10 mt-14 md:mt-0 text-center text-beige">
-		<h2 class="mb-6">A Quiet Space of Wellness in a Fast World</h2>
-		<p class="body max-w-[720px] mx-auto">
+	<div class="container relative z-10 mt-14 text-center text-beige">
+		<h4 class="mb-6">A Quiet Space of Wellness in a Fast World</h4>
+		<p class="body max-w-[621px] mx-auto">
 			Wellness Whisper is where Sandjong shares what stirs within, such as thoughtful updates, seasonal
 			rituals, and cultural moments that follow the rhythm of rest and renewal. From treatments inspired by
 			ancestral ingredients to workshops and limited offerings, each story unfolds gently for your eyes only.
@@ -23,12 +23,11 @@ get_header();
 	</div>
 </section>
 
-
-<section class="bg-beige relative pb-24">
+<section class="bg-beige relative py-10">
 	<div class="container relative z-10 text-primary pt-16">
-		<div class="mb-10 md:mb-12 text-center md:text-left">
+		<div class="mb-10 md:mb-12 text-left">
 			<h4 class="text-terracota mb-3">Gentle Offerings</h4>
-			<p class="body max-w-[720px] mx-auto md:mx-0">
+			<p class="body">
 				Limited-time rituals and curated treatments inspired by the season's energy that are designed to bring
 				balance in rhythm with nature.
 			</p>
@@ -48,31 +47,25 @@ get_header();
 		);
 
 		if ($promo_query->have_posts()): ?>
-			<div class="grid md:grid-cols-3 gap-10 mb-12">
+			<div class="grid md:grid-cols-3 gap-10 md:gap-16 mb-12">
 				<?php while ($promo_query->have_posts()):
 					$promo_query->the_post(); ?>
-					<article class="bg-beige/60 rounded-xl overflow-hidden shadow-sm">
+					<article>
 						<?php if (has_post_thumbnail()): ?>
-							<a href="<?php the_permalink(); ?>" class="block">
+							<a href=" <?php the_permalink(); ?>" class="block">
 								<?php the_post_thumbnail('large', array(
-									'class' => 'w-full h-[260px] object-cover',
+									'class' => 'w-full h-[436px] object-cover rounded-xl mb-4',
 								)); ?>
 							</a>
 						<?php endif; ?>
 
-						<div class="p-6">
-							<h5 class="mb-2">
-								<a href="<?php the_permalink(); ?>" class="hover:text-terracota transition-colors">
-									<?php the_title(); ?>
-								</a>
-							</h5>
-							<div class="body text-primary/80 mb-4 min-h-[72px]">
-								<?php echo wp_trim_words(get_the_excerpt(), 20); ?>
-							</div>
-							<a href="<?php the_permalink(); ?>"
-								class="inline-flex items-center body text-terracota hover:text-primary transition-colors">
-								Read more
+						<h5 class="mb-2">
+							<a href="<?php the_permalink(); ?>" class="hover:text-terracota transition-colors !no-underline">
+								<?php the_title(); ?>
 							</a>
+						</h5>
+						<div class="body text-primary/80 mb-4">
+							<?php echo wp_trim_words(get_the_excerpt(), 20); ?>
 						</div>
 					</article>
 				<?php endwhile; ?>
@@ -97,7 +90,9 @@ get_header();
 					<div class="flex justify-center mt-4">
 						<ul class="flex items-center gap-4 text-sm body text-primary/80">
 							<?php foreach ($promo_links as $link): ?>
-								<li class="px-1"><?php echo wp_kses_post($link); ?></li>
+								<li class="px-1">
+									<?php echo wp_kses_post($link); ?>
+								</li>
 							<?php endforeach; ?>
 						</ul>
 					</div>
@@ -111,12 +106,11 @@ get_header();
 	</div>
 </section>
 
-
-<section class="bg-beige py-24">
+<section class="bg-beige py-10 relative">
 	<div class="container text-primary">
-		<div class="mb-16 md:mb-20">
-			<h4 class="text-terracota mb-3">Whispers from Sandjong</h4>
-			<p class="body max-w-[720px]">
+		<div class="mb-16">
+			<h4 class="text-terracota mb-5 md:mb-3 max-w-[240px] md:max-w-full">Whispers from Sandjong</h4>
+			<p class="body max-w-[291px] md:max-w-full">
 				The thoughtful updates from our sanctuaries, including new rituals, cultural moments, and
 				what’s quietly unfolding at Sandjong.
 			</p>
@@ -137,9 +131,9 @@ get_header();
 		if ($news_query->have_posts()):
 			while ($news_query->have_posts()):
 				$news_query->the_post();
-		?>
-				<article class="border-t border-[#CBAF8A]/40 py-12 first:border-t-0 first:pt-0">
-					<div class="grid md:grid-cols-[minmax(0,320px)_minmax(0,1fr)] gap-8 md:gap-12 items-start">
+				?>
+				<article class="border-b border-gold border-dashed mb-12 pb-12 last:mb-0">
+					<div class="grid md:grid-cols-[minmax(0,320px)_minmax(0,1fr)] gap-8 md:gap-24 items-start">
 						<div class="w-full">
 							<?php if (has_post_thumbnail()): ?>
 								<a href="<?php the_permalink(); ?>" class="block overflow-hidden rounded-lg">
@@ -149,34 +143,33 @@ get_header();
 								</a>
 							<?php else: ?>
 								<a href="<?php the_permalink(); ?>"
-									class="block overflow-hidden rounded-lg bg-primary/5 h-full min-h-[220px] flex items-center justify-center">
+									class="block !no-underline overflow-hidden rounded-lg bg-primary/5 h-full min-h-[250px] flex items-center justify-center">
 									<span class="body text-primary/60">No image available</span>
 								</a>
 							<?php endif; ?>
 						</div>
 
-						<div class="flex flex-col justify-between h-full">
-							<div>
-								<p class="body text-terracota mb-3">
-									<?php echo get_the_date('d M Y'); ?>
-								</p>
-								<h4 class="mb-4">
-									<a href="<?php the_permalink(); ?>" class="hover:text-terracota transition-colors">
-										<?php the_title(); ?>
-									</a>
-								</h4>
-								<div class="body text-primary/80 max-w-[640px]">
-									<?php the_excerpt(); ?>
-								</div>
+						<div>
+							<p class="opacity-60 text-primary text-[10px] mb-3">
+								<?php echo get_the_date('d M Y'); ?>
+							</p>
+							<h4 class="mb-4">
+								<a href="<?php the_permalink(); ?>"
+									class="hover:text-terracota transition-colors !no-underline">
+									<?php the_title(); ?>
+								</a>
+							</h4>
+							<div class="body line-clamp-2 mb-10 md:mb-24">
+								<?php the_excerpt(); ?>
 							</div>
-
-							<div class="mt-6">
+							<div>
 								<a href="<?php the_permalink(); ?>"
 									class="inline-flex items-center body text-terracota hover:text-primary transition-colors">
 									Read more
 								</a>
 							</div>
 						</div>
+
 					</div>
 				</article>
 				<?php
@@ -203,7 +196,9 @@ get_header();
 						<div class="flex justify-center">
 							<ul class="flex items-center gap-4 text-sm body text-primary/80">
 								<?php foreach ($links as $link): ?>
-									<li class="px-1"><?php echo wp_kses_post($link); ?></li>
+									<li class="px-1">
+										<?php echo wp_kses_post($link); ?>
+									</li>
 								<?php endforeach; ?>
 							</ul>
 						</div>
@@ -217,5 +212,4 @@ get_header();
 		<?php endif; ?>
 	</div>
 </section>
-
 <?php get_footer(); ?>
