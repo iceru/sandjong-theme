@@ -21,7 +21,7 @@
             class="w-full h-full object-bottom object-cover" alt="">
     </div>
     <section
-        class="container relative z-20 pb-52 flex flex-wrap md:flex-nowrap py-11 space-y-12 md:space-y-0 md:space-x-16">
+        class="container relative z-20 pb-20 flex flex-wrap md:flex-nowrap py-11 space-y-12 md:space-y-0 md:space-x-16">
         <div class="w-full md:w-[20%] shrink-0">
             <img class="w-[136px] md:w-[200px]"
                 src="<?php echo get_template_directory_uri(); ?>/images/webp/logo-2.webp" alt="Sandjong Logo">
@@ -57,10 +57,11 @@
                     </div>
                     <div>
                         <ul class="space-y-2 md:space-y-5">
-                            <li><a href="/journey" class="!no-underline">Journey of Sandjong</a></li>
-                            <li><a href="/signature-rituals" class="!no-underline">Signature Rituals</a></li>
-                            <li><a href="/wellness-whisper" class="!no-underline">Wellness Whisper</a></li>
-                            <li><a href="/expand" class="!no-underline">Expand with Sandjong</a></li>
+                            <li><a href="/journey" class="!no-underline">About Us</a></li>
+                            <li><a href="/signature-rituals" class="!no-underline">Our Treatment</a></li>
+                            <li><a href="/wellness-whisper" class="!no-underline">News</a></li>
+                            <li><a href="/expand" class="!no-underline">Franchise</a></li>
+                            <li><a href="/sanctuary" class="!no-underline">Our Outlets</a></li>
                         </ul>
                     </div>
                 </div>
@@ -179,7 +180,7 @@
                                 isSnapping = false;
                             }
                         });
-                        
+
                         // Fallback reset
                         setTimeout(() => {
                             isSnapping = false;

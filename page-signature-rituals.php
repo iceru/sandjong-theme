@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 
-<section class="relative h-[501px] flex flex-col justify-center items-center">
+<section class="relative h-screen flex flex-col justify-center items-center">
     <div class="absolute w-full h-[110%] left-0 -top-[10%]" data-scroll data-scroll-speed="2">
         <img class="w-full h-full object-cover"
             src="<?php echo get_template_directory_uri(); ?>/images/webp/bg-signature.webp" alt="">
@@ -13,18 +13,7 @@
     </p>
 </section>
 
-<section class="bg-beige py-20 md:py-28 relative">
-    <div class="container">
-        <h4
-            class="text-center max-w-[328px] md:max-w-[1000px] mx-auto font-bold md:font-normal !text-xl md:!text-[32px] !leading-normal">
-            Our treatments are rooted in ancestral wisdom and delivered with calm precision. Each one designed to
-            restore balance through touch, tradition, and intention. We draw from nature, from culture, and from the
-            knowledge that wellness begins when you come home to yourself.
-        </h4>
-    </div>
-</section>
-
-<section class="py-10 bg-beige">
+<section class=" bg-beige py-16 relative z-10">
     <div class="container">
         <div
             class="flex border-terracota/60 border-b mb-9 space-x-16 md:space-x-0 overflow-auto whitespace-nowrap no-scrollbar">

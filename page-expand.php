@@ -13,7 +13,7 @@
     }
 </style>
 
-<section class="relative h-[501px]">
+<section class="relative h-screen flex flex-col justify-center items-center">
     <div class="w-full h-[110%] left-0 -top-[10%] absolute" data-scroll data-scroll-speed="2">
         <img src="<?php echo get_template_directory_uri(); ?>/images/expand/hero.webp"
             class="w-full object-cover h-full" alt="">
@@ -32,8 +32,8 @@
     </div>
 </section>
 
-<section class="bg-beige py-16 relative z-10">
-    <div class="container grid md:grid-cols-2">
+<section class="bg-beige py-16 relative z-10 h-screen flex flex-col justify-center">
+    <div class="container grid md:grid-cols-2 items-center">
         <div class="mb-20 md:mb-0">
             <h4 class="text-terracota mb-6">
                 Spa Operation
@@ -58,7 +58,7 @@
     </div>
 </section>
 
-<section class="bg-primary py-20 relative z-10" id="services">
+<section class="bg-primary py-20 relative z-10 h-screen flex flex-col justify-center" id="services">
     <div class="absolute w-full h-full left-0 top-0">
         <img src="<?php echo get_template_directory_uri(); ?>/images/webp/bg-green.webp"
             class="w-full h-full object-cover" alt="">
@@ -73,13 +73,13 @@
         ));
 
         if ($services->have_posts()):
-        ?>
+            ?>
             <div class="grid md:grid-cols-2 gap-14 md:gap-32">
                 <div class="relative">
                     <?php while ($services->have_posts()):
                         $services->the_post();
                         $activeClass = ($services->current_post === 0) ? '' : 'hidden'; // First visible, others hidden
-                    ?>
+                        ?>
                         <img src="<?php echo get_the_post_thumbnail_url() ? get_the_post_thumbnail_url() : get_template_directory_uri() . '/images/expand/our-services.webp'; ?>"
                             class="service-image masked-facility w-full h-auto object-cover <?php echo $activeClass; ?>"
                             data-id="service-<?php echo get_the_ID(); ?>" alt="<?php the_title(); ?>">
@@ -92,7 +92,7 @@
                         <?php while ($services->have_posts()):
                             $services->the_post();
                             $opacityClass = ($services->current_post === 0) ? 'opacity-100 border-b-white' : 'opacity-40 border-b-transparent';
-                        ?>
+                            ?>
                             <div class="cursor-pointer pb-5 border-b-2 border-transparent service-tab transition-opacity duration-300 <?php echo $opacityClass; ?>"
                                 data-target="service-<?php echo get_the_ID(); ?>">
                                 <h5 class="whitespace-nowrap">
@@ -106,7 +106,7 @@
                         <?php while ($services->have_posts()):
                             $services->the_post();
                             $activeClass = ($services->current_post === 0) ? '' : 'hidden';
-                        ?>
+                            ?>
                             <div class="service-content <?php echo $activeClass; ?>" id="service-<?php echo get_the_ID(); ?>">
                                 <h4 class="text-gold mb-2">
                                     <?php the_title(); ?>
@@ -122,13 +122,13 @@
                     </div>
                 </div>
             </div>
-        <?php wp_reset_postdata();
+            <?php wp_reset_postdata();
         endif; ?>
     </div>
 </section>
 <script>
-    jQuery(document).ready(function($) {
-        $('.service-tab').click(function() {
+    jQuery(document).ready(function ($) {
+        $('.service-tab').click(function () {
             var targetId = $(this).data('target');
 
             // Handle Tabs
@@ -146,7 +146,7 @@
     });
 </script>
 
-<section class="relative">
+<section class="relative h-screen flex flex-col justify-center">
     <div class="absolute w-full h-[130%] left-0 -top-[20%]" data-scroll data-scroll-speed="2">
         <img src="<?php echo get_template_directory_uri(); ?>/images/webp/bg-timeline.webp"
             class="w-full h-full object-cover" alt="">
@@ -229,7 +229,7 @@
     </div>
 </section>
 
-<section class="bg-beige py-24 relative">
+<section class="bg-beige py-24 relative h-screen">
     <div class="absolute w-full h-full left-0 top-0 opacity-10">
         <img src="<?php echo get_template_directory_uri(); ?>/images/webp/bg-beige.webp"
             class="w-full h-full object-cover" alt="">

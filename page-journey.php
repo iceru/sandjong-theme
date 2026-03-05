@@ -26,7 +26,7 @@
 </style>
 
 
-<section class="relative h-[501px] flex justify-center items-center">
+<section class="relative h-screen flex justify-center items-center">
     <div class="absolute w-full h-[110%] left-0 -top-[10%]" data-scroll data-scroll-speed="2">
         <img class="w-full h-full object-cover"
             src="<?php echo get_template_directory_uri(); ?>/images/webp/bg-journey.webp" alt="">
@@ -37,7 +37,7 @@
     </h4>
 </section>
 
-<section class="bg-beige py-[71px] md:py-36 relative">
+<section class="bg-beige py-[71px] h-screen flex flex-col justify-center md:py-36 relative">
     <div class="container grid md:grid-cols-2 text-primary">
         <h4 class="max-w-[312px] mb-10 md:mb-0">
             Nature Inheritance Rooted in Culture
@@ -52,11 +52,11 @@
     </div>
 </section>
 
-<section class="bg-primary py-20 md:py-36 relative">
-    <div class="md:container grid md:grid-cols-2 ">
+<section class="bg-primary py-20 md:py-36 relative h-screen flex flex-col justify-center">
+    <div class="md:container grid md:grid-cols-2 items-center">
         <div class="px-4 md:px-0">
-            <h5 class="mb-9 text-gold">Our Commitment</h5>
-            <h4 class="max-w-[487px] text-beige mb-14 md:mb-52">
+            <h4 class="mb-6 text-gold italic ">Our Commitment</h4>
+            <h4 class="max-w-[487px] text-beige">
                 Amerta’s dedication to maintain a 5-star standard and crafting unforgettable experiences for our valued
                 customers is shown and nurtured through our vision, mission, culture, motto, and values.
             </h4>
@@ -114,7 +114,7 @@
     </div>
 </section>
 
-<section class="relative overflow-hidden" id="culture">
+<section class="relative overflow-hidden h-screen flex flex-col justify-center" id="culture">
     <div class="absolute w-full h-[110%] left-0 -top-[10%]" data-scroll data-scroll-speed="2">
         <img class="w-full h-full object-cover"
             src="<?php echo get_template_directory_uri(); ?>/images/webp/bg-culture.webp" alt="">
@@ -138,7 +138,8 @@
         <div class="grid grid-cols-2 md:grid-cols-3 gap-8 gap-y-20 md:gap-20">
             <div>
                 <div class="mb-9 w-[74px] h-[74px] rounded-full bg-gold/20 flex justify-center items-center">
-                    <img class="w-12 h-12 object-contain" src="<?php echo get_template_directory_uri(); ?>/images/icons/heart.png" alt="">
+                    <img class="w-12 h-12 object-contain"
+                        src="<?php echo get_template_directory_uri(); ?>/images/icons/heart.png" alt="">
                 </div>
                 <h5 class="text-gold mb-1">Commitment</h5>
                 <p class="body max-w-[266px]">An unwavering dedication to enhance our brand’s and our clients’ image by
@@ -148,7 +149,8 @@
             </div>
             <div>
                 <div class="mb-9 w-[74px] h-[74px] rounded-full bg-gold/20 flex justify-center items-center">
-                    <img class="w-12 h-12 object-contain" src="<?php echo get_template_directory_uri(); ?>/images/icons/idea.png" alt="">
+                    <img class="w-12 h-12 object-contain"
+                        src="<?php echo get_template_directory_uri(); ?>/images/icons/idea.png" alt="">
                 </div>
                 <h5 class="text-gold mb-1">Innovation</h5>
                 <p class="body max-w-[266px]">An unyielding aim for innovation to elevate our core principle of customer
@@ -156,7 +158,8 @@
             </div>
             <div>
                 <div class="mb-9 w-[74px] h-[74px] rounded-full bg-gold/20 flex justify-center items-center">
-                    <img class="w-12 h-12 object-contain" src="<?php echo get_template_directory_uri(); ?>/images/icons/star.png" alt="">
+                    <img class="w-12 h-12 object-contain"
+                        src="<?php echo get_template_directory_uri(); ?>/images/icons/star.png" alt="">
                 </div>
                 <h5 class="text-gold mb-1">Uniqueness</h5>
                 <p class="body max-w-[266px]">An adamant intention to be a unique trendsetter to the hospitality
@@ -164,7 +167,8 @@
             </div>
             <div>
                 <div class="mb-9 w-[74px] h-[74px] rounded-full bg-gold/20 flex justify-center items-center">
-                    <img class="w-12 h-12 object-contain" src="<?php echo get_template_directory_uri(); ?>/images/icons/review.png" alt="">
+                    <img class="w-12 h-12 object-contain"
+                        src="<?php echo get_template_directory_uri(); ?>/images/icons/review.png" alt="">
                 </div>
                 <h5 class="text-gold mb-1">Memorable Experience</h5>
                 <p class="body max-w-[266px]">A supporting empowerment for our staff to consistently deliver first-rate,
@@ -172,7 +176,8 @@
             </div>
             <div>
                 <div class="mb-9 w-[74px] h-[74px] rounded-full bg-gold/20 flex justify-center items-center">
-                    <img class="w-12 h-12 object-contain" src="<?php echo get_template_directory_uri(); ?>/images/icons/guarantee.png" alt="">
+                    <img class="w-12 h-12 object-contain"
+                        src="<?php echo get_template_directory_uri(); ?>/images/icons/guarantee.png" alt="">
                 </div>
                 <h5 class="text-gold mb-1">Consistent</h5>
                 <p class="body max-w-[281px]">A committed pledge to prioritize the implementation of our top-tier
@@ -210,7 +215,7 @@
                 while ($senses_query->have_posts()):
                     $senses_query->the_post();
                     $icon = get_field('icon'); // Assuming ACF field 'icon'
-            ?>
+                    ?>
                     <div>
                         <div class="grid md:grid-cols-2">
                             <div class="mb-16 md:mb-0 ">
@@ -237,7 +242,7 @@
                             </div>
                         </div>
                     </div>
-            <?php
+                    <?php
                 endwhile;
                 wp_reset_postdata();
             endif;
@@ -250,24 +255,21 @@
     </div>
 </section>
 
-<section class="h-[90vh] md:h-[90vh] max-h-[702px] flex flex-col justify-center items-center relative z-0 ">
+<section class="h-screen flex flex-col justify-center items-center relative z-0 ">
     <div class="absolute w-full h-[120%] left-0 -top-[20%] " data-scroll data-scroll-speed="2">
         <img class="w-full h-full top-0 object-cover object-top"
             src="<?php echo get_template_directory_uri(); ?>/images/webp/bg-ambience.webp" alt="">
     </div>
-    <h4 class="text-gold relative z-10 mb-20 md:mb-40">
-        Enchanting <span class="text-beige">Ambience</span>
-    </h4>
-</section>
 
-<section class="relative py-28 z-10 bg-beige">
-    <div
-        class="bg-primary relative z-20 w-[90vw] md:w-[70vw] mx-auto py-14 px-4 md:!p-20 text-center -mt-[310px] md:-mt-[360px] rounded-xl">
-        <div class="w-[94%] h-3 rounded-t-xl -top-3 left-1/2 -translate-x-1/2 bg-primary absolute">
+    <div class="bg-primary/90 relative z-20 w-[90vw] md:w-[70vw] mx-auto py-14 px-4 text-center rounded-xl">
+        <div class="w-[95%] md:w-[98%] h-3 rounded-t-xl -top-3 left-1/2 -translate-x-1/2 bg-primary/90 absolute">
         </div>
-        <div class="w-[94%] h-3 rounded-b-xl -bottom-3 left-1/2 -translate-x-1/2 bg-primary absolute">
+        <div class="w-[95%] md:w-[98%] h-3 rounded-b-xl -bottom-3 left-1/2 -translate-x-1/2 bg-primary/90 absolute">
         </div>
-        <h4 class="text-gold mb-8 md:mb-16 !text-xl md:!text-[32px] font-bold">
+        <h5 class="text-gold relative mb-6">
+            Enchanting Ambience
+        </h5>
+        <h4 class="text-beige mb-8 md:mb-16 !text-xl md:!text-[32px]">
             A space where time slows, and stories unfold
         </h4>
         <p class="text-beige max-w-[612px] mb-16 mx-auto">
@@ -278,12 +280,15 @@
         </p>
         <a href="#" class="button bg-gold !px-8">Explore</a>
     </div>
+</section>
+
+<section class="relative py-28 z-10 bg-beige">
     <div class="absolute w-full h-full left-0 top-0 opacity-10">
         <img class="w-full h-full object-cover object-bottom"
             src="<?php echo get_template_directory_uri(); ?>/images/webp/bg-beige.webp" alt="">
     </div>
-    <div class="container">
-        <h4 class="text-center mt-24 text-gold mb-16">Delicately Facilitating <span class="text-primary">
+    <div class="container relative z-10">
+        <h4 class="text-center text-gold mb-16">Delicately Facilitating <span class="text-primary">
                 Your Serene Moments
             </span>
         </h4>
@@ -302,7 +307,7 @@
                 if ($facility_query->have_posts()):
                     while ($facility_query->have_posts()):
                         $facility_query->the_post();
-                ?>
+                        ?>
                         <div>
                             <div class="grid md:grid-cols-2 gap-6">
                                 <div>
@@ -327,7 +332,7 @@
                                 </div>
                             </div>
                         </div>
-                <?php
+                        <?php
                     endwhile;
                     wp_reset_postdata();
                 endif;
@@ -346,19 +351,26 @@
             class="w-full h-full object-cover mix-blend-multiply" alt="" />
     </div>
     <div class="container relative">
-        <h4 class="text-gold mb-14">Echoes <span class="text-beige">of Time</span></h4>
         <div class="grid md:grid-cols-2">
-            <p class="text-beige max-w-[435px]">Our story unfolds slowly, a rhythmic ritual of tradition. Born from a
-                vision
-                by Amerta Jiwa Indonesia,
-                Sandjong was shaped by culture, soul, and serenity. Each chapter reflects care and devotion to
-                heritage-based wellness. Our milestones are echoes of all who have journeyed with us and all that shaped
-                the
-                legacy with us; of hands that healed, scents that calmed, and guests who found their way back to
-                themselves.
-            </p>
+
             <div>
-                <p class="text-beige max-w-[435px] mb-9">Sandjong's identity are echoes of every hand that has healed,
+                <h4 class="text-gold mb-14">Echoes <span class="text-beige">of Time</span></h4>
+                <p class="text-beige max-w-[455px] body">Our story unfolds slowly, a rhythmic ritual of tradition. Born
+                    from
+                    a
+                    vision
+                    by Amerta Jiwa Indonesia,
+                    Sandjong was shaped by culture, soul, and serenity. Each chapter reflects care and devotion to
+                    heritage-based wellness. Our milestones are echoes of all who have journeyed with us and all that
+                    shaped
+                    the
+                    legacy with us; of hands that healed, scents that calmed, and guests who found their way back to
+                    themselves.
+                </p>
+            </div>
+            <div>
+                <p class="text-beige max-w-[455px] mb-9 body">Sandjong's identity are echoes of every hand that has
+                    healed,
                     every
                     scent that has calmed, every guest who found a moment to return to themselves.
                 </p>
@@ -477,11 +489,11 @@
                     if ($awards_query->have_posts()):
                         while ($awards_query->have_posts()):
                             $awards_query->the_post();
-                    ?>
+                            ?>
                             <div class="flex flex-col justify-center items-center text-center">
                                 <div class="flex justify-center">
                                     <?php if (has_post_thumbnail()): ?>
-                                        <?php the_post_thumbnail('medium', array('class' => 'object-contain')); ?>
+                                        <?php the_post_thumbnail('medium', array('class' => 'object-contain h-[300px]')); ?>
                                     <?php else: ?>
                                         <img src="<?php echo get_template_directory_uri(); ?>/images/webp/award-1.webp" alt="">
                                     <?php endif; ?>
@@ -491,7 +503,7 @@
                                     <?php the_content(); ?>
                                 </div>
                             </div>
-                    <?php
+                            <?php
                         endwhile;
                         wp_reset_postdata();
                     endif;
@@ -503,7 +515,7 @@
     </div>
 </section>
 
-<section class="relative py-40">
+<section class="relative py-40 h-screen flex flex-col justify-center">
     <div class="absolute inset-0 h-[120%] -top-0 left-0" data-scroll data-scroll-speed="2">
         <img src="<?php echo get_template_directory_uri(); ?>/images/webp/bg-session.webp"
             class="w-full h-full object-cover " alt="" />
@@ -523,7 +535,7 @@
 
 
 <script>
-    $(document).ready(function() {
+    $(document).ready(function () {
         $('.senses-slider').slick({
             slidesToShow: 1,
             slidesToScroll: 1,
@@ -578,7 +590,7 @@
             threshold: 0.2
         });
 
-        $('.senses-slider, .facility-slider, .awards-slider').each(function() {
+        $('.senses-slider, .facility-slider, .awards-slider').each(function () {
             sliderObserver.observe(this);
         });
 
@@ -603,7 +615,7 @@
             $item.find('.timeline-content').slideDown(400);
         }
 
-        $('.timeline-item').on('click', function() {
+        $('.timeline-item').on('click', function () {
             triggerTimelineItem($(this));
             // Reset interval on manual click
             clearInterval(timelineInterval);
@@ -634,11 +646,11 @@
         let scrollLeft;
 
         // IMPORTANT: Prevent browser from trying to drag images/links
-        $container.on('dragstart', function(e) {
+        $container.on('dragstart', function (e) {
             e.preventDefault();
         });
 
-        $container.on('mousedown', function(e) {
+        $container.on('mousedown', function (e) {
             isDown = true;
             $container.addClass('dragging');
             // pageX is the mouse position relative to the whole document
@@ -646,12 +658,12 @@
             scrollLeft = $container.scrollLeft();
         });
 
-        $(window).on('mouseup', function() { // Attach to window to catch release outside container
+        $(window).on('mouseup', function () { // Attach to window to catch release outside container
             isDown = false;
             $container.removeClass('dragging');
         });
 
-        $container.on('mousemove', function(e) {
+        $container.on('mousemove', function (e) {
             if (!isDown) return;
             e.preventDefault(); // Stop text selection or other default behaviors
 

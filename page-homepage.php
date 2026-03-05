@@ -38,16 +38,16 @@
 </section>
 
 <section id="about"
-    class="bg-beige text-center py-20 md:py-36 flex flex-col justify-center items-center relative text-primary">
+    class="bg-beige text-center py-20 md:py-36 flex flex-col justify-center max-h-screen items-center relative text-primary">
     <div class="absolute w-full h-[130%] md:h-full left-0 top-0 opacity-10">
         <img class="w-full h-full object-cover object-top"
             src="<?php echo get_template_directory_uri(); ?>/images/webp/bg-beige.webp" alt="">
     </div>
-    <div class="container">
+    <div class="container relative z-10">
         <h3 class="mb-7 max-w-[522px] mx-auto">
             Rooted in Nature, Shaped by Heritage
         </h3>
-        <p class="body max-w-[600px] mx-auto mb-14">
+        <p class="body max-w-[800px] mx-auto mb-14 !text-lg">
             Rooted in Chinese-Peranakan heritage, Sandjong blends the charm of a Chinese apothecary with the grounded
             spirit
             of the Baduy, the grace of the Peranakan, the calm of the Javanese, and the soul of the Balinese, while
@@ -108,7 +108,8 @@
                 while ($branch_query->have_posts()):
                     $branch_query->the_post();
                     ?>
-                    <div class="grid md:grid-cols-2 not-last:mb-8 not-last:pb-8 not-last:border-b border-gold border-dashed">
+                    <div
+                        class="grid md:grid-cols-2 items-center not-last:mb-8 not-last:pb-8 not-last:border-b border-gold border-dashed">
                         <div class="space-y-8 text-primary order-2 md:order-1">
                             <h4 class="!text-[32px] max-w-[288px] md:max-w-full !leading-tight md:leading-normal">
                                 <?php the_title(); ?>
@@ -137,8 +138,8 @@
     </div>
 </section>
 
-<section id="posts" class="bg-primary pb-40 relative z-10">
-    <div class="w-full h-[526px] hidden md:block relative">
+<section id="posts" class="bg-primary pb-32 relative z-10">
+    <div class="w-full h-[384px] hidden md:block relative">
         <img class="w-full h-[120%] absolute left-0 -top-[10%] object-cover" data-scroll data-scroll-speed="2"
             src="<?php echo get_template_directory_uri(); ?>/images/webp/bg-posts-2.webp" alt="">
     </div>
@@ -151,9 +152,9 @@
             src="<?php echo get_template_directory_uri(); ?>/images/webp/bg-footer.webp" alt="">
     </div>
     <div
-        class="flex flex-wrap md:flex-nowrap max-w-[90%] justify-between bg-beige mx-auto md:max-w-[1100px] p-6 md:p-16 rounded-lg z-10 relative -mt-60 md:-mt-40">
-        <div class="w-[95%] md:w-[98%] h-4 rounded-t-xl -top-4 left-1/2 -translate-x-1/2 bg-beige absolute"></div>
-        <div class="w-[95%] md:w-[98%] h-4 rounded-b-xl -bottom-4 left-1/2 -translate-x-1/2 bg-beige absolute"></div>
+        class="flex flex-wrap md:flex-nowrap max-w-[90%] justify-between bg-beige/90 mx-auto md:max-w-[1100px] p-6 md:p-16 rounded-lg z-10 relative -mt-60 md:-mt-48">
+        <div class="w-[95%] md:w-[98%] h-4 rounded-t-xl -top-4 left-1/2 -translate-x-1/2 bg-beige/90 absolute"></div>
+        <div class="w-[95%] md:w-[98%] h-4 rounded-b-xl -bottom-4 left-1/2 -translate-x-1/2 bg-beige/90 absolute"></div>
         <div class="w-full md:w-[45%] mb-16 md:mb-0 flex flex-col justify-between">
             <div>
                 <h5 class="text-gold mb-4">Wellness Whisper</h5>

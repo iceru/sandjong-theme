@@ -7,7 +7,7 @@
 get_header();
 ?>
 
-<section class="relative h-[501px] flex justify-center items-center">
+<section class="relative h-screen flex justify-center items-center">
 	<div class="absolute w-full h-[110%] left-0 -top-[10%]" data-scroll data-scroll-speed="2">
 		<img class="w-full h-full object-cover"
 			src="<?php echo get_template_directory_uri(); ?>/images/webp/bg-wellness.webp" alt="News hero background">
@@ -23,7 +23,7 @@ get_header();
 	</div>
 </section>
 
-<section class="bg-beige relative py-16">
+<section class="bg-beige relative py-10">
 	<div class="container relative z-10 text-primary pt-16">
 		<div class="mb-10 md:mb-12 text-left">
 			<h4 class="text-terracota mb-3">Gentle Offerings</h4>
@@ -106,7 +106,7 @@ get_header();
 	</div>
 </section>
 
-<section class="bg-beige py-16 relative">
+<section class="bg-beige py-10 relative">
 	<div class="container text-primary">
 		<div class="mb-16">
 			<h4 class="text-terracota mb-5 md:mb-3 max-w-[240px] md:max-w-full">Whispers from Sandjong</h4>
@@ -131,7 +131,7 @@ get_header();
 		if ($news_query->have_posts()):
 			while ($news_query->have_posts()):
 				$news_query->the_post();
-		?>
+				?>
 				<article class="border-b border-gold border-dashed mb-12 pb-12 last:mb-0">
 					<div class="grid md:grid-cols-[minmax(0,320px)_minmax(0,1fr)] gap-8 md:gap-24 items-start">
 						<div class="w-full">

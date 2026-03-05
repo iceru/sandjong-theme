@@ -59,23 +59,23 @@
                     </li>
                     <li>
                         <a class="!no-underline text-xs hover:text-gold transition-colors <?php echo (strpos($current_uri, '/journey') !== false) ? 'text-gold' : ''; ?>"
-                            href="/journey">Journey of Sandjong </a>
+                            href="/journey">About Us </a>
                     </li>
                     <li>
                         <a class="!no-underline text-xs hover:text-gold transition-colors <?php echo (strpos($current_uri, '/signature-rituals') !== false) ? 'text-gold' : ''; ?>"
-                            href="/signature-rituals">Signature Rituals</a>
+                            href="/signature-rituals">Our Treatment</a>
                     </li>
                     <li>
                         <a class="!no-underline text-xs hover:text-gold transition-colors <?php echo (strpos($current_uri, '/wellness-whisper') !== false) ? 'text-gold' : ''; ?>"
-                            href="/wellness-whisper">Wellness Whisper</a>
+                            href="/wellness-whisper">News</a>
                     </li>
                     <li>
                         <a class="!no-underline text-xs hover:text-gold transition-colors <?php echo (strpos($current_uri, '/expand') !== false) ? 'text-gold' : ''; ?>"
-                            href="/expand">Expand with Sandjong</a>
+                            href="/expand">Franchise</a>
                     </li>
                     <li>
                         <a class="!no-underline text-xs hover:text-gold transition-colors <?php echo (strpos($current_uri, '/sanctuary') !== false) ? 'text-gold' : ''; ?>"
-                            href="/sanctuary">Sanctuary of Sandjong</a>
+                            href="/sanctuary">Our Outlets</a>
                     </li>
                 </ul>
                 <div class="hidden md:block">
@@ -99,15 +99,15 @@
                         <li><a class="!no-underline hover:text-gold transition-colors <?php echo ($current_uri == '/' || $current_uri == '/index.php') ? 'text-gold' : ''; ?>"
                                 href="/">Home</a></li>
                         <li><a class="!no-underline hover:text-gold transition-colors <?php echo (strpos($current_uri, '/journey') !== false) ? 'text-gold' : ''; ?>"
-                                href="/journey">Journey of Sandjong </a></li>
+                                href="/journey">About Us </a></li>
                         <li><a class="!no-underline hover:text-gold transition-colors <?php echo (strpos($current_uri, '/signature-rituals') !== false) ? 'text-gold' : ''; ?>"
-                                href="/signature-rituals">Signature Rituals</a></li>
+                                href="/signature-rituals">Our Treatment</a></li>
                         <li><a class="!no-underline hover:text-gold transition-colors <?php echo (strpos($current_uri, '/wellness-whisper') !== false) ? 'text-gold' : ''; ?>"
-                                href="/wellness-whisper">Wellness Whisper</a></li>
+                                href="/wellness-whisper">News</a></li>
                         <li><a class="!no-underline hover:text-gold transition-colors <?php echo (strpos($current_uri, '/expand') !== false) ? 'text-gold' : ''; ?>"
-                                href="/expand">Expand with Sandjong</a></li>
+                                href="/expand">Franchise</a></li>
                         <li><a class="!no-underline hover:text-gold transition-colors <?php echo (strpos($current_uri, '/sanctuary') !== false) ? 'text-gold' : ''; ?>"
-                                href="/sanctuary">Sanctuary of Sandjong</a></li>
+                                href="/sanctuary">Our Outlets</a></li>
                     </ul>
                 </div>
                 <div>
