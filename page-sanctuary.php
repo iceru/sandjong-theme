@@ -137,7 +137,7 @@
     </div>
 </section>
 
-<section class="h-[456px] relative">
+<section class="h-screen flex flex-col justify-center relative">
     <div class="absolute w-full h-[120%] left-0 -top-[10%]" data-scroll data-scroll-speed="2">
         <img src="<?php echo get_template_directory_uri(); ?>/images/webp/bg-journey.webp"
             class="w-full h-full object-cover" alt="">
