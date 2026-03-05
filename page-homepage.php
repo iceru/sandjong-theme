@@ -38,7 +38,7 @@
 </section>
 
 <section id="about"
-    class="bg-beige text-center py-20 md:py-36 flex flex-col justify-center max-h-screen items-center relative text-primary">
+    class="bg-beige text-center py-20 md:py-36 flex flex-col justify-center h-screen items-center relative text-primary">
     <div class="absolute w-full h-[130%] md:h-full left-0 top-0 opacity-10">
         <img class="w-full h-full object-cover object-top"
             src="<?php echo get_template_directory_uri(); ?>/images/webp/bg-beige.webp" alt="">
