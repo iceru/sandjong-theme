@@ -57,11 +57,11 @@
                     </div>
                     <div>
                         <ul class="space-y-2 md:space-y-5">
-                            <li><a href="/journey" class="!no-underline">About Us</a></li>
-                            <li><a href="/signature-rituals" class="!no-underline">Our Treatment</a></li>
-                            <li><a href="/wellness-whisper" class="!no-underline">News</a></li>
-                            <li><a href="/expand" class="!no-underline">Franchise</a></li>
-                            <li><a href="/sanctuary" class="!no-underline">Our Outlets</a></li>
+                            <li><a href="/about-us" class="!no-underline">About Us</a></li>
+                            <li><a href="/our-treatment" class="!no-underline">Our Treatment</a></li>
+                            <li><a href="/news" class="!no-underline">News</a></li>
+                            <li><a href="/franchise" class="!no-underline">Franchise</a></li>
+                            <li><a href="/our-outlets" class="!no-underline">Our Outlets</a></li>
                         </ul>
                     </div>
                 </div>

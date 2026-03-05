@@ -58,24 +58,24 @@
                             href="/">Home</a>
                     </li>
                     <li>
-                        <a class="!no-underline text-xs hover:text-gold transition-colors <?php echo (strpos($current_uri, '/journey') !== false) ? 'text-gold' : ''; ?>"
-                            href="/journey">About Us </a>
+                        <a class="!no-underline text-xs hover:text-gold transition-colors <?php echo (strpos($current_uri, '/about-us') !== false) ? 'text-gold' : ''; ?>"
+                            href="/about-us">About Us </a>
                     </li>
                     <li>
-                        <a class="!no-underline text-xs hover:text-gold transition-colors <?php echo (strpos($current_uri, '/signature-rituals') !== false) ? 'text-gold' : ''; ?>"
-                            href="/signature-rituals">Our Treatment</a>
+                        <a class="!no-underline text-xs hover:text-gold transition-colors <?php echo (strpos($current_uri, '/our-treatment') !== false) ? 'text-gold' : ''; ?>"
+                            href="/our-treatment">Our Treatment</a>
                     </li>
                     <li>
-                        <a class="!no-underline text-xs hover:text-gold transition-colors <?php echo (strpos($current_uri, '/wellness-whisper') !== false) ? 'text-gold' : ''; ?>"
-                            href="/wellness-whisper">News</a>
+                        <a class="!no-underline text-xs hover:text-gold transition-colors <?php echo (strpos($current_uri, '/news') !== false) ? 'text-gold' : ''; ?>"
+                            href="/news">News</a>
                     </li>
                     <li>
                         <a class="!no-underline text-xs hover:text-gold transition-colors <?php echo (strpos($current_uri, '/expand') !== false) ? 'text-gold' : ''; ?>"
-                            href="/expand">Franchise</a>
+                            href="/franchise">Franchise</a>
                     </li>
                     <li>
-                        <a class="!no-underline text-xs hover:text-gold transition-colors <?php echo (strpos($current_uri, '/sanctuary') !== false) ? 'text-gold' : ''; ?>"
-                            href="/sanctuary">Our Outlets</a>
+                        <a class="!no-underline text-xs hover:text-gold transition-colors <?php echo (strpos($current_uri, '/our-outlets') !== false) ? 'text-gold' : ''; ?>"
+                            href="/our-outlets">Our Outlets</a>
                     </li>
                 </ul>
                 <div class="hidden md:block">
@@ -98,16 +98,16 @@
                     <ul class="flex flex-col space-y-6 text-beige">
                         <li><a class="!no-underline hover:text-gold transition-colors <?php echo ($current_uri == '/' || $current_uri == '/index.php') ? 'text-gold' : ''; ?>"
                                 href="/">Home</a></li>
-                        <li><a class="!no-underline hover:text-gold transition-colors <?php echo (strpos($current_uri, '/journey') !== false) ? 'text-gold' : ''; ?>"
-                                href="/journey">About Us </a></li>
-                        <li><a class="!no-underline hover:text-gold transition-colors <?php echo (strpos($current_uri, '/signature-rituals') !== false) ? 'text-gold' : ''; ?>"
-                                href="/signature-rituals">Our Treatment</a></li>
-                        <li><a class="!no-underline hover:text-gold transition-colors <?php echo (strpos($current_uri, '/wellness-whisper') !== false) ? 'text-gold' : ''; ?>"
-                                href="/wellness-whisper">News</a></li>
+                        <li><a class="!no-underline hover:text-gold transition-colors <?php echo (strpos($current_uri, '/about-us') !== false) ? 'text-gold' : ''; ?>"
+                                href="/about-us">About Us </a></li>
+                        <li><a class="!no-underline hover:text-gold transition-colors <?php echo (strpos($current_uri, '/our-treatment') !== false) ? 'text-gold' : ''; ?>"
+                                href="/our-treatment">Our Treatment</a></li>
+                        <li><a class="!no-underline hover:text-gold transition-colors <?php echo (strpos($current_uri, '/news') !== false) ? 'text-gold' : ''; ?>"
+                                href="/news">News</a></li>
                         <li><a class="!no-underline hover:text-gold transition-colors <?php echo (strpos($current_uri, '/expand') !== false) ? 'text-gold' : ''; ?>"
-                                href="/expand">Franchise</a></li>
-                        <li><a class="!no-underline hover:text-gold transition-colors <?php echo (strpos($current_uri, '/sanctuary') !== false) ? 'text-gold' : ''; ?>"
-                                href="/sanctuary">Our Outlets</a></li>
+                                href="/franchise">Franchise</a></li>
+                        <li><a class="!no-underline hover:text-gold transition-colors <?php echo (strpos($current_uri, '/our-outlets') !== false) ? 'text-gold' : ''; ?>"
+                                href="/our-outlets">Our Outlets</a></li>
                     </ul>
                 </div>
                 <div>

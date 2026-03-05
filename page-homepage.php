@@ -56,7 +56,7 @@
             your
             place to unwind, refresh your body, and restore your mind in a culturally rich and rejuvenating sanctuary.
         </p>
-        <a href="/journey" class="button bg-gold group">
+        <a href="/about-us" class="button bg-gold group">
             Learn More
         </a>
     </div>
@@ -117,7 +117,7 @@
                             <div class="max-w-[489px]">
                                 <?php the_content(); ?>
                             </div>
-                            <a href="/sanctuary#<?php echo get_post_field('post_name'); ?>"
+                            <a href="/our-outlets#<?php echo get_post_field('post_name'); ?>"
                                 class="button bg-gold inline-block mb-8 md:mb-0">Explore</a>
                         </div>
                         <div class="order-1 md:order-2 mb-7 md:mb-0">
@@ -168,7 +168,7 @@
                 </p>
             </div>
             <div>
-                <a href="/wellness-whisper" class="button bg-terracota">Read More</a>
+                <a href="/news" class="button bg-terracota">Read More</a>
             </div>
         </div>
         <div class="flex-col space-y-2 items-center justify-center hidden md:flex">
@@ -230,10 +230,10 @@
             souls.
         </p>
         <div class="flex justify-center items-center space-x-8">
-            <a href="/sanctuary" class="button bg-terracota">
+            <a href="/our-outlets" class="button bg-terracota">
                 Spa Operation
             </a>
-            <a href="/expand" class="button bg-gold group">
+            <a href="/franchise" class="button bg-gold group">
                 For Franchise
             </a>
         </div>
