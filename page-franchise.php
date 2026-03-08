@@ -229,7 +229,7 @@
     </div>
 </section>
 
-<section class="bg-beige py-24 relative h-screen">
+<section class="bg-beige py-24 relative min-h-screen">
     <div class="absolute w-full h-full left-0 top-0 opacity-10">
         <img src="<?php echo get_template_directory_uri(); ?>/images/webp/bg-beige.webp"
             class="w-full h-full object-cover" alt="">

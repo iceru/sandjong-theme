@@ -525,3 +525,7 @@ form.fluent_form_3 .wpf_has_custom_css.ff-btn-submit:hover {
   flex-wrap: nowrap;
   /* Or wrap if you want it responsive */
 }
+
+#forms .form-group {
+  margin-bottom: 1.5rem;
+}
