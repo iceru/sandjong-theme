@@ -4,7 +4,7 @@
         scroll-margin-top: 120px;
     }
 </style>
-<section class="h-screen w-full md:aspect-video md:h-auto">
+<section class="h-screen w-full">
     <div class="absolute w-full h-[120%] left-0 -top-[10%]" data-scroll data-scroll-speed="2">
         <img src="<?php echo get_template_directory_uri(); ?>/images/webp/bg-sanctuary.webp"
             class="w-full h-full object-cover" alt="">

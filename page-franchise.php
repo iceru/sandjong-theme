@@ -32,7 +32,7 @@
     </div>
 </section>
 
-<section class="bg-beige py-16 relative z-10 h-screen flex flex-col justify-center">
+<section class="bg-beige py-16 relative z-10 min-h-screen flex flex-col justify-center">
     <div class="container grid md:grid-cols-2 items-center">
         <div class="mb-20 md:mb-0">
             <h4 class="text-terracota mb-6">
@@ -58,7 +58,7 @@
     </div>
 </section>
 
-<section class="bg-primary py-20 relative z-10 h-screen flex flex-col justify-center" id="services">
+<section class="bg-primary py-20 relative z-10 flex flex-col justify-center" id="services">
     <div class="absolute w-full h-full left-0 top-0">
         <img src="<?php echo get_template_directory_uri(); ?>/images/webp/bg-green.webp"
             class="w-full h-full object-cover" alt="">

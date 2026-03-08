@@ -38,23 +38,28 @@
 </section>
 
 <section class="bg-beige py-[71px] h-screen flex flex-col justify-center md:py-36 relative">
-    <div class="container grid md:grid-cols-2 text-primary">
+    <div class="container grid md:grid-cols-2 text-primary items-center">
         <h4 class="max-w-[312px] mb-10 md:mb-0">
             Nature Inheritance Rooted in Culture
         </h4>
-        <p class="body">Born from Amerta Jiwa Indonesia, Sandjong elevates wellness into a living ritual. The name
+        <p class="body">Born from <strong>Amerta Jiwa Indonesia</strong>, Sandjong elevates wellness into a living
+            ritual. The name
             Sandjong is
-            inspired by the Indonesian word “sanjung”, meaning “praise” or “to bring joy” which reflects our
-            devotion to heritage and balance. Rooted in Indonesia’s rich traditions, we reinterpret ancient wellness
-            philosophies into refined, multisensory experiences, and create spaces to return home to: to calm, to
+            inspired by the Indonesian word <strong>“sanjung”</strong>, meaning <strong>“praise”</strong> or <strong>“to
+                bring joy”</strong> which
+            reflects our
+            devotion to heritage and balance. <strong>Rooted in Indonesia’s rich traditions</strong>, we reinterpret
+            ancient wellness
+            philosophies into refined, multisensory experiences, and create spaces to <strong>return home</strong> to:
+            to calm, to
             culture, to self.
         </p>
     </div>
 </section>
 
-<section class="bg-primary py-20 md:py-36 relative h-screen flex flex-col justify-center">
+<section class="bg-primary py-20 md:py-36 relative min-h-screen flex flex-col justify-center">
     <div class="md:container grid md:grid-cols-2 items-center">
-        <div class="px-4 md:px-0">
+        <div class="px-4 md:px-0 mb-10 md:mb-0">
             <h4 class="mb-6 text-gold italic ">Our Commitment</h4>
             <h4 class="max-w-[487px] text-beige">
                 Amerta’s dedication to maintain a 5-star standard and crafting unforgettable experiences for our valued
@@ -490,7 +495,7 @@
                         while ($awards_query->have_posts()):
                             $awards_query->the_post();
                             ?>
-                            <div class="flex flex-col justify-center items-center text-center">
+                            <div class="flex flex-col h-[400px] justify-center items-center text-center">
                                 <div class="flex justify-center">
                                     <?php if (has_post_thumbnail()): ?>
                                         <?php the_post_thumbnail('medium', array('class' => 'object-contain h-[300px]')); ?>

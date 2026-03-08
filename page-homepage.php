@@ -122,10 +122,10 @@
                         </div>
                         <div class="order-1 md:order-2 mb-7 md:mb-0">
                             <?php if (has_post_thumbnail()): ?>
-                                <?php the_post_thumbnail('large', array('class' => 'masked-image max-h-[355px] w-full object-cover')); ?>
+                                <?php the_post_thumbnail('large', array('class' => 'masked-image h-[200px] md:h-[300px] max-h-[355px] w-full object-cover')); ?>
                             <?php else: ?>
                                 <img src="<?php echo get_template_directory_uri(); ?>/images/webp/episode.webp"
-                                    class="masked-image max-h-[355px] w-full object-cover" alt="">
+                                    class="masked-image h-[280px] md:h-auto max-h-[355px] w-full object-cover" alt="">
                             <?php endif; ?>
                         </div>
                     </div>
