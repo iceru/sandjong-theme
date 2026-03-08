@@ -44,7 +44,7 @@
             <section
                 class="drop-shadow-2xl container relative flex justify-between items-center rounded-b-xl bg-primary py-5 pb-3 px-[22px] min-h-[40px]">
                 <div class="absolute -bottom-3 left-1/2 -translate-x-1/2 w-[98.5%] rounded-b-xl  h-4 bg-primary"></div>
-                <button id="mobile-menu-btn" class="sm:hidden">
+                <button id="mobile-menu-btn" class="xl:hidden">
                     <div class="h-px w-7 bg-gold mb-2"></div>
                     <div class="h-px w-4 bg-gold"></div>
                 </button>
@@ -52,7 +52,7 @@
                     <img src="<?php echo get_template_directory_uri(); ?>/images/logo.png" class="h-[30px] md:h-[42px]"
                         alt="">
                 </a>
-                <ul class="items-center text-beige space-x-10 hidden sm:flex">
+                <ul class="items-center text-beige space-x-10 hidden xl:flex">
                     <li>
                         <a class="!no-underline text-xs hover:text-gold transition-colors <?php echo ($current_uri == '/' || $current_uri == '/index.php') ? 'text-gold' : ''; ?>"
                             href="/">Home</a>
@@ -78,7 +78,7 @@
                             href="/our-outlets">Our Outlets</a>
                     </li>
                 </ul>
-                <div class="hidden sm:block">
+                <div class="hidden xl:block">
                     <a href="https://wa.me/6282130376088" target="_blank" class="button bg-terracota ">
                         Book Now
                     </a>
