@@ -48,7 +48,7 @@
             inspired by the Indonesian word <strong>“sanjung”</strong>, meaning <strong>“praise”</strong> or <strong>“to
                 bring joy”</strong> which
             reflects our
-            devotion to heritage and balance. <strong>Rooted in Indonesia’s rich traditions</strong>, we reinterpret
+            devotion to heritage and balance. <br /> <br /> <strong>Rooted in Indonesia’s rich traditions</strong>, we reinterpret
             ancient wellness
             philosophies into refined, multisensory experiences, and create spaces to <strong>return home</strong> to:
             to calm, to
