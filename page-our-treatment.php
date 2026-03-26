@@ -144,7 +144,7 @@
                     <div class="mb-14">
                         <h5 class="text-terracota mb-4"><?php echo $category->name; ?></h5>
                         <?php if ($category->description): ?>
-                            <p class="body text-primary mb-10 max-w-[482px]">
+                            <p class="body text-primary mb-10">
                                 <?php echo $category->description; ?>
                             </p>
                         <?php endif; ?>
