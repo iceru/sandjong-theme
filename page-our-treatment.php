@@ -110,7 +110,7 @@
         </div>
         <div id="package" class="tab-content hidden">
             <div
-                class="rounded-lg relative flex flex-col justify-end p-6 md:p-14 min-h-[658px] md:min-h-[552px] mb-[71px]">
+                class="rounded-lg relative flex flex-col justify-end p-6 md:p-14 min-h-[658px] md:min-h-[552px] mb-11">
                 <div class="absolute w-full h-full left-0 top-0">
                     <img class="rounded-lg w-full h-full object-cover"
                         src="<?php echo get_template_directory_uri(); ?>/images/webp/package.webp" alt="">
@@ -130,100 +130,93 @@
                     </p>
                 </div>
             </div>
-            <div>
-                <div class="flex items-center space-x-2 mb-10">
-                    <img src="<?php echo get_template_directory_uri(); ?>/images/icons/arrow-gold.png"
-                        class="rotate-180" alt="">
-                    <div class="w-full border border-dashed h-[1px] border-gold"></div>
-                    <img src="<?php echo get_template_directory_uri(); ?>/images/icons/arrow-gold.png" alt="">
-                </div>
-                <div id="package-treaments">
-                    <?php
-                    $categories = get_terms(array(
-                        'taxonomy' => 'treatment-category',
-                        'hide_empty' => true,
-                        'orderby' => 'slug',
-                        'order' => 'ASC',
-                    ));
+            <div id="package-treaments">
+                <?php
+                $categories = get_terms(array(
+                    'taxonomy' => 'treatment-category',
+                    'hide_empty' => true,
+                    'orderby' => 'slug',
+                    'order' => 'ASC',
+                ));
 
-                    foreach ($categories as $category):
-                        ?>
-                        <div class="grid md:grid-cols-2">
-                            <div class="mb-10 md:mb-0">
-                                <h5 class="text-terracota"><?php echo $category->name; ?></h5>
-                                <?php if ($category->description): ?>
-                                    <p class="body text-primary mt-9 max-w-[482px]">
-                                        <?php echo $category->description; ?>
-                                    </p>
-                                <?php endif; ?>
-                            </div>
-                            <div>
-                                <?php
-                                $p_args = array(
-                                    'post_type' => 'package-treatment',
-                                    'posts_per_page' => -1,
-                                    'tax_query' => array(
-                                        array(
-                                            'taxonomy' => 'treatment-category',
-                                            'field' => 'term_id',
-                                            'terms' => $category->term_id,
-                                        ),
+                foreach ($categories as $category):
+                    ?>
+                    <div class="mb-14">
+                        <h5 class="text-terracota mb-4"><?php echo $category->name; ?></h5>
+                        <?php if ($category->description): ?>
+                            <p class="body text-primary mb-10 max-w-[482px]">
+                                <?php echo $category->description; ?>
+                            </p>
+                        <?php endif; ?>
+
+                        <div class="package-sliders">
+                            <?php
+                            $p_args = array(
+                                'post_type' => 'package-treatment',
+                                'posts_per_page' => -1,
+                                'tax_query' => array(
+                                    array(
+                                        'taxonomy' => 'treatment-category',
+                                        'field' => 'term_id',
+                                        'terms' => $category->term_id,
                                     ),
-                                    'orderby' => 'menu_order',
-                                    'order' => 'ASC',
-                                );
-                                $p_query = new WP_Query($p_args);
-                                $count = 0;
-                                $total = $p_query->post_count;
-                                if ($p_query->have_posts()):
-                                    while ($p_query->have_posts()):
-                                        $p_query->the_post();
-                                        $count++;
-                                        ?>
-                                        <div>
-                                            <?php if (get_field('subtitle')): ?>
-                                                <h5 class="text-gold mb-11">
-                                                    <?php the_field('subtitle'); ?>
-                                                </h5>
-                                            <?php endif; ?>
-
+                                ),
+                                'orderby' => 'menu_order',
+                                'order' => 'ASC',
+                            );
+                            $p_query = new WP_Query($p_args);
+                            if ($p_query->have_posts()):
+                                while ($p_query->have_posts()):
+                                    $p_query->the_post();
+                                    ?>
+                                    <div class="md:pr-6 py-5">
+                                        <div
+                                            class="bg-[#F8E6D2] px-4 md:px-6 py-2 grid md:grid-cols-2 relative rounded-xl gap-6 md:gap-12">
                                             <div
-                                                class="flex items-start space-x-14 pb-12 mb-12 <?php echo ($count < $total) ? 'border-b border-gold/50' : ''; ?>">
-                                                <div>
-                                                    <h4 class="text-primary mb-10">
+                                                class="w-[94%] md:w-[98%] h-3 md:h-4 rounded-t-xl -top-3 md:-top-4 left-1/2 -translate-x-1/2 bg-[#F8E6D2] absolute -z-10">
+                                            </div>
+                                            <div
+                                                class="w-[94%] md:w-[98%] h-3 md:h-4 rounded-b-xl -bottom-3 md:-bottom-4 left-1/2 -translate-x-1/2 bg-[#F8E6D2] absolute -z-10">
+                                            </div>
+                                            <div>
+                                                <img src="<?php echo get_the_post_thumbnail_url() ? get_the_post_thumbnail_url() : get_template_directory_uri() . '/images/signature-1.png'; ?>"
+                                                    alt="<?php the_title(); ?>" class="w-full h-full object-cover rounded-lg">
+                                            </div>
+                                            <div class="flex flex-col justify-between px-3 md:px-0">
+                                                <div class="mb-14 md:mb-0">
+                                                    <?php if (get_field('subtitle')): ?>
+                                                        <h6 class="text-gold mb-2 md:mt-9">
+                                                            <?php the_field('subtitle'); ?>
+                                                        </h6>
+                                                    <?php endif; ?>
+                                                    <h5 class="text-primary mb-4 md:mb-11 <?php echo get_field('subtitle') ? '' : 'md:mt-9'; ?>">
                                                         <?php the_title(); ?>
-                                                    </h4>
-                                                    <div class="prose prose-sm max-w-none">
+                                                    </h5>
+                                                    <div class="max-w-[394px]">
                                                         <?php the_content(); ?>
                                                     </div>
                                                 </div>
-                                                <?php if (get_field('duration')): ?>
-                                                    <div
-                                                        class="flex items-center bg-gold/20 text-gold space-x-2 rounded-lg py-1 px-2 shrink-0 mt-1">
-                                                        <img src="<?php echo get_template_directory_uri(); ?>/images/icons/timer.png"
-                                                            alt="" class="w-4 h-4 object-contain">
-                                                        <span>
-                                                            <?php the_field('duration'); ?>’
-                                                        </span>
-                                                    </div>
-                                                <?php endif; ?>
+                                                <div>
+                                                    <?php if (get_field('duration')): ?>
+                                                        <div
+                                                            class="mb-2 md:mb-7 inline-flex items-center space-x-2 rounded-lg py-1 px-1.5 bg-gold/20 text-gold">
+                                                            <img src="<?php echo get_template_directory_uri(); ?>/images/icons/timer.png"
+                                                                class="object-contain w-4 h-4" alt="">
+                                                            <span><?php the_field('duration'); ?> Minutes</span>
+                                                        </div>
+                                                    <?php endif; ?>
+                                                </div>
                                             </div>
                                         </div>
-                                        <?php
-                                    endwhile;
-                                    wp_reset_postdata();
-                                endif;
-                                ?>
-                            </div>
+                                    </div>
+                                    <?php
+                                endwhile;
+                                wp_reset_postdata();
+                            endif;
+                            ?>
                         </div>
-                        <div class="flex items-center space-x-2 mb-10">
-                            <img src="<?php echo get_template_directory_uri(); ?>/images/icons/arrow-gold.png"
-                                class="rotate-180" alt="">
-                            <div class="w-full border border-dashed h-[1px] border-gold"></div>
-                            <img src="<?php echo get_template_directory_uri(); ?>/images/icons/arrow-gold.png" alt="">
-                        </div>
-                    <?php endforeach; ?>
-                </div>
+                    </div>
+                <?php endforeach; ?>
             </div>
         </div>
         <div id="simple" class="tab-content hidden">
@@ -298,7 +291,7 @@
 <script>
     $(document).ready(function () {
         // 1. Initialize the slider
-        $('.signature-sliders').slick({
+        $('.signature-sliders, .package-sliders').slick({
             infinite: false,
             slidesToShow: 1.25,
             slidesToScroll: 1,
@@ -331,7 +324,7 @@
             // slider reinitializes AFTER the element is visible
             $(target).removeClass('hidden').hide().fadeIn(500, function () {
                 // 3. Re-initialize/Refresh sliders inside the active tab
-                $(this).find('.signature-sliders').slick('setPosition');
+                $(this).find('.signature-sliders, .package-sliders').slick('setPosition');
             });
         });
     });
