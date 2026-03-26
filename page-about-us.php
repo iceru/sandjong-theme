@@ -344,14 +344,13 @@
     </div>
 </section>
 
-<section class="relative py-20" id="timeline">
+<section class="relative py-20 min-h-screen flex flex-col justify-center" id="timeline">
     <div class="absolute inset-0 bg-body/20 h-[120%] -top-[20%] left-0" data-scroll data-scroll-speed="2">
         <img src="<?php echo get_template_directory_uri(); ?>/images/webp/bg-timeline.webp"
             class="w-full h-full object-cover mix-blend-multiply" alt="" />
     </div>
     <div class="container relative">
         <div class="grid md:grid-cols-2">
-
             <div>
                 <h4 class="text-gold mb-14">Echoes <span class="text-beige">of Time</span></h4>
                 <p class="text-beige max-w-[455px] body">Our story unfolds slowly, a rhythmic ritual of tradition. Born
@@ -456,6 +455,7 @@
                 </div>
             </div>
         </div>
+    </div>
 </section>
 
 <section id="awards" class="bg-beige py-20 md:py-28 relative z-10">
