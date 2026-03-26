@@ -71,14 +71,14 @@
                     </div>
                     <div>
                         <ul class="space-y-5">
-                            <li><a href="tel:+622139521229" class="flex space-x-2 !no-underline">
+                            <li><a href="tel:+622139521229" class="flex space-x-2 !no-underline items-center">
                                     <img class="w-4 h-4" src="<?php echo get_template_directory_uri(); ?>/images/icons/phone.png"
                                         alt="">
                                     <span>021-3952-1229</span>
                                 </a>
                             </li>
                             <li><a href="https://wa.me/6282130376088" target="_blank"
-                                    class="flex space-x-2 !no-underline">
+                                    class="flex space-x-2 !no-underline items-center">
                                     <img class="w-4 h-4"
                                         src="<?php echo get_template_directory_uri(); ?>/images/icons/whatsapp.png"
                                         alt="">
@@ -86,7 +86,7 @@
                                 </a>
                             </li>
                             <li><a href="mailto:info.sandjong@amertajiwa.com"
-                                    class="flex space-x-2 !no-underline">
+                                    class="flex space-x-2 !no-underline items-center">
                                     <img class="w-4 h-4"
                                         src="<?php echo get_template_directory_uri(); ?>/images/icons/email.png"
                                         alt="">
