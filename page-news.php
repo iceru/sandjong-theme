@@ -52,15 +52,16 @@ get_header();
 					$promo_query->the_post(); ?>
 					<article>
 						<?php if (has_post_thumbnail()): ?>
-							<a href=" <?php the_permalink(); ?>" class="block">
+							<a href=" <?php echo get_field('link') ?>" class="block">
 								<?php the_post_thumbnail('large', array(
-									'class' => 'w-full h-[436px] object-cover rounded-xl mb-4',
+									'class' => 'w-full object-cover rounded-xl mb-4 aspect-video',
 								)); ?>
 							</a>
 						<?php endif; ?>
 
 						<h5 class="mb-2">
-							<a href="<?php the_permalink(); ?>" class="hover:text-terracota transition-colors !no-underline">
+							<a href="<?php echo get_field('link') ?>"
+								class="hover:text-terracota transition-colors !no-underline">
 								<?php the_title(); ?>
 							</a>
 						</h5>

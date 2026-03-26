@@ -31,7 +31,7 @@
         <img class="w-full h-full object-cover"
             src="<?php echo get_template_directory_uri(); ?>/images/webp/bg-journey.webp" alt="">
     </div>
-    <h4 class="text-beige relative z-10 mt-14 md:mt-0 max-w-[192px] md:max-w-full text-center">
+    <h4 class="text-beige big relative z-10 mt-14 md:mt-0 max-w-[192px] md:max-w-full text-center">
         Rooted in
         Amerta Jiwa
     </h4>
@@ -39,7 +39,7 @@
 
 <section class="bg-beige py-[71px] h-screen flex flex-col justify-center md:py-36 relative">
     <div class="container grid md:grid-cols-2 text-primary items-center">
-        <h4 class="max-w-[312px] mb-10 md:mb-0">
+        <h4 class="max-w-[412px] big mb-10 md:mb-0">
             Nature Inheritance Rooted in Culture
         </h4>
         <p class="body">Born from <strong>Amerta Jiwa Indonesia</strong>, Sandjong elevates wellness into a living
@@ -60,7 +60,7 @@
 <section class="bg-primary py-20 md:py-36 relative min-h-screen flex flex-col justify-center">
     <div class="md:container grid md:grid-cols-2 items-center">
         <div class="px-4 md:px-0 mb-10 md:mb-0">
-            <h4 class="mb-6 text-gold italic ">Our Commitment</h4>
+            <h4 class="mb-6 text-gold italic small">Our Commitment</h4>
             <h4 class="max-w-[487px] text-beige">
                 Amerta’s dedication to maintain a 5-star standard and crafting unforgettable experiences for our valued
                 customers is shown and nurtured through our vision, mission, culture, motto, and values.
@@ -198,14 +198,6 @@
             src="<?php echo get_template_directory_uri(); ?>/images/webp/bg-green.webp" alt="">
     </div>
     <div class="container relative">
-        <div class="grid md:grid-cols-2 mb-[72px] md:mb-28">
-            <h4 class="text-gold mb-10 md:mb-0">5 Senses Experiences</h4>
-            <p class="body text-beige">
-                As the company overseeing our diverse portfolio of wellness services, we remain firm in our commitment
-                to the concept of ‘5-senses branding’. We want to guarantee that each aspects of our offerings caters to
-                a unified and immersive sensory journey for our valued clients:
-            </p>
-        </div>
         <!-- TODO: Slick Slider Grid Experiences -->
         <div class="senses-slider">
             <?php
@@ -232,6 +224,8 @@
                                 <?php endif; ?>
                             </div>
                             <div>
+                                <h4 class="text-gold mb-20">5 Senses Experiences</h4>
+
                                 <div class="mb-10 w-[71px] h-[71px] rounded-full bg-[#966938] flex justify-center items-center">
                                     <?php if ($icon): ?>
                                         <img src="<?php echo esc_url($icon); ?>" class="w-[54px] h-[54px] object-contain">
@@ -254,7 +248,7 @@
             ?>
         </div>
         <div
-            class="senses-nav flex items-center md:absolute md:left-[52%] md:ml-12 md:-translate-x-1/2 md:bottom-20 mt-4">
+            class="senses-nav flex items-center md:absolute md:left-[52%] md:ml-12 md:-translate-x-1/2 md:bottom-4 mt-4">
         </div>
 
     </div>
@@ -317,13 +311,13 @@
                             <div class="grid md:grid-cols-2 gap-6">
                                 <div>
                                     <?php if (has_post_thumbnail()): ?>
-                                        <?php the_post_thumbnail('large', array('class' => 'masked-facility w-full h-full object-cover')); ?>
+                                        <?php the_post_thumbnail('large', array('class' => 'masked-facility w-full h-full object-cover max-h-[400px]')); ?>
                                     <?php else: ?>
                                         <img src="<?php echo get_template_directory_uri(); ?>/images/webp/lobby.webp"
-                                            class="masked-facility w-full h-full object-cover" alt="">
+                                            class="masked-facility w-full h-full object-cover max-h-[400px]" alt="">
                                     <?php endif; ?>
                                 </div>
-                                <div class="bg-[#FFE5C9] rounded-xl relative p-8 md:px-20 md:py-16">
+                                <div class="bg-[#FFE5C9] rounded-xl relative p-8 md:px-16 md:py-12">
                                     <div
                                         class="w-[95%] md:w-[98%] h-3 rounded-t-xl -top-3 left-1/2 -translate-x-1/2 bg-[#FFE5C9] absolute">
                                     </div>

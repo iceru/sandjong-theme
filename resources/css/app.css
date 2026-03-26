@@ -1,7 +1,7 @@
-@import 'tailwindcss';
-@import './theme.css';
-@import './utilities.css';
-@import './custom.css' layer(utilities);
+@import "tailwindcss";
+@import "./theme.css";
+@import "./utilities.css";
+@import "./custom.css" layer(utilities);
 
 @source '../../vendor/tailpress/framework/**/*.php';
 @source '../../vendor/tailpress/framework/**/**/*.php';
@@ -12,13 +12,13 @@
 }
 
 @theme {
-  --color-primary: #314E48;
-  --color-terracota: #A05752;
-  --color-gold: #CF9C63;
-  --color-beige: #FFF1E2;
-  --color-beige-dark: #FFE5C9;
-  --color-body: #1D1D1D;
-  --color-primary-2: #27403B;
+  --color-primary: #314e48;
+  --color-terracota: #a05752;
+  --color-gold: #cf9c63;
+  --color-beige: #fff1e2;
+  --color-beige-dark: #ffe5c9;
+  --color-body: #1d1d1d;
+  --color-primary-2: #27403b;
 }
 
 /*
@@ -30,7 +30,6 @@
   color utility to any element that depends on these defaults.
 */
 @layer base {
-
   *,
   ::after,
   ::before,
@@ -40,7 +39,6 @@
   }
 }
 
-
 .stepped-corner {
   background-color: var(--color-primary);
 
@@ -48,14 +46,23 @@
   --s: 40px;
 
   -webkit-mask:
-    radial-gradient(var(--r) at calc(100% - var(--r) - var(--s)) calc(100% - var(--r)), #0000 98%, #000) calc(var(--r) + var(--s)) var(--r),
-    radial-gradient(var(--r) at calc(100% - var(--r)) calc(100% - var(--r) - var(--s)), #0000 98%, #000) var(--r) calc(var(--r) + var(--s));
-
+    radial-gradient(
+        var(--r) at calc(100% - var(--r) - var(--s)) calc(100% - var(--r)),
+        #0000 98%,
+        #000
+      )
+      calc(var(--r) + var(--s)) var(--r),
+    radial-gradient(
+        var(--r) at calc(100% - var(--r)) calc(100% - var(--r) - var(--s)),
+        #0000 98%,
+        #000
+      )
+      var(--r) calc(var(--r) + var(--s));
 }
 
 body,
 html {
-  font-family: 'Philosopher', sans-serif;
+  font-family: "Philosopher", sans-serif;
 }
 
 h3 {
@@ -68,6 +75,16 @@ h4 {
   line-height: 36px;
 }
 
+h4.big {
+  font-size: 40px;
+  line-height: 44px;
+}
+
+h4.small {
+  font-size: 28px;
+  line-height: 32px;
+}
+
 h5 {
   font-size: 20px;
   font-weight: bold;
@@ -78,7 +95,6 @@ h5 {
   font-size: 14px;
   line-height: 24px;
 }
-
 
 @media screen and (max-width: 768px) {
   h3 {
@@ -164,7 +180,7 @@ h5 {
   padding: 0;
   cursor: pointer;
   color: transparent;
-  border: 1px solid #A05752;
+  border: 1px solid #a05752;
   border-radius: 50%;
   outline: none;
   background: transparent;
@@ -178,18 +194,17 @@ h5 {
 }
 
 .slick-dots li.slick-active button {
-  background: #A05752;
-  border-color: #A05752;
+  background: #a05752;
+  border-color: #a05752;
 }
 
 .awards-slider .slick-dots li button {
-  @apply border-beige
+  @apply border-beige;
 }
 
 .awards-slider .slick-dots li.slick-active button {
-  @apply bg-beige border-beige
+  @apply bg-beige border-beige;
 }
-
 
 .timeline-item .timeline-dot {
   transform: scale(0.6);
@@ -220,7 +235,7 @@ h5 {
 
 /* Active Tab */
 .tab-trigger.active h5 {
-  @apply opacity-100 border-terracota
+  @apply opacity-100 border-terracota;
 }
 
 .no-scrollbar::-webkit-scrollbar {
@@ -285,7 +300,7 @@ h5 {
   display: block;
   font-size: 14px;
   font-weight: 600;
-  color: #8D5B4C;
+  color: #8d5b4c;
   text-transform: uppercase;
   letter-spacing: 1px;
 }
@@ -297,12 +312,12 @@ h5 {
   width: 100%;
   padding: 15px 20px;
   background-color: transparent;
-  border: 1px solid #C4B9A7;
+  border: 1px solid #c4b9a7;
   /* Subtle border color */
   border-radius: 12px;
   /* Rounded corners per image */
   font-size: 16px;
-  color: #5C5446;
+  color: #5c5446;
 }
 
 .custom-contact-form textarea {
@@ -312,7 +327,7 @@ h5 {
 
 /* Placeholder Color */
 .custom-contact-form ::placeholder {
-  color: #A39B8F;
+  color: #a39b8f;
   opacity: 1;
 }
 
@@ -329,9 +344,9 @@ h5 {
 }
 
 .custom-contact-form .btn-submit {
-  background-color: #C2A36F;
+  background-color: #c2a36f;
   /* Gold/Tan color from image */
-  color: #FFF;
+  color: #fff;
   padding: 12px 60px;
   border: none;
   border-radius: 8px;
@@ -341,7 +356,7 @@ h5 {
 }
 
 .custom-contact-form .btn-submit:hover {
-  background-color: #A88B5A;
+  background-color: #a88b5a;
 }
 
 /* Mobile Responsive */
@@ -350,7 +365,6 @@ h5 {
     grid-template-columns: 1fr;
   }
 }
-
 
 .signature-sliders-container {
   position: relative;
@@ -396,7 +410,6 @@ h5 {
 }
 
 @media (max-width: 1280px) {
-
   .signature-sliders .slick-prev,
   .sliders .slick-prev {
     left: -30px;
@@ -409,7 +422,6 @@ h5 {
 }
 
 @media (max-width: 1024px) {
-
   .signature-sliders .slick-prev,
   .sliders .slick-prev,
   .signature-sliders .slick-next,
@@ -431,10 +443,10 @@ h5 {
 }
 
 form.fluent_form_3 .ff-t-container {
-  background-color: #27403B;
+  background-color: #27403b;
   padding: 8px 8px;
   border: 2px solid #e8e2d6;
-  border-radius: .75rem;
+  border-radius: 0.75rem;
   position: relative;
   display: flex;
   align-items: center;

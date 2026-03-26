@@ -164,66 +164,61 @@
 </section>
 
 <section class="bg-beige py-16 md:py-32 relative z-10">
-    <div class="container md:flex md:space-x-28">
-        <div class="shrink-0 mb-16 md:mb-0">
-            <p class="text-primary max-w-[326px]">
-                Each Sandjong franchise is thoughtfully curated: maintaining our standards of care, heritage, and
-                sensory
-                experience, while allowing your space to reflect the spirit of its surroundings.
-            </p>
-        </div>
-        <div class="">
-            <p class="text-primary mb-11 md:mb-[61px]">You will receive:</p>
-            <div class="grid grid-cols-2 md:grid-cols-3 gap-4 gap-y-16 md:gap-28">
-                <div>
-                    <div class="w-16 h-16 mb-9 rounded-full bg-gold/20 flex justify-center items-center">
-                        <img src="<?php echo get_template_directory_uri(); ?>/images/icons/certificate.png"
-                            class="w-[42px] h-[42px] object-contain" alt="">
-                    </div>
-                    <h5 class="text-primary max-w-[150px] md:max-w-[210px]">Full franchise license and rights to the
-                        Sandjong brand</h5>
+    <div class="container">
+        <h5 class="text-primary max-w-[600px] mb-10 md:mb-20">
+            Each Sandjong franchise is thoughtfully curated: maintaining our standards of care, heritage, and
+            sensory
+            experience, while allowing your space to reflect the spirit of its surroundings.
+        </h5>
+        <div class="grid grid-cols-2 md:grid-cols-3 gap-4 gap-y-16 md:gap-28 md:max-w-[80%]">
+            <div>
+                <div class="w-16 h-16 mb-9 rounded-full bg-gold/20 flex justify-center items-center">
+                    <img src="<?php echo get_template_directory_uri(); ?>/images/icons/certificate.png"
+                        class="w-[42px] h-[42px] object-contain" alt="">
                 </div>
-                <div>
-                    <div class="w-16 h-16 mb-9 rounded-full bg-gold/20 flex justify-center items-center">
-                        <img src="<?php echo get_template_directory_uri(); ?>/images/icons/design.png"
-                            class="w-[42px] h-[42px] object-contain" alt="">
-                    </div>
-                    <h5 class="text-primary max-w-[150px] md:max-w-[210px]">Design guidance & spatial concept
-                        development</h5>
+                <h5 class="text-primary max-w-[150px] md:max-w-[210px]">Full franchise license and rights to the
+                    Sandjong brand</h5>
+            </div>
+            <div>
+                <div class="w-16 h-16 mb-9 rounded-full bg-gold/20 flex justify-center items-center">
+                    <img src="<?php echo get_template_directory_uri(); ?>/images/icons/design.png"
+                        class="w-[42px] h-[42px] object-contain" alt="">
                 </div>
-                <div>
-                    <div class="w-16 h-16 mb-9 rounded-full bg-gold/20 flex justify-center items-center">
-                        <img src="<?php echo get_template_directory_uri(); ?>/images/icons/training.png"
-                            class="w-[42px] h-[42px] object-contain" alt="">
-                    </div>
-                    <h5 class="text-primary max-w-[150px] md:max-w-[210px]">Training and refreshment programs for
-                        therapists</h5>
+                <h5 class="text-primary max-w-[150px] md:max-w-[210px]">Design guidance & spatial concept
+                    development</h5>
+            </div>
+            <div>
+                <div class="w-16 h-16 mb-9 rounded-full bg-gold/20 flex justify-center items-center">
+                    <img src="<?php echo get_template_directory_uri(); ?>/images/icons/training.png"
+                        class="w-[42px] h-[42px] object-contain" alt="">
                 </div>
-                <div>
-                    <div class="w-16 h-16 mb-9 rounded-full bg-gold/20 flex justify-center items-center">
-                        <img src="<?php echo get_template_directory_uri(); ?>/images/icons/user-manual.png"
-                            class="w-[42px] h-[42px] object-contain" alt="">
-                    </div>
-                    <h5 class="text-primary max-w-[150px] md:max-w-[210px]">Service manuals, rituals, SOPs, and guest
-                        experience
-                        protocols</h5>
+                <h5 class="text-primary max-w-[150px] md:max-w-[210px]">Training and refreshment programs for
+                    therapists</h5>
+            </div>
+            <div>
+                <div class="w-16 h-16 mb-9 rounded-full bg-gold/20 flex justify-center items-center">
+                    <img src="<?php echo get_template_directory_uri(); ?>/images/icons/user-manual.png"
+                        class="w-[42px] h-[42px] object-contain" alt="">
                 </div>
-                <div>
-                    <div class="w-16 h-16 mb-9 rounded-full bg-gold/20 flex justify-center items-center">
-                        <img src="<?php echo get_template_directory_uri(); ?>/images/icons/presentation.png"
-                            class="w-[42px] h-[42px] object-contain" alt="">
-                    </div>
-                    <h5 class="text-primary max-w-[150px] md:max-w-[210px]">Marketing materials, launch support, and
-                        brand campaigns</h5>
+                <h5 class="text-primary max-w-[150px] md:max-w-[210px]">Service manuals, rituals, SOPs, and guest
+                    experience
+                    protocols</h5>
+            </div>
+            <div>
+                <div class="w-16 h-16 mb-9 rounded-full bg-gold/20 flex justify-center items-center">
+                    <img src="<?php echo get_template_directory_uri(); ?>/images/icons/presentation.png"
+                        class="w-[42px] h-[42px] object-contain" alt="">
                 </div>
-                <div>
-                    <div class="w-16 h-16 mb-9 rounded-full bg-gold/20 flex justify-center items-center">
-                        <img src="<?php echo get_template_directory_uri(); ?>/images/icons/guarantee-2.png"
-                            class="w-[42px] h-[42px] object-contain" alt="">
-                    </div>
-                    <h5 class="text-primary max-w-[150px] md:max-w-[210px]">Continuous operational consulting and
-                        quality control</h5>
+                <h5 class="text-primary max-w-[150px] md:max-w-[210px]">Marketing materials, launch support, and
+                    brand campaigns</h5>
+            </div>
+            <div>
+                <div class="w-16 h-16 mb-9 rounded-full bg-gold/20 flex justify-center items-center">
+                    <img src="<?php echo get_template_directory_uri(); ?>/images/icons/guarantee-2.png"
+                        class="w-[42px] h-[42px] object-contain" alt="">
                 </div>
+                <h5 class="text-primary max-w-[150px] md:max-w-[210px]">Continuous operational consulting and
+                    quality control</h5>
             </div>
         </div>
     </div>

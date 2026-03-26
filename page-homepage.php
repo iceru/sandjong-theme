@@ -66,25 +66,18 @@
     <div>
         <h4 class="mb-8 text-center text-gold">A Window to the Soul</h4>
         <div class="flex flex-col justify-center items-center">
-            <div class="mb-8 md:w-[522px] w-[287px] h-[296px] md:h-[536px] relative flex justify-center items-center">
+            <div class="mb-8 md:w-[482px] w-[287px] h-[296px] md:h-[495px] relative flex justify-center items-center">
                 <h4 class="text-beige relative z-10 text-center !text-xl md:!text-2xl max-w-[221px] md:max-w-[360px]">
                     The Unique Threads in Our Wellness Tapestry
                 </h4>
                 <img class="w-full h-full object-cover absolute left-0 top-0"
                     src="<?php echo get_template_directory_uri(); ?>/images/webp/soul-1.webp" alt="">
             </div>
-            <p class="text-sm md:text-base max-w-[291px] md:max-w-[503px] text-center">
-                In Gading Serpong, find the tender fusion of Baduy simplicity and Peranakan color. In Jakarta, step into
-                a
-                refined haven inspired by Javanese nobility, Balinese devotion, and Peranakan beauty. Each Sandjong
-                space
-                reflects heritage, nurtures serenity, and creates a soft feeling of home where you can always belong.
-            </p>
         </div>
     </div>
-    <img class="md:w-[374px] w-[220px] md:h-[384px] h-[220px] object-cover absolute -left-[48%] md:-left-16 top-[43%] md:top-[46%] rounded-lg -translate-y-1/2 z-0"
+    <img class="md:w-[374px] w-[220px] md:h-[384px] h-[220px] object-cover absolute -left-[48%] md:-left-16 top-[43%] md:top-[50%] rounded-lg -translate-y-1/2 z-0"
         src="<?php echo get_template_directory_uri(); ?>/images/webp/soul-3.webp" alt="">
-    <img class="md:w-[374px] w-[220px] md:h-[384px] h-[220px] object-cover absolute -right-[48%] md:-right-16 top-[43%] md:top-[46%] rounded-lg -translate-y-1/2 z-0"
+    <img class="md:w-[374px] w-[220px] md:h-[384px] h-[220px] object-cover absolute -right-[48%] md:-right-16 top-[43%] md:top-[50%] rounded-lg -translate-y-1/2 z-0"
         src="<?php echo get_template_directory_uri(); ?>/images/webp/soul-2.webp" alt="">
 </section>
 
@@ -93,7 +86,6 @@
         <div class="flex items-end md:items-center justify-between space-x-6 mb-16">
             <h5 class="text-gold md:whitespace-nowrap max-w-[168px] md:max-w-full">Sandjong's Wellness Branches</h5>
             <div class="h-[1px] w-full border border-gold border-dashed mt-[4px] hidden md:block"></div>
-            <a href="" class="button !text-gold whitespace-nowrap !p-0">Explore more</a>
         </div>
         <div>
             <?php
