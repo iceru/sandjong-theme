@@ -56,9 +56,11 @@
                                 <p class="body mb-5">
                                     <?php echo get_field('location'); ?>
                                 </p>
+                                <?php $map_link = get_field('map_link'); if ($map_link): ?>
                                   <div>
-                                    <a href="<?php get_field('map_link') ?>" target="_blank" class="!no-underline text-terracota body">Directions</a>
+                                    <a href="<?php echo $map_link; ?>" target="_blank" class="!no-underline text-terracota body">Directions</a>
                                 </div>
+                                <?php endif; ?>
                             </div>
                             <div>
                                 <p class="font-bold body mb-1">
