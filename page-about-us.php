@@ -48,7 +48,8 @@
             inspired by the Indonesian word <strong>“sanjung”</strong>, meaning <strong>“praise”</strong> or <strong>“to
                 bring joy”</strong> which
             reflects our
-            devotion to heritage and balance. <br /> <br /> <strong>Rooted in Indonesia’s rich traditions</strong>, we reinterpret
+            devotion to heritage and balance. <br /> <br /> <strong>Rooted in Indonesia’s rich traditions</strong>, we
+            reinterpret
             ancient wellness
             philosophies into refined, multisensory experiences, and create spaces to <strong>return home</strong> to:
             to calm, to
@@ -217,13 +218,13 @@
                         <div class="grid md:grid-cols-2">
                             <div class="mb-16 md:mb-0 ">
                                 <?php if (has_post_thumbnail()): ?>
-                                    <?php the_post_thumbnail('large', array('class' => 'masked-sense w-full h-full object-cover max-w-[500px]')); ?>
+                                    <?php the_post_thumbnail('large', array('class' => 'masked-sense w-full h-full object-cover ')); ?>
                                 <?php else: ?>
                                     <img src="<?php echo get_template_directory_uri(); ?>/images/webp/senses.webp"
-                                        class="masked-sense w-full h-full object-cover max-w-[500px]" alt="">
+                                        class="masked-sense w-full h-full object-cover " alt="">
                                 <?php endif; ?>
                             </div>
-                            <div>
+                            <div class="md:pl-14">
                                 <h4 class="text-gold mb-20">5 Senses Experiences</h4>
 
                                 <div class="mb-10 w-[71px] h-[71px] rounded-full bg-[#966938] flex justify-center items-center">
@@ -247,8 +248,13 @@
             endif;
             ?>
         </div>
-        <div
-            class="senses-nav flex items-center md:absolute md:left-[52%] md:ml-12 md:-translate-x-1/2 md:bottom-4 mt-4">
+        <div class="grid grid-cols-2 absolute left-1/2 -translate-x-1/2 w-full -bottom-8 md:bottom-14 px-6 md:px-0">
+            <div class="hidden md:block"></div>
+            <div>
+
+                <div class="senses-nav flex items-center md:pl-14">
+                </div>
+            </div>
         </div>
 
     </div>
@@ -311,10 +317,10 @@
                             <div class="grid md:grid-cols-2 gap-6">
                                 <div>
                                     <?php if (has_post_thumbnail()): ?>
-                                        <?php the_post_thumbnail('large', array('class' => 'masked-facility w-full h-full object-cover max-h-[400px]')); ?>
+                                        <?php the_post_thumbnail('large', array('class' => 'masked-facility object-cover aspect-4/3')); ?>
                                     <?php else: ?>
                                         <img src="<?php echo get_template_directory_uri(); ?>/images/webp/lobby.webp"
-                                            class="masked-facility w-full h-full object-cover max-h-[400px]" alt="">
+                                            class="masked-facility w-full h-full object-cover aspect-4/3" alt="">
                                     <?php endif; ?>
                                 </div>
                                 <div class="bg-[#FFE5C9] rounded-xl relative p-8 md:px-16 md:py-12">
@@ -337,8 +343,11 @@
                 endif;
                 ?>
             </div>
-            <div
-                class="facility-nav flex items-center md:absolute md:left-[63%] md:-translate-x-1/2 md:bottom-20 md:mt-4">
+            <div class="grid md:grid-cols-2 left-1/2 w-full -translate-x-1/2 bottom-24 absolute gap-6">
+                <div></div>
+
+                <div class="facility-nav flex items-center px-8 md:px-16">
+                </div>
             </div>
         </div>
     </div>
