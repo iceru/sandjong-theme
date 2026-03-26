@@ -53,9 +53,12 @@
                                 <p class="font-bold body mb-1">
                                     Location
                                 </p>
-                                <p class="body">
+                                <p class="body mb-5">
                                     <?php echo get_field('location'); ?>
                                 </p>
+                                  <div>
+                                    <a href="<?php get_field('map_link') ?>" target="_blank" class="!no-underline text-terracota body">Directions</a>
+                                </div>
                             </div>
                             <div>
                                 <p class="font-bold body mb-1">
@@ -67,18 +70,11 @@
                             </div>
                             <div>
                                 <p class="font-bold body mb-1">
-                                    Socials
+                                    Menu
                                 </p>
-                                <div class="flex">
-                                    <a href="<?php echo get_field('instagram'); ?>" target="_blank"><img
-                                            src="<?php echo get_template_directory_uri(); ?>/images/icons/instagram.png"
-                                            class="mr-2 -ml-1" alt="Instagram">
-                                    </a>
-                                    <a href="<?php echo get_field('facebook'); ?>" target="_blank"><img
-                                            src="<?php echo get_template_directory_uri(); ?>/images/icons/facebook.png"
-                                            alt="Facebook">
-                                    </a>
-                                </div>
+                                <?php $menu = get_field('menu'); if ($menu): ?>
+                                    <a href="<?php echo $menu; ?>" target="_blank" class="!no-underline text-terracota body">View our menu</a>
+                                <?php endif; ?>
                             </div>
                             <div>
                                 <p class="font-bold body mb-1">

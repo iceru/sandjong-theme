@@ -71,10 +71,27 @@
                     </div>
                     <div>
                         <ul class="space-y-5">
-                            <li><a href="tel:+622139521229" class="!no-underline">021-3952-1229</a></li>
-                            <li><a href="tel:+6282130376088" class="!no-underline">0821-3037-6088</a></li>
+                            <li><a href="tel:+622139521229" class="flex space-x-2 !no-underline">
+                                    <img class="w-4 h-4" src="<?php echo get_template_directory_uri(); ?>/images/icons/phone.png"
+                                        alt="">
+                                    <span>021-3952-1229</span>
+                                </a>
+                            </li>
+                            <li><a href="https://wa.me/6282130376088" target="_blank"
+                                    class="flex space-x-2 !no-underline">
+                                    <img class="w-4 h-4"
+                                        src="<?php echo get_template_directory_uri(); ?>/images/icons/whatsapp.png"
+                                        alt="">
+                                    <span>0821-3037-6088</span>
+                                </a>
+                            </li>
                             <li><a href="mailto:info.sandjong@amertajiwa.com"
-                                    class="!no-underline">info.sandjong@amertajiwa.com</a>
+                                    class="flex space-x-2 !no-underline">
+                                    <img class="w-4 h-4"
+                                        src="<?php echo get_template_directory_uri(); ?>/images/icons/email.png"
+                                        alt="">
+                                    <span>info.sandjong@amertajiwa.com</span>
+                                </a>
                             </li>
                         </ul>
                     </div>
