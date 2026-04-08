@@ -248,7 +248,7 @@
             endif;
             ?>
         </div>
-        <div class="grid grid-cols-2 absolute left-1/2 -translate-x-1/2 w-full -bottom-8 lg:bottom-14 px-6 md:px-0">
+        <div class="grid grid-cols-2 absolute left-1/2 -translate-x-1/2 w-full -bottom-8 xl:bottom-14 px-6 md:px-0">
             <div class="hidden md:block"></div>
             <div>
 
@@ -343,7 +343,7 @@
                 endif;
                 ?>
             </div>
-            <div class="grid md:grid-cols-2 left-1/2 w-full -translate-x-1/2 bottom-8 lg:bottom-24 absolute gap-6">
+            <div class="grid md:grid-cols-2 left-1/2 w-full -translate-x-1/2 bottom-8 xl:bottom-24 absolute gap-6">
                 <div></div>
 
                 <div class="facility-nav flex items-center px-8 md:px-16">
