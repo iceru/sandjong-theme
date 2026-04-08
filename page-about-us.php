@@ -248,7 +248,7 @@
             endif;
             ?>
         </div>
-        <div class="grid grid-cols-2 absolute left-1/2 -translate-x-1/2 w-full -bottom-8 md:bottom-14 px-6 md:px-0">
+        <div class="grid grid-cols-2 absolute left-1/2 -translate-x-1/2 w-full -bottom-8 lg:bottom-14 px-6 md:px-0">
             <div class="hidden md:block"></div>
             <div>
 
