@@ -214,35 +214,35 @@
                     $senses_query->the_post();
                     $icon = get_field('icon'); // Assuming ACF field 'icon'
                     ?>
-                    <div>
-                        <div class="grid md:grid-cols-2">
-                            <div class="mb-16 md:mb-0 ">
-                                <?php if (has_post_thumbnail()): ?>
-                                    <?php the_post_thumbnail('large', array('class' => 'masked-sense w-full h-full object-cover ')); ?>
-                                <?php else: ?>
-                                    <img src="<?php echo get_template_directory_uri(); ?>/images/webp/senses.webp"
-                                        class="masked-sense w-full h-full object-cover " alt="">
-                                <?php endif; ?>
-                            </div>
-                            <div class="md:pl-14">
-                                <h4 class="text-gold mb-20">5 Senses Experiences</h4>
+            <div>
+                <div class="grid md:grid-cols-2">
+                    <div class="mb-16 md:mb-0 ">
+                        <?php if (has_post_thumbnail()): ?>
+                        <?php the_post_thumbnail('large', array('class' => 'masked-sense w-full h-full object-cover ')); ?>
+                        <?php else: ?>
+                        <img src="<?php echo get_template_directory_uri(); ?>/images/webp/senses.webp"
+                            class="masked-sense w-full h-full object-cover " alt="">
+                        <?php endif; ?>
+                    </div>
+                    <div class="md:pl-14">
+                        <h4 class="text-gold mb-20">5 Senses Experiences</h4>
 
-                                <div class="mb-10 w-[71px] h-[71px] rounded-full bg-[#966938] flex justify-center items-center">
-                                    <?php if ($icon): ?>
-                                        <img src="<?php echo esc_url($icon); ?>" class="w-[54px] h-[54px] object-contain">
-                                    <?php else: ?>
-                                        <img src=" <?php echo get_template_directory_uri(); ?>/images/icons/eye.png"
-                                            class="w-[54px] h-[54px] object-contain" alt="">
-                                    <?php endif; ?>
-                                </div>
-                                <h5 class="text-gold mb-4"><?php the_title(); ?></h5>
-                                <div class="body text-beige max-w-[336px]">
-                                    <?php the_content(); ?>
-                                </div>
-                            </div>
+                        <div class="mb-10 w-[71px] h-[71px] rounded-full bg-[#966938] flex justify-center items-center">
+                            <?php if ($icon): ?>
+                            <img src="<?php echo esc_url($icon); ?>" class="w-[54px] h-[54px] object-contain">
+                            <?php else: ?>
+                            <img src=" <?php echo get_template_directory_uri(); ?>/images/icons/eye.png"
+                                class="w-[54px] h-[54px] object-contain" alt="">
+                            <?php endif; ?>
+                        </div>
+                        <h5 class="text-gold mb-4"><?php the_title(); ?></h5>
+                        <div class="body text-beige max-w-[336px]">
+                            <?php the_content(); ?>
                         </div>
                     </div>
-                    <?php
+                </div>
+            </div>
+            <?php
                 endwhile;
                 wp_reset_postdata();
             endif;
@@ -313,37 +313,37 @@
                     while ($facility_query->have_posts()):
                         $facility_query->the_post();
                         ?>
+                <div>
+                    <div class="grid md:grid-cols-2 gap-6">
                         <div>
-                            <div class="grid md:grid-cols-2 gap-6">
-                                <div>
-                                    <?php if (has_post_thumbnail()): ?>
-                                        <?php the_post_thumbnail('large', array('class' => 'masked-facility object-cover aspect-4/3')); ?>
-                                    <?php else: ?>
-                                        <img src="<?php echo get_template_directory_uri(); ?>/images/webp/lobby.webp"
-                                            class="masked-facility w-full h-full object-cover aspect-4/3" alt="">
-                                    <?php endif; ?>
-                                </div>
-                                <div class="bg-[#FFE5C9] rounded-xl relative p-8 md:px-16 md:py-12">
-                                    <div
-                                        class="w-[95%] md:w-[98%] h-3 rounded-t-xl -top-3 left-1/2 -translate-x-1/2 bg-[#FFE5C9] absolute">
-                                    </div>
-                                    <div
-                                        class="w-[95%] md:w-[98%] h-3 rounded-b-xl -bottom-3 left-1/2 -translate-x-1/2 bg-[#FFE5C9] absolute">
-                                    </div>
-                                    <h4 class="text-gold mb-11"><?php the_title(); ?></h4>
-                                    <div class="body max-w-[398px] mb-14 md:mb-0">
-                                        <?php the_content(); ?>
-                                    </div>
-                                </div>
+                            <?php if (has_post_thumbnail()): ?>
+                            <?php the_post_thumbnail('large', array('class' => 'masked-facility object-cover aspect-4/3')); ?>
+                            <?php else: ?>
+                            <img src="<?php echo get_template_directory_uri(); ?>/images/webp/lobby.webp"
+                                class="masked-facility w-full h-full object-cover aspect-4/3" alt="">
+                            <?php endif; ?>
+                        </div>
+                        <div class="bg-[#FFE5C9] rounded-xl relative p-8 md:px-16 md:py-12">
+                            <div
+                                class="w-[95%] md:w-[98%] h-3 rounded-t-xl -top-3 left-1/2 -translate-x-1/2 bg-[#FFE5C9] absolute">
+                            </div>
+                            <div
+                                class="w-[95%] md:w-[98%] h-3 rounded-b-xl -bottom-3 left-1/2 -translate-x-1/2 bg-[#FFE5C9] absolute">
+                            </div>
+                            <h4 class="text-gold mb-11"><?php the_title(); ?></h4>
+                            <div class="body max-w-[398px] mb-14 md:mb-0">
+                                <?php the_content(); ?>
                             </div>
                         </div>
-                        <?php
+                    </div>
+                </div>
+                <?php
                     endwhile;
                     wp_reset_postdata();
                 endif;
                 ?>
             </div>
-            <div class="grid md:grid-cols-2 left-1/2 w-full -translate-x-1/2 bottom-24 absolute gap-6">
+            <div class="grid md:grid-cols-2 left-1/2 w-full -translate-x-1/2 bottom-8 lg:bottom-24 absolute gap-6">
                 <div></div>
 
                 <div class="facility-nav flex items-center px-8 md:px-16">
@@ -498,20 +498,20 @@
                         while ($awards_query->have_posts()):
                             $awards_query->the_post();
                             ?>
-                            <div class="flex flex-col h-[400px] justify-center items-center text-center">
-                                <div class="flex justify-center">
-                                    <?php if (has_post_thumbnail()): ?>
-                                        <?php the_post_thumbnail('medium', array('class' => 'object-contain h-[300px]')); ?>
-                                    <?php else: ?>
-                                        <img src="<?php echo get_template_directory_uri(); ?>/images/webp/award-1.webp" alt="">
-                                    <?php endif; ?>
-                                </div>
-                                <h5 class="text-gold mt-4"><?php the_title(); ?></h5>
-                                <div class="body text-beige max-w-[385px] mx-auto">
-                                    <?php the_content(); ?>
-                                </div>
-                            </div>
-                            <?php
+                    <div class="flex flex-col h-[400px] justify-center items-center text-center">
+                        <div class="flex justify-center">
+                            <?php if (has_post_thumbnail()): ?>
+                            <?php the_post_thumbnail('medium', array('class' => 'object-contain h-[300px]')); ?>
+                            <?php else: ?>
+                            <img src="<?php echo get_template_directory_uri(); ?>/images/webp/award-1.webp" alt="">
+                            <?php endif; ?>
+                        </div>
+                        <h5 class="text-gold mt-4"><?php the_title(); ?></h5>
+                        <div class="body text-beige max-w-[385px] mx-auto">
+                            <?php the_content(); ?>
+                        </div>
+                    </div>
+                    <?php
                         endwhile;
                         wp_reset_postdata();
                     endif;
