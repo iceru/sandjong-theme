@@ -30,6 +30,7 @@
   color utility to any element that depends on these defaults.
 */
 @layer base {
+
   *,
   ::after,
   ::before,
@@ -46,18 +47,12 @@
   --s: 40px;
 
   -webkit-mask:
-    radial-gradient(
-        var(--r) at calc(100% - var(--r) - var(--s)) calc(100% - var(--r)),
-        #0000 98%,
-        #000
-      )
-      calc(var(--r) + var(--s)) var(--r),
-    radial-gradient(
-        var(--r) at calc(100% - var(--r)) calc(100% - var(--r) - var(--s)),
-        #0000 98%,
-        #000
-      )
-      var(--r) calc(var(--r) + var(--s));
+    radial-gradient(var(--r) at calc(100% - var(--r) - var(--s)) calc(100% - var(--r)),
+      #0000 98%,
+      #000) calc(var(--r) + var(--s)) var(--r),
+    radial-gradient(var(--r) at calc(100% - var(--r)) calc(100% - var(--r) - var(--s)),
+      #0000 98%,
+      #000) var(--r) calc(var(--r) + var(--s));
 }
 
 body,
@@ -76,13 +71,13 @@ h4 {
 }
 
 h4.big {
-  font-size: 40px;
-  line-height: 44px;
+  font-size: 44px;
+  line-height: 48px;
 }
 
 h4.small {
-  font-size: 28px;
-  line-height: 32px;
+  font-size: 26px;
+  line-height: 30px;
 }
 
 h5 {
@@ -416,6 +411,7 @@ h5 {
 }
 
 @media (max-width: 1280px) {
+
   .signature-sliders .slick-prev,
   .sliders .slick-prev,
   .package-sliders .slick-prev {
@@ -430,6 +426,7 @@ h5 {
 }
 
 @media (max-width: 1024px) {
+
   .signature-sliders .slick-prev,
   .sliders .slick-prev,
   .package-sliders .slick-prev,

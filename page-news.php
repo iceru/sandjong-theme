@@ -23,8 +23,8 @@ get_header();
 	</div>
 </section>
 
-<section class="bg-beige relative py-10">
-	<div class="container relative z-10 text-primary pt-16">
+<section class="bg-beige relative">
+	<div class="container relative z-10 text-primary min-h-screen flex flex-col justify-center">
 		<div class="mb-10 md:mb-12 text-left">
 			<h4 class="text-terracota mb-3">Gentle Offerings</h4>
 			<p class="body">
@@ -219,8 +219,8 @@ get_header();
 </section>
 
 <script>
-	jQuery(document).ready(function($) {
-		$(document).on('click', '.news-pagination a', function(e) {
+	jQuery(document).ready(function ($) {
+		$(document).on('click', '.news-pagination a', function (e) {
 			e.preventDefault();
 			const url = $(this).attr('href');
 			const $wrapper = $(this).closest('[id$="-ajax-wrapper"]');
@@ -235,7 +235,7 @@ get_header();
 			$.ajax({
 				url: url,
 				type: 'GET',
-				success: function(response) {
+				success: function (response) {
 					const $newHtml = $(response).find('#' + wrapperId).html();
 					if ($newHtml) {
 						$wrapper.html($newHtml);
@@ -254,14 +254,14 @@ get_header();
 						}, 500);
 					}
 				},
-				error: function() {
+				error: function () {
 					window.location.href = url; // Fallback to normal load
 				}
 			});
 		});
 
 		// Handle browser back/forward buttons
-		window.onpopstate = function() {
+		window.onpopstate = function () {
 			window.location.reload();
 		};
 	});
