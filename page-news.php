@@ -24,7 +24,7 @@ get_header();
 </section>
 
 <section class="bg-beige relative">
-	<div class="container relative z-10 text-primary min-h-screen flex flex-col justify-center">
+	<div class="container relative z-10 text-primary min-h-screen flex flex-col justify-center py-16 md:py-4">
 		<div class="mb-10 md:mb-12 text-left">
 			<h4 class="text-terracota mb-3">Gentle Offerings</h4>
 			<p class="body">
@@ -157,13 +157,13 @@ get_header();
 								<p class="opacity-60 text-primary text-[10px] mb-3">
 									<?php echo get_the_date('d M Y'); ?>
 								</p>
-								<h4 class="mb-4">
+								<h4 class="mb-4 lg:max-w-[80%]">
 									<a href="<?php the_permalink(); ?>"
 										class="hover:text-terracota transition-colors !no-underline">
 										<?php the_title(); ?>
 									</a>
 								</h4>
-								<div class="body line-clamp-2 mb-10 md:mb-24">
+								<div class="body line-clamp-2 mb-10 md:mb-24 lg:max-w-[80%]">
 									<?php the_excerpt(); ?>
 								</div>
 								<div>

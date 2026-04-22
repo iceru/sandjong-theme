@@ -165,12 +165,12 @@
 
 <section class="bg-beige py-16 md:py-32 relative z-10">
     <div class="container">
-        <h5 class="text-primary max-w-[600px] mb-10 md:mb-20">
+        <h5 class="text-primary max-w-[600px] mb-12">
             Each Sandjong franchise is thoughtfully curated: maintaining our standards of care, heritage, and
             sensory
             experience, while allowing your space to reflect the spirit of its surroundings.
         </h5>
-        <div class="grid grid-cols-2 md:grid-cols-3 gap-4 gap-y-16 md:gap-28 md:max-w-[80%]">
+        <div class="grid grid-cols-2 md:grid-cols-3 gap-4 gap-y-12 md:gap-12 md:gap-x-20 md:max-w-[80%]">
             <div>
                 <div class="w-16 h-16 mb-9 rounded-full bg-gold/20 flex justify-center items-center">
                     <img src="<?php echo get_template_directory_uri(); ?>/images/icons/certificate.png"

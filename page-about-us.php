@@ -37,7 +37,7 @@
     </h4>
 </section>
 
-<section class="bg-beige py-[71px] h-screen flex flex-col justify-center md:py-36 relative">
+<section class="bg-beige py-[71px] md:max-h-[500px] h-screen flex flex-col justify-center md:py-36 relative">
     <div class="container grid md:grid-cols-2 text-primary items-center">
         <h4 class="max-w-[412px] big mb-10 md:mb-0">
             Nature Inheritance Rooted in Culture
@@ -62,7 +62,7 @@
     <div class="md:container grid md:grid-cols-2 items-center">
         <div class="px-4 md:px-0 mb-10 md:mb-0">
             <h4 class="mb-6 text-gold italic small">Our Commitment</h4>
-            <h4 class="max-w-[487px] text-beige">
+            <h4 class="max-w-[487px] text-beige mid">
                 Amerta’s dedication to maintain a 5-star standard and crafting unforgettable experiences for our valued
                 customers is shown and nurtured through our vision, mission, culture, motto, and values.
             </h4>
@@ -140,8 +140,8 @@
             src="<?php echo get_template_directory_uri(); ?>/images/webp/bg-beige.webp" alt="">
     </div>
     <div class="container relative z-10">
-        <h4 class="text-terracota mb-16">Values</h4>
-        <div class="grid grid-cols-2 md:grid-cols-3 gap-8 gap-y-20 md:gap-20">
+        <h4 class="text-terracota mb-10">Values</h4>
+        <div class="grid grid-cols-2 md:grid-cols-3 gap-8 gap-y-10 md:gap-10">
             <div>
                 <div class="mb-9 w-[74px] h-[74px] rounded-full bg-gold/20 flex justify-center items-center">
                     <img class="w-12 h-12 object-contain"

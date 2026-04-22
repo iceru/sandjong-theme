@@ -80,6 +80,12 @@ h4.small {
   line-height: 30px;
 }
 
+h4.mid {
+  font-size: 28px;
+  line-height: 30px;
+}
+
+
 h5 {
   font-size: 20px;
   font-weight: bold;
@@ -316,7 +322,7 @@ h5 {
 }
 
 .custom-contact-form textarea {
-  height: 350px;
+  height: 180px;
   /* Large height per image */
 }
 
