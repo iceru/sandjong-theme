@@ -187,9 +187,9 @@
                         <small class="text-xs text-primary font-bold mb-2">
                             <?php echo get_the_date('d M Y'); ?>
                         </small>
-                        <h4 class="mb-2 line-clamp-1 text-primary">
+                        <h5 class="mb-2 line-clamp-2 text-primary">
                             <?php the_title(); ?>
-                        </h4>
+                        </h5>
                         <a href="<?php the_permalink(); ?>" class="button !text-terracota !p-0 !underline">
                             Read More
                         </a>
