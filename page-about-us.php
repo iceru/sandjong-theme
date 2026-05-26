@@ -318,7 +318,7 @@
                                         <?php the_post_thumbnail('large', array('class' => 'masked-facility object-cover aspect-4/3')); ?>
                                     <?php else: ?>
                                         <img src="<?php echo get_template_directory_uri(); ?>/images/webp/lobby.webp"
-                                            class="masked-facility w-full h-full object-cover aspect-4/3" alt="">
+                                            class="masked-facility w-full h-full object-cover aspect-4/3 max-w-[648px]" alt="">
                                     <?php endif; ?>
                                 </div>
                                 <div class="bg-[#FFE5C9] rounded-xl relative p-8 md:px-16 md:py-12">
