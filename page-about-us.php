@@ -315,7 +315,7 @@
                             <div class="grid md:grid-cols-2 gap-6">
                                 <div>
                                     <?php if (has_post_thumbnail()): ?>
-                                        <?php the_post_thumbnail('large', array('class' => 'masked-facility object-cover aspect-4/3')); ?>
+                                        <?php the_post_thumbnail('large', array('class' => 'masked-facility object-cover aspect-4/3 max-w-[648px]')); ?>
                                     <?php else: ?>
                                         <img src="<?php echo get_template_directory_uri(); ?>/images/webp/lobby.webp"
                                             class="masked-facility w-full h-full object-cover aspect-4/3 max-w-[648px]" alt="">
