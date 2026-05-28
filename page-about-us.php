@@ -63,8 +63,7 @@
         <div class="px-4 md:px-0 mb-10 md:mb-0">
             <h4 class="mb-6 text-gold italic small">Our Commitment</h4>
             <h4 class="max-w-[487px] text-beige mid">
-                Amerta’s dedication to maintain a 5-star standard and crafting unforgettable experiences for our valued
-                customers is shown and nurtured through our vision, mission, culture, motto, and values.
+                Amerta’s dedication to maintain a 5-star standard and crafting unforgettable experiences for our valued customers is shown and nurtured through our vision, mission, culture, and motto
             </h4>
         </div>
         <div
@@ -80,8 +79,7 @@
                     </div>
                     <h5 class="text-gold mb-4">Vision</h5>
                     <p class="body text-primary">
-                        To lead Indonesia’s wellness industry with our profound expertise, innovation, and continuous
-                        advancement through research and development.
+                        To lead Indonesia’s wellness industry with our profound expertise, innovation, and continuous advancement through research and development.
                     </p>
                 </div>
             </div>
@@ -96,8 +94,7 @@
                     </div>
                     <h5 class="text-gold mb-4">Mission</h5>
                     <p class="body text-primary min-h-[96px]">
-                        Dedicated to creating a uniquely memorable experience and genuine care to meet our customers’
-                        needs.
+                        Dedicated to creating a uniquely memorable experience and genuine care to meet our customers’ needs.
                     </p>
                 </div>
             </div>
@@ -112,7 +109,7 @@
                     </div>
                     <h5 class="text-gold mb-4">Motto</h5>
                     <p class="body text-primary min-h-[96px]">
-                        “Delivering exceptional customer satisfaction while honoring the needs of all”
+                        Delivering exceptional customer satisfaction while honoring the needs of all.
                     </p>
                 </div>
             </div>
@@ -318,10 +315,10 @@
                             <div class="grid md:grid-cols-2 gap-6">
                                 <div>
                                     <?php if (has_post_thumbnail()): ?>
-                                        <?php the_post_thumbnail('large', array('class' => 'masked-facility object-cover aspect-4/3')); ?>
+                                        <?php the_post_thumbnail('large', array('class' => 'masked-facility object-cover aspect-4/3 max-w-[648px]')); ?>
                                     <?php else: ?>
                                         <img src="<?php echo get_template_directory_uri(); ?>/images/webp/lobby.webp"
-                                            class="masked-facility w-full h-full object-cover aspect-4/3" alt="">
+                                            class="masked-facility w-full h-full object-cover aspect-4/3 max-w-[648px]" alt="">
                                     <?php endif; ?>
                                 </div>
                                 <div class="bg-[#FFE5C9] rounded-xl relative p-8 md:px-16 md:py-12">
