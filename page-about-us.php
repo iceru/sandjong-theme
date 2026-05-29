@@ -70,7 +70,7 @@
             class="draggable-container px-4 md:pl-0 md:pr-4 md:absolute right-0 flex space-x-6 w-full md:w-1/2 whitespace-nowrap overflow-x-auto pb-6 cursor-grab select-none no-scrollbar">
 
             <div class="w-[312px] shrink-0 ">
-                <img src="<?php echo get_template_directory_uri(); ?>/images/webp/vision.webp"
+                <img src="<?php echo get_template_directory_uri(); ?>/images/vision.png"
                     class="w-full h-[270px] object-cover" alt="">
 
                 <div class="bg-beige py-10 px-9 rounded-b-lg whitespace-normal relative">
@@ -100,7 +100,7 @@
             </div>
 
             <div class="w-[312px] shrink-0">
-                <img src="<?php echo get_template_directory_uri(); ?>/images/webp/motto.webp"
+                <img src="<?php echo get_template_directory_uri(); ?>/images/motto.png"
                     class="w-full h-[270px] object-cover" alt="">
 
                 <div class="bg-beige py-10 px-9 rounded-b-lg whitespace-normal relative">
@@ -210,7 +210,7 @@
                 while ($senses_query->have_posts()):
                     $senses_query->the_post();
                     $icon = get_field('icon'); // Assuming ACF field 'icon'
-            ?>
+                    ?>
                     <div>
                         <h4 class="text-gold md:hidden mb-12">5 Senses Experiences</h4>
                         <div class="grid md:grid-cols-2">
@@ -240,7 +240,7 @@
                             </div>
                         </div>
                     </div>
-            <?php
+                    <?php
                 endwhile;
                 wp_reset_postdata();
             endif;
@@ -310,7 +310,7 @@
                 if ($facility_query->have_posts()):
                     while ($facility_query->have_posts()):
                         $facility_query->the_post();
-                ?>
+                        ?>
                         <div>
                             <div class="grid md:grid-cols-2 gap-6 min-w-0">
                                 <div class="min-w-0">
@@ -335,7 +335,7 @@
                                 </div>
                             </div>
                         </div>
-                <?php
+                        <?php
                     endwhile;
                     wp_reset_postdata();
                 endif;
@@ -495,7 +495,7 @@
                     if ($awards_query->have_posts()):
                         while ($awards_query->have_posts()):
                             $awards_query->the_post();
-                    ?>
+                            ?>
                             <div class="flex flex-col h-[400px] justify-center items-center text-center">
                                 <div class="flex justify-center">
                                     <?php if (has_post_thumbnail()): ?>
@@ -509,7 +509,7 @@
                                     <?php the_content(); ?>
                                 </div>
                             </div>
-                    <?php
+                            <?php
                         endwhile;
                         wp_reset_postdata();
                     endif;
@@ -541,7 +541,7 @@
 
 
 <script>
-    $(document).ready(function() {
+    $(document).ready(function () {
         $('.senses-slider').slick({
             slidesToShow: 1,
             slidesToScroll: 1,
@@ -596,7 +596,7 @@
             threshold: 0.2
         });
 
-        $('.senses-slider, .facility-slider, .awards-slider').each(function() {
+        $('.senses-slider, .facility-slider, .awards-slider').each(function () {
             sliderObserver.observe(this);
         });
 
@@ -621,7 +621,7 @@
             $item.find('.timeline-content').slideDown(400);
         }
 
-        $('.timeline-item').on('click', function() {
+        $('.timeline-item').on('click', function () {
             triggerTimelineItem($(this));
             // Reset interval on manual click
             clearInterval(timelineInterval);
@@ -652,11 +652,11 @@
         let scrollLeft;
 
         // IMPORTANT: Prevent browser from trying to drag images/links
-        $container.on('dragstart', function(e) {
+        $container.on('dragstart', function (e) {
             e.preventDefault();
         });
 
-        $container.on('mousedown', function(e) {
+        $container.on('mousedown', function (e) {
             isDown = true;
             $container.addClass('dragging');
             // pageX is the mouse position relative to the whole document
@@ -664,12 +664,12 @@
             scrollLeft = $container.scrollLeft();
         });
 
-        $(window).on('mouseup', function() { // Attach to window to catch release outside container
+        $(window).on('mouseup', function () { // Attach to window to catch release outside container
             isDown = false;
             $container.removeClass('dragging');
         });
 
-        $container.on('mousemove', function(e) {
+        $container.on('mousemove', function (e) {
             if (!isDown) return;
             e.preventDefault(); // Stop text selection or other default behaviors
 
