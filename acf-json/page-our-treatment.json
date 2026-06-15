@@ -1,0 +1,261 @@
+{
+    "key": "group_page_our_treatment",
+    "title": "Our Treatment",
+    "fields": [
+        {
+            "key": "field_treatment_hero_tab",
+            "label": "Hero",
+            "name": "",
+            "type": "tab",
+            "placement": "top"
+        },
+        {
+            "key": "field_treatment_hero_title",
+            "label": "Title",
+            "name": "treatment_hero_title",
+            "type": "text",
+            "default_value": "Crafted with Care, Offered with Meaning."
+        },
+        {
+            "key": "field_treatment_hero_text",
+            "label": "Text",
+            "name": "treatment_hero_text",
+            "type": "wysiwyg",
+            "tabs": "all",
+            "toolbar": "basic",
+            "media_upload": 0,
+            "default_value": "Every ritual at Sandjong is an invitation to return, not to escape. To return to your senses. To be present in your own skin. As you are."
+        },
+        {
+            "key": "field_treatment_hero_background",
+            "label": "Background Image",
+            "name": "treatment_hero_background",
+            "type": "image",
+            "return_format": "array",
+            "preview_size": "medium",
+            "library": "all"
+        },
+        {
+            "key": "field_treatment_tabs_tab",
+            "label": "Tabs",
+            "name": "",
+            "type": "tab",
+            "placement": "top"
+        },
+        {
+            "key": "field_treatment_signature_tab_label",
+            "label": "Signature Tab Label",
+            "name": "treatment_signature_tab_label",
+            "type": "text",
+            "default_value": "Signature Treatment"
+        },
+        {
+            "key": "field_treatment_package_tab_label",
+            "label": "Package Tab Label",
+            "name": "treatment_package_tab_label",
+            "type": "text",
+            "default_value": "Package Treatment"
+        },
+        {
+            "key": "field_treatment_simple_tab_label",
+            "label": "Simple Tab Label",
+            "name": "treatment_simple_tab_label",
+            "type": "text",
+            "default_value": "Simple Touch"
+        },
+        {
+            "key": "field_treatment_signature_tab",
+            "label": "Signature Panel",
+            "name": "",
+            "type": "tab",
+            "placement": "top"
+        },
+        {
+            "key": "field_treatment_signature_panel_title",
+            "label": "Title",
+            "name": "treatment_signature_panel_title",
+            "type": "text",
+            "instructions": "Treatment cards are managed from the Signature Treatments post type.",
+            "default_value": "Refined Rituals for Rest, Recovery, and Renewal."
+        },
+        {
+            "key": "field_treatment_signature_panel_text",
+            "label": "Text",
+            "name": "treatment_signature_panel_text",
+            "type": "wysiwyg",
+            "tabs": "all",
+            "toolbar": "basic",
+            "media_upload": 0,
+            "default_value": "A collection of exclusive treatments curated to meet the changing needs of your body, mind, and energy. Each experience is designed with intention—from calming stress to celebrating special occasions—with herbal elements and cultural touches drawn from Sandjong’s apothecary roots.<br><br>Perfect for: those seeking tailored, elevated care with a sense of purpose."
+        },
+        {
+            "key": "field_treatment_signature_panel_background",
+            "label": "Background Image",
+            "name": "treatment_signature_panel_background",
+            "type": "image",
+            "return_format": "array",
+            "preview_size": "medium",
+            "library": "all"
+        },
+        {
+            "key": "field_treatment_package_tab",
+            "label": "Package Panel",
+            "name": "",
+            "type": "tab",
+            "placement": "top"
+        },
+        {
+            "key": "field_treatment_package_panel_title",
+            "label": "Title",
+            "name": "treatment_package_panel_title",
+            "type": "text",
+            "instructions": "Treatment cards are managed from Package Treatments and Treatment Categories.",
+            "default_value": "A Complete Journey, Harmonized from Head to Toe"
+        },
+        {
+            "key": "field_treatment_package_panel_text",
+            "label": "Text",
+            "name": "treatment_package_panel_text",
+            "type": "wysiwyg",
+            "tabs": "all",
+            "toolbar": "basic",
+            "media_upload": 0,
+            "default_value": "Each package combines multiple treatments into a cohesive flow that offers a full-body experience to restore your energy, sooth your senses, and honors your time. From foot rituals to body scrubs, massages, and facials, this is your invitation to be completely cared for.<br><br>Perfect for: those looking for extended, full-journey indulgence or shared wellness experiences."
+        },
+        {
+            "key": "field_treatment_package_panel_background",
+            "label": "Background Image",
+            "name": "treatment_package_panel_background",
+            "type": "image",
+            "return_format": "array",
+            "preview_size": "medium",
+            "library": "all"
+        },
+        {
+            "key": "field_treatment_simple_tab",
+            "label": "Simple Panel",
+            "name": "",
+            "type": "tab",
+            "placement": "top"
+        },
+        {
+            "key": "field_treatment_simple_panel_title",
+            "label": "Title",
+            "name": "treatment_simple_panel_title",
+            "type": "text",
+            "instructions": "Treatment cards are managed from the Simple Touch post type.",
+            "default_value": "Small Rituals. Lasting Calm."
+        },
+        {
+            "key": "field_treatment_simple_panel_text",
+            "label": "Text",
+            "name": "treatment_simple_panel_text",
+            "type": "wysiwyg",
+            "tabs": "all",
+            "toolbar": "basic",
+            "media_upload": 0,
+            "default_value": "Even the simplest touch, when offered with care, can bring clarity and calm. These shorter treatments offer targeted relief, like herbal compresses, focused massage, or scalp rituals for moments when you need a pause, not a full escape.<br><br>Perfect for: those who need a gentle reset in the midst of a full day"
+        },
+        {
+            "key": "field_treatment_simple_panel_background",
+            "label": "Background Image",
+            "name": "treatment_simple_panel_background",
+            "type": "image",
+            "return_format": "array",
+            "preview_size": "medium",
+            "library": "all"
+        },
+        {
+            "key": "field_treatment_assets_tab",
+            "label": "Assets & Labels",
+            "name": "",
+            "type": "tab",
+            "placement": "top"
+        },
+        {
+            "key": "field_treatment_card_fallback_image",
+            "label": "Card Fallback Image",
+            "name": "treatment_card_fallback_image",
+            "type": "image",
+            "return_format": "array",
+            "preview_size": "medium",
+            "library": "all"
+        },
+        {
+            "key": "field_treatment_simple_fallback_image",
+            "label": "Simple Touch Fallback Image",
+            "name": "treatment_simple_fallback_image",
+            "type": "image",
+            "return_format": "array",
+            "preview_size": "medium",
+            "library": "all"
+        },
+        {
+            "key": "field_treatment_timer_icon",
+            "label": "Timer Icon",
+            "name": "treatment_timer_icon",
+            "type": "image",
+            "return_format": "array",
+            "preview_size": "thumbnail",
+            "library": "all"
+        },
+        {
+            "key": "field_treatment_duration_suffix",
+            "label": "Duration Suffix",
+            "name": "treatment_duration_suffix",
+            "type": "text",
+            "default_value": "Minutes"
+        },
+        {
+            "key": "field_treatment_simple_duration_suffix",
+            "label": "Simple Touch Duration Suffix",
+            "name": "treatment_simple_duration_suffix",
+            "type": "text",
+            "default_value": "’"
+        },
+        {
+            "key": "field_treatment_slider_prev_arrow",
+            "label": "Slider Previous Arrow",
+            "name": "treatment_slider_prev_arrow",
+            "type": "image",
+            "return_format": "array",
+            "preview_size": "thumbnail",
+            "library": "all"
+        },
+        {
+            "key": "field_treatment_slider_next_arrow",
+            "label": "Slider Next Arrow",
+            "name": "treatment_slider_next_arrow",
+            "type": "image",
+            "return_format": "array",
+            "preview_size": "thumbnail",
+            "library": "all"
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "page_template",
+                "operator": "==",
+                "value": "page-our-treatment.php"
+            }
+        ],
+        [
+            {
+                "param": "page",
+                "operator": "==",
+                "value": "our-treatment"
+            }
+        ]
+    ],
+    "menu_order": 4,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "modified": 1781481600
+}

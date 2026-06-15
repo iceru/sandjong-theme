@@ -1,0 +1,183 @@
+{
+    "key": "group_page_our_outlets",
+    "title": "Our Outlets",
+    "fields": [
+        {
+            "key": "field_outlets_hero_tab",
+            "label": "Hero",
+            "name": "",
+            "type": "tab",
+            "placement": "top"
+        },
+        {
+            "key": "field_outlets_hero_title",
+            "label": "Title",
+            "name": "outlets_hero_title",
+            "type": "text",
+            "default_value": "Sandjong Wellness by Amerta"
+        },
+        {
+            "key": "field_outlets_hero_text",
+            "label": "Text",
+            "name": "outlets_hero_text",
+            "type": "wysiwyg",
+            "tabs": "all",
+            "toolbar": "basic",
+            "media_upload": 0,
+            "default_value": "One soul, two expressions. Each rooted in the land it stands on. Every Sandjong sanctuary reflects its surroundings and though distinct in character, all share one heart: to offer moments of pause, presence, and cultural connection. Two destinations, two stories, one philosophy of care."
+        },
+        {
+            "key": "field_outlets_hero_background",
+            "label": "Background Image",
+            "name": "outlets_hero_background",
+            "type": "image",
+            "return_format": "array",
+            "preview_size": "medium",
+            "library": "all"
+        },
+        {
+            "key": "field_outlets_branches_tab",
+            "label": "Branches",
+            "name": "",
+            "type": "tab",
+            "placement": "top"
+        },
+        {
+            "key": "field_outlets_location_label",
+            "label": "Location Label",
+            "name": "outlets_location_label",
+            "type": "text",
+            "instructions": "Individual branch titles, descriptions, images, and details are managed from the Branch post type.",
+            "default_value": "Location"
+        },
+        {
+            "key": "field_outlets_directions_button_text",
+            "label": "Directions Button Text",
+            "name": "outlets_directions_button_text",
+            "type": "text",
+            "default_value": "Directions"
+        },
+        {
+            "key": "field_outlets_perfect_for_label",
+            "label": "Perfect For Label",
+            "name": "outlets_perfect_for_label",
+            "type": "text",
+            "default_value": "Perfect for"
+        },
+        {
+            "key": "field_outlets_menu_label",
+            "label": "Menu Label",
+            "name": "outlets_menu_label",
+            "type": "text",
+            "default_value": "Menu"
+        },
+        {
+            "key": "field_outlets_menu_button_text",
+            "label": "Menu Button Text",
+            "name": "outlets_menu_button_text",
+            "type": "text",
+            "default_value": "Menu"
+        },
+        {
+            "key": "field_outlets_experience_label",
+            "label": "Experience Label",
+            "name": "outlets_experience_label",
+            "type": "text",
+            "default_value": "Experience"
+        },
+        {
+            "key": "field_outlets_concept_essence_label",
+            "label": "Concept Essence Label",
+            "name": "outlets_concept_essence_label",
+            "type": "text",
+            "default_value": "Concept Essence"
+        },
+        {
+            "key": "field_outlets_branch_fallback_image",
+            "label": "Fallback Branch Image",
+            "name": "outlets_branch_fallback_image",
+            "type": "image",
+            "instructions": "Used only when a Branch has no branch_images and no featured image.",
+            "return_format": "array",
+            "preview_size": "medium",
+            "library": "all"
+        },
+        {
+            "key": "field_outlets_slider_prev_arrow",
+            "label": "Slider Previous Arrow",
+            "name": "outlets_slider_prev_arrow",
+            "type": "image",
+            "return_format": "array",
+            "preview_size": "thumbnail",
+            "library": "all"
+        },
+        {
+            "key": "field_outlets_slider_next_arrow",
+            "label": "Slider Next Arrow",
+            "name": "outlets_slider_next_arrow",
+            "type": "image",
+            "return_format": "array",
+            "preview_size": "thumbnail",
+            "library": "all"
+        },
+        {
+            "key": "field_outlets_closing_tab",
+            "label": "Closing Section",
+            "name": "",
+            "type": "tab",
+            "placement": "top"
+        },
+        {
+            "key": "field_outlets_closing_title",
+            "label": "Title",
+            "name": "outlets_closing_title",
+            "type": "text",
+            "default_value": "Living Stories of Our Sanctuaries"
+        },
+        {
+            "key": "field_outlets_closing_text",
+            "label": "Text",
+            "name": "outlets_closing_text",
+            "type": "wysiwyg",
+            "tabs": "all",
+            "toolbar": "basic",
+            "media_upload": 0,
+            "default_value": "Each Sandjong sanctuary is a chapter of our journey, a celebration of local culture, and a place shaped for stillness. As we continue to grow, we hold to one promise: to stay rooted in heritage, and to welcome you with the same gentle grace every single time."
+        },
+        {
+            "key": "field_outlets_closing_background",
+            "label": "Background Image",
+            "name": "outlets_closing_background",
+            "type": "image",
+            "return_format": "array",
+            "preview_size": "medium",
+            "library": "all"
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "page_template",
+                "operator": "==",
+                "value": "page-our-outlets.php"
+            }
+        ],
+        [
+            {
+                "param": "page",
+                "operator": "==",
+                "value": "our-outlets"
+            }
+        ]
+    ],
+    "menu_order": 3,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "modified": 1781481600
+}

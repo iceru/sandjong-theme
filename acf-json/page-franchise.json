@@ -1,0 +1,315 @@
+{
+    "key": "group_page_franchise",
+    "title": "Franchise",
+    "fields": [
+        {
+            "key": "field_franchise_hero_tab",
+            "label": "Hero",
+            "name": "",
+            "type": "tab",
+            "placement": "top"
+        },
+        {
+            "key": "field_franchise_hero_title",
+            "label": "Title",
+            "name": "franchise_hero_title",
+            "type": "text",
+            "default_value": "A partnership rooted in care, guided by heritage"
+        },
+        {
+            "key": "field_franchise_hero_text",
+            "label": "Text",
+            "name": "franchise_hero_text",
+            "type": "wysiwyg",
+            "tabs": "all",
+            "toolbar": "basic",
+            "media_upload": 0,
+            "default_value": "In the world of wellness, what is genuine always moves gently from within. Through our Spa Operation and Franchise Partnerships, Sandjong welcomes you to build spaces that honor tradition while embracing the needs of today. With the guidance of Amerta Jiwa Indonesia, we offer cultural depth, thoughtful service, and seasoned expertise to help you cultivate a sanctuary of your own, in any place you choose."
+        },
+        {
+            "key": "field_franchise_hero_background",
+            "label": "Background Image",
+            "name": "franchise_hero_background",
+            "type": "image",
+            "return_format": "array",
+            "preview_size": "medium",
+            "library": "all"
+        },
+        {
+            "key": "field_franchise_operation_tab",
+            "label": "Spa Operation",
+            "name": "",
+            "type": "tab",
+            "placement": "top"
+        },
+        {
+            "key": "field_franchise_operation_title",
+            "label": "Title",
+            "name": "franchise_operation_title",
+            "type": "text",
+            "default_value": "Spa Operation"
+        },
+        {
+            "key": "field_franchise_operation_subtitle",
+            "label": "Subtitle",
+            "name": "franchise_operation_subtitle",
+            "type": "text",
+            "default_value": "Let us carry the rhythm of Sandjong into your space."
+        },
+        {
+            "key": "field_franchise_operation_text",
+            "label": "Text",
+            "name": "franchise_operation_text",
+            "type": "wysiwyg",
+            "tabs": "all",
+            "toolbar": "basic",
+            "media_upload": 0,
+            "default_value": "Bringing a spa to life requires more than a good idea, as it takes guidance, systems, and soul. At Sandjong, through the expertise of Amerta Jiwa Indonesia, we offer a full suite of operational services to help you create or elevate your wellness experience.\n\nWhether you're a hotel, residence, or lifestyle destination, we offer complete support: from concept to treatment, from therapist to guest. Every detail is shaped with intention, designed to reflect the essence of Sandjong, where healing is deeply rooted in tradition."
+        },
+        {
+            "key": "field_franchise_operation_image",
+            "label": "Image",
+            "name": "franchise_operation_image",
+            "type": "image",
+            "return_format": "array",
+            "preview_size": "medium",
+            "library": "all"
+        },
+        {
+            "key": "field_franchise_services_tab",
+            "label": "Services",
+            "name": "",
+            "type": "tab",
+            "placement": "top"
+        },
+        {
+            "key": "field_franchise_services_title",
+            "label": "Title",
+            "name": "franchise_services_title",
+            "type": "text",
+            "instructions": "Individual service tabs are managed from the Services post type.",
+            "default_value": "Our Services"
+        },
+        {
+            "key": "field_franchise_services_background",
+            "label": "Background Image",
+            "name": "franchise_services_background",
+            "type": "image",
+            "return_format": "array",
+            "preview_size": "medium",
+            "library": "all"
+        },
+        {
+            "key": "field_franchise_services_fallback_image",
+            "label": "Fallback Service Image",
+            "name": "franchise_services_fallback_image",
+            "type": "image",
+            "return_format": "array",
+            "preview_size": "medium",
+            "library": "all"
+        },
+        {
+            "key": "field_franchise_intro_tab",
+            "label": "Franchise Intro",
+            "name": "",
+            "type": "tab",
+            "placement": "top"
+        },
+        {
+            "key": "field_franchise_intro_title",
+            "label": "Title",
+            "name": "franchise_intro_title",
+            "type": "text",
+            "default_value": "For Franchise"
+        },
+        {
+            "key": "field_franchise_intro_subtitle",
+            "label": "Subtitle",
+            "name": "franchise_intro_subtitle",
+            "type": "text",
+            "default_value": "Own a Sandjong sanctuary, guided by our legacy."
+        },
+        {
+            "key": "field_franchise_intro_text",
+            "label": "Text",
+            "name": "franchise_intro_text",
+            "type": "wysiwyg",
+            "tabs": "all",
+            "toolbar": "basic",
+            "media_upload": 0,
+            "default_value": "We offer the opportunity to open a Sandjong spa through a boutique franchise model that’s designed for those who believe in the power of culture-based wellness and wish to bring it to new communities."
+        },
+        {
+            "key": "field_franchise_intro_background",
+            "label": "Background Image",
+            "name": "franchise_intro_background",
+            "type": "image",
+            "return_format": "array",
+            "preview_size": "medium",
+            "library": "all"
+        },
+        {
+            "key": "field_franchise_benefits_tab",
+            "label": "Benefits",
+            "name": "",
+            "type": "tab",
+            "placement": "top"
+        },
+        {
+            "key": "field_franchise_benefits_intro",
+            "label": "Intro",
+            "name": "franchise_benefits_intro",
+            "type": "textarea",
+            "rows": 4,
+            "default_value": "Each Sandjong franchise is thoughtfully curated: maintaining our standards of care, heritage, and sensory experience, while allowing your space to reflect the spirit of its surroundings."
+        },
+        {
+            "key": "field_franchise_benefits",
+            "label": "Benefits",
+            "name": "franchise_benefits",
+            "type": "repeater",
+            "layout": "block",
+            "button_label": "Add Benefit",
+            "sub_fields": [
+                {
+                    "key": "field_franchise_benefit_icon",
+                    "label": "Icon",
+                    "name": "icon",
+                    "type": "image",
+                    "return_format": "array",
+                    "preview_size": "thumbnail",
+                    "library": "all"
+                },
+                {
+                    "key": "field_franchise_benefit_text",
+                    "label": "Text",
+                    "name": "text",
+                    "type": "text"
+                }
+            ]
+        },
+        {
+            "key": "field_franchise_contact_tab",
+            "label": "Contact",
+            "name": "",
+            "type": "tab",
+            "placement": "top"
+        },
+        {
+            "key": "field_franchise_contact_title",
+            "label": "Title",
+            "name": "franchise_contact_title",
+            "type": "text",
+            "default_value": "Let Us Build Serenity, Together"
+        },
+        {
+            "key": "field_franchise_contact_text",
+            "label": "Text",
+            "name": "franchise_contact_text",
+            "type": "wysiwyg",
+            "tabs": "all",
+            "toolbar": "basic",
+            "media_upload": 0,
+            "default_value": "If you feel aligned with our purpose, we welcome you into this shared journey to create sanctuaries that heal, restore, and carry the richness of Indonesian culture forward."
+        },
+        {
+            "key": "field_franchise_contact_heading",
+            "label": "Contact Heading",
+            "name": "franchise_contact_heading",
+            "type": "text",
+            "default_value": "Inquire with us"
+        },
+        {
+            "key": "field_franchise_contact_company",
+            "label": "Company",
+            "name": "franchise_contact_company",
+            "type": "text",
+            "default_value": "Sandjong Wellness by Amerta Jiwa Indonesia"
+        },
+        {
+            "key": "field_franchise_contact_location_title",
+            "label": "Location Title",
+            "name": "franchise_contact_location_title",
+            "type": "text",
+            "default_value": "Episode Hotel Gading Serpong"
+        },
+        {
+            "key": "field_franchise_contact_address",
+            "label": "Address",
+            "name": "franchise_contact_address",
+            "type": "textarea",
+            "rows": 3,
+            "default_value": "2nd Floor, Jl. Gading Serpong Boulevard Barat S No. 6-7 Pakulonan Barat Tangerang — 15810"
+        },
+        {
+            "key": "field_franchise_contact_items",
+            "label": "Contact Items",
+            "name": "franchise_contact_items",
+            "type": "repeater",
+            "layout": "table",
+            "button_label": "Add Contact Item",
+            "sub_fields": [
+                {
+                    "key": "field_franchise_contact_item_label",
+                    "label": "Label",
+                    "name": "label",
+                    "type": "text"
+                },
+                {
+                    "key": "field_franchise_contact_item_text",
+                    "label": "Text",
+                    "name": "text",
+                    "type": "text"
+                },
+                {
+                    "key": "field_franchise_contact_item_url",
+                    "label": "URL",
+                    "name": "url",
+                    "type": "url"
+                }
+            ]
+        },
+        {
+            "key": "field_franchise_contact_shortcode",
+            "label": "Form Shortcode",
+            "name": "franchise_contact_shortcode",
+            "type": "text",
+            "default_value": "[contact-form-7 id=\"7318e68\" title=\"Contact form 1\"]"
+        },
+        {
+            "key": "field_franchise_contact_background",
+            "label": "Background Image",
+            "name": "franchise_contact_background",
+            "type": "image",
+            "return_format": "array",
+            "preview_size": "medium",
+            "library": "all"
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "page_template",
+                "operator": "==",
+                "value": "page-franchise.php"
+            }
+        ],
+        [
+            {
+                "param": "page",
+                "operator": "==",
+                "value": "franchise"
+            }
+        ]
+    ],
+    "menu_order": 2,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "modified": 1781481600
+}

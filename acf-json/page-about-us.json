@@ -1,0 +1,540 @@
+{
+    "key": "group_page_about_us",
+    "title": "About Us",
+    "fields": [
+        {
+            "key": "field_about_hero_tab",
+            "label": "Hero",
+            "name": "",
+            "type": "tab",
+            "placement": "top"
+        },
+        {
+            "key": "field_about_hero_title",
+            "label": "Title",
+            "name": "about_hero_title",
+            "type": "text",
+            "default_value": "Rooted in Amerta Jiwa"
+        },
+        {
+            "key": "field_about_hero_background",
+            "label": "Background Image",
+            "name": "about_hero_background",
+            "type": "image",
+            "return_format": "array",
+            "preview_size": "medium",
+            "library": "all"
+        },
+        {
+            "key": "field_about_intro_tab",
+            "label": "Intro",
+            "name": "",
+            "type": "tab",
+            "placement": "top"
+        },
+        {
+            "key": "field_about_intro_title",
+            "label": "Title",
+            "name": "about_intro_title",
+            "type": "text",
+            "default_value": "Nature Inheritance Rooted in Culture"
+        },
+        {
+            "key": "field_about_intro_text",
+            "label": "Text",
+            "name": "about_intro_text",
+            "type": "wysiwyg",
+            "tabs": "all",
+            "toolbar": "basic",
+            "media_upload": 0,
+            "default_value": "Born from <strong>Amerta Jiwa Indonesia</strong>, Sandjong elevates wellness into a living ritual. The name Sandjong is inspired by the Indonesian word <strong>“sanjung”</strong>, meaning <strong>“praise”</strong> or <strong>“to bring joy”</strong> which reflects our devotion to heritage and balance. <br><br><strong>Rooted in Indonesia’s rich traditions</strong>, we reinterpret ancient wellness philosophies into refined, multisensory experiences, and create spaces to <strong>return home</strong> to: to calm, to culture, to self."
+        },
+        {
+            "key": "field_about_commitment_tab",
+            "label": "Commitment",
+            "name": "",
+            "type": "tab",
+            "placement": "top"
+        },
+        {
+            "key": "field_about_commitment_eyebrow",
+            "label": "Eyebrow",
+            "name": "about_commitment_eyebrow",
+            "type": "text",
+            "default_value": "Our Commitment"
+        },
+        {
+            "key": "field_about_commitment_title",
+            "label": "Title",
+            "name": "about_commitment_title",
+            "type": "textarea",
+            "rows": 3,
+            "default_value": "Amerta’s dedication to maintain a 5-star standard and crafting unforgettable experiences for our valued customers is shown and nurtured through our vision, mission, culture, and motto"
+        },
+        {
+            "key": "field_about_commitment_cards",
+            "label": "Cards",
+            "name": "about_commitment_cards",
+            "type": "repeater",
+            "layout": "block",
+            "button_label": "Add Card",
+            "sub_fields": [
+                {
+                    "key": "field_about_commitment_card_image",
+                    "label": "Image",
+                    "name": "image",
+                    "type": "image",
+                    "return_format": "array",
+                    "preview_size": "medium",
+                    "library": "all"
+                },
+                {
+                    "key": "field_about_commitment_card_title",
+                    "label": "Title",
+                    "name": "title",
+                    "type": "text"
+                },
+                {
+                    "key": "field_about_commitment_card_text",
+                    "label": "Text",
+                    "name": "text",
+                    "type": "textarea",
+                    "rows": 4
+                }
+            ]
+        },
+        {
+            "key": "field_about_culture_tab",
+            "label": "Culture",
+            "name": "",
+            "type": "tab",
+            "placement": "top"
+        },
+        {
+            "key": "field_about_culture_eyebrow",
+            "label": "Eyebrow",
+            "name": "about_culture_eyebrow",
+            "type": "text",
+            "default_value": "Our Culture"
+        },
+        {
+            "key": "field_about_culture_title",
+            "label": "Title",
+            "name": "about_culture_title",
+            "type": "textarea",
+            "rows": 4,
+            "default_value": "In Amerta’s esteemed environment, we nurture and enhance our offered personalized services and the mutual respect by embracing the reliable principles of amiability and positive attitude."
+        },
+        {
+            "key": "field_about_culture_background",
+            "label": "Background Image",
+            "name": "about_culture_background",
+            "type": "image",
+            "return_format": "array",
+            "preview_size": "medium",
+            "library": "all"
+        },
+        {
+            "key": "field_about_values_tab",
+            "label": "Values",
+            "name": "",
+            "type": "tab",
+            "placement": "top"
+        },
+        {
+            "key": "field_about_values_title",
+            "label": "Title",
+            "name": "about_values_title",
+            "type": "text",
+            "default_value": "Values"
+        },
+        {
+            "key": "field_about_values_background",
+            "label": "Background Image",
+            "name": "about_values_background",
+            "type": "image",
+            "return_format": "array",
+            "preview_size": "medium",
+            "library": "all"
+        },
+        {
+            "key": "field_about_values_items",
+            "label": "Value Items",
+            "name": "about_values_items",
+            "type": "repeater",
+            "layout": "block",
+            "button_label": "Add Value",
+            "sub_fields": [
+                {
+                    "key": "field_about_values_item_icon",
+                    "label": "Icon",
+                    "name": "icon",
+                    "type": "image",
+                    "return_format": "array",
+                    "preview_size": "thumbnail",
+                    "library": "all"
+                },
+                {
+                    "key": "field_about_values_item_title",
+                    "label": "Title",
+                    "name": "title",
+                    "type": "text"
+                },
+                {
+                    "key": "field_about_values_item_text",
+                    "label": "Text",
+                    "name": "text",
+                    "type": "textarea",
+                    "rows": 4
+                }
+            ]
+        },
+        {
+            "key": "field_about_senses_tab",
+            "label": "Senses",
+            "name": "",
+            "type": "tab",
+            "placement": "top"
+        },
+        {
+            "key": "field_about_senses_title",
+            "label": "Title",
+            "name": "about_senses_title",
+            "type": "text",
+            "instructions": "Individual slide content is managed from the Senses post type.",
+            "default_value": "5 Senses Experiences"
+        },
+        {
+            "key": "field_about_senses_background",
+            "label": "Background Image",
+            "name": "about_senses_background",
+            "type": "image",
+            "return_format": "array",
+            "preview_size": "medium",
+            "library": "all"
+        },
+        {
+            "key": "field_about_senses_fallback_image",
+            "label": "Fallback Slide Image",
+            "name": "about_senses_fallback_image",
+            "type": "image",
+            "return_format": "array",
+            "preview_size": "medium",
+            "library": "all"
+        },
+        {
+            "key": "field_about_senses_fallback_icon",
+            "label": "Fallback Icon",
+            "name": "about_senses_fallback_icon",
+            "type": "image",
+            "return_format": "array",
+            "preview_size": "thumbnail",
+            "library": "all"
+        },
+        {
+            "key": "field_about_ambience_tab",
+            "label": "Ambience",
+            "name": "",
+            "type": "tab",
+            "placement": "top"
+        },
+        {
+            "key": "field_about_ambience_eyebrow",
+            "label": "Eyebrow",
+            "name": "about_ambience_eyebrow",
+            "type": "text",
+            "default_value": "Enchanting Ambience"
+        },
+        {
+            "key": "field_about_ambience_title",
+            "label": "Title",
+            "name": "about_ambience_title",
+            "type": "text",
+            "default_value": "A space where time slows, and stories unfold"
+        },
+        {
+            "key": "field_about_ambience_text",
+            "label": "Text",
+            "name": "about_ambience_text",
+            "type": "wysiwyg",
+            "tabs": "all",
+            "toolbar": "basic",
+            "media_upload": 0,
+            "default_value": "Inspired by apothecaries of the past and royal sanctuaries of Southeast Asia, Sandjong is alive with texture, scent, and sound that relives that era. In Gading Serpong, Baduy serenity meets Peranakan spirit; in Jakarta, Javanese grace, Balinese warmth, and Peranakan elegance intertwine. From heirlooms to herbal blends, every detail invites you into a deeply sensory, culturally rooted escape."
+        },
+        {
+            "key": "field_about_ambience_button",
+            "label": "Button",
+            "name": "about_ambience_button",
+            "type": "link",
+            "return_format": "array"
+        },
+        {
+            "key": "field_about_ambience_background",
+            "label": "Background Image",
+            "name": "about_ambience_background",
+            "type": "image",
+            "return_format": "array",
+            "preview_size": "medium",
+            "library": "all"
+        },
+        {
+            "key": "field_about_facilities_tab",
+            "label": "Facilities",
+            "name": "",
+            "type": "tab",
+            "placement": "top"
+        },
+        {
+            "key": "field_about_facilities_title_gold",
+            "label": "Gold Title Text",
+            "name": "about_facilities_title_gold",
+            "type": "text",
+            "instructions": "Individual slide content is managed from the Facilities post type.",
+            "default_value": "Delicately Facilitating"
+        },
+        {
+            "key": "field_about_facilities_title_primary",
+            "label": "Primary Title Text",
+            "name": "about_facilities_title_primary",
+            "type": "text",
+            "default_value": "Your Serene Moments"
+        },
+        {
+            "key": "field_about_facilities_background",
+            "label": "Background Image",
+            "name": "about_facilities_background",
+            "type": "image",
+            "return_format": "array",
+            "preview_size": "medium",
+            "library": "all"
+        },
+        {
+            "key": "field_about_facilities_fallback_image",
+            "label": "Fallback Facility Image",
+            "name": "about_facilities_fallback_image",
+            "type": "image",
+            "return_format": "array",
+            "preview_size": "medium",
+            "library": "all"
+        },
+        {
+            "key": "field_about_timeline_tab",
+            "label": "Timeline",
+            "name": "",
+            "type": "tab",
+            "placement": "top"
+        },
+        {
+            "key": "field_about_timeline_title_gold",
+            "label": "Gold Title Text",
+            "name": "about_timeline_title_gold",
+            "type": "text",
+            "default_value": "Echoes"
+        },
+        {
+            "key": "field_about_timeline_title_beige",
+            "label": "Beige Title Text",
+            "name": "about_timeline_title_beige",
+            "type": "text",
+            "default_value": "of Time"
+        },
+        {
+            "key": "field_about_timeline_intro",
+            "label": "Intro Text",
+            "name": "about_timeline_intro",
+            "type": "wysiwyg",
+            "tabs": "all",
+            "toolbar": "basic",
+            "media_upload": 0,
+            "default_value": "Our story unfolds slowly, a rhythmic ritual of tradition. Born from a vision by Amerta Jiwa Indonesia, Sandjong was shaped by culture, soul, and serenity. Each chapter reflects care and devotion to heritage-based wellness. Our milestones are echoes of all who have journeyed with us and all that shaped the legacy with us; of hands that healed, scents that calmed, and guests who found their way back to themselves."
+        },
+        {
+            "key": "field_about_timeline_side_text",
+            "label": "Side Text",
+            "name": "about_timeline_side_text",
+            "type": "wysiwyg",
+            "tabs": "all",
+            "toolbar": "basic",
+            "media_upload": 0,
+            "default_value": "Sandjong's identity are echoes of every hand that has healed, every scent that has calmed, every guest who found a moment to return to themselves."
+        },
+        {
+            "key": "field_about_timeline_background",
+            "label": "Background Image",
+            "name": "about_timeline_background",
+            "type": "image",
+            "return_format": "array",
+            "preview_size": "medium",
+            "library": "all"
+        },
+        {
+            "key": "field_about_timeline_arrow_icon",
+            "label": "Arrow Icon",
+            "name": "about_timeline_arrow_icon",
+            "type": "image",
+            "return_format": "array",
+            "preview_size": "thumbnail",
+            "library": "all"
+        },
+        {
+            "key": "field_about_timeline_dot_icon",
+            "label": "Dot Icon",
+            "name": "about_timeline_dot_icon",
+            "type": "image",
+            "return_format": "array",
+            "preview_size": "thumbnail",
+            "library": "all"
+        },
+        {
+            "key": "field_about_timeline_items",
+            "label": "Timeline Items",
+            "name": "about_timeline_items",
+            "type": "repeater",
+            "layout": "block",
+            "button_label": "Add Timeline Item",
+            "sub_fields": [
+                {
+                    "key": "field_about_timeline_item_title",
+                    "label": "Title",
+                    "name": "title",
+                    "type": "text"
+                },
+                {
+                    "key": "field_about_timeline_item_text",
+                    "label": "Text",
+                    "name": "text",
+                    "type": "wysiwyg",
+                    "tabs": "all",
+                    "toolbar": "basic",
+                    "media_upload": 0
+                }
+            ]
+        },
+        {
+            "key": "field_about_awards_tab",
+            "label": "Awards",
+            "name": "",
+            "type": "tab",
+            "placement": "top"
+        },
+        {
+            "key": "field_about_awards_title_gold",
+            "label": "Gold Title Text",
+            "name": "about_awards_title_gold",
+            "type": "text",
+            "instructions": "Individual award slides are managed from the Awards post type.",
+            "default_value": "In Gentle"
+        },
+        {
+            "key": "field_about_awards_title_primary",
+            "label": "Primary Title Text",
+            "name": "about_awards_title_primary",
+            "type": "text",
+            "default_value": "Honor"
+        },
+        {
+            "key": "field_about_awards_text",
+            "label": "Text",
+            "name": "about_awards_text",
+            "type": "wysiwyg",
+            "tabs": "all",
+            "toolbar": "basic",
+            "media_upload": 0,
+            "default_value": "Every recognition we have received is not a trophy, but a whisper of gratitude—gently offered by those who have felt the calm, the comfort, and the culture within our sanctuary. These honors are not our destination. They are gentle markers along our path—reminders that grace, when given sincerely, often returns softly."
+        },
+        {
+            "key": "field_about_awards_fallback_image",
+            "label": "Fallback Award Image",
+            "name": "about_awards_fallback_image",
+            "type": "image",
+            "return_format": "array",
+            "preview_size": "medium",
+            "library": "all"
+        },
+        {
+            "key": "field_about_slider_arrow_icon",
+            "label": "Main Slider Arrow Icon",
+            "name": "about_slider_arrow_icon",
+            "type": "image",
+            "return_format": "array",
+            "preview_size": "thumbnail",
+            "library": "all"
+        },
+        {
+            "key": "field_about_awards_arrow_icon",
+            "label": "Awards Arrow Icon",
+            "name": "about_awards_arrow_icon",
+            "type": "image",
+            "return_format": "array",
+            "preview_size": "thumbnail",
+            "library": "all"
+        },
+        {
+            "key": "field_about_session_tab",
+            "label": "Session CTA",
+            "name": "",
+            "type": "tab",
+            "placement": "top"
+        },
+        {
+            "key": "field_about_session_title",
+            "label": "Title",
+            "name": "about_session_title",
+            "type": "text",
+            "default_value": "Loved in Silence, Remembered in Stillness"
+        },
+        {
+            "key": "field_about_session_text",
+            "label": "Text",
+            "name": "about_session_text",
+            "type": "wysiwyg",
+            "tabs": "all",
+            "toolbar": "basic",
+            "media_upload": 0,
+            "default_value": "But beyond accolades, it is the return of a guest, the softened breath at the end of a treatment, and the shared stillness that truly honors us."
+        },
+        {
+            "key": "field_about_session_button",
+            "label": "Button",
+            "name": "about_session_button",
+            "type": "link",
+            "return_format": "array"
+        },
+        {
+            "key": "field_about_session_background",
+            "label": "Background Image",
+            "name": "about_session_background",
+            "type": "image",
+            "return_format": "array",
+            "preview_size": "medium",
+            "library": "all"
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "page_template",
+                "operator": "==",
+                "value": "page-about-us.php"
+            }
+        ],
+        [
+            {
+                "param": "page",
+                "operator": "==",
+                "value": "about-us"
+            }
+        ]
+    ],
+    "menu_order": 1,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "modified": 1781481600
+}
