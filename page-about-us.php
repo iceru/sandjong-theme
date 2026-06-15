@@ -297,8 +297,8 @@
         </h4>
 
         <!-- TODO: Slick Slider Facility -->
-        <div class="relative">
-            <div class="facility-slider">
+        <div class="relative overflow-hidden">
+            <div class="facility-slider w-full max-w-full overflow-hidden">
                 <?php
                 $facility_query = new WP_Query(array(
                     'post_type' => 'facility',
@@ -312,16 +312,16 @@
                         $facility_query->the_post();
                         ?>
                         <div>
-                            <div class="grid md:grid-cols-2 gap-6">
-                                <div>
+                            <div class="grid md:grid-cols-2 gap-6 min-w-0">
+                                <div class="min-w-0">
                                     <?php if (has_post_thumbnail()): ?>
-                                        <?php the_post_thumbnail('large', array('class' => 'masked-facility object-cover aspect-4/3 max-w-[648px]')); ?>
+                                        <?php the_post_thumbnail('large', array('class' => 'masked-facility w-full max-w-full object-cover aspect-4/3 max-w-[648px]')); ?>
                                     <?php else: ?>
                                         <img src="<?php echo get_template_directory_uri(); ?>/images/webp/lobby.webp"
-                                            class="masked-facility w-full h-full object-cover aspect-4/3 max-w-[648px]" alt="">
+                                            class="masked-facility w-full max-w-full h-full object-cover aspect-4/3 max-w-[648px]" alt="">
                                     <?php endif; ?>
                                 </div>
-                                <div class="bg-[#FFE5C9] rounded-xl relative p-8 md:px-16 md:py-12">
+                                <div class="bg-[#FFE5C9] rounded-xl relative p-8 md:px-16 md:py-12 min-w-0">
                                     <div
                                         class="w-[95%] md:w-[98%] h-3 rounded-t-xl -top-3 left-1/2 -translate-x-1/2 bg-[#FFE5C9] absolute">
                                     </div>

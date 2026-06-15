@@ -102,7 +102,7 @@
                     </div>
                     <div>
                         <ul class="space-y-5">
-                            <li><a href="https://www.instagram.com/sandjongwellness/?hl=en" target="_blank"
+                            <li><a href="https://www.instagram.com/sandjong.wellness?igsh=MXVxM2FraGw1ZDdyaw==" target="_blank"
                                     class="!no-underline">Instagram</a></li>
                             <li><a href="https://www.facebook.com/sandjongwellness" target="_blank"
                                     class="!no-underline">Facebook</a>
@@ -162,9 +162,15 @@
             let isSnapping = false;
 
             // Prevent snapping from getting locked if user interrupts it
-            const releaseSnap = () => { isSnapping = false; };
-            window.addEventListener('wheel', releaseSnap, { passive: true });
-            window.addEventListener('touchstart', releaseSnap, { passive: true });
+            const releaseSnap = () => {
+                isSnapping = false;
+            };
+            window.addEventListener('wheel', releaseSnap, {
+                passive: true
+            });
+            window.addEventListener('touchstart', releaseSnap, {
+                passive: true
+            });
 
             lenis.on('scroll', () => {
                 if (isSnapping) return;
